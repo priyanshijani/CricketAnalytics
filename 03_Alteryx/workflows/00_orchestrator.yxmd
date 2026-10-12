@@ -86,6 +86,24 @@
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDirectory" />
         </Node>
+        <Node ToolID="83">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="159" y="154" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>!StartsWith([FileName], ".")</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Ignore placeholder files (.gitkeep)</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
         <Node ToolID="4">
           <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
             <Position x="234" y="280" />
@@ -1639,6 +1657,10 @@ ErrorMessage=ErrorMessage
     </Connection>
     <Connection>
       <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="83" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="83" Connection="True" />
       <Destination ToolID="5" Connection="Input" />
     </Connection>
     <Connection name="#1">
