@@ -94,7 +94,7 @@ Every pass is the same three steps; no reporting data is prepared by hand.
 
 | Option | How | Where |
 |---|---|---|
-| **A · Ready-made scenarios** | `02_SampleData\stage_demo_change.bat <scenario>` with `new_matches`, then `corrected_files`, `duplicate_files`, `malformed_files` — one per pass | Files: `02_SampleData\source\demo_changes\` |
+| **A · Ready-made scenarios** | Double-click `02_SampleData\stage_demo_change.bat` and enter **1** to **4**: `new_matches`, then `corrected_files`, `duplicate_files`, `malformed_files` — one per pass. From a prompt: `stage_demo_change.bat new_matches` | Files: `02_SampleData\source\demo_changes\` |
 | **B · Your own files** | Copy into the inbox. A match: any `.json` ([JSON schema](02_SampleData/source/json/JSON_SCHEMA.md), copy one from `02_SampleData\source\json\matches\` as a template). CSV names must start with `deliveries`, `player_rankings` or `historical_stats` ([CSV schema](02_SampleData/source/csv/CSV_SCHEMA.md)) | `02_SampleData\_runtime\inbound\` |
 | **C · New master data** | Insert teams, players or venues into `CricketSource` (SSMS or `sqlcmd`); the next run reads it live. [Examples](07_Docs/deployment.md#d-add-new-or-changed-data) | SQL Server `CricketSource.dbo` |
 

@@ -171,6 +171,9 @@ Every pass is the same three moves: **put the data in place → run the orchestr
 
 ### D1. Ready-made scenarios
 
+Double-click `02_SampleData\stage_demo_change.bat` and enter the scenario number (1 to 4, in the order below), or
+name it from a command prompt:
+
 ```bat
 02_SampleData\stage_demo_change.bat new_matches
 ```
