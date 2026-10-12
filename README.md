@@ -65,6 +65,12 @@ Each step's detail and troubleshooting: **[07_Docs/deployment.md](07_Docs/deploy
 > Why step 8 is manual: Alteryx 2026.2 accepts only connections saved in Designer's own store. Each connection only
 > names a DSN from step 7, so no server name or password is typed there.
 
+> [!CAUTION]
+> **About step 9.** Run it with Designer closed. If a workflow was open, close it *without saving*, or the old
+> connection IDs come back and the run fails with *Selected Connection is not available*.
+> Afterwards `git status` lists **11 changed workflow files**: that is expected on every PC (only the connection IDs
+> changed). **Do not commit them.** Re-run step 9 whenever you recreate an Alteryx connection.
+
 ### Part C · Run the pipeline and open the dashboards
 
 | Step | Do | File / location | You should see |

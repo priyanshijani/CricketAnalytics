@@ -114,6 +114,13 @@ workflow and macro. It changes nothing else, and running it again is harmless.
 
 **Check:** the script prints `[OK]` for both connections and ends with `11 of 14 workflow / macro files relinked`.
 
+> [!CAUTION]
+> - **Close Designer first.** If a workflow is open while the script runs, close it *without saving*: saving puts the
+>   old connection IDs back, and the run fails with *Selected Connection is not available*.
+> - **`git status` now lists 11 changed `.yxmd` / `.yxmc` files.** This is expected on every PC: only the connection
+>   IDs changed. Do not commit them; the IDs are valid only on this machine.
+> - Run it again whenever you recreate either Alteryx connection (a new connection gets a new ID).
+
 ---
 
 ## C. Run the pipeline
@@ -218,6 +225,7 @@ the team name carried in each match file, not from this table.
 | "The certificate chain was issued by an authority that is not trusted" | Run `sqlcmd` with `-C` (trust the local server certificate); the setup scripts already do. |
 | `sqlcmd` cannot connect to `localhost\SQLEXPRESS` | Check the instance name (B2). In **SQL Server Configuration Manager**, enable **TCP/IP** for the instance and start the **SQL Server Browser** service, then restart SQL Server. |
 | `create_odbc_dsns.bat` says administrator rights needed | Right-click → Run as administrator. |
+| *Selected Connection is not available. Set one up to use the tool.* | The workflows still hold another machine's connection IDs. Close Designer without saving, run `python 03_Alteryx\relink_connections.py` (B7), reopen the workflow. |
 | `relink_connections.py` finds 0 or 2 connections | Create exactly one connection per DSN (B6); delete stray copies in Manage Connections. |
 | A tool says its connection is missing | Close Designer, run B7 again, reopen the workflow. |
 | Designer offers to "Update Missing Macros" | Click **Close**, not Update (Update writes this PC's absolute paths into the workflow). Every macro is referenced relative to the workflow folder, so this only appears if the repository folder structure was changed; restore it from git. |
