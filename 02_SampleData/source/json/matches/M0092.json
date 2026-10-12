@@ -1,0 +1,50 @@
+{
+  "match_id": "M0092",
+  "season": "2025",
+  "format": "T20",
+  "date": "2025-04-23",
+  "venue": {
+    "code": "DEL01"
+  },
+  "teams": [
+    {
+      "code": "DEL",
+      "name": "Delhi Comets"
+    },
+    {
+      "code": "KOL",
+      "name": "Kolkata Tigers"
+    }
+  ],
+  "toss": {
+    "winner": "DEL",
+    "decision": "Bat"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "KOL",
+    "margin": 7,
+    "margin_type": "Wickets",
+    "man_of_match": "P0068"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "DEL",
+      "bowling_team": "KOL",
+      "runs": 179,
+      "wickets": 6,
+      "overs": 20.0,
+      "extras": 4
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "KOL",
+      "bowling_team": "DEL",
+      "runs": 244,
+      "wickets": 3,
+      "overs": 20.0,
+      "extras": 10
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "match_id": "M0111",
+  "season": "2025",
+  "format": "T20",
+  "date": "2025-05-31",
+  "venue": {
+    "code": "CHE01"
+  },
+  "teams": [
+    {
+      "code": "CHE",
+      "name": "Chennai Kings"
+    },
+    {
+      "code": "KOL",
+      "name": "Kolkata Tigers"
+    }
+  ],
+  "toss": {
+    "winner": "KOL",
+    "decision": "Field"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "KOL",
+    "margin": 7,
+    "margin_type": "Wickets",
+    "man_of_match": "P0076"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "CHE",
+      "bowling_team": "KOL",
+      "runs": 187,
+      "wickets": 5,
+      "overs": 20.0,
+      "extras": 7
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "KOL",
+      "bowling_team": "CHE",
+      "runs": 188,
+      "wickets": 3,
+      "overs": 20.0,
+      "extras": 10
+    }
+  ]
+}

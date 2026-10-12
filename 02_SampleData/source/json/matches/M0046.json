@@ -1,0 +1,50 @@
+{
+  "match_id": "M0046",
+  "season": "2024",
+  "format": "T20",
+  "date": "2024-04-11",
+  "venue": {
+    "code": "BLR01"
+  },
+  "teams": [
+    {
+      "code": "BLR",
+      "name": "Bangalore Royals"
+    },
+    {
+      "code": "HYD",
+      "name": "Hyderabad Hawks"
+    }
+  ],
+  "toss": {
+    "winner": "HYD",
+    "decision": "Bat"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "HYD",
+    "margin": 7,
+    "margin_type": "Runs",
+    "man_of_match": "P0100"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "HYD",
+      "bowling_team": "BLR",
+      "runs": 177,
+      "wickets": 2,
+      "overs": 20.0,
+      "extras": 10
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "BLR",
+      "bowling_team": "HYD",
+      "runs": 170,
+      "wickets": 7,
+      "overs": 20.0,
+      "extras": 4
+    }
+  ]
+}

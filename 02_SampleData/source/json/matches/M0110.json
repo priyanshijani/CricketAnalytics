@@ -1,0 +1,50 @@
+{
+  "match_id": "M0110",
+  "season": "2025",
+  "format": "T20",
+  "date": "2025-05-29",
+  "venue": {
+    "code": "BLR01"
+  },
+  "teams": [
+    {
+      "code": "BLR",
+      "name": "Bangalore Royals"
+    },
+    {
+      "code": "CHE",
+      "name": "Chennai Kings"
+    }
+  ],
+  "toss": {
+    "winner": "BLR",
+    "decision": "Bat"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "CHE",
+    "margin": 5,
+    "margin_type": "Wickets",
+    "man_of_match": "P0042"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "BLR",
+      "bowling_team": "CHE",
+      "runs": 77,
+      "wickets": 10,
+      "overs": 9.5,
+      "extras": 3
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "CHE",
+      "bowling_team": "BLR",
+      "runs": 186,
+      "wickets": 5,
+      "overs": 20.0,
+      "extras": 10
+    }
+  ]
+}

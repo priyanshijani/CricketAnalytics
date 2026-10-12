@@ -1,0 +1,50 @@
+{
+  "match_id": "M0074",
+  "season": "2024",
+  "format": "T20",
+  "date": "2024-06-06",
+  "venue": {
+    "code": "PUN01"
+  },
+  "teams": [
+    {
+      "code": "PUN",
+      "name": "Punjab Warriors"
+    },
+    {
+      "code": "MUM",
+      "name": "Mumbai Sharks"
+    }
+  ],
+  "toss": {
+    "winner": "PUN",
+    "decision": "Field"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "MUM",
+    "margin": 93,
+    "margin_type": "Runs",
+    "man_of_match": "P0001"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "MUM",
+      "bowling_team": "PUN",
+      "runs": 226,
+      "wickets": 8,
+      "overs": 20.0,
+      "extras": 15
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "PUN",
+      "bowling_team": "MUM",
+      "runs": 133,
+      "wickets": 10,
+      "overs": 14.3,
+      "extras": 4
+    }
+  ]
+}

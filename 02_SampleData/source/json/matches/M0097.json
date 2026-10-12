@@ -1,0 +1,50 @@
+{
+  "match_id": "M0097",
+  "season": "2025",
+  "format": "T20",
+  "date": "2025-05-03",
+  "venue": {
+    "code": "CHE01"
+  },
+  "teams": [
+    {
+      "code": "CHE",
+      "name": "Chennai Kings"
+    },
+    {
+      "code": "RAJ",
+      "name": "Rajasthan Titans"
+    }
+  ],
+  "toss": {
+    "winner": "CHE",
+    "decision": "Field"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "RAJ",
+    "margin": 34,
+    "margin_type": "Runs",
+    "man_of_match": "P0141"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "RAJ",
+      "bowling_team": "CHE",
+      "runs": 188,
+      "wickets": 10,
+      "overs": 19.5,
+      "extras": 6
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "CHE",
+      "bowling_team": "RAJ",
+      "runs": 154,
+      "wickets": 10,
+      "overs": 18.3,
+      "extras": 2
+    }
+  ]
+}

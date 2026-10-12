@@ -1,0 +1,173 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Cricket match",
+  "type": "object",
+  "required": [
+    "match_id",
+    "season",
+    "format",
+    "date",
+    "venue",
+    "teams",
+    "toss",
+    "result",
+    "innings"
+  ],
+  "properties": {
+    "match_id": {
+      "type": "string"
+    },
+    "season": {
+      "type": "string"
+    },
+    "format": {
+      "type": "string",
+      "enum": [
+        "T20",
+        "ODI",
+        "Test",
+        "T10"
+      ]
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "venue": {
+      "type": "object",
+      "required": [
+        "code"
+      ],
+      "properties": {
+        "code": {
+          "type": "string"
+        }
+      }
+    },
+    "teams": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "object",
+        "required": [
+          "code",
+          "name"
+        ],
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "toss": {
+      "type": "object",
+      "required": [
+        "winner",
+        "decision"
+      ],
+      "properties": {
+        "winner": {
+          "type": "string"
+        },
+        "decision": {
+          "type": "string",
+          "enum": [
+            "Bat",
+            "Field"
+          ]
+        }
+      }
+    },
+    "result": {
+      "type": "object",
+      "required": [
+        "method"
+      ],
+      "properties": {
+        "method": {
+          "type": "string",
+          "enum": [
+            "Normal",
+            "Tied",
+            "NoResult",
+            "Abandoned",
+            "SuperOver"
+          ]
+        },
+        "winner": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "margin": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "margin_type": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "Runs",
+            "Wickets",
+            null
+          ]
+        },
+        "man_of_match": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "innings": {
+      "type": "array",
+      "maxItems": 2,
+      "items": {
+        "type": "object",
+        "required": [
+          "innings_no",
+          "batting_team",
+          "bowling_team",
+          "wickets",
+          "overs",
+          "extras"
+        ],
+        "properties": {
+          "innings_no": {
+            "type": "integer"
+          },
+          "batting_team": {
+            "type": "string"
+          },
+          "bowling_team": {
+            "type": "string"
+          },
+          "runs": {
+            "type": "integer"
+          },
+          "wickets": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "overs": {
+            "type": "number"
+          },
+          "extras": {
+            "type": "integer"
+          }
+        }
+      }
+    }
+  }
+}

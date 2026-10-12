@@ -1,0 +1,50 @@
+{
+  "match_id": "M0107",
+  "season": "2025",
+  "format": "T20",
+  "date": "2025-05-23",
+  "venue": {
+    "code": "DEL01"
+  },
+  "teams": [
+    {
+      "code": "DEL",
+      "name": "Delhi Comets"
+    },
+    {
+      "code": "MUM",
+      "name": "Mumbai Sharks"
+    }
+  ],
+  "toss": {
+    "winner": "DEL",
+    "decision": "Bat"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "DEL",
+    "margin": 106,
+    "margin_type": "Runs",
+    "man_of_match": "P0035"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "DEL",
+      "bowling_team": "MUM",
+      "runs": 213,
+      "wickets": 9,
+      "overs": 20.0,
+      "extras": 5
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "MUM",
+      "bowling_team": "DEL",
+      "runs": 107,
+      "wickets": 10,
+      "overs": 14.2,
+      "extras": 5
+    }
+  ]
+}

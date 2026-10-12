@@ -1,0 +1,50 @@
+{
+  "match_id": "M0038",
+  "season": "2023",
+  "format": "T20",
+  "date": "2023-06-14",
+  "venue": {
+    "code": "CHE01"
+  },
+  "teams": [
+    {
+      "code": "CHE",
+      "name": "Chennai Kings"
+    },
+    {
+      "code": "RAJ",
+      "name": "Rajasthan Titans"
+    }
+  ],
+  "toss": {
+    "winner": "CHE",
+    "decision": "Field"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "CHE",
+    "margin": 3,
+    "margin_type": "Wickets",
+    "man_of_match": "P0134"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "RAJ",
+      "bowling_team": "CHE",
+      "runs": 167,
+      "wickets": 9,
+      "overs": 20.0,
+      "extras": 9
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "CHE",
+      "bowling_team": "RAJ",
+      "runs": 208,
+      "wickets": 7,
+      "overs": 20.0,
+      "extras": 11
+    }
+  ]
+}

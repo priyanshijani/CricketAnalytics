@@ -1,0 +1,153 @@
+﻿PlayerCode,PlayerName,Country,PlayerRole,BattingStyle,BowlingStyle,DateOfBirth,DebutDate,LatestTeamName
+P0001,Vikram Sharma,England,Batter,Right-hand bat,,1988-02-02,2009-12-01,Mumbai Sharks
+P0002,Vikram Chauhan,Pakistan,Batter,Left-hand bat,,1992-05-12,2012-04-09,Mumbai Sharks
+P0003,Arjun Pandey,Pakistan,AllRounder,Left-hand bat,Right-arm leg-spin,1992-01-07,2011-11-24,Mumbai Sharks
+P0004,Naveen Saxena,Sri Lanka,Batter,Left-hand bat,,,2007-10-23,Mumbai Sharks
+P0005,Rohan Desai,England,AllRounder,Right-hand bat,,1988-07-24,2008-08-20,Mumbai Sharks
+P0006,Naveen Iyer,Sri Lanka,Batter,Right-hand bat,,1992-06-03,2011-12-09,Mumbai Sharks
+P0007,Chetan Desai,New Zealand,Batter,Right-hand bat,,2000-09-03,2021-02-11,Mumbai Sharks
+P0008,Amit Verma,Pakistan,Batter,Right-hand bat,,,2022-08-15,Mumbai Sharks
+P0009,Amit Mehta,Pakistan,Bowler,Right-hand bat,Right-arm off-spin,,2022-01-07,Mumbai Sharks
+P0010,Tarun Trivedi,Pakistan,Bowler,Right-hand bat,Left-arm orthodox,,2015-09-03,Mumbai Sharks
+P0011,Gautam Malhotra,Sri Lanka,Batter,Left-hand bat,,,2013-06-14,Mumbai Sharks
+P0012,Amit Chauhan,India,AllRounder,Right-hand bat,Right-arm fast,,2011-01-10,Bangalore Royals
+P0013,Lakshay Joshi,India,Bowler,Left-hand bat,Right-arm off-spin,2000-08-24,2022-03-27,Mumbai Sharks
+P0014,Gautam Ghosh,New Zealand,WicketKeeper,Right-hand bat,Right-arm leg-spin,2001-02-08,2022-05-12,Mumbai Sharks
+P0015,Devendra Kapoor,Sri Lanka,WicketKeeper,Right-hand bat,Left-arm fast,1990-11-03,2008-01-21,Mumbai Sharks
+P0016,Dhruv Khan,Sri Lanka,Batter,Left-hand bat,,1997-10-27,2016-02-04,Mumbai Sharks
+P0017,Farhan Agarwal,Pakistan,AllRounder,Right-hand bat,Right-arm fast,1988-02-23,2009-08-18,Mumbai Sharks
+P0018,Imran Bose,Pakistan,Bowler,Right-hand bat,Right-arm leg-spin,2003-11-08,2022-11-28,Mumbai Sharks
+P0019,Suresh Reddy,India,AllRounder,Left-hand bat,Left-arm fast,1990-06-03,2010-12-16,Mumbai Sharks
+P0020,Omar Naidu,West Indies,Bowler,Right-hand bat,Right-arm fast,1992-02-04,2014-12-10,Delhi Comets
+P0021,Naveen Sinha,Pakistan,Bowler,Right-hand bat,Right-arm off-spin,1988-06-12,2010-01-09,Delhi Comets
+P0022,Uday Sharma,South Africa,Bowler,Left-hand bat,Right-arm leg-spin,2001-04-19,2021-01-16,Delhi Comets
+P0023,Bhavesh Dhawan,England,Batter,Right-hand bat,,1989-01-24,2007-06-05,Delhi Comets
+P0024,Lakshay Naidu,West Indies,Bowler,Right-hand bat,Right-arm fast,2000-01-18,2019-05-04,Delhi Comets
+P0025,Imran Naidu,Sri Lanka,Batter,Left-hand bat,,2000-01-11,2019-02-03,Delhi Comets
+P0026,Eshan Bhatt,Sri Lanka,WicketKeeper,Left-hand bat,Left-arm orthodox,2003-02-25,2022-12-21,Delhi Comets
+P0027,Vikram Pandey,West Indies,AllRounder,Right-hand bat,Right-arm leg-spin,1993-03-23,2015-11-22,Delhi Comets
+P0028,Mohit Joshi,Australia,Batter,Right-hand bat,,2005-05-14,2022-04-01,Delhi Comets
+P0029,Ishaan Mehta,West Indies,Batter,Left-hand bat,,1997-06-04,2017-09-04,Delhi Comets
+P0030,Nikhil Trivedi,Sri Lanka,Batter,Right-hand bat,,1990-03-04,2011-09-11,Delhi Comets
+P0031,Arjun Iyer,Australia,Bowler,Left-hand bat,Left-arm orthodox,1992-03-26,2011-08-24,
+P0032,Qasim Saxena,India,Batter,Right-hand bat,,1998-03-20,2018-02-22,Delhi Falcons
+P0033,Suresh Naidu,India,Bowler,Right-hand bat,Left-arm orthodox,1988-11-26,2007-08-14,Delhi Comets
+P0034,Arjun Rao,Pakistan,Bowler,Left-hand bat,Right-arm leg-spin,1989-03-20,2007-11-17,Delhi Comets
+P0035,Omar Malhotra,India,Bowler,Right-hand bat,,2001-10-14,2019-02-16,Delhi Comets
+P0036,Gautam Kapoor,New Zealand,Batter,Left-hand bat,,1994-08-21,2013-02-12,Delhi Comets
+P0037,Rohan Reddy,New Zealand,AllRounder,Left-hand bat,Right-arm leg-spin,1992-06-14,2014-05-15,Delhi Comets
+P0038,Chetan Sinha,England,Bowler,Right-hand bat,,1999-02-01,2018-12-17,Delhi Comets
+P0039,Ishaan Yadav,Pakistan,AllRounder,Left-hand bat,Right-arm leg-spin,1993-06-20,2011-06-25,Chennai Kings
+P0040,Farhan Mehta,South Africa,Bowler,Right-hand bat,Left-arm fast,1995-10-27,2013-12-14,Chennai Kings
+P0041,Pranav Agarwal,England,Batter,Left-hand bat,,2002-07-16,2022-10-18,Chennai Kings
+P0042,Karan Chauhan,England,Batter,Right-hand bat,,2004-08-04,2022-12-09,Chennai Kings
+P0043,Chetan Chopra,West Indies,Bowler,Left-hand bat,,1989-06-18,2008-08-22,Chennai Kings
+P0044,Gautam Sharma,Pakistan,Batter,Right-hand bat,,2000-08-08,2020-11-15,Chennai Kings
+P0045,Eshan Desai,South Africa,Bowler,Left-hand bat,Left-arm orthodox,1988-05-13,2008-01-15,Chennai Kings
+P0046,Tarun Khan,West Indies,Batter,Right-hand bat,,2003-08-01,2022-11-15,Chennai Kings
+P0047,Manish Reddy,New Zealand,WicketKeeper,Right-hand bat,Right-arm off-spin,2004-01-19,2022-03-17,Chennai Kings
+P0048,Eshan Agarwal,West Indies,Bowler,Left-hand bat,Right-arm leg-spin,2001-02-12,2022-09-05,Chennai Kings
+P0049,Dhruv Sharma,India,Batter,Right-hand bat,,2000-02-22,2022-02-02,Chennai Kings
+P0050,Devendra Chauhan,India,WicketKeeper,Right-hand bat,Right-arm fast,2002-01-13,2020-02-28,Punjab Warriors
+P0051,Eshan Shetty,West Indies,Batter,Left-hand bat,,1998-06-03,2017-02-09,Chennai Kings
+P0052,Vikram Pillai,New Zealand,Batter,Right-hand bat,,1995-12-26,2013-10-09,Chennai Kings
+P0053,Siddharth Malhotra,Sri Lanka,Bowler,Right-hand bat,,1989-06-13,2009-10-25,Chennai Kings
+P0054,Mohit Ghosh,Pakistan,Batter,Right-hand bat,,1994-06-10,2014-09-17,Chennai Kings
+P0055,Uday Nair,England,Bowler,Right-hand bat,Left-arm orthodox,2002-05-16,2022-08-23,Chennai Kings
+P0056,Rohan Ghosh,England,AllRounder,Right-hand bat,Right-arm leg-spin,2004-09-04,2022-09-28,Chennai Kings
+P0057,Varun Menon,Pakistan,Bowler,Left-hand bat,Right-arm off-spin,1999-08-02,2020-07-17,Chennai Kings
+P0058,Eshan Yadav,Sri Lanka,WicketKeeper,Left-hand bat,Left-arm orthodox,1997-12-21,2015-05-14,Kolkata Tigers
+P0059,Qasim Sharma,Australia,Batter,Right-hand bat,,1993-06-27,2013-11-15,Kolkata Tigers
+P0060,Vishal Verma,Sri Lanka,Batter,Right-hand bat,,1998-01-15,2019-05-13,Kolkata Tigers
+P0061,Sanjay Shetty,West Indies,Batter,Left-hand bat,,2003-03-28,2021-01-28,Kolkata Tigers
+P0062,Pranav Naidu,West Indies,Batter,Left-hand bat,,1990-12-05,2012-06-23,Kolkata Tigers
+P0063,Arjun Chopra,South Africa,Bowler,Right-hand bat,Right-arm leg-spin,1988-07-26,2009-03-04,Kolkata Tigers
+P0064,Kabir Rao,South Africa,Batter,Left-hand bat,,1990-09-22,2009-04-11,Kolkata Tigers
+P0065,Vikram Desai,India,Batter,Left-hand bat,,2002-06-08,2022-12-26,Kolkata Tigers
+P0066,Devendra Malhotra,India,Bowler,Right-hand bat,Left-arm fast,1993-08-27,2014-02-18,Kolkata Tigers
+P0067,Naveen Mehta,New Zealand,Bowler,Left-hand bat,,2000-12-25,2018-08-10,Kolkata Tigers
+P0068,Amit Sinha,England,Bowler,Right-hand bat,Right-arm leg-spin,1992-12-21,2010-09-11,Kolkata Tigers
+P0069,Devendra Kulkarni,Australia,Bowler,Right-hand bat,Right-arm off-spin,1992-02-04,2011-08-18,Hyderabad Hawks
+P0070,Rahul Sinha,England,AllRounder,Right-hand bat,Right-arm fast,1995-03-09,2014-09-03,Kolkata Tigers
+P0071,Uday Iyer,Pakistan,Bowler,Right-hand bat,,1988-04-27,2008-09-27,Kolkata Tigers
+P0072,Kabir Gill,South Africa,AllRounder,Right-hand bat,Left-arm fast,2001-03-19,2019-04-22,Kolkata Tigers
+P0073,Amit Joshi,Sri Lanka,Bowler,Right-hand bat,Right-arm off-spin,1995-06-20,2016-12-10,Kolkata Tigers
+P0074,Dhruv Bhatt,England,Bowler,Right-hand bat,Left-arm fast,1996-02-01,2018-02-23,Kolkata Tigers
+P0075,Pranav Dhawan,Australia,Bowler,Right-hand bat,Left-arm fast,1995-06-20,2017-02-20,Kolkata Tigers
+P0076,Ishaan Shetty,Sri Lanka,Bowler,Left-hand bat,,1994-01-07,2014-05-07,Kolkata Tigers
+P0077,Rahul Trivedi,Australia,Batter,Right-hand bat,,2002-10-06,2022-12-27,Bangalore Royals
+P0078,Sanjay Menon,England,Batter,Left-hand bat,,2005-03-26,2022-10-10,Bangalore Royals
+P0079,Naveen Bhatt,India,AllRounder,Right-hand bat,,1999-07-13,2021-12-15,Bangalore Royals
+P0080,Lakshay Sharma,Sri Lanka,Batter,Right-hand bat,,1998-07-27,2016-05-26,Bangalore Royals
+P0081,Ishaan Chauhan,New Zealand,AllRounder,Right-hand bat,Left-arm fast,1989-05-27,2009-10-25,Bangalore Royals
+P0082,Farhan Saxena,New Zealand,Batter,Left-hand bat,,1996-11-28,2017-01-21,Bangalore Royals
+P0083,Rohan Nair,West Indies,AllRounder,Left-hand bat,Left-arm fast,1997-09-11,2018-09-23,Bangalore Royals
+P0084,Suresh Kulkarni,Australia,Bowler,Right-hand bat,Right-arm off-spin,1993-08-03,2014-05-09,Bangalore Royals
+P0085,Omar Dhawan,Australia,Bowler,Left-hand bat,,1989-01-01,2009-11-25,Bangalore Royals
+P0086,Arjun Trivedi,India,Bowler,Left-hand bat,Right-arm leg-spin,1996-11-13,2014-04-14,Bangalore Royals
+P0087,Pranav Trivedi,South Africa,Batter,Right-hand bat,,2002-08-04,2020-08-20,Bangalore Royals
+P0088,Imran Menon,Australia,Batter,Right-hand bat,,2005-05-25,2022-09-27,Kolkata Tigers
+P0089,Rajat Pillai,West Indies,Bowler,Left-hand bat,Left-arm fast,1998-04-18,2016-04-06,Bangalore Royals
+P0090,Qasim Malhotra,India,Batter,Right-hand bat,,1995-02-01,2017-04-07,Bangalore Royals
+P0091,Qasim Kapoor,Sri Lanka,WicketKeeper,Right-hand bat,,1989-08-05,2011-10-28,Bangalore Royals
+P0092,Devendra Nair,West Indies,Bowler,Left-hand bat,Left-arm orthodox,2002-08-27,2022-09-25,Bangalore Royals
+P0093,Mohit Iyer,South Africa,Batter,Right-hand bat,,2004-10-07,2022-12-27,Bangalore Royals
+P0094,Rahul Chauhan,England,Bowler,Right-hand bat,Right-arm fast,1994-04-19,2016-05-24,Bangalore Royals
+P0095,Omar Ghosh,Sri Lanka,AllRounder,Right-hand bat,Right-arm off-spin,1996-12-14,2016-03-25,Bangalore Royals
+P0096,Uday Verma,India,Batter,Left-hand bat,,2001-07-19,2021-03-05,Hyderabad Hawks
+P0097,Vikram Sinha,Sri Lanka,AllRounder,Left-hand bat,Left-arm orthodox,1994-01-19,2015-01-02,Hyderabad Hawks
+P0098,Gautam Rao,New Zealand,AllRounder,Right-hand bat,Right-arm leg-spin,1997-11-20,2015-07-24,Hyderabad Hawks
+P0099,Rohan Sinha,South Africa,Bowler,Left-hand bat,Right-arm leg-spin,1992-10-22,2010-02-24,Hyderabad Hawks
+P0100,Amit Gill,India,Batter,Right-hand bat,,1989-04-13,2009-02-02,Hyderabad Hawks
+P0101,Vishal Trivedi,Pakistan,Bowler,Left-hand bat,Right-arm off-spin,1991-10-08,2012-01-06,Hyderabad Hawks
+P0102,Harish Mehta,Pakistan,Bowler,Left-hand bat,,1989-12-02,2007-02-21,Hyderabad Hawks
+P0103,Vikram Agarwal,Pakistan,Bowler,Right-hand bat,Right-arm fast,1995-02-26,2014-07-06,Hyderabad Hawks
+P0104,Qasim Bose,Sri Lanka,Bowler,Left-hand bat,,2004-05-24,2022-12-14,Hyderabad Hawks
+P0105,Rajat Trivedi,Australia,Batter,Right-hand bat,,2004-10-27,2022-02-07,Hyderabad Hawks
+P0106,Rahul Chopra,Sri Lanka,Batter,Right-hand bat,,2000-04-12,2021-01-28,Hyderabad Hawks
+P0107,Jayant Malhotra,New Zealand,WicketKeeper,Left-hand bat,Right-arm fast,1988-12-16,2008-11-01,Hyderabad Hawks
+P0108,Omar Kapoor,India,Batter,Left-hand bat,,1990-07-27,2010-07-25,
+P0109,Imran Dhawan,Australia,WicketKeeper,Right-hand bat,Left-arm fast,1999-11-25,2018-10-10,Hyderabad Hawks
+P0110,Nikhil Bhatt,Australia,Bowler,Left-hand bat,Left-arm fast,1989-11-16,2008-06-06,Hyderabad Hawks
+P0111,Chetan Bhatt,New Zealand,Bowler,Left-hand bat,Right-arm off-spin,2001-01-19,2020-11-26,Hyderabad Hawks
+P0112,Farhan Sharma,India,Bowler,Left-hand bat,,2000-05-04,2020-02-20,Hyderabad Hawks
+P0113,Ishaan Bose,New Zealand,WicketKeeper,Left-hand bat,Left-arm fast,1992-07-23,2014-09-05,Hyderabad Hawks
+P0114,Qasim Shetty,Sri Lanka,WicketKeeper,Left-hand bat,Right-arm off-spin,2001-05-08,2020-02-07,Hyderabad Hawks
+P0115,Varun Reddy,Sri Lanka,WicketKeeper,Right-hand bat,Left-arm fast,1993-03-14,2015-04-10,Punjab Warriors
+P0116,Rahul Rao,South Africa,Batter,Right-hand bat,,1995-03-28,2016-11-14,Punjab Warriors
+P0117,Imran Kulkarni,Sri Lanka,Batter,Left-hand bat,,1990-02-11,2011-01-14,Punjab Warriors
+P0118,Amit Pillai,West Indies,AllRounder,Left-hand bat,Right-arm leg-spin,2004-02-19,2022-08-27,Punjab Warriors
+P0119,Dhruv Chauhan,Pakistan,Bowler,Left-hand bat,Left-arm fast,2002-11-03,2021-04-10,Punjab Warriors
+P0120,Kabir Reddy,Australia,Batter,Left-hand bat,,2003-10-28,2021-09-08,Punjab Warriors
+P0121,Imran Trivedi,India,Batter,Left-hand bat,,1994-02-18,2013-06-01,Punjab Warriors
+P0122,Sanjay Naidu,West Indies,AllRounder,Left-hand bat,Right-arm leg-spin,1988-07-22,2006-09-19,Punjab Warriors
+P0123,Qasim Iyer,Sri Lanka,AllRounder,Left-hand bat,Right-arm fast,1990-09-20,2010-07-17,Punjab Warriors
+P0124,Devendra Pandey,Pakistan,Batter,Left-hand bat,,2003-12-02,2022-01-27,Punjab Warriors
+P0125,Sanjay Ghosh,India,AllRounder,Left-hand bat,Right-arm off-spin,2001-09-05,2019-12-12,Punjab Warriors
+P0126,Vishal Ghosh,Sri Lanka,Batter,Right-hand bat,,1993-07-08,2015-10-22,Punjab Warriors
+P0127,Nikhil Menon,England,AllRounder,Right-hand bat,Left-arm orthodox,2004-05-10,2022-09-15,Punjab Warriors
+P0128,Bhavesh Chopra,Pakistan,Bowler,Left-hand bat,Left-arm fast,1994-01-22,2013-04-24,Punjab Warriors
+P0129,Aditya Kapoor,England,Bowler,Right-hand bat,,1998-04-04,2020-06-26,Punjab Warriors
+P0130,Devendra Bose,New Zealand,Batter,Right-hand bat,,1988-01-14,2006-08-13,
+P0131,Siddharth Naidu,West Indies,WicketKeeper,Left-hand bat,,1989-02-09,2011-11-14,Punjab Warriors
+P0132,Uday Khan,South Africa,Bowler,Left-hand bat,Left-arm fast,2005-05-03,2022-02-05,Punjab Warriors
+P0133,Eshan Malhotra,Australia,Batter,Left-hand bat,,1995-07-03,2017-06-02,Punjab Warriors
+P0134,Vikram Trivedi,West Indies,Bowler,Left-hand bat,Left-arm fast,1994-12-06,2014-10-02,Rajasthan Titans
+P0135,Jayant Pandey,Pakistan,Batter,Left-hand bat,,2004-05-06,2022-05-08,Rajasthan Titans
+P0136,Kabir Malhotra,South Africa,Bowler,Right-hand bat,Left-arm fast,1992-04-25,2012-05-04,Rajasthan Titans
+P0137,Manish Yadav,Australia,Batter,Left-hand bat,,1993-03-04,2014-12-23,Rajasthan Titans
+P0138,Aditya Ghosh,Pakistan,Batter,Left-hand bat,,2003-09-01,2022-06-23,Rajasthan Titans
+P0139,Nikhil Kapoor,India,Bowler,Left-hand bat,Left-arm fast,2002-03-17,2022-04-16,Rajasthan Titans
+P0140,Manish Iyer,West Indies,Batter,Left-hand bat,,1995-10-08,2016-02-23,Rajasthan Titans
+P0141,Dhruv Kapoor,India,WicketKeeper,Right-hand bat,,1990-07-25,2008-10-09,Rajasthan Titans
+P0142,Arjun Ghosh,New Zealand,Batter,Right-hand bat,,1990-04-24,2009-05-07,Rajasthan Titans
+P0143,Imran Yadav,India,Bowler,Right-hand bat,Right-arm off-spin,2000-06-20,2019-08-14,Rajasthan Titans
+P0144,Karan Kapoor,Pakistan,WicketKeeper,Left-hand bat,,1996-09-22,2016-07-13,Rajasthan Titans
+P0145,Manish Nair,New Zealand,AllRounder,Left-hand bat,Right-arm leg-spin,2002-06-22,2020-12-06,Rajasthan Titans
+P0146,Sanjay Rao,India,Batter,Left-hand bat,,2001-09-08,2022-05-13,Rajasthan Titans
+P0147,Eshan Pandey,Pakistan,Batter,Right-hand bat,,1988-03-10,2007-01-14,Rajasthan Titans
+P0148,Gautam Trivedi,England,Bowler,Left-hand bat,Right-arm fast,2005-07-24,2022-03-20,Rajasthan Titans
+P0149,Rahul Gill,England,AllRounder,Right-hand bat,Left-arm orthodox,1989-07-10,2009-02-25,Rajasthan Titans
+P0150,Aditya Agarwal,Pakistan,Bowler,Left-hand bat,Left-arm fast,1994-01-19,2014-08-07,Rajasthan Titans
+P0151,Harish Joshi,Australia,Bowler,Right-hand bat,Left-arm fast,2002-05-25,2020-11-14,Rajasthan Titans
+P0152,Rajat Dhawan,West Indies,Batter,Left-hand bat,,1988-05-03,2006-02-28,Rajasthan Titans

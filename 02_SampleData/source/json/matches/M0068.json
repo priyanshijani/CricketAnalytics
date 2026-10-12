@@ -1,0 +1,50 @@
+{
+  "match_id": "M0068",
+  "season": "2024",
+  "format": "T20",
+  "date": "2024-05-25",
+  "venue": {
+    "code": "RAJ01"
+  },
+  "teams": [
+    {
+      "code": "RAJ",
+      "name": "Rajasthan Titans"
+    },
+    {
+      "code": "KOL",
+      "name": "Kolkata Tigers"
+    }
+  ],
+  "toss": {
+    "winner": "RAJ",
+    "decision": "Field"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "KOL",
+    "margin": 5,
+    "margin_type": "Runs",
+    "man_of_match": "P0136"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "KOL",
+      "bowling_team": "RAJ",
+      "runs": 189,
+      "wickets": 9,
+      "overs": 20.0,
+      "extras": 7
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "RAJ",
+      "bowling_team": "KOL",
+      "runs": 184,
+      "wickets": 7,
+      "overs": 20.0,
+      "extras": 5
+    }
+  ]
+}

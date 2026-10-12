@@ -1,0 +1,50 @@
+{
+  "match_id": "M0059",
+  "season": "2024",
+  "format": "T20",
+  "date": "2024-05-07",
+  "venue": {
+    "code": "BLR01"
+  },
+  "teams": [
+    {
+      "code": "BLR",
+      "name": "Bangalore Royals"
+    },
+    {
+      "code": "PUN",
+      "name": "Punjab Warriors"
+    }
+  ],
+  "toss": {
+    "winner": "PUN",
+    "decision": "Field"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "BLR",
+    "margin": 26,
+    "margin_type": "Runs",
+    "man_of_match": "P0120"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "BLR",
+      "bowling_team": "PUN",
+      "runs": 197,
+      "wickets": 7,
+      "overs": 20.0,
+      "extras": 9
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "PUN",
+      "bowling_team": "BLR",
+      "runs": 171,
+      "wickets": 6,
+      "overs": 20.0,
+      "extras": 5
+    }
+  ]
+}

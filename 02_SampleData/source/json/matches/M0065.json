@@ -1,0 +1,50 @@
+{
+  "match_id": "M0065",
+  "season": "2024",
+  "format": "T20",
+  "date": "2024-05-19",
+  "venue": {
+    "code": "DEL01"
+  },
+  "teams": [
+    {
+      "code": "DEL",
+      "name": "Delhi Comets"
+    },
+    {
+      "code": "RAJ",
+      "name": "Rajasthan Titans"
+    }
+  ],
+  "toss": {
+    "winner": "RAJ",
+    "decision": "Field"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "DEL",
+    "margin": 34,
+    "margin_type": "Runs",
+    "man_of_match": "P0144"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "DEL",
+      "bowling_team": "RAJ",
+      "runs": 189,
+      "wickets": 10,
+      "overs": 18.2,
+      "extras": 10
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "RAJ",
+      "bowling_team": "DEL",
+      "runs": 155,
+      "wickets": 6,
+      "overs": 20.0,
+      "extras": 8
+    }
+  ]
+}

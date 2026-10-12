@@ -1,0 +1,50 @@
+{
+  "match_id": "M0013",
+  "season": "2023",
+  "format": "T20",
+  "date": "2023-04-25",
+  "venue": {
+    "code": "BLR01"
+  },
+  "teams": [
+    {
+      "code": "BLR",
+      "name": "Bangalore Royals"
+    },
+    {
+      "code": "XYZ",
+      "name": "Unknown XYZ"
+    }
+  ],
+  "toss": {
+    "winner": "HYD",
+    "decision": "Field"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "HYD",
+    "margin": 2,
+    "margin_type": "Wickets",
+    "man_of_match": "P0087"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "BLR",
+      "bowling_team": "HYD",
+      "runs": 172,
+      "wickets": 9,
+      "overs": 20.0,
+      "extras": 2
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "HYD",
+      "bowling_team": "BLR",
+      "runs": 192,
+      "wickets": 8,
+      "overs": 20.0,
+      "extras": 7
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "match_id": "M0069",
+  "season": "2024",
+  "format": "T20",
+  "date": "2024-05-27",
+  "venue": {
+    "code": "BLR01"
+  },
+  "teams": [
+    {
+      "code": "BLR",
+      "name": "Bangalore Royals"
+    },
+    {
+      "code": "RAJ",
+      "name": "Rajasthan Titans"
+    }
+  ],
+  "toss": {
+    "winner": "RAJ",
+    "decision": "Bat"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "RAJ",
+    "margin": 21,
+    "margin_type": "Runs",
+    "man_of_match": "P0087"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "RAJ",
+      "bowling_team": "BLR",
+      "runs": 174,
+      "wickets": 6,
+      "overs": 20.0,
+      "extras": 9
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "BLR",
+      "bowling_team": "RAJ",
+      "runs": 153,
+      "wickets": 10,
+      "overs": 19.3,
+      "extras": 2
+    }
+  ]
+}

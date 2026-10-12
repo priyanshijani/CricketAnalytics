@@ -1,0 +1,50 @@
+{
+  "match_id": "M0012",
+  "season": "2023",
+  "format": "T20",
+  "date": "2023-04-23",
+  "venue": {
+    "code": "CHE01"
+  },
+  "teams": [
+    {
+      "code": "CHE",
+      "name": "Chennai Kings"
+    },
+    {
+      "code": "PUN",
+      "name": "Punjab Warriors"
+    }
+  ],
+  "toss": {
+    "winner": "CHE",
+    "decision": "Bat"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "PUN",
+    "margin": 8,
+    "margin_type": "Wickets",
+    "man_of_match": "P0047"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "CHE",
+      "bowling_team": "PUN",
+      "runs": 136,
+      "wickets": 10,
+      "overs": 16.5,
+      "extras": 8
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "PUN",
+      "bowling_team": "CHE",
+      "runs": 195,
+      "wickets": 2,
+      "overs": 20.0,
+      "extras": 6
+    }
+  ]
+}

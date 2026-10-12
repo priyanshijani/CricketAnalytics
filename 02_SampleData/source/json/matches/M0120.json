@@ -1,0 +1,50 @@
+{
+  "match_id": "M0120",
+  "season": "2025",
+  "format": "T20",
+  "date": "2025-06-18",
+  "venue": {
+    "code": "MUM01"
+  },
+  "teams": [
+    {
+      "code": "MUM",
+      "name": "Mumbai Sharks"
+    },
+    {
+      "code": "DEL",
+      "name": "Delhi Comets"
+    }
+  ],
+  "toss": {
+    "winner": "DEL",
+    "decision": "Field"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "DEL",
+    "margin": 2,
+    "margin_type": "Wickets",
+    "man_of_match": "P0027"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "MUM",
+      "bowling_team": "DEL",
+      "runs": 153,
+      "wickets": 7,
+      "overs": 20.0,
+      "extras": 12
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "DEL",
+      "bowling_team": "MUM",
+      "runs": 180,
+      "wickets": 8,
+      "overs": 20.0,
+      "extras": 9
+    }
+  ]
+}

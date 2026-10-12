@@ -1,0 +1,50 @@
+{
+  "match_id": "M0003",
+  "season": "2023",
+  "format": "T20",
+  "date": "2023-04-05",
+  "venue": {
+    "code": "PUN01"
+  },
+  "teams": [
+    {
+      "code": "PUN",
+      "name": "Punjab Warriors"
+    },
+    {
+      "code": "HYD",
+      "name": "Hyderabad Hawks"
+    }
+  ],
+  "toss": {
+    "winner": "HYD",
+    "decision": "Bat"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "PUN",
+    "margin": 4,
+    "margin_type": "Wickets",
+    "man_of_match": "P0102"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "HYD",
+      "bowling_team": "PUN",
+      "runs": 168,
+      "wickets": 5,
+      "overs": 20.0,
+      "extras": 8
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "PUN",
+      "bowling_team": "HYD",
+      "runs": 194,
+      "wickets": 6,
+      "overs": 20.0,
+      "extras": 3
+    }
+  ]
+}

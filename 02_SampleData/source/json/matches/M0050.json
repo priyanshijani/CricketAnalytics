@@ -1,0 +1,50 @@
+{
+  "match_id": "M0050",
+  "season": "2024",
+  "format": "T20",
+  "date": "2024-04-19",
+  "venue": {
+    "code": "RAJ01"
+  },
+  "teams": [
+    {
+      "code": "RAJ",
+      "name": "Rajasthan Titans"
+    },
+    {
+      "code": "HYD",
+      "name": "Hyderabad Hawks"
+    }
+  ],
+  "toss": {
+    "winner": "RAJ",
+    "decision": "Bat"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "HYD",
+    "margin": 3,
+    "margin_type": "Wickets",
+    "man_of_match": "P0140"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "RAJ",
+      "bowling_team": "HYD",
+      "runs": 165,
+      "wickets": 10,
+      "overs": 18.1,
+      "extras": 7
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "HYD",
+      "bowling_team": "RAJ",
+      "runs": 201,
+      "wickets": 7,
+      "overs": 20.0,
+      "extras": 6
+    }
+  ]
+}

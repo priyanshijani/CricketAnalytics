@@ -1,0 +1,50 @@
+{
+  "match_id": "M0001",
+  "season": "2023",
+  "format": "T20",
+  "date": "2023-04-01",
+  "venue": {
+    "code": "PUN01"
+  },
+  "teams": [
+    {
+      "code": "PUN",
+      "name": "Punjab Warriors"
+    },
+    {
+      "code": "RAJ",
+      "name": "Rajasthan Titans"
+    }
+  ],
+  "toss": {
+    "winner": "RAJ",
+    "decision": "Bat"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "PUN",
+    "margin": 3,
+    "margin_type": "Wickets",
+    "man_of_match": "P0136"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "RAJ",
+      "bowling_team": "PUN",
+      "runs": 167,
+      "wickets": 7,
+      "overs": 20.0,
+      "extras": 8
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "PUN",
+      "bowling_team": "RAJ",
+      "runs": 169,
+      "wickets": 7,
+      "overs": 20.0,
+      "extras": 5
+    }
+  ]
+}

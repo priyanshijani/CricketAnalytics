@@ -1,0 +1,38 @@
+# Machine-local configuration (template: config/local.config.example)
+config/local.config
+
+# Test runner output lists server logins
+06_Tests/results/latest_sql_test_run.txt
+
+# Pipeline working area: created and filled by each run, never committed
+02_SampleData/_runtime/**
+!02_SampleData/_runtime/*/
+!02_SampleData/_runtime/*/.gitkeep
+
+# Tool logs and caches
+*.log
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Alteryx autosave backups and local workflow snapshots
+*.bak
+03_Alteryx/macros/_backup_*/
+
+# Office lock files
+~$*
+
+# Tableau local artefacts
+*.twbr
+*.tmp
+05_Tableau/workbook/*_test*.twb
+
+# Reference copy of the assignment brief (kept locally)
+07_Docs/assignment/
+
+# Local editor settings
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini

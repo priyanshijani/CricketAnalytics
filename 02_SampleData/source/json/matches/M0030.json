@@ -1,0 +1,50 @@
+{
+  "match_id": "M0030",
+  "season": "2023",
+  "format": "T20",
+  "date": "2023-05-29",
+  "venue": {
+    "code": "KOL01"
+  },
+  "teams": [
+    {
+      "code": "KOL",
+      "name": "Kolkata Tigers"
+    },
+    {
+      "code": "MUM",
+      "name": "Mumbai Sharks"
+    }
+  ],
+  "toss": {
+    "winner": "MUM",
+    "decision": "Field"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "KOL",
+    "margin": 44,
+    "margin_type": "Runs",
+    "man_of_match": "P0006"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "KOL",
+      "bowling_team": "MUM",
+      "runs": 194,
+      "wickets": 6,
+      "overs": 20.0,
+      "extras": 4
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "MUM",
+      "bowling_team": "KOL",
+      "runs": 150,
+      "wickets": 8,
+      "overs": 20.0,
+      "extras": 8
+    }
+  ]
+}

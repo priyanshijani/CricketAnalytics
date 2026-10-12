@@ -1,0 +1,50 @@
+{
+  "match_id": "M0114",
+  "season": "2025",
+  "format": "T20",
+  "date": "2025-06-06",
+  "venue": {
+    "code": "MUM01"
+  },
+  "teams": [
+    {
+      "code": "MUM",
+      "name": "Mumbai Sharks"
+    },
+    {
+      "code": "HYD",
+      "name": "Hyderabad Hawks"
+    }
+  ],
+  "toss": {
+    "winner": "HYD",
+    "decision": "Field"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "HYD",
+    "margin": 5,
+    "margin_type": "Wickets",
+    "man_of_match": "P0101"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "MUM",
+      "bowling_team": "HYD",
+      "runs": 170,
+      "wickets": 9,
+      "overs": 20.0,
+      "extras": 10
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "HYD",
+      "bowling_team": "MUM",
+      "runs": 176,
+      "wickets": 5,
+      "overs": 20.0,
+      "extras": 10
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "match_id": "M0084",
+  "season": "2025",
+  "format": "T20",
+  "date": "2025-04-07",
+  "venue": {
+    "code": "KOL01"
+  },
+  "teams": [
+    {
+      "code": "KOL",
+      "name": "Kolkata Tigers"
+    },
+    {
+      "code": "HYD",
+      "name": "Hyderabad Hawks"
+    }
+  ],
+  "toss": {
+    "winner": "HYD",
+    "decision": "Field"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "HYD",
+    "margin": 4,
+    "margin_type": "Wickets",
+    "man_of_match": "P0106"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "KOL",
+      "bowling_team": "HYD",
+      "runs": 164,
+      "wickets": 9,
+      "overs": 20.0,
+      "extras": 11
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "HYD",
+      "bowling_team": "KOL",
+      "runs": 192,
+      "wickets": 6,
+      "overs": 20.0,
+      "extras": 8
+    }
+  ]
+}

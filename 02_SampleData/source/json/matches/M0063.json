@@ -1,0 +1,50 @@
+{
+  "match_id": "M0063",
+  "season": "2024",
+  "format": "T20",
+  "date": "2024-05-15",
+  "venue": {
+    "code": "KOL01"
+  },
+  "teams": [
+    {
+      "code": "KOL",
+      "name": "Kolkata Tigers"
+    },
+    {
+      "code": "HYD",
+      "name": "Hyderabad Hawks"
+    }
+  ],
+  "toss": {
+    "winner": "KOL",
+    "decision": "Field"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "KOL",
+    "margin": 4,
+    "margin_type": "Wickets",
+    "man_of_match": "P0064"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "HYD",
+      "bowling_team": "KOL",
+      "runs": 126,
+      "wickets": 10,
+      "overs": 15.4,
+      "extras": 8
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "KOL",
+      "bowling_team": "HYD",
+      "runs": 183,
+      "wickets": 6,
+      "overs": 20.0,
+      "extras": 6
+    }
+  ]
+}

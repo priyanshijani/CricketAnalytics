@@ -1,0 +1,2308 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2026.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="74" y="502" width="379" height="133" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>ETL logging: Start of run Log</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>ETL logging: Start of run Log</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="1">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+            <Position x="99" y="551" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <NumRows value="0" />
+              <Fields>
+                <Field name="WorkflowName" />
+              </Fields>
+              <Data />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="WorkflowName" size="1073741823" source="TextInput:" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+        </Node>
+        <Node ToolID="2">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="234" y="551" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="&quot;03_ingest_csv&quot;" field="WorkflowName" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="&quot;Started&quot;" field="Status" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="0" field="RowsIn" size="8" type="Int64" enabled="true" />
+                <FormulaField expression="0" field="RowsOut" size="8" type="Int64" enabled="true" />
+                <FormulaField expression="0" field="RowsRejected" size="8" type="Int64" enabled="true" />
+                <FormulaField expression="&quot;&quot;" field="ErrorMessage" size="1073741823" type="V_WString" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>WorkflowName = "03_ingest_csv"
+Status = "Started"
+RowsIn = 0
+RowsOut =...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="WorkflowName" size="1073741823" source="Formula: &quot;03_ingest_csv&quot;" type="V_WString" />
+                <Field name="Status" size="1073741823" source="Formula: &quot;Started&quot;" type="V_WString" />
+                <Field name="RowsIn" source="Formula: 0" type="Int64" />
+                <Field name="RowsOut" source="Formula: 0" type="Int64" />
+                <Field name="RowsRejected" source="Formula: 0" type="Int64" />
+                <Field name="ErrorMessage" size="1073741823" source="Formula: &quot;&quot;" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="3">
+          <GuiSettings Plugin="Log_ETL_Event.yxmc">
+            <Position x="369" y="551" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="Input.Input5"><![CDATA[WorkflowName=WorkflowName
+Status=Status
+RowsIn=RowsIn
+RowsOut=RowsOut
+RowsRejected=RowsRejected
+ErrorMessage=ErrorMessage
+]]></Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="..\macros\Log_ETL_Event.yxmc" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="73" y="45" width="379" height="401" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Input all csv files, split by category</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Input all csv files, split by category</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="5">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Directory.Directory">
+            <Position x="98" y="94" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Directory>%Engine.WorkflowDirectory%\..\..\02_SampleData\_runtime\inbound</Directory>
+              <FileSpec>*.*</FileSpec>
+              <IncludeSubDirs value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>dir %Engine.WorkflowDirectory%\..\..\02_SampleData\_runtime\inbound\*.*</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="FullPath" size="32767" type="V_WString" />
+                <Field name="Directory" size="32767" type="V_WString" />
+                <Field name="FileName" size="260" type="V_WString" />
+                <Field name="ShortFileName" size="14" type="V_WString" />
+                <Field name="CreationTime" size="19" type="DateTime" />
+                <Field name="LastAccessTime" size="19" type="DateTime" />
+                <Field name="LastWriteTime" size="19" type="DateTime" />
+                <Field name="Size" type="Int64" />
+                <Field name="AttributeArchive" type="Bool" />
+                <Field name="AttributeCompressed" type="Bool" />
+                <Field name="AttributeEncrypted" type="Bool" />
+                <Field name="AttributeHidden" type="Bool" />
+                <Field name="AttributeNormal" type="Bool" />
+                <Field name="AttributeOffline" type="Bool" />
+                <Field name="AttributeReadonly" type="Bool" />
+                <Field name="AttributeReparsePoint" type="Bool" />
+                <Field name="AttributeSparseFile" type="Bool" />
+                <Field name="AttributeSystem" type="Bool" />
+                <Field name="AttributeTemporary" type="Bool" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDirectory" />
+        </Node>
+        <Node ToolID="6">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="234" y="94" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>EndsWith([FileName],".csv")</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>EndsWith([FileName],".csv")</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="True">
+              <RecordInfo>
+                <Field name="FullPath" size="32767" type="V_WString" />
+                <Field name="Directory" size="32767" type="V_WString" />
+                <Field name="FileName" size="260" type="V_WString" />
+                <Field name="ShortFileName" size="14" type="V_WString" />
+                <Field name="CreationTime" size="19" type="DateTime" />
+                <Field name="LastAccessTime" size="19" type="DateTime" />
+                <Field name="LastWriteTime" size="19" type="DateTime" />
+                <Field name="Size" type="Int64" />
+                <Field name="AttributeArchive" type="Bool" />
+                <Field name="AttributeCompressed" type="Bool" />
+                <Field name="AttributeEncrypted" type="Bool" />
+                <Field name="AttributeHidden" type="Bool" />
+                <Field name="AttributeNormal" type="Bool" />
+                <Field name="AttributeOffline" type="Bool" />
+                <Field name="AttributeReadonly" type="Bool" />
+                <Field name="AttributeReparsePoint" type="Bool" />
+                <Field name="AttributeSparseFile" type="Bool" />
+                <Field name="AttributeSystem" type="Bool" />
+                <Field name="AttributeTemporary" type="Bool" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="False">
+              <RecordInfo>
+                <Field name="FullPath" size="32767" type="V_WString" />
+                <Field name="Directory" size="32767" type="V_WString" />
+                <Field name="FileName" size="260" type="V_WString" />
+                <Field name="ShortFileName" size="14" type="V_WString" />
+                <Field name="CreationTime" size="19" type="DateTime" />
+                <Field name="LastAccessTime" size="19" type="DateTime" />
+                <Field name="LastWriteTime" size="19" type="DateTime" />
+                <Field name="Size" type="Int64" />
+                <Field name="AttributeArchive" type="Bool" />
+                <Field name="AttributeCompressed" type="Bool" />
+                <Field name="AttributeEncrypted" type="Bool" />
+                <Field name="AttributeHidden" type="Bool" />
+                <Field name="AttributeNormal" type="Bool" />
+                <Field name="AttributeOffline" type="Bool" />
+                <Field name="AttributeReadonly" type="Bool" />
+                <Field name="AttributeReparsePoint" type="Bool" />
+                <Field name="AttributeSparseFile" type="Bool" />
+                <Field name="AttributeSystem" type="Bool" />
+                <Field name="AttributeTemporary" type="Bool" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="7">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="369" y="94" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>StartsWith([FileName],"deliveries")</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>StartsWith([FileName],"deliveries")</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="True">
+              <RecordInfo>
+                <Field name="FullPath" size="32767" type="V_WString" />
+                <Field name="Directory" size="32767" type="V_WString" />
+                <Field name="FileName" size="260" type="V_WString" />
+                <Field name="ShortFileName" size="14" type="V_WString" />
+                <Field name="CreationTime" size="19" type="DateTime" />
+                <Field name="LastAccessTime" size="19" type="DateTime" />
+                <Field name="LastWriteTime" size="19" type="DateTime" />
+                <Field name="Size" type="Int64" />
+                <Field name="AttributeArchive" type="Bool" />
+                <Field name="AttributeCompressed" type="Bool" />
+                <Field name="AttributeEncrypted" type="Bool" />
+                <Field name="AttributeHidden" type="Bool" />
+                <Field name="AttributeNormal" type="Bool" />
+                <Field name="AttributeOffline" type="Bool" />
+                <Field name="AttributeReadonly" type="Bool" />
+                <Field name="AttributeReparsePoint" type="Bool" />
+                <Field name="AttributeSparseFile" type="Bool" />
+                <Field name="AttributeSystem" type="Bool" />
+                <Field name="AttributeTemporary" type="Bool" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="False">
+              <RecordInfo>
+                <Field name="FullPath" size="32767" type="V_WString" />
+                <Field name="Directory" size="32767" type="V_WString" />
+                <Field name="FileName" size="260" type="V_WString" />
+                <Field name="ShortFileName" size="14" type="V_WString" />
+                <Field name="CreationTime" size="19" type="DateTime" />
+                <Field name="LastAccessTime" size="19" type="DateTime" />
+                <Field name="LastWriteTime" size="19" type="DateTime" />
+                <Field name="Size" type="Int64" />
+                <Field name="AttributeArchive" type="Bool" />
+                <Field name="AttributeCompressed" type="Bool" />
+                <Field name="AttributeEncrypted" type="Bool" />
+                <Field name="AttributeHidden" type="Bool" />
+                <Field name="AttributeNormal" type="Bool" />
+                <Field name="AttributeOffline" type="Bool" />
+                <Field name="AttributeReadonly" type="Bool" />
+                <Field name="AttributeReparsePoint" type="Bool" />
+                <Field name="AttributeSparseFile" type="Bool" />
+                <Field name="AttributeSystem" type="Bool" />
+                <Field name="AttributeTemporary" type="Bool" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="8">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="369" y="241" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>StartsWith([FileName],"player_rankings")</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>StartsWith([FileName],"player_rankings")</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="True">
+              <RecordInfo>
+                <Field name="FullPath" size="32767" type="V_WString" />
+                <Field name="Directory" size="32767" type="V_WString" />
+                <Field name="FileName" size="260" type="V_WString" />
+                <Field name="ShortFileName" size="14" type="V_WString" />
+                <Field name="CreationTime" size="19" type="DateTime" />
+                <Field name="LastAccessTime" size="19" type="DateTime" />
+                <Field name="LastWriteTime" size="19" type="DateTime" />
+                <Field name="Size" type="Int64" />
+                <Field name="AttributeArchive" type="Bool" />
+                <Field name="AttributeCompressed" type="Bool" />
+                <Field name="AttributeEncrypted" type="Bool" />
+                <Field name="AttributeHidden" type="Bool" />
+                <Field name="AttributeNormal" type="Bool" />
+                <Field name="AttributeOffline" type="Bool" />
+                <Field name="AttributeReadonly" type="Bool" />
+                <Field name="AttributeReparsePoint" type="Bool" />
+                <Field name="AttributeSparseFile" type="Bool" />
+                <Field name="AttributeSystem" type="Bool" />
+                <Field name="AttributeTemporary" type="Bool" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="False">
+              <RecordInfo>
+                <Field name="FullPath" size="32767" type="V_WString" />
+                <Field name="Directory" size="32767" type="V_WString" />
+                <Field name="FileName" size="260" type="V_WString" />
+                <Field name="ShortFileName" size="14" type="V_WString" />
+                <Field name="CreationTime" size="19" type="DateTime" />
+                <Field name="LastAccessTime" size="19" type="DateTime" />
+                <Field name="LastWriteTime" size="19" type="DateTime" />
+                <Field name="Size" type="Int64" />
+                <Field name="AttributeArchive" type="Bool" />
+                <Field name="AttributeCompressed" type="Bool" />
+                <Field name="AttributeEncrypted" type="Bool" />
+                <Field name="AttributeHidden" type="Bool" />
+                <Field name="AttributeNormal" type="Bool" />
+                <Field name="AttributeOffline" type="Bool" />
+                <Field name="AttributeReadonly" type="Bool" />
+                <Field name="AttributeReparsePoint" type="Bool" />
+                <Field name="AttributeSparseFile" type="Bool" />
+                <Field name="AttributeSystem" type="Bool" />
+                <Field name="AttributeTemporary" type="Bool" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="9">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="369" y="362" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>StartsWith([FileName],"historical_stats")</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>StartsWith([FileName],"historical_stats")</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="True">
+              <RecordInfo>
+                <Field name="FullPath" size="32767" type="V_WString" />
+                <Field name="Directory" size="32767" type="V_WString" />
+                <Field name="FileName" size="260" type="V_WString" />
+                <Field name="ShortFileName" size="14" type="V_WString" />
+                <Field name="CreationTime" size="19" type="DateTime" />
+                <Field name="LastAccessTime" size="19" type="DateTime" />
+                <Field name="LastWriteTime" size="19" type="DateTime" />
+                <Field name="Size" type="Int64" />
+                <Field name="AttributeArchive" type="Bool" />
+                <Field name="AttributeCompressed" type="Bool" />
+                <Field name="AttributeEncrypted" type="Bool" />
+                <Field name="AttributeHidden" type="Bool" />
+                <Field name="AttributeNormal" type="Bool" />
+                <Field name="AttributeOffline" type="Bool" />
+                <Field name="AttributeReadonly" type="Bool" />
+                <Field name="AttributeReparsePoint" type="Bool" />
+                <Field name="AttributeSparseFile" type="Bool" />
+                <Field name="AttributeSystem" type="Bool" />
+                <Field name="AttributeTemporary" type="Bool" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="False">
+              <RecordInfo>
+                <Field name="FullPath" size="32767" type="V_WString" />
+                <Field name="Directory" size="32767" type="V_WString" />
+                <Field name="FileName" size="260" type="V_WString" />
+                <Field name="ShortFileName" size="14" type="V_WString" />
+                <Field name="CreationTime" size="19" type="DateTime" />
+                <Field name="LastAccessTime" size="19" type="DateTime" />
+                <Field name="LastWriteTime" size="19" type="DateTime" />
+                <Field name="Size" type="Int64" />
+                <Field name="AttributeArchive" type="Bool" />
+                <Field name="AttributeCompressed" type="Bool" />
+                <Field name="AttributeEncrypted" type="Bool" />
+                <Field name="AttributeHidden" type="Bool" />
+                <Field name="AttributeNormal" type="Bool" />
+                <Field name="AttributeOffline" type="Bool" />
+                <Field name="AttributeReadonly" type="Bool" />
+                <Field name="AttributeReparsePoint" type="Bool" />
+                <Field name="AttributeSparseFile" type="Bool" />
+                <Field name="AttributeSystem" type="Bool" />
+                <Field name="AttributeTemporary" type="Bool" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="110">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="539" y="45" width="514" height="518" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>File-hash branches (one per category)</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>File-hash branches (one per category)</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="100">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BlobInput.BlobInput">
+            <Position x="564" y="94" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FileName />
+              <ModifyMethod>Path</ModifyMethod>
+              <ModifyFilename_Field>FullPath</ModifyFilename_Field>
+              <ModifyFilename_StopOnError value="False" />
+              <SplitBlobs value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="FullPath" size="32767" type="V_WString" />
+                <Field name="Directory" size="32767" type="V_WString" />
+                <Field name="FileName" size="260" type="V_WString" />
+                <Field name="ShortFileName" size="14" type="V_WString" />
+                <Field name="CreationTime" size="19" type="DateTime" />
+                <Field name="LastAccessTime" size="19" type="DateTime" />
+                <Field name="LastWriteTime" size="19" type="DateTime" />
+                <Field name="Size" type="Int64" />
+                <Field name="AttributeArchive" type="Bool" />
+                <Field name="AttributeCompressed" type="Bool" />
+                <Field name="AttributeEncrypted" type="Bool" />
+                <Field name="AttributeHidden" type="Bool" />
+                <Field name="AttributeNormal" type="Bool" />
+                <Field name="AttributeOffline" type="Bool" />
+                <Field name="AttributeReadonly" type="Bool" />
+                <Field name="AttributeReparsePoint" type="Bool" />
+                <Field name="AttributeSparseFile" type="Bool" />
+                <Field name="AttributeSystem" type="Bool" />
+                <Field name="AttributeTemporary" type="Bool" />
+                <Field name="Blob" size="2147483647" source="BlobInput: " type="Blob" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBlobInput" />
+        </Node>
+        <Node ToolID="101">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BlobConvert.BlobConvert">
+            <Position x="699" y="94" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ToBlob value="False" />
+              <from_Field>Blob</from_Field>
+              <from_Mode>Text</from_Mode>
+              <from_textCodePage>65001</from_textCodePage>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="FullPath" size="32767" type="V_WString" />
+                <Field name="Directory" size="32767" type="V_WString" />
+                <Field name="FileName" size="260" type="V_WString" />
+                <Field name="ShortFileName" size="14" type="V_WString" />
+                <Field name="CreationTime" size="19" type="DateTime" />
+                <Field name="LastAccessTime" size="19" type="DateTime" />
+                <Field name="LastWriteTime" size="19" type="DateTime" />
+                <Field name="Size" type="Int64" />
+                <Field name="AttributeArchive" type="Bool" />
+                <Field name="AttributeCompressed" type="Bool" />
+                <Field name="AttributeEncrypted" type="Bool" />
+                <Field name="AttributeHidden" type="Bool" />
+                <Field name="AttributeNormal" type="Bool" />
+                <Field name="AttributeOffline" type="Bool" />
+                <Field name="AttributeReadonly" type="Bool" />
+                <Field name="AttributeReparsePoint" type="Bool" />
+                <Field name="AttributeSparseFile" type="Bool" />
+                <Field name="AttributeSystem" type="Bool" />
+                <Field name="AttributeTemporary" type="Bool" />
+                <Field name="Blob" size="1073741823" source="BlobConvert: Text - CodePage: 65001" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBlobConvert" />
+        </Node>
+        <Node ToolID="102">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="834" y="94" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="MD5_UTF8([Blob])" field="SourceFileHash" size="1073741823" type="V_WString" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>SourceFileHash = MD5_UTF8([Blob])
+Output: FullPath, FileName, SourceFileHash - join this into the deliveries Dynamic Input on FullPath.</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="FullPath" size="32767" type="V_WString" />
+                <Field name="Directory" size="32767" type="V_WString" />
+                <Field name="FileName" size="260" type="V_WString" />
+                <Field name="ShortFileName" size="14" type="V_WString" />
+                <Field name="CreationTime" size="19" type="DateTime" />
+                <Field name="LastAccessTime" size="19" type="DateTime" />
+                <Field name="LastWriteTime" size="19" type="DateTime" />
+                <Field name="Size" type="Int64" />
+                <Field name="AttributeArchive" type="Bool" />
+                <Field name="AttributeCompressed" type="Bool" />
+                <Field name="AttributeEncrypted" type="Bool" />
+                <Field name="AttributeHidden" type="Bool" />
+                <Field name="AttributeNormal" type="Bool" />
+                <Field name="AttributeOffline" type="Bool" />
+                <Field name="AttributeReadonly" type="Bool" />
+                <Field name="AttributeReparsePoint" type="Bool" />
+                <Field name="AttributeSparseFile" type="Bool" />
+                <Field name="AttributeSystem" type="Bool" />
+                <Field name="AttributeTemporary" type="Bool" />
+                <Field name="Blob" size="1073741823" source="BlobConvert: Text - CodePage: 65001" type="V_WString" />
+                <Field name="SourceFileHash" size="1073741823" source="Formula: MD5_UTF8([Blob])" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="120">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BlobInput.BlobInput">
+            <Position x="564" y="280" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FileName />
+              <ModifyMethod>Path</ModifyMethod>
+              <ModifyFilename_Field>FullPath</ModifyFilename_Field>
+              <ModifyFilename_StopOnError value="False" />
+              <SplitBlobs value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="FullPath" size="32767" type="V_WString" />
+                <Field name="Directory" size="32767" type="V_WString" />
+                <Field name="FileName" size="260" type="V_WString" />
+                <Field name="ShortFileName" size="14" type="V_WString" />
+                <Field name="CreationTime" size="19" type="DateTime" />
+                <Field name="LastAccessTime" size="19" type="DateTime" />
+                <Field name="LastWriteTime" size="19" type="DateTime" />
+                <Field name="Size" type="Int64" />
+                <Field name="AttributeArchive" type="Bool" />
+                <Field name="AttributeCompressed" type="Bool" />
+                <Field name="AttributeEncrypted" type="Bool" />
+                <Field name="AttributeHidden" type="Bool" />
+                <Field name="AttributeNormal" type="Bool" />
+                <Field name="AttributeOffline" type="Bool" />
+                <Field name="AttributeReadonly" type="Bool" />
+                <Field name="AttributeReparsePoint" type="Bool" />
+                <Field name="AttributeSparseFile" type="Bool" />
+                <Field name="AttributeSystem" type="Bool" />
+                <Field name="AttributeTemporary" type="Bool" />
+                <Field name="Blob" size="2147483647" source="BlobInput: " type="Blob" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBlobInput" />
+        </Node>
+        <Node ToolID="121">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BlobConvert.BlobConvert">
+            <Position x="699" y="280" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ToBlob value="False" />
+              <from_Field>Blob</from_Field>
+              <from_Mode>Text</from_Mode>
+              <from_textCodePage>65001</from_textCodePage>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="FullPath" size="32767" type="V_WString" />
+                <Field name="Directory" size="32767" type="V_WString" />
+                <Field name="FileName" size="260" type="V_WString" />
+                <Field name="ShortFileName" size="14" type="V_WString" />
+                <Field name="CreationTime" size="19" type="DateTime" />
+                <Field name="LastAccessTime" size="19" type="DateTime" />
+                <Field name="LastWriteTime" size="19" type="DateTime" />
+                <Field name="Size" type="Int64" />
+                <Field name="AttributeArchive" type="Bool" />
+                <Field name="AttributeCompressed" type="Bool" />
+                <Field name="AttributeEncrypted" type="Bool" />
+                <Field name="AttributeHidden" type="Bool" />
+                <Field name="AttributeNormal" type="Bool" />
+                <Field name="AttributeOffline" type="Bool" />
+                <Field name="AttributeReadonly" type="Bool" />
+                <Field name="AttributeReparsePoint" type="Bool" />
+                <Field name="AttributeSparseFile" type="Bool" />
+                <Field name="AttributeSystem" type="Bool" />
+                <Field name="AttributeTemporary" type="Bool" />
+                <Field name="Blob" size="1073741823" source="BlobConvert: Text - CodePage: 65001" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBlobConvert" />
+        </Node>
+        <Node ToolID="122">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="834" y="280" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="MD5_UTF8([Blob])" field="SourceFileHash" size="1073741823" type="V_WString" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>SourceFileHash = MD5_UTF8([Blob])
+Output: FullPath, FileName, SourceFileHash - join this into the player_rankings Dynamic Input on FullPath.</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="FullPath" size="32767" type="V_WString" />
+                <Field name="Directory" size="32767" type="V_WString" />
+                <Field name="FileName" size="260" type="V_WString" />
+                <Field name="ShortFileName" size="14" type="V_WString" />
+                <Field name="CreationTime" size="19" type="DateTime" />
+                <Field name="LastAccessTime" size="19" type="DateTime" />
+                <Field name="LastWriteTime" size="19" type="DateTime" />
+                <Field name="Size" type="Int64" />
+                <Field name="AttributeArchive" type="Bool" />
+                <Field name="AttributeCompressed" type="Bool" />
+                <Field name="AttributeEncrypted" type="Bool" />
+                <Field name="AttributeHidden" type="Bool" />
+                <Field name="AttributeNormal" type="Bool" />
+                <Field name="AttributeOffline" type="Bool" />
+                <Field name="AttributeReadonly" type="Bool" />
+                <Field name="AttributeReparsePoint" type="Bool" />
+                <Field name="AttributeSparseFile" type="Bool" />
+                <Field name="AttributeSystem" type="Bool" />
+                <Field name="AttributeTemporary" type="Bool" />
+                <Field name="Blob" size="1073741823" source="BlobConvert: Text - CodePage: 65001" type="V_WString" />
+                <Field name="SourceFileHash" size="1073741823" source="Formula: MD5_UTF8([Blob])" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="140">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BlobInput.BlobInput">
+            <Position x="564" y="479" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FileName />
+              <ModifyMethod>Path</ModifyMethod>
+              <ModifyFilename_Field>FullPath</ModifyFilename_Field>
+              <ModifyFilename_StopOnError value="False" />
+              <SplitBlobs value="False" />
+              <BlobChunkSize>1024</BlobChunkSize>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Historical stats hash branch</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="FullPath" size="32767" type="V_WString" />
+                <Field name="Directory" size="32767" type="V_WString" />
+                <Field name="FileName" size="260" type="V_WString" />
+                <Field name="ShortFileName" size="14" type="V_WString" />
+                <Field name="CreationTime" size="19" type="DateTime" />
+                <Field name="LastAccessTime" size="19" type="DateTime" />
+                <Field name="LastWriteTime" size="19" type="DateTime" />
+                <Field name="Size" type="Int64" />
+                <Field name="AttributeArchive" type="Bool" />
+                <Field name="AttributeCompressed" type="Bool" />
+                <Field name="AttributeEncrypted" type="Bool" />
+                <Field name="AttributeHidden" type="Bool" />
+                <Field name="AttributeNormal" type="Bool" />
+                <Field name="AttributeOffline" type="Bool" />
+                <Field name="AttributeReadonly" type="Bool" />
+                <Field name="AttributeReparsePoint" type="Bool" />
+                <Field name="AttributeSparseFile" type="Bool" />
+                <Field name="AttributeSystem" type="Bool" />
+                <Field name="AttributeTemporary" type="Bool" />
+                <Field name="Blob" size="2147483647" source="BlobInput: " type="Blob" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBlobInput" />
+        </Node>
+        <Node ToolID="141">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BlobConvert.BlobConvert">
+            <Position x="699" y="479" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ToBlob value="False" />
+              <from_Field>Blob</from_Field>
+              <from_Mode>Text</from_Mode>
+              <from_textCodePage>65001</from_textCodePage>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="FullPath" size="32767" type="V_WString" />
+                <Field name="Directory" size="32767" type="V_WString" />
+                <Field name="FileName" size="260" type="V_WString" />
+                <Field name="ShortFileName" size="14" type="V_WString" />
+                <Field name="CreationTime" size="19" type="DateTime" />
+                <Field name="LastAccessTime" size="19" type="DateTime" />
+                <Field name="LastWriteTime" size="19" type="DateTime" />
+                <Field name="Size" type="Int64" />
+                <Field name="AttributeArchive" type="Bool" />
+                <Field name="AttributeCompressed" type="Bool" />
+                <Field name="AttributeEncrypted" type="Bool" />
+                <Field name="AttributeHidden" type="Bool" />
+                <Field name="AttributeNormal" type="Bool" />
+                <Field name="AttributeOffline" type="Bool" />
+                <Field name="AttributeReadonly" type="Bool" />
+                <Field name="AttributeReparsePoint" type="Bool" />
+                <Field name="AttributeSparseFile" type="Bool" />
+                <Field name="AttributeSystem" type="Bool" />
+                <Field name="AttributeTemporary" type="Bool" />
+                <Field name="Blob" size="1073741823" source="BlobConvert: Text - CodePage: 65001" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBlobConvert" />
+        </Node>
+        <Node ToolID="142">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="834" y="479" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="MD5_UTF8([Blob])" field="SourceFileHash" size="1073741823" type="V_WString" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>SourceFileHash = MD5_UTF8([Blob])
+Output: FullPath, FileName, SourceFileHash - join this into the historical_stats Dynamic Input on FullPath.</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="FullPath" size="32767" type="V_WString" />
+                <Field name="Directory" size="32767" type="V_WString" />
+                <Field name="FileName" size="260" type="V_WString" />
+                <Field name="ShortFileName" size="14" type="V_WString" />
+                <Field name="CreationTime" size="19" type="DateTime" />
+                <Field name="LastAccessTime" size="19" type="DateTime" />
+                <Field name="LastWriteTime" size="19" type="DateTime" />
+                <Field name="Size" type="Int64" />
+                <Field name="AttributeArchive" type="Bool" />
+                <Field name="AttributeCompressed" type="Bool" />
+                <Field name="AttributeEncrypted" type="Bool" />
+                <Field name="AttributeHidden" type="Bool" />
+                <Field name="AttributeNormal" type="Bool" />
+                <Field name="AttributeOffline" type="Bool" />
+                <Field name="AttributeReadonly" type="Bool" />
+                <Field name="AttributeReparsePoint" type="Bool" />
+                <Field name="AttributeSparseFile" type="Bool" />
+                <Field name="AttributeSystem" type="Bool" />
+                <Field name="AttributeTemporary" type="Bool" />
+                <Field name="Blob" size="1073741823" source="BlobConvert: Text - CodePage: 65001" type="V_WString" />
+                <Field name="SourceFileHash" size="1073741823" source="Formula: MD5_UTF8([Blob])" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="169">
+          <GuiSettings Plugin="Read_HistoricalStats.yxmc">
+            <Position x="969" y="479" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="BatchMacroGroupBy" />
+              <Value name="Input.ControlIn"><![CDATA[FullPath=FullPath
+FileName=FileName
+SourceFileHash=SourceFileHash
+]]></Value>
+              <Value name="ControlParams"><![CDATA[FullPath=FullPath
+]]></Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name>Read_HistoricalStats (143)</Name>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="DataOut">
+              <RecordInfo>
+                <Field name="player_code" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\historical_stats\historical_stats.csv" type="V_WString" />
+                <Field name="player_name" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\historical_stats\historical_stats.csv" type="V_WString" />
+                <Field name="season" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\historical_stats\historical_stats.csv" type="V_WString" />
+                <Field name="format_code" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\historical_stats\historical_stats.csv" type="V_WString" />
+                <Field name="matches_played" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\historical_stats\historical_stats.csv" type="V_WString" />
+                <Field name="runs_scored" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\historical_stats\historical_stats.csv" type="V_WString" />
+                <Field name="wickets_taken" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\historical_stats\historical_stats.csv" type="V_WString" />
+                <Field name="season_start_date" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\historical_stats\historical_stats.csv" type="V_WString" />
+                <Field name="FullPath" size="32767" type="V_WString" />
+                <Field name="Directory" size="32767" type="V_WString" />
+                <Field name="FileName" size="260" type="V_WString" />
+                <Field name="ShortFileName" size="14" type="V_WString" />
+                <Field name="CreationTime" size="19" type="DateTime" />
+                <Field name="LastAccessTime" size="19" type="DateTime" />
+                <Field name="LastWriteTime" size="19" type="DateTime" />
+                <Field name="Size" type="Int64" />
+                <Field name="AttributeArchive" type="Bool" />
+                <Field name="AttributeCompressed" type="Bool" />
+                <Field name="AttributeEncrypted" type="Bool" />
+                <Field name="AttributeHidden" type="Bool" />
+                <Field name="AttributeNormal" type="Bool" />
+                <Field name="AttributeOffline" type="Bool" />
+                <Field name="AttributeReadonly" type="Bool" />
+                <Field name="AttributeReparsePoint" type="Bool" />
+                <Field name="AttributeSparseFile" type="Bool" />
+                <Field name="AttributeSystem" type="Bool" />
+                <Field name="AttributeTemporary" type="Bool" />
+                <Field name="Blob" size="1073741823" source="BlobConvert: Text - CodePage: 65001" type="V_WString" />
+                <Field name="SourceFileHash" size="1073741823" source="Formula: MD5_UTF8([Blob])" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings Macro="..\macros\Read_HistoricalStats.yxmc" />
+        </Node>
+        <Node ToolID="170">
+          <GuiSettings Plugin="Read_PlayerRankings.yxmc">
+            <Position x="969" y="280" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="BatchMacroGroupBy" />
+              <Value name="Input.ControlIn"><![CDATA[FullPath=FullPath
+FileName=FileName
+SourceFileHash=SourceFileHash
+]]></Value>
+              <Value name="ControlParams"><![CDATA[FullPath=FullPath
+]]></Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name>Read_PlayerRankings (123)</Name>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="DataOut">
+              <RecordInfo>
+                <Field name="player_code" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\player_rankings\player_rankings.csv" type="V_WString" />
+                <Field name="player_name" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\player_rankings\player_rankings.csv" type="V_WString" />
+                <Field name="format_code" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\player_rankings\player_rankings.csv" type="V_WString" />
+                <Field name="discipline" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\player_rankings\player_rankings.csv" type="V_WString" />
+                <Field name="ranking_date" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\player_rankings\player_rankings.csv" type="V_WString" />
+                <Field name="rank_position" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\player_rankings\player_rankings.csv" type="V_WString" />
+                <Field name="rating_points" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\player_rankings\player_rankings.csv" type="V_WString" />
+                <Field name="FullPath" size="32767" type="V_WString" />
+                <Field name="Directory" size="32767" type="V_WString" />
+                <Field name="FileName" size="260" type="V_WString" />
+                <Field name="ShortFileName" size="14" type="V_WString" />
+                <Field name="CreationTime" size="19" type="DateTime" />
+                <Field name="LastAccessTime" size="19" type="DateTime" />
+                <Field name="LastWriteTime" size="19" type="DateTime" />
+                <Field name="Size" type="Int64" />
+                <Field name="AttributeArchive" type="Bool" />
+                <Field name="AttributeCompressed" type="Bool" />
+                <Field name="AttributeEncrypted" type="Bool" />
+                <Field name="AttributeHidden" type="Bool" />
+                <Field name="AttributeNormal" type="Bool" />
+                <Field name="AttributeOffline" type="Bool" />
+                <Field name="AttributeReadonly" type="Bool" />
+                <Field name="AttributeReparsePoint" type="Bool" />
+                <Field name="AttributeSparseFile" type="Bool" />
+                <Field name="AttributeSystem" type="Bool" />
+                <Field name="AttributeTemporary" type="Bool" />
+                <Field name="Blob" size="1073741823" source="BlobConvert: Text - CodePage: 65001" type="V_WString" />
+                <Field name="SourceFileHash" size="1073741823" source="Formula: MD5_UTF8([Blob])" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings Macro="..\macros\Read_PlayerRankings.yxmc" />
+        </Node>
+        <Node ToolID="171">
+          <GuiSettings Plugin="Read_Deliveries.yxmc">
+            <Position x="969" y="94" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="BatchMacroGroupBy" />
+              <Value name="Input.ControlIn"><![CDATA[FullPath=FullPath
+FileName=FileName
+SourceFileHash=SourceFileHash
+]]></Value>
+              <Value name="ControlParams"><![CDATA[FullPath=FullPath
+]]></Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name>Read_Deliveries (103)</Name>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="DataOut">
+              <RecordInfo>
+                <Field name="match_id" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="innings_no" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="over_no" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="ball_no" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="batsman_code" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="bowler_code" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="runs_off_bat" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="extra_runs" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="extra_type" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="is_wicket" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="dismissal_type" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="dismissed_player_code" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="FullPath" size="32767" type="V_WString" />
+                <Field name="Directory" size="32767" type="V_WString" />
+                <Field name="FileName" size="260" type="V_WString" />
+                <Field name="ShortFileName" size="14" type="V_WString" />
+                <Field name="CreationTime" size="19" type="DateTime" />
+                <Field name="LastAccessTime" size="19" type="DateTime" />
+                <Field name="LastWriteTime" size="19" type="DateTime" />
+                <Field name="Size" type="Int64" />
+                <Field name="AttributeArchive" type="Bool" />
+                <Field name="AttributeCompressed" type="Bool" />
+                <Field name="AttributeEncrypted" type="Bool" />
+                <Field name="AttributeHidden" type="Bool" />
+                <Field name="AttributeNormal" type="Bool" />
+                <Field name="AttributeOffline" type="Bool" />
+                <Field name="AttributeReadonly" type="Bool" />
+                <Field name="AttributeReparsePoint" type="Bool" />
+                <Field name="AttributeSparseFile" type="Bool" />
+                <Field name="AttributeSystem" type="Bool" />
+                <Field name="AttributeTemporary" type="Bool" />
+                <Field name="Blob" size="1073741823" source="BlobConvert: Text - CodePage: 65001" type="V_WString" />
+                <Field name="SourceFileHash" size="1073741823" source="Formula: MD5_UTF8([Blob])" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings Macro="..\macros\Read_Deliveries.yxmc" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="165">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1139" y="45" width="219" height="479" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>ETL Validation &amp; Logging</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>ETL Validation &amp; Logging</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="104">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1164" y="94" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[FileName]" field="SourceFileName" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="&quot;03_ingest_csv_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" field="LoadRunId" size="1073741823" type="V_WString" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>SourceFileName = [FileName]
+LoadRunId = "03_ingest_csv_" + DateTimeFormat(DateTimeStart(),"%Y%m%d%H%M%S")</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="match_id" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="innings_no" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="over_no" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="ball_no" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="batsman_code" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="bowler_code" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="runs_off_bat" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="extra_runs" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="extra_type" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="is_wicket" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="dismissal_type" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="dismissed_player_code" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="FullPath" size="32767" type="V_WString" />
+                <Field name="Directory" size="32767" type="V_WString" />
+                <Field name="FileName" size="260" type="V_WString" />
+                <Field name="ShortFileName" size="14" type="V_WString" />
+                <Field name="CreationTime" size="19" type="DateTime" />
+                <Field name="LastAccessTime" size="19" type="DateTime" />
+                <Field name="LastWriteTime" size="19" type="DateTime" />
+                <Field name="Size" type="Int64" />
+                <Field name="AttributeArchive" type="Bool" />
+                <Field name="AttributeCompressed" type="Bool" />
+                <Field name="AttributeEncrypted" type="Bool" />
+                <Field name="AttributeHidden" type="Bool" />
+                <Field name="AttributeNormal" type="Bool" />
+                <Field name="AttributeOffline" type="Bool" />
+                <Field name="AttributeReadonly" type="Bool" />
+                <Field name="AttributeReparsePoint" type="Bool" />
+                <Field name="AttributeSparseFile" type="Bool" />
+                <Field name="AttributeSystem" type="Bool" />
+                <Field name="AttributeTemporary" type="Bool" />
+                <Field name="Blob" size="1073741823" source="BlobConvert: Text - CodePage: 65001" type="V_WString" />
+                <Field name="SourceFileHash" size="1073741823" source="Formula: MD5_UTF8([Blob])" type="V_WString" />
+                <Field name="SourceFileName" size="1073741823" source="Formula: [FileName]" type="V_WString" />
+                <Field name="LoadRunId" size="1073741823" source="Formula: &quot;03_ingest_csv_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="124">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1164" y="267" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[FileName]" field="SourceFileName" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="&quot;03_ingest_csv_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" field="LoadRunId" size="1073741823" type="V_WString" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>SourceFileName = [FileName]
+LoadRunId = "03_ingest_csv_" + DateTimeFormat(DateTimeStart(),"%Y%m%d%H%M%S")</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="player_code" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\player_rankings\player_rankings.csv" type="V_WString" />
+                <Field name="player_name" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\player_rankings\player_rankings.csv" type="V_WString" />
+                <Field name="format_code" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\player_rankings\player_rankings.csv" type="V_WString" />
+                <Field name="discipline" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\player_rankings\player_rankings.csv" type="V_WString" />
+                <Field name="ranking_date" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\player_rankings\player_rankings.csv" type="V_WString" />
+                <Field name="rank_position" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\player_rankings\player_rankings.csv" type="V_WString" />
+                <Field name="rating_points" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\player_rankings\player_rankings.csv" type="V_WString" />
+                <Field name="FullPath" size="32767" type="V_WString" />
+                <Field name="Directory" size="32767" type="V_WString" />
+                <Field name="FileName" size="260" type="V_WString" />
+                <Field name="ShortFileName" size="14" type="V_WString" />
+                <Field name="CreationTime" size="19" type="DateTime" />
+                <Field name="LastAccessTime" size="19" type="DateTime" />
+                <Field name="LastWriteTime" size="19" type="DateTime" />
+                <Field name="Size" type="Int64" />
+                <Field name="AttributeArchive" type="Bool" />
+                <Field name="AttributeCompressed" type="Bool" />
+                <Field name="AttributeEncrypted" type="Bool" />
+                <Field name="AttributeHidden" type="Bool" />
+                <Field name="AttributeNormal" type="Bool" />
+                <Field name="AttributeOffline" type="Bool" />
+                <Field name="AttributeReadonly" type="Bool" />
+                <Field name="AttributeReparsePoint" type="Bool" />
+                <Field name="AttributeSparseFile" type="Bool" />
+                <Field name="AttributeSystem" type="Bool" />
+                <Field name="AttributeTemporary" type="Bool" />
+                <Field name="Blob" size="1073741823" source="BlobConvert: Text - CodePage: 65001" type="V_WString" />
+                <Field name="SourceFileHash" size="1073741823" source="Formula: MD5_UTF8([Blob])" type="V_WString" />
+                <Field name="SourceFileName" size="1073741823" source="Formula: [FileName]" type="V_WString" />
+                <Field name="LoadRunId" size="1073741823" source="Formula: &quot;03_ingest_csv_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="144">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1164" y="440" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[FileName]" field="SourceFileName" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="&quot;03_ingest_csv_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" field="LoadRunId" size="1073741823" type="V_WString" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>SourceFileName = [FileName]
+LoadRunId = "03_ingest_csv_" + DateTimeFormat(DateTimeStart(),"%Y%m%d%H%M%S")</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="player_code" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\historical_stats\historical_stats.csv" type="V_WString" />
+                <Field name="player_name" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\historical_stats\historical_stats.csv" type="V_WString" />
+                <Field name="season" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\historical_stats\historical_stats.csv" type="V_WString" />
+                <Field name="format_code" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\historical_stats\historical_stats.csv" type="V_WString" />
+                <Field name="matches_played" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\historical_stats\historical_stats.csv" type="V_WString" />
+                <Field name="runs_scored" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\historical_stats\historical_stats.csv" type="V_WString" />
+                <Field name="wickets_taken" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\historical_stats\historical_stats.csv" type="V_WString" />
+                <Field name="season_start_date" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\historical_stats\historical_stats.csv" type="V_WString" />
+                <Field name="FullPath" size="32767" type="V_WString" />
+                <Field name="Directory" size="32767" type="V_WString" />
+                <Field name="FileName" size="260" type="V_WString" />
+                <Field name="ShortFileName" size="14" type="V_WString" />
+                <Field name="CreationTime" size="19" type="DateTime" />
+                <Field name="LastAccessTime" size="19" type="DateTime" />
+                <Field name="LastWriteTime" size="19" type="DateTime" />
+                <Field name="Size" type="Int64" />
+                <Field name="AttributeArchive" type="Bool" />
+                <Field name="AttributeCompressed" type="Bool" />
+                <Field name="AttributeEncrypted" type="Bool" />
+                <Field name="AttributeHidden" type="Bool" />
+                <Field name="AttributeNormal" type="Bool" />
+                <Field name="AttributeOffline" type="Bool" />
+                <Field name="AttributeReadonly" type="Bool" />
+                <Field name="AttributeReparsePoint" type="Bool" />
+                <Field name="AttributeSparseFile" type="Bool" />
+                <Field name="AttributeSystem" type="Bool" />
+                <Field name="AttributeTemporary" type="Bool" />
+                <Field name="Blob" size="1073741823" source="BlobConvert: Text - CodePage: 65001" type="V_WString" />
+                <Field name="SourceFileHash" size="1073741823" source="Formula: MD5_UTF8([Blob])" type="V_WString" />
+                <Field name="SourceFileName" size="1073741823" source="Formula: [FileName]" type="V_WString" />
+                <Field name="LoadRunId" size="1073741823" source="Formula: &quot;03_ingest_csv_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="167">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1664" y="407" width="244" height="453" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Plumbing Validation</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Plumbing Validation</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="107">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1689" y="456" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>IsNull([SourceFileName]) OR IsNull([LoadRunId]) OR IsNull([SourceFileHash])</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Deliveries plumbing check: flag if SourceFileName, LoadRunId, or SourceFileHash is null</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="True">
+              <RecordInfo>
+                <Field name="MatchIdRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="InningsNo" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="OverNo" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="BallNo" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="BatsmanCodeRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="BowlerCodeRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="RunsOffBatRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="ExtraRunsRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="ExtraTypeRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="WicketFlagRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="DismissalTypeRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="DismissedPlayerCodeRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="SourceFileHash" size="1073741823" source="Formula: MD5_UTF8([Blob])" type="V_WString" />
+                <Field name="SourceFileName" size="1073741823" source="Formula: [FileName]" type="V_WString" />
+                <Field name="LoadRunId" size="1073741823" source="Formula: &quot;03_ingest_csv_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="False">
+              <RecordInfo>
+                <Field name="MatchIdRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="InningsNo" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="OverNo" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="BallNo" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="BatsmanCodeRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="BowlerCodeRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="RunsOffBatRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="ExtraRunsRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="ExtraTypeRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="WicketFlagRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="DismissalTypeRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="DismissedPlayerCodeRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="SourceFileHash" size="1073741823" source="Formula: MD5_UTF8([Blob])" type="V_WString" />
+                <Field name="SourceFileName" size="1073741823" source="Formula: [FileName]" type="V_WString" />
+                <Field name="LoadRunId" size="1073741823" source="Formula: &quot;03_ingest_csv_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="108">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Message.Message">
+            <Position x="1824" y="456" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <When>First</When>
+              <Filter />
+              <Type>Message</Type>
+              <Priority>Normal</Priority>
+              <Transient>False</Transient>
+              <MessageExpression>"error"</MessageExpression>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="MatchIdRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="InningsNo" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="OverNo" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="BallNo" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="BatsmanCodeRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="BowlerCodeRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="RunsOffBatRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="ExtraRunsRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="ExtraTypeRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="WicketFlagRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="DismissalTypeRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="DismissedPlayerCodeRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="SourceFileHash" size="1073741823" source="Formula: MD5_UTF8([Blob])" type="V_WString" />
+                <Field name="SourceFileName" size="1073741823" source="Formula: [FileName]" type="V_WString" />
+                <Field name="LoadRunId" size="1073741823" source="Formula: &quot;03_ingest_csv_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMessage" />
+        </Node>
+        <Node ToolID="127">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1689" y="616" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>IsNull([SourceFileName]) OR IsNull([LoadRunId]) OR IsNull([SourceFileHash])</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Player rankings plumbing check: flag if SourceFileName, LoadRunId, or SourceFileHash is null</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="True">
+              <RecordInfo>
+                <Field name="PlayerCodeRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\player_rankings\player_rankings.csv" type="V_WString" />
+                <Field name="FormatCodeRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\player_rankings\player_rankings.csv" type="V_WString" />
+                <Field name="DisciplineRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\player_rankings\player_rankings.csv" type="V_WString" />
+                <Field name="RankingDateRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\player_rankings\player_rankings.csv" type="V_WString" />
+                <Field name="RankPositionRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\player_rankings\player_rankings.csv" type="V_WString" />
+                <Field name="RatingPointsRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\player_rankings\player_rankings.csv" type="V_WString" />
+                <Field name="SourceFileHash" size="1073741823" source="Formula: MD5_UTF8([Blob])" type="V_WString" />
+                <Field name="SourceFileName" size="1073741823" source="Formula: [FileName]" type="V_WString" />
+                <Field name="LoadRunId" size="1073741823" source="Formula: &quot;03_ingest_csv_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="False">
+              <RecordInfo>
+                <Field name="PlayerCodeRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\player_rankings\player_rankings.csv" type="V_WString" />
+                <Field name="FormatCodeRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\player_rankings\player_rankings.csv" type="V_WString" />
+                <Field name="DisciplineRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\player_rankings\player_rankings.csv" type="V_WString" />
+                <Field name="RankingDateRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\player_rankings\player_rankings.csv" type="V_WString" />
+                <Field name="RankPositionRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\player_rankings\player_rankings.csv" type="V_WString" />
+                <Field name="RatingPointsRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\player_rankings\player_rankings.csv" type="V_WString" />
+                <Field name="SourceFileHash" size="1073741823" source="Formula: MD5_UTF8([Blob])" type="V_WString" />
+                <Field name="SourceFileName" size="1073741823" source="Formula: [FileName]" type="V_WString" />
+                <Field name="LoadRunId" size="1073741823" source="Formula: &quot;03_ingest_csv_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="128">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Message.Message">
+            <Position x="1824" y="616" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <When>First</When>
+              <Filter />
+              <Type>Message</Type>
+              <Priority>Normal</Priority>
+              <Transient>False</Transient>
+              <MessageExpression>"Error"</MessageExpression>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="PlayerCodeRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\player_rankings\player_rankings.csv" type="V_WString" />
+                <Field name="FormatCodeRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\player_rankings\player_rankings.csv" type="V_WString" />
+                <Field name="DisciplineRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\player_rankings\player_rankings.csv" type="V_WString" />
+                <Field name="RankingDateRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\player_rankings\player_rankings.csv" type="V_WString" />
+                <Field name="RankPositionRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\player_rankings\player_rankings.csv" type="V_WString" />
+                <Field name="RatingPointsRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\player_rankings\player_rankings.csv" type="V_WString" />
+                <Field name="SourceFileHash" size="1073741823" source="Formula: MD5_UTF8([Blob])" type="V_WString" />
+                <Field name="SourceFileName" size="1073741823" source="Formula: [FileName]" type="V_WString" />
+                <Field name="LoadRunId" size="1073741823" source="Formula: &quot;03_ingest_csv_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMessage" />
+        </Node>
+        <Node ToolID="147">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1689" y="776" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>IsNull([SourceFileName]) OR IsNull([LoadRunId]) OR IsNull([SourceFileHash])</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Historical stats plumbing check: flag if SourceFileName, LoadRunId, or SourceFileHash is null</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="True">
+              <RecordInfo>
+                <Field name="PlayerCodeRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\historical_stats\historical_stats.csv" type="V_WString" />
+                <Field name="SeasonRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\historical_stats\historical_stats.csv" type="V_WString" />
+                <Field name="FormatCodeRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\historical_stats\historical_stats.csv" type="V_WString" />
+                <Field name="MatchesPlayedRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\historical_stats\historical_stats.csv" type="V_WString" />
+                <Field name="RunsScoredRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\historical_stats\historical_stats.csv" type="V_WString" />
+                <Field name="WicketsTakenRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\historical_stats\historical_stats.csv" type="V_WString" />
+                <Field name="SourceFileHash" size="1073741823" source="Formula: MD5_UTF8([Blob])" type="V_WString" />
+                <Field name="SourceFileName" size="1073741823" source="Formula: [FileName]" type="V_WString" />
+                <Field name="LoadRunId" size="1073741823" source="Formula: &quot;03_ingest_csv_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="False">
+              <RecordInfo>
+                <Field name="PlayerCodeRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\historical_stats\historical_stats.csv" type="V_WString" />
+                <Field name="SeasonRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\historical_stats\historical_stats.csv" type="V_WString" />
+                <Field name="FormatCodeRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\historical_stats\historical_stats.csv" type="V_WString" />
+                <Field name="MatchesPlayedRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\historical_stats\historical_stats.csv" type="V_WString" />
+                <Field name="RunsScoredRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\historical_stats\historical_stats.csv" type="V_WString" />
+                <Field name="WicketsTakenRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\historical_stats\historical_stats.csv" type="V_WString" />
+                <Field name="SourceFileHash" size="1073741823" source="Formula: MD5_UTF8([Blob])" type="V_WString" />
+                <Field name="SourceFileName" size="1073741823" source="Formula: [FileName]" type="V_WString" />
+                <Field name="LoadRunId" size="1073741823" source="Formula: &quot;03_ingest_csv_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="148">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Message.Message">
+            <Position x="1824" y="776" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <When>First</When>
+              <Filter />
+              <Type>Message</Type>
+              <Priority>Normal</Priority>
+              <Transient>False</Transient>
+              <MessageExpression>"Error"</MessageExpression>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="PlayerCodeRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\historical_stats\historical_stats.csv" type="V_WString" />
+                <Field name="SeasonRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\historical_stats\historical_stats.csv" type="V_WString" />
+                <Field name="FormatCodeRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\historical_stats\historical_stats.csv" type="V_WString" />
+                <Field name="MatchesPlayedRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\historical_stats\historical_stats.csv" type="V_WString" />
+                <Field name="RunsScoredRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\historical_stats\historical_stats.csv" type="V_WString" />
+                <Field name="WicketsTakenRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\historical_stats\historical_stats.csv" type="V_WString" />
+                <Field name="SourceFileHash" size="1073741823" source="Formula: MD5_UTF8([Blob])" type="V_WString" />
+                <Field name="SourceFileName" size="1073741823" source="Formula: [FileName]" type="V_WString" />
+                <Field name="LoadRunId" size="1073741823" source="Formula: &quot;03_ingest_csv_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMessage" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="168">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1664" y="44" width="784" height="345" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>ETL Logging: End to Run Log</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>ETL Logging: End to Run Log</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="109">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="1689" y="93" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="SourceFileName" action="Count" rename="DeliveriesCount" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="DeliveriesCount" source="Summarize: Count - SourceFileName" type="Int64" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="160">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+            <Position x="1824" y="94" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <CartesianMode>Error</CartesianMode>
+              <SelectConfiguration>
+                <Configuration outputConnection="Output">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="DeliveriesCount" source="Summarize: Count - SourceFileName" type="Int64" />
+                <Field name="PlayerRankingCount" source="Summarize: Count - SourceFileName" type="Int64" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+        </Node>
+        <Node ToolID="129">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="1689" y="305" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="SourceFileName" action="Count" rename="PlayerRankingCount" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="PlayerRankingCount" source="Summarize: Count - SourceFileName" type="Int64" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="161">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+            <Position x="1959" y="94" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <CartesianMode>Error</CartesianMode>
+              <SelectConfiguration>
+                <Configuration outputConnection="Output">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="DeliveriesCount" source="Summarize: Count - SourceFileName" type="Int64" />
+                <Field name="PlayerRankingCount" source="Summarize: Count - SourceFileName" type="Int64" />
+                <Field name="HistoricalStatsCount" source="Summarize: Count - SourceFileName" type="Int64" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+        </Node>
+        <Node ToolID="149">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="1824" y="306" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="SourceFileName" action="Count" rename="HistoricalStatsCount" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="HistoricalStatsCount" source="Summarize: Count - SourceFileName" type="Int64" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="162">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="2094" y="94" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="&quot;03_ingest_csv&quot;" field="WorkflowName" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="&quot;Succeeded&quot;" field="Status" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="0" field="RowsIn" size="8" type="Int64" enabled="true" />
+                <FormulaField expression="[DeliveriesCount]+[PlayerRankingCount]+[HistoricalStatsCount]" field="RowsOut" size="8" type="Int64" enabled="true" />
+                <FormulaField expression="0" field="RowsRejected" size="8" type="Int64" enabled="true" />
+                <FormulaField expression="&quot;&quot;" field="ErrorMessage" size="1073741823" type="V_WString" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>WorkflowName = "03_ingest_csv"
+Status = "Succeeded"
+RowsIn = 0
+RowsOut = [DeliveriesCount]+[PlayerRankingCount]+[HistoricalStatsCount]</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="DeliveriesCount" source="Summarize: Count - SourceFileName" type="Int64" />
+                <Field name="PlayerRankingCount" source="Summarize: Count - SourceFileName" type="Int64" />
+                <Field name="HistoricalStatsCount" source="Summarize: Count - SourceFileName" type="Int64" />
+                <Field name="WorkflowName" size="1073741823" source="Formula: &quot;03_ingest_csv&quot;" type="V_WString" />
+                <Field name="Status" size="1073741823" source="Formula: &quot;Succeeded&quot;" type="V_WString" />
+                <Field name="RowsIn" source="Formula: 0" type="Int64" />
+                <Field name="RowsOut" source="Formula: [DeliveriesCount]+[PlayerRankingCount]+[HistoricalStatsCount]" type="Int64" />
+                <Field name="RowsRejected" source="Formula: 0" type="Int64" />
+                <Field name="ErrorMessage" size="1073741823" source="Formula: &quot;&quot;" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="163">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="2229" y="94" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="DeliveriesCount" selected="False" />
+                <SelectField field="PlayerRankingCount" selected="False" />
+                <SelectField field="HistoricalStatsCount" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="WorkflowName" size="1073741823" source="Formula: &quot;03_ingest_csv&quot;" type="V_WString" />
+                <Field name="Status" size="1073741823" source="Formula: &quot;Succeeded&quot;" type="V_WString" />
+                <Field name="RowsIn" source="Formula: 0" type="Int64" />
+                <Field name="RowsOut" source="Formula: [DeliveriesCount]+[PlayerRankingCount]+[HistoricalStatsCount]" type="Int64" />
+                <Field name="RowsRejected" source="Formula: 0" type="Int64" />
+                <Field name="ErrorMessage" size="1073741823" source="Formula: &quot;&quot;" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="164">
+          <GuiSettings Plugin="Log_ETL_Event.yxmc">
+            <Position x="2364" y="94" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="Input.Input5"><![CDATA[WorkflowName=WorkflowName
+Status=Status
+RowsIn=RowsIn
+RowsOut=RowsOut
+RowsRejected=RowsRejected
+ErrorMessage=ErrorMessage
+]]></Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="..\macros\Log_ETL_Event.yxmc" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="172">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="166">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1373" y="41" width="280" height="373" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Output Staging Table (Bronze Layer)</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Output Staging Table (Bronze Layer)</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="105">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="1398" y="89" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="match_id" selected="True" rename="MatchIdRaw" />
+                <SelectField field="innings_no" selected="True" rename="InningsNo" />
+                <SelectField field="over_no" selected="True" rename="OverNo" />
+                <SelectField field="ball_no" selected="True" rename="BallNo" />
+                <SelectField field="batsman_code" selected="True" rename="BatsmanCodeRaw" />
+                <SelectField field="bowler_code" selected="True" rename="BowlerCodeRaw" />
+                <SelectField field="runs_off_bat" selected="True" rename="RunsOffBatRaw" />
+                <SelectField field="extra_runs" selected="True" rename="ExtraRunsRaw" />
+                <SelectField field="extra_type" selected="True" rename="ExtraTypeRaw" />
+                <SelectField field="is_wicket" selected="True" rename="WicketFlagRaw" />
+                <SelectField field="dismissal_type" selected="True" rename="DismissalTypeRaw" />
+                <SelectField field="dismissed_player_code" selected="True" rename="DismissedPlayerCodeRaw" />
+                <SelectField field="FullPath" selected="False" />
+                <SelectField field="Directory" selected="False" />
+                <SelectField field="FileName" selected="False" />
+                <SelectField field="ShortFileName" selected="False" />
+                <SelectField field="CreationTime" selected="False" />
+                <SelectField field="LastAccessTime" selected="False" />
+                <SelectField field="LastWriteTime" selected="False" />
+                <SelectField field="Size" selected="False" />
+                <SelectField field="AttributeArchive" selected="False" />
+                <SelectField field="AttributeCompressed" selected="False" />
+                <SelectField field="AttributeEncrypted" selected="False" />
+                <SelectField field="AttributeHidden" selected="False" />
+                <SelectField field="AttributeNormal" selected="False" />
+                <SelectField field="AttributeOffline" selected="False" />
+                <SelectField field="AttributeReadonly" selected="False" />
+                <SelectField field="AttributeReparsePoint" selected="False" />
+                <SelectField field="AttributeSparseFile" selected="False" />
+                <SelectField field="AttributeSystem" selected="False" />
+                <SelectField field="AttributeTemporary" selected="False" />
+                <SelectField field="Blob" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="MatchIdRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="InningsNo" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="OverNo" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="BallNo" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="BatsmanCodeRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="BowlerCodeRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="RunsOffBatRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="ExtraRunsRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="ExtraTypeRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="WicketFlagRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="DismissalTypeRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="DismissedPlayerCodeRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+                <Field name="SourceFileHash" size="1073741823" source="Formula: MD5_UTF8([Blob])" type="V_WString" />
+                <Field name="SourceFileName" size="1073741823" source="Formula: [FileName]" type="V_WString" />
+                <Field name="LoadRunId" size="1073741823" source="Formula: &quot;03_ingest_csv_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="106">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="1530" y="90" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File />
+              <Passwords />
+              <Disable>False</Disable>
+              <FormatSpecificOptions UseDcm="true" MaxRecords="" Format="23">
+                <SpatialObjSize>8000</SpatialObjSize>
+                <TableStyle>Quoted</TableStyle>
+                <TransactionMessages>False</TransactionMessages>
+                <Geometry>True</Geometry>
+                <Table>[stg].[BallByBallRaw]</Table>
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <OutputOption>Delete</OutputOption>
+                <Connection DcmType="ConnectionId" DcmTitle="CricketDW_DSN" DcmSchemaId="database-odbc-dsn-mssql-nocreds">f2959105-04cd-4379-a3c1-64baa7fb78b9</Connection>
+                <Projection />
+                <PostSQL />
+                <TransactionSize>10000</TransactionSize>
+                <PreSQL />
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>dcm:CricketDW_DSN
+Table=[stg].[BallByBallRaw]</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="125">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="1398" y="210" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="player_code" selected="True" rename="PlayerCodeRaw" />
+                <SelectField field="player_name" selected="False" />
+                <SelectField field="format_code" selected="True" rename="FormatCodeRaw" />
+                <SelectField field="discipline" selected="True" rename="DisciplineRaw" />
+                <SelectField field="ranking_date" selected="True" rename="RankingDateRaw" />
+                <SelectField field="rank_position" selected="True" rename="RankPositionRaw" />
+                <SelectField field="rating_points" selected="True" rename="RatingPointsRaw" />
+                <SelectField field="FullPath" selected="False" />
+                <SelectField field="Directory" selected="False" />
+                <SelectField field="FileName" selected="False" />
+                <SelectField field="ShortFileName" selected="False" />
+                <SelectField field="CreationTime" selected="False" />
+                <SelectField field="LastAccessTime" selected="False" />
+                <SelectField field="LastWriteTime" selected="False" />
+                <SelectField field="Size" selected="False" />
+                <SelectField field="AttributeArchive" selected="False" />
+                <SelectField field="AttributeCompressed" selected="False" />
+                <SelectField field="AttributeEncrypted" selected="False" />
+                <SelectField field="AttributeHidden" selected="False" />
+                <SelectField field="AttributeNormal" selected="False" />
+                <SelectField field="AttributeOffline" selected="False" />
+                <SelectField field="AttributeReadonly" selected="False" />
+                <SelectField field="AttributeReparsePoint" selected="False" />
+                <SelectField field="AttributeSparseFile" selected="False" />
+                <SelectField field="AttributeSystem" selected="False" />
+                <SelectField field="AttributeTemporary" selected="False" />
+                <SelectField field="Blob" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="PlayerCodeRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\player_rankings\player_rankings.csv" type="V_WString" />
+                <Field name="FormatCodeRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\player_rankings\player_rankings.csv" type="V_WString" />
+                <Field name="DisciplineRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\player_rankings\player_rankings.csv" type="V_WString" />
+                <Field name="RankingDateRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\player_rankings\player_rankings.csv" type="V_WString" />
+                <Field name="RankPositionRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\player_rankings\player_rankings.csv" type="V_WString" />
+                <Field name="RatingPointsRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\player_rankings\player_rankings.csv" type="V_WString" />
+                <Field name="SourceFileHash" size="1073741823" source="Formula: MD5_UTF8([Blob])" type="V_WString" />
+                <Field name="SourceFileName" size="1073741823" source="Formula: [FileName]" type="V_WString" />
+                <Field name="LoadRunId" size="1073741823" source="Formula: &quot;03_ingest_csv_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="126">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="1530" y="210" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File />
+              <Passwords />
+              <Disable>False</Disable>
+              <FormatSpecificOptions UseDcm="true" MaxRecords="" Format="23">
+                <SpatialObjSize>8000</SpatialObjSize>
+                <TableStyle>Quoted</TableStyle>
+                <TransactionMessages>False</TransactionMessages>
+                <Geometry>True</Geometry>
+                <Table>[stg].[PlayerRankingRaw]</Table>
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <OutputOption>Delete</OutputOption>
+                <Connection DcmType="ConnectionId" DcmTitle="CricketDW_DSN" DcmSchemaId="database-odbc-dsn-mssql-nocreds">f2959105-04cd-4379-a3c1-64baa7fb78b9</Connection>
+                <Projection />
+                <PostSQL />
+                <TransactionSize>10000</TransactionSize>
+                <PreSQL />
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>dcm:CricketDW_DSN
+Table=[stg].[PlayerRankingRaw]</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="145">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="1398" y="330" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="player_code" selected="True" rename="PlayerCodeRaw" />
+                <SelectField field="player_name" selected="False" />
+                <SelectField field="season" selected="True" rename="SeasonRaw" />
+                <SelectField field="format_code" selected="True" rename="FormatCodeRaw" />
+                <SelectField field="matches_played" selected="True" rename="MatchesPlayedRaw" />
+                <SelectField field="runs_scored" selected="True" rename="RunsScoredRaw" />
+                <SelectField field="wickets_taken" selected="True" rename="WicketsTakenRaw" />
+                <SelectField field="season_start_date" selected="False" />
+                <SelectField field="FullPath" selected="False" />
+                <SelectField field="Directory" selected="False" />
+                <SelectField field="FileName" selected="False" />
+                <SelectField field="ShortFileName" selected="False" />
+                <SelectField field="CreationTime" selected="False" />
+                <SelectField field="LastAccessTime" selected="False" />
+                <SelectField field="LastWriteTime" selected="False" />
+                <SelectField field="Size" selected="False" />
+                <SelectField field="AttributeArchive" selected="False" />
+                <SelectField field="AttributeCompressed" selected="False" />
+                <SelectField field="AttributeEncrypted" selected="False" />
+                <SelectField field="AttributeHidden" selected="False" />
+                <SelectField field="AttributeNormal" selected="False" />
+                <SelectField field="AttributeOffline" selected="False" />
+                <SelectField field="AttributeReadonly" selected="False" />
+                <SelectField field="AttributeReparsePoint" selected="False" />
+                <SelectField field="AttributeSparseFile" selected="False" />
+                <SelectField field="AttributeSystem" selected="False" />
+                <SelectField field="AttributeTemporary" selected="False" />
+                <SelectField field="Blob" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="PlayerCodeRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\historical_stats\historical_stats.csv" type="V_WString" />
+                <Field name="SeasonRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\historical_stats\historical_stats.csv" type="V_WString" />
+                <Field name="FormatCodeRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\historical_stats\historical_stats.csv" type="V_WString" />
+                <Field name="MatchesPlayedRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\historical_stats\historical_stats.csv" type="V_WString" />
+                <Field name="RunsScoredRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\historical_stats\historical_stats.csv" type="V_WString" />
+                <Field name="WicketsTakenRaw" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\historical_stats\historical_stats.csv" type="V_WString" />
+                <Field name="SourceFileHash" size="1073741823" source="Formula: MD5_UTF8([Blob])" type="V_WString" />
+                <Field name="SourceFileName" size="1073741823" source="Formula: [FileName]" type="V_WString" />
+                <Field name="LoadRunId" size="1073741823" source="Formula: &quot;03_ingest_csv_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="146">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="1530" y="330" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File />
+              <Passwords />
+              <Disable>False</Disable>
+              <FormatSpecificOptions UseDcm="true" MaxRecords="" Format="23">
+                <SpatialObjSize>8000</SpatialObjSize>
+                <TableStyle>Quoted</TableStyle>
+                <TransactionMessages>False</TransactionMessages>
+                <Geometry>True</Geometry>
+                <Table>[stg].[HistoricalStatsRaw]</Table>
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <OutputOption>Delete</OutputOption>
+                <Connection DcmType="ConnectionId" DcmTitle="CricketDW_DSN" DcmSchemaId="database-odbc-dsn-mssql-nocreds">f2959105-04cd-4379-a3c1-64baa7fb78b9</Connection>
+                <Projection />
+                <PostSQL />
+                <TransactionSize>10000</TransactionSize>
+                <PreSQL />
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>dcm:CricketDW_DSN
+Table=[stg].[HistoricalStatsRaw]</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Input5" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="True" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="True" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="True" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="True" />
+      <Destination ToolID="100" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="True" />
+      <Destination ToolID="120" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="True" />
+      <Destination ToolID="140" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="100" Connection="Output" />
+      <Destination ToolID="101" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="101" Connection="Output" />
+      <Destination ToolID="102" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="102" Connection="Output" />
+      <Destination ToolID="171" Connection="ControlIn" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="102" Connection="Output" />
+      <Destination ToolID="171" Connection="Control" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="120" Connection="Output" />
+      <Destination ToolID="121" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="121" Connection="Output" />
+      <Destination ToolID="122" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="122" Connection="Output" />
+      <Destination ToolID="170" Connection="ControlIn" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="122" Connection="Output" />
+      <Destination ToolID="170" Connection="Control" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="140" Connection="Output" />
+      <Destination ToolID="141" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="141" Connection="Output" />
+      <Destination ToolID="142" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="142" Connection="Output" />
+      <Destination ToolID="169" Connection="ControlIn" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="142" Connection="Output" />
+      <Destination ToolID="169" Connection="Control" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="169" Connection="DataOut" />
+      <Destination ToolID="144" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="170" Connection="DataOut" />
+      <Destination ToolID="124" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="171" Connection="DataOut" />
+      <Destination ToolID="104" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="104" Connection="Output" />
+      <Destination ToolID="105" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="124" Connection="Output" />
+      <Destination ToolID="125" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="144" Connection="Output" />
+      <Destination ToolID="145" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="107" Connection="True" />
+      <Destination ToolID="108" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="127" Connection="True" />
+      <Destination ToolID="128" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="147" Connection="True" />
+      <Destination ToolID="148" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="109" Connection="Output" />
+      <Destination ToolID="160" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="129" Connection="Output" />
+      <Destination ToolID="160" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="160" Connection="Output" />
+      <Destination ToolID="161" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="149" Connection="Output" />
+      <Destination ToolID="161" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="161" Connection="Output" />
+      <Destination ToolID="162" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="162" Connection="Output" />
+      <Destination ToolID="163" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="163" Connection="Output" />
+      <Destination ToolID="164" Connection="Input5" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="105" Connection="Output" />
+      <Destination ToolID="106" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="105" Connection="Output" />
+      <Destination ToolID="107" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="105" Connection="Output" />
+      <Destination ToolID="109" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="125" Connection="Output" />
+      <Destination ToolID="126" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="125" Connection="Output" />
+      <Destination ToolID="127" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="125" Connection="Output" />
+      <Destination ToolID="129" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="145" Connection="Output" />
+      <Destination ToolID="146" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="145" Connection="Output" />
+      <Destination ToolID="147" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="145" Connection="Output" />
+      <Destination ToolID="149" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="False" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <DefaultTZ value="Local" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>03_ingest_csv</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="3ac300b7-7388-4d89-b8bb-d4f34fccd7a8" />
+      <Telemetry>
+        <PreviousWorkflowId value="0474f72a-a7de-4b88-af05-8ade8d625275" />
+        <OriginWorkflowId value="dd08e39c-d0a7-47ed-ae8e-5ce11731eb20" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (172)</Name>
+          <ToolId value="172" />
+          <Questions />
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="3" Selected="True" />
+        <Tool ToolId="169" Selected="True" />
+        <Tool ToolId="170" Selected="True" />
+        <Tool ToolId="171" Selected="True" />
+        <Tool ToolId="106" Selected="True" />
+        <Tool ToolId="126" Selected="True" />
+        <Tool ToolId="146" Selected="True" />
+        <Tool ToolId="164" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>

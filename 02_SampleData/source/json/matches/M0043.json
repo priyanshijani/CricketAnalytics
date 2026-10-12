@@ -1,0 +1,50 @@
+{
+  "match_id": "M0043",
+  "season": "2024",
+  "format": "T20",
+  "date": "2024-04-05",
+  "venue": {
+    "code": "BLR01"
+  },
+  "teams": [
+    {
+      "code": "BLR",
+      "name": "Bangalore Royals"
+    },
+    {
+      "code": "CHE",
+      "name": "Chennai Kings"
+    }
+  ],
+  "toss": {
+    "winner": "BLR",
+    "decision": "Field"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "BLR",
+    "margin": 5,
+    "margin_type": "Wickets",
+    "man_of_match": "P0049"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "CHE",
+      "bowling_team": "BLR",
+      "runs": 129,
+      "wickets": 8,
+      "overs": 20.0,
+      "extras": 4
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "BLR",
+      "bowling_team": "CHE",
+      "runs": 146,
+      "wickets": 5,
+      "overs": 20.0,
+      "extras": 4
+    }
+  ]
+}

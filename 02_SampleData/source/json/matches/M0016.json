@@ -1,0 +1,50 @@
+{
+  "match_id": "M0016",
+  "season": "2023",
+  "format": "T20",
+  "date": "2023-05-01",
+  "venue": {
+    "code": "DEL01"
+  },
+  "teams": [
+    {
+      "code": "DEL",
+      "name": "Delhi Falcons"
+    },
+    {
+      "code": "CHE",
+      "name": "Chennai Kings"
+    }
+  ],
+  "toss": {
+    "winner": "DEL",
+    "decision": "Field"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "DEL",
+    "margin": 5,
+    "margin_type": "Wickets",
+    "man_of_match": "P0023"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "CHE",
+      "bowling_team": "DEL",
+      "runs": 148,
+      "wickets": 6,
+      "overs": 20.0,
+      "extras": 5
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "DEL",
+      "bowling_team": "CHE",
+      "runs": 165,
+      "wickets": 5,
+      "overs": 20.0,
+      "extras": 7
+    }
+  ]
+}

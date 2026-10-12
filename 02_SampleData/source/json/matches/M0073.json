@@ -1,0 +1,50 @@
+{
+  "match_id": "M0073",
+  "season": "2024",
+  "format": "T20",
+  "date": "2024-06-04",
+  "venue": {
+    "code": "DEL01"
+  },
+  "teams": [
+    {
+      "code": "DEL",
+      "name": "Delhi Comets"
+    },
+    {
+      "code": "MUM",
+      "name": "Mumbai Sharks"
+    }
+  ],
+  "toss": {
+    "winner": "DEL",
+    "decision": "Bat"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "MUM",
+    "margin": 4,
+    "margin_type": "Wickets",
+    "man_of_match": "P0005"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "DEL",
+      "bowling_team": "MUM",
+      "runs": 186,
+      "wickets": 7,
+      "overs": 20.0,
+      "extras": 8
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "MUM",
+      "bowling_team": "DEL",
+      "runs": 199,
+      "wickets": 6,
+      "overs": 20.0,
+      "extras": 8
+    }
+  ]
+}

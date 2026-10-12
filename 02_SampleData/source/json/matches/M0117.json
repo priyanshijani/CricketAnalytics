@@ -1,0 +1,50 @@
+{
+  "match_id": "M0117",
+  "season": "2025",
+  "format": "T20",
+  "date": "2025-06-12",
+  "venue": {
+    "code": "PUN01"
+  },
+  "teams": [
+    {
+      "code": "PUN",
+      "name": "Punjab Warriors"
+    },
+    {
+      "code": "DEL",
+      "name": "Delhi Comets"
+    }
+  ],
+  "toss": {
+    "winner": "DEL",
+    "decision": "Field"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "PUN",
+    "margin": 51,
+    "margin_type": "Runs",
+    "man_of_match": "P0117"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "PUN",
+      "bowling_team": "DEL",
+      "runs": 187,
+      "wickets": 5,
+      "overs": 20.0,
+      "extras": 6
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "DEL",
+      "bowling_team": "PUN",
+      "runs": 136,
+      "wickets": 10,
+      "overs": 16.2,
+      "extras": 10
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "match_id": "M0091",
+  "season": "2025",
+  "format": "T20",
+  "date": "2025-04-21",
+  "venue": {
+    "code": "KOL01"
+  },
+  "teams": [
+    {
+      "code": "KOL",
+      "name": "Kolkata Tigers"
+    },
+    {
+      "code": "MUM",
+      "name": "Mumbai Sharks"
+    }
+  ],
+  "toss": {
+    "winner": "KOL",
+    "decision": "Field"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "MUM",
+    "margin": 43,
+    "margin_type": "Runs",
+    "man_of_match": "P0018"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "MUM",
+      "bowling_team": "KOL",
+      "runs": 198,
+      "wickets": 9,
+      "overs": 20.0,
+      "extras": 8
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "KOL",
+      "bowling_team": "MUM",
+      "runs": 155,
+      "wickets": 6,
+      "overs": 20.0,
+      "extras": 8
+    }
+  ]
+}

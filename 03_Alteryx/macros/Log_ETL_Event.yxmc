@@ -1,0 +1,269 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2026.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="306" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[WorkflowName] + &quot;_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" field="LoadRunId" size="1073741823" type="V_WString" enabled="true" />
+            <FormulaField expression="DateTimeNow()" field="StartTime" size="19" type="DateTime" enabled="true" />
+            <FormulaField expression="IIF([Status]=&quot;Started&quot;, Null(), DateTimeNow())" field="EndTime" size="19" type="DateTime" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>LoadRunId = [WorkflowName] + "_" + DateTimeFormat(DateTimeStart(),"%Y%m%d%H%M%S")
+...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="WorkflowName" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="Status" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="RowsIn" source="TextInput:" type="Int64" />
+            <Field name="RowsOut" source="TextInput:" type="Int64" />
+            <Field name="RowsRejected" source="TextInput:" type="Int64" />
+            <Field name="ErrorMessage" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="LoadRunId" size="1073741823" source="Formula: [WorkflowName] + &quot;_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" type="V_WString" />
+            <Field name="StartTime" size="19" source="Formula: DateTimeNow()" type="DateTime" />
+            <Field name="EndTime" size="19" source="Formula: IIF([Status]=&quot;Started&quot;, Null(), DateTimeNow())" type="DateTime" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="54" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>Input5</Name>
+          <Abbrev />
+          <ShowFieldMap value="True" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="0" />
+              <Fields>
+                <Field name="WorkflowName" />
+                <Field name="Status" />
+                <Field name="RowsIn" />
+                <Field name="RowsOut" />
+                <Field name="RowsRejected" />
+                <Field name="ErrorMessage" />
+              </Fields>
+              <Data />
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Input</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="WorkflowName" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="Status" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="RowsIn" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="RowsOut" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="RowsRejected" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="ErrorMessage" size="1073741823" source="TextInput:" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="402" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File />
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions UseDcm="true" MaxRecords="" Format="23">
+            <SpatialObjSize>8000</SpatialObjSize>
+            <TableStyle>Quoted</TableStyle>
+            <TransactionMessages>False</TransactionMessages>
+            <Geometry>True</Geometry>
+            <Table>audit.Audit_ETLRunLog</Table>
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <OutputOption>Append</OutputOption>
+            <Connection DcmType="ConnectionId" DcmTitle="CricketDW_DSN" DcmSchemaId="database-odbc-dsn-mssql-nocreds">f2959105-04cd-4379-a3c1-64baa7fb78b9</Connection>
+            <Projection />
+            <PostSQL />
+            <TransactionSize>10000</TransactionSize>
+            <PreSQL />
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>dcm:CricketDW_DSN
+Table=audit.Audit_ETLRunLog</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="210" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="RowsIn" selected="True" type="Int64" size="8" />
+            <SelectField field="RowsOut" selected="True" type="Int64" size="8" />
+            <SelectField field="RowsRejected" selected="True" type="Int64" size="8" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="WorkflowName" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="Status" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="RowsIn" source="TextInput:" type="Int64" />
+            <Field name="RowsOut" source="TextInput:" type="Int64" />
+            <Field name="RowsRejected" source="TextInput:" type="Int64" />
+            <Field name="ErrorMessage" size="1073741823" source="TextInput:" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <DefaultTZ value="Local" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <Constants>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Macro Input (5)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Log_ETL_Event</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="768fcf24-cd65-46dc-8417-1e8b553b329d" />
+      <Telemetry>
+        <PreviousWorkflowId value="76719046-52c9-4db3-9fe9-87eaffdca1b1" />
+        <OriginWorkflowId value="c502de6c-c4da-4464-8302-ef243dd28f1a" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (2)</Name>
+          <ToolId value="2" />
+          <Questions>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description>Macro Input (5)</Description>
+              <Name>Macro Input (5)</Name>
+              <ToolId value="5" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="5" Selected="True" />
+        <Tool ToolId="7" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>

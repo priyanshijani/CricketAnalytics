@@ -1,0 +1,34 @@
+﻿LoadRunId,EntityType,OutcomeOrder,Outcome,Passed,Rows,IsCurrent
+04_dq_validation_20261007124340,Player,5,Flagged (loaded with a warning),1,6,0
+04_dq_validation_20261006153858,Innings,1,Bad record,0,2,1
+04_dq_validation_20261007133028,Player,5,Flagged (loaded with a warning),1,6,0
+04_dq_validation_20261006153858,Delivery,5,Flagged (loaded with a warning),1,31,1
+04_dq_validation_20261007154733,Player,5,Flagged (loaded with a warning),1,6,0
+04_dq_validation_20261006153858,Match,1,Bad record,0,3,1
+04_dq_validation_20261006153858,Delivery,3,Parent rejected,0,249,1
+04_dq_validation_20261007125220,Player,5,Flagged (loaded with a warning),1,6,0
+04_dq_validation_20261006153858,Innings,5,Flagged (loaded with a warning),1,1,1
+04_dq_validation_20261006153858,HistoricalStats,1,Bad record,0,1,1
+04_dq_validation_20261006153858,Player,5,Flagged (loaded with a warning),1,6,0
+04_dq_validation_20261006153858,Match,2,Duplicate file,0,1,1
+04_dq_validation_20261006153858,Delivery,1,Bad record,0,2,1
+04_dq_validation_20261006153858,Innings,3,Parent rejected,0,4,1
+04_dq_validation_20261007130744,Player,5,Flagged (loaded with a warning),1,6,0
+04_dq_validation_20261006153858,Delivery,4,Held: match incomplete,0,772,1
+04_dq_validation_20261007125003,Player,5,Flagged (loaded with a warning),1,6,0
+04_dq_validation_20261007165649,Player,5,Flagged (loaded with a warning),1,6,1
+04_dq_validation_20261007130629,Player,5,Flagged (loaded with a warning),1,6,0
+04_dq_validation_20261006153858,Delivery,0,Accepted,1,28038,1
+04_dq_validation_20261006153858,HistoricalStats,0,Accepted,1,395,1
+04_dq_validation_20261006153858,Innings,0,Accepted,1,232,1
+04_dq_validation_20261006153858,Match,0,Accepted,1,119,1
+04_dq_validation_20261006153858,Player,0,Accepted,1,146,0
+04_dq_validation_20261006153858,PlayerRanking,0,Accepted,1,756,1
+04_dq_validation_20261007124340,Player,0,Accepted,1,146,0
+04_dq_validation_20261007125003,Player,0,Accepted,1,146,0
+04_dq_validation_20261007125220,Player,0,Accepted,1,146,0
+04_dq_validation_20261007130629,Player,0,Accepted,1,146,0
+04_dq_validation_20261007130744,Player,0,Accepted,1,146,0
+04_dq_validation_20261007133028,Player,0,Accepted,1,146,0
+04_dq_validation_20261007154733,Player,0,Accepted,1,146,0
+04_dq_validation_20261007165649,Player,0,Accepted,1,146,1

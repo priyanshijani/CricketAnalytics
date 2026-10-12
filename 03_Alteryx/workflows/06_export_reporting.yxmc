@@ -1,0 +1,856 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2026.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="74" y="45" width="514" height="133" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>0. Run log - Started</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>0. Run log - Started</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="2">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+            <Position x="99" y="94" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <NumRows value="1" />
+              <Fields>
+                <Field name="Run" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>1</c>
+                </r>
+              </Data>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>One row so the Started log call fires.</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Run" source="TextInput:" type="Int32" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+        </Node>
+        <Node ToolID="3">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="234" y="94" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="&quot;06_export_reporting&quot;" field="WorkflowName" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="&quot;Started&quot;" field="Status" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="0" field="RowsIn" size="8" type="Int64" enabled="true" />
+                <FormulaField expression="0" field="RowsOut" size="8" type="Int64" enabled="true" />
+                <FormulaField expression="0" field="RowsRejected" size="8" type="Int64" enabled="true" />
+                <FormulaField expression="&quot;&quot;" field="ErrorMessage" size="1073741823" type="V_WString" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Started row</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Run" source="TextInput:" type="Int32" />
+                <Field name="WorkflowName" size="1073741823" source="Formula: &quot;06_export_reporting&quot;" type="V_WString" />
+                <Field name="Status" size="1073741823" source="Formula: &quot;Started&quot;" type="V_WString" />
+                <Field name="RowsIn" source="Formula: 0" type="Int64" />
+                <Field name="RowsOut" source="Formula: 0" type="Int64" />
+                <Field name="RowsRejected" source="Formula: 0" type="Int64" />
+                <Field name="ErrorMessage" size="1073741823" source="Formula: &quot;&quot;" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="4">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="369" y="94" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Run" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Drop helper field</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="WorkflowName" size="1073741823" source="Formula: &quot;06_export_reporting&quot;" type="V_WString" />
+                <Field name="Status" size="1073741823" source="Formula: &quot;Started&quot;" type="V_WString" />
+                <Field name="RowsIn" source="Formula: 0" type="Int64" />
+                <Field name="RowsOut" source="Formula: 0" type="Int64" />
+                <Field name="RowsRejected" source="Formula: 0" type="Int64" />
+                <Field name="ErrorMessage" size="1073741823" source="Formula: &quot;&quot;" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="5">
+          <GuiSettings Plugin="Log_ETL_Event.yxmc">
+            <Position x="504" y="94" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="Input.Input5"><![CDATA[WorkflowName=WorkflowName
+Status=Status
+RowsIn=RowsIn
+RowsOut=RowsOut
+RowsRejected=RowsRejected
+ErrorMessage=ErrorMessage
+]]></Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Audit_ETLRunLog: Started</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="..\macros\Log_ETL_Event.yxmc" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="74" y="234" width="1189" height="293" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>1. Export - every rpt view to 04_Prepared</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>1. Export - every rpt view to 04_Prepared</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="7">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="99" y="283" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File />
+              <FormatSpecificOptions UseDcm="true" Format="23" RecordLimit="">
+                <SingleRowFetch>False</SingleRowFetch>
+                <ReadCentroids>False</ReadCentroids>
+                <Query>SELECT v.name AS ViewName FROM sys.views AS v JOIN sys.schemas AS s ON s.schema_id = v.schema_id WHERE s.name = 'rpt' ORDER BY v.name</Query>
+                <TableStyle>Quoted</TableStyle>
+                <PostSQL />
+                <CacheData>False</CacheData>
+                <Table />
+                <SessionReadOnly>True</SessionReadOnly>
+                <ReadUncommitted>False</ReadUncommitted>
+                <Connection DcmType="ConnectionId" DcmTitle="CricketDW_DSN" DcmSchemaId="database-odbc-dsn-mssql-nocreds">f2959105-04cd-4379-a3c1-64baa7fb78b9</Connection>
+                <NoProgress>True</NoProgress>
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <PreSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Every view in the rpt schema - a new reporting view is exported with no workflow change</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="ViewName" size="128" source="File: SELECT v.name AS ViewName FROM sys.views AS v JOIN sys.schemas AS s ON s.schema_id = v.schema_id WHERE s.name = 'rpt' ORDER BY v.name" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="8">
+          <GuiSettings Plugin="Export_View.yxmc">
+            <Position x="234" y="283" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="ControlParams"><![CDATA[ViewName=ViewName
+]]></Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Batch macro: one view per iteration -&gt; 04_Prepared\rpt_[ViewName].csv</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Exported">
+              <RecordInfo>
+                <Field name="ViewName" size="128" source="Summarize: GroupBy - ViewName" type="V_String" />
+                <Field name="RowsWritten" source="Summarize: Count - ViewName" type="Int64" />
+                <Field name="ViewRows" source="File: SELECT CAST('Player' AS VARCHAR(128)) AS ViewName, COUNT(*) AS ViewRows FROM rpt.Player" type="Int32" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings Macro="..\macros\Export_View.yxmc" />
+        </Node>
+        <Node ToolID="9">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="369" y="283" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="ViewName" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="ViewName" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_ViewName" selected="False" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Every view, with its counts. L = empty view (no rows to count)</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Left">
+              <RecordInfo>
+                <Field name="ViewName" size="128" source="File: SELECT v.name AS ViewName FROM sys.views AS v JOIN sys.schemas AS s ON s.schema_id = v.schema_id WHERE s.name = 'rpt' ORDER BY v.name" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="Join">
+              <RecordInfo>
+                <Field name="ViewName" size="128" source="File: SELECT v.name AS ViewName FROM sys.views AS v JOIN sys.schemas AS s ON s.schema_id = v.schema_id WHERE s.name = 'rpt' ORDER BY v.name" type="V_WString" />
+                <Field name="RowsWritten" source="Summarize: Count - ViewName" type="Int64" />
+                <Field name="ViewRows" source="File: SELECT CAST('Player' AS VARCHAR(128)) AS ViewName, COUNT(*) AS ViewRows FROM rpt.Player" type="Int32" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="Right">
+              <RecordInfo>
+                <Field name="ViewName" size="128" source="Summarize: GroupBy - ViewName" type="V_String" />
+                <Field name="RowsWritten" source="Summarize: Count - ViewName" type="Int64" />
+                <Field name="ViewRows" source="File: SELECT CAST('Player' AS VARCHAR(128)) AS ViewName, COUNT(*) AS ViewRows FROM rpt.Player" type="Int32" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="10">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="504" y="283" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="0" field="RowsWritten" size="8" type="Int64" enabled="true" />
+                <FormulaField expression="0" field="ViewRows" size="8" type="Int64" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Empty view: 0 rows</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="ViewName" size="128" source="File: SELECT v.name AS ViewName FROM sys.views AS v JOIN sys.schemas AS s ON s.schema_id = v.schema_id WHERE s.name = 'rpt' ORDER BY v.name" type="V_WString" />
+                <Field name="RowsWritten" source="Formula: 0" type="Int64" />
+                <Field name="ViewRows" source="Formula: 0" type="Int64" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="11">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="639" y="283" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Warning</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>All views</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="ViewName" size="128" source="File: SELECT v.name AS ViewName FROM sys.views AS v JOIN sys.schemas AS s ON s.schema_id = v.schema_id WHERE s.name = 'rpt' ORDER BY v.name" type="V_WString" />
+                <Field name="RowsWritten" source="(Multiple Sources)" type="Int64" />
+                <Field name="ViewRows" source="(Multiple Sources)" type="Int64" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+        <Node ToolID="12">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="774" y="283" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="&quot;rpt_&quot; + [ViewName] + &quot;.csv&quot;" field="FileName" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="&quot;rpt.&quot; + [ViewName]" field="SourceView" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="[RowsWritten]" field="RowCount" size="8" type="Int64" enabled="true" />
+                <FormulaField expression="&quot;06_export_reporting_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" field="BatchId" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="DateTimeNow()" field="GeneratedAt" size="19" type="DateTime" enabled="true" />
+                <FormulaField expression="[RowsWritten] = [ViewRows]" field="Reconciled" size="1" type="Bool" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Manifest row: file, source view, rows, batch id, time; rows written must equal the view's own count</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="ViewName" size="128" source="File: SELECT v.name AS ViewName FROM sys.views AS v JOIN sys.schemas AS s ON s.schema_id = v.schema_id WHERE s.name = 'rpt' ORDER BY v.name" type="V_WString" />
+                <Field name="RowsWritten" source="(Multiple Sources)" type="Int64" />
+                <Field name="ViewRows" source="(Multiple Sources)" type="Int64" />
+                <Field name="FileName" size="1073741823" source="Formula: &quot;rpt_&quot; + [ViewName] + &quot;.csv&quot;" type="V_WString" />
+                <Field name="SourceView" size="1073741823" source="Formula: &quot;rpt.&quot; + [ViewName]" type="V_WString" />
+                <Field name="RowCount" source="Formula: [RowsWritten]" type="Int64" />
+                <Field name="BatchId" size="1073741823" source="Formula: &quot;06_export_reporting_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" type="V_WString" />
+                <Field name="GeneratedAt" size="19" source="Formula: DateTimeNow()" type="DateTime" />
+                <Field name="Reconciled" source="Formula: [RowsWritten] = [ViewRows]" type="Bool" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="13">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="909" y="443" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>![Reconciled]</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Rows written &lt;&gt; rows in the view</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="True">
+              <RecordInfo>
+                <Field name="ViewName" size="128" source="File: SELECT v.name AS ViewName FROM sys.views AS v JOIN sys.schemas AS s ON s.schema_id = v.schema_id WHERE s.name = 'rpt' ORDER BY v.name" type="V_WString" />
+                <Field name="RowsWritten" source="(Multiple Sources)" type="Int64" />
+                <Field name="ViewRows" source="(Multiple Sources)" type="Int64" />
+                <Field name="FileName" size="1073741823" source="Formula: &quot;rpt_&quot; + [ViewName] + &quot;.csv&quot;" type="V_WString" />
+                <Field name="SourceView" size="1073741823" source="Formula: &quot;rpt.&quot; + [ViewName]" type="V_WString" />
+                <Field name="RowCount" source="Formula: [RowsWritten]" type="Int64" />
+                <Field name="BatchId" size="1073741823" source="Formula: &quot;06_export_reporting_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" type="V_WString" />
+                <Field name="GeneratedAt" size="19" source="Formula: DateTimeNow()" type="DateTime" />
+                <Field name="Reconciled" source="Formula: [RowsWritten] = [ViewRows]" type="Bool" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="False">
+              <RecordInfo>
+                <Field name="ViewName" size="128" source="File: SELECT v.name AS ViewName FROM sys.views AS v JOIN sys.schemas AS s ON s.schema_id = v.schema_id WHERE s.name = 'rpt' ORDER BY v.name" type="V_WString" />
+                <Field name="RowsWritten" source="(Multiple Sources)" type="Int64" />
+                <Field name="ViewRows" source="(Multiple Sources)" type="Int64" />
+                <Field name="FileName" size="1073741823" source="Formula: &quot;rpt_&quot; + [ViewName] + &quot;.csv&quot;" type="V_WString" />
+                <Field name="SourceView" size="1073741823" source="Formula: &quot;rpt.&quot; + [ViewName]" type="V_WString" />
+                <Field name="RowCount" source="Formula: [RowsWritten]" type="Int64" />
+                <Field name="BatchId" size="1073741823" source="Formula: &quot;06_export_reporting_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" type="V_WString" />
+                <Field name="GeneratedAt" size="19" source="Formula: DateTimeNow()" type="DateTime" />
+                <Field name="Reconciled" source="Formula: [RowsWritten] = [ViewRows]" type="Bool" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="14">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Message.Message">
+            <Position x="1044" y="443" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <When>First</When>
+              <Filter />
+              <Type>Error</Type>
+              <Priority>High</Priority>
+              <Transient>False</Transient>
+              <MessageExpression>"Export of rpt." + [ViewName] + " wrote " + ToString([RowsWritten]) + " rows; the view has " + ToString([ViewRows])</MessageExpression>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Fail loudly</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="ViewName" size="128" source="File: SELECT v.name AS ViewName FROM sys.views AS v JOIN sys.schemas AS s ON s.schema_id = v.schema_id WHERE s.name = 'rpt' ORDER BY v.name" type="V_WString" />
+                <Field name="RowsWritten" source="(Multiple Sources)" type="Int64" />
+                <Field name="ViewRows" source="(Multiple Sources)" type="Int64" />
+                <Field name="FileName" size="1073741823" source="Formula: &quot;rpt_&quot; + [ViewName] + &quot;.csv&quot;" type="V_WString" />
+                <Field name="SourceView" size="1073741823" source="Formula: &quot;rpt.&quot; + [ViewName]" type="V_WString" />
+                <Field name="RowCount" source="Formula: [RowsWritten]" type="Int64" />
+                <Field name="BatchId" size="1073741823" source="Formula: &quot;06_export_reporting_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" type="V_WString" />
+                <Field name="GeneratedAt" size="19" source="Formula: DateTimeNow()" type="DateTime" />
+                <Field name="Reconciled" source="Formula: [RowsWritten] = [ViewRows]" type="Bool" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMessage" />
+        </Node>
+        <Node ToolID="15">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+            <Position x="909" y="283" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SortInfo locale="0">
+                <Field field="FileName" order="Ascending" />
+              </SortInfo>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Manifest order</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="ViewName" size="128" source="File: SELECT v.name AS ViewName FROM sys.views AS v JOIN sys.schemas AS s ON s.schema_id = v.schema_id WHERE s.name = 'rpt' ORDER BY v.name" type="V_WString" />
+                <Field name="RowsWritten" source="(Multiple Sources)" type="Int64" />
+                <Field name="ViewRows" source="(Multiple Sources)" type="Int64" />
+                <Field name="FileName" size="1073741823" source="Formula: &quot;rpt_&quot; + [ViewName] + &quot;.csv&quot;" type="V_WString" />
+                <Field name="SourceView" size="1073741823" source="Formula: &quot;rpt.&quot; + [ViewName]" type="V_WString" />
+                <Field name="RowCount" source="Formula: [RowsWritten]" type="Int64" />
+                <Field name="BatchId" size="1073741823" source="Formula: &quot;06_export_reporting_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" type="V_WString" />
+                <Field name="GeneratedAt" size="19" source="Formula: DateTimeNow()" type="DateTime" />
+                <Field name="Reconciled" source="Formula: [RowsWritten] = [ViewRows]" type="Bool" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+        </Node>
+        <Node ToolID="16">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="1044" y="283" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="FileName" selected="True" type="V_String" size="100" />
+                <SelectField field="SourceView" selected="True" type="V_String" size="130" />
+                <SelectField field="RowCount" selected="True" type="Int64" size="8" />
+                <SelectField field="BatchId" selected="True" type="V_String" size="50" />
+                <SelectField field="GeneratedAt" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Manifest columns</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="FileName" size="100" source="Formula: &quot;rpt_&quot; + [ViewName] + &quot;.csv&quot;" type="V_String" />
+                <Field name="SourceView" size="130" source="Formula: &quot;rpt.&quot; + [ViewName]" type="V_String" />
+                <Field name="RowCount" source="Formula: [RowsWritten]" type="Int64" />
+                <Field name="BatchId" size="50" source="Formula: &quot;06_export_reporting_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" type="V_String" />
+                <Field name="GeneratedAt" size="19" source="Formula: DateTimeNow()" type="DateTime" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="17">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="1179" y="283" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="0">..\..\04_Prepared\_manifest.csv</File>
+              <Passwords />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <LineEndStyle>CRLF</LineEndStyle>
+                <Delimeter>,</Delimeter>
+                <ForceQuotes>False</ForceQuotes>
+                <HeaderRow>True</HeaderRow>
+                <CodePage>65001</CodePage>
+                <WriteBOM>True</WriteBOM>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>04_Prepared\_manifest.csv - what was exported, how many rows, which batch, when</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1349" y="234" width="514" height="133" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>2. Run log - Succeeded</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>2. Run log - Succeeded</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="19">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="1374" y="283" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="RowCount" action="Sum" rename="RowsOut" />
+                <SummarizeField field="FileName" action="Count" rename="Files" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Rows and files exported</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="RowsOut" source="Summarize: Sum - RowCount" type="Int64" />
+                <Field name="Files" source="Summarize: Count - FileName" type="Int64" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="20">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1509" y="283" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="&quot;06_export_reporting&quot;" field="WorkflowName" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="&quot;Succeeded&quot;" field="Status" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="[RowsOut]" field="RowsIn" size="8" type="Int64" enabled="true" />
+                <FormulaField expression="0" field="RowsRejected" size="8" type="Int64" enabled="true" />
+                <FormulaField expression="&quot;&quot;" field="ErrorMessage" size="1073741823" type="V_WString" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Succeeded row</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="RowsOut" source="Summarize: Sum - RowCount" type="Int64" />
+                <Field name="Files" source="Summarize: Count - FileName" type="Int64" />
+                <Field name="WorkflowName" size="1073741823" source="Formula: &quot;06_export_reporting&quot;" type="V_WString" />
+                <Field name="Status" size="1073741823" source="Formula: &quot;Succeeded&quot;" type="V_WString" />
+                <Field name="RowsIn" source="Formula: [RowsOut]" type="Int64" />
+                <Field name="RowsRejected" source="Formula: 0" type="Int64" />
+                <Field name="ErrorMessage" size="1073741823" source="Formula: &quot;&quot;" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="21">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="1644" y="283" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="WorkflowName" selected="True" />
+                <SelectField field="Status" selected="True" />
+                <SelectField field="RowsIn" selected="True" type="Int64" size="8" />
+                <SelectField field="RowsOut" selected="True" type="Int64" size="8" />
+                <SelectField field="RowsRejected" selected="True" type="Int64" size="8" />
+                <SelectField field="ErrorMessage" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Log fields</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="WorkflowName" size="1073741823" source="Formula: &quot;06_export_reporting&quot;" type="V_WString" />
+                <Field name="Status" size="1073741823" source="Formula: &quot;Succeeded&quot;" type="V_WString" />
+                <Field name="RowsIn" source="Formula: [RowsOut]" type="Int64" />
+                <Field name="RowsOut" source="Summarize: Sum - RowCount" type="Int64" />
+                <Field name="RowsRejected" source="Formula: 0" type="Int64" />
+                <Field name="ErrorMessage" size="1073741823" source="Formula: &quot;&quot;" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="22">
+          <GuiSettings Plugin="Log_ETL_Event.yxmc">
+            <Position x="1779" y="283" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="Input.Input5"><![CDATA[WorkflowName=WorkflowName
+Status=Status
+RowsIn=RowsIn
+RowsOut=RowsOut
+RowsRejected=RowsRejected
+ErrorMessage=ErrorMessage
+]]></Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Audit_ETLRunLog: Succeeded</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="..\macros\Log_ETL_Event.yxmc" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="5" Connection="Input5" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="8" Connection="Control" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="9" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Exported" />
+      <Destination ToolID="9" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Left" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="9" Connection="Join" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="True" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="22" Connection="Input5" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="False" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="True" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <DefaultTZ value="Local" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>06_export_reporting</Name>
+      <Description>Exports every view in the rpt schema to 04_Prepared\rpt_[View].csv (the files Tableau reads) and writes 04_Prepared\_manifest.csv: file, source view, row count, batch id, generation time. Rows written are reconciled against each view's own count; a mismatch stops the run.</Description>
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="9567db23-16ff-4c9c-a251-879207e04b3c" />
+      <Telemetry>
+        <PreviousWorkflowId value="629af02b-bddb-4b4f-bc41-a6b4f05e8edf" />
+        <OriginWorkflowId value="9567db23-16ff-4c9c-a251-879207e04b3c" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (23)</Name>
+          <ToolId value="23" />
+          <Questions />
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="5" Selected="True" />
+        <Tool ToolId="8" Selected="True" />
+        <Tool ToolId="17" Selected="True" />
+        <Tool ToolId="22" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>

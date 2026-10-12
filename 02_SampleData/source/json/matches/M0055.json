@@ -1,0 +1,50 @@
+{
+  "match_id": "M0055",
+  "season": "2024",
+  "format": "T20",
+  "date": "2024-04-29",
+  "venue": {
+    "code": "KOL01"
+  },
+  "teams": [
+    {
+      "code": "KOL",
+      "name": "Kolkata Tigers"
+    },
+    {
+      "code": "BLR",
+      "name": "Bangalore Royals"
+    }
+  ],
+  "toss": {
+    "winner": "BLR",
+    "decision": "Field"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "BLR",
+    "margin": 4,
+    "margin_type": "Wickets",
+    "man_of_match": "P0059"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "KOL",
+      "bowling_team": "BLR",
+      "runs": 165,
+      "wickets": 8,
+      "overs": 20.0,
+      "extras": 8
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "BLR",
+      "bowling_team": "KOL",
+      "runs": 167,
+      "wickets": 6,
+      "overs": 20.0,
+      "extras": 9
+    }
+  ]
+}

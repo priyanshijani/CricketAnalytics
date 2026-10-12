@@ -1,0 +1,18 @@
+{
+  "season": "2023",
+  "format": "T20",
+  "date": "2023-05-01",
+  "venue": {
+    "code": "MUM01"
+  },
+  "teams": [
+    {
+      "code": "MUM",
+      "name": "Mumbai Sharks"
+    },
+    {
+      "code": "CHE",
+      "name": "Chennai Kings"
+    }
+  ]
+}

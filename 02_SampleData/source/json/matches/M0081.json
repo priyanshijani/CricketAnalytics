@@ -1,0 +1,50 @@
+{
+  "match_id": "M0081",
+  "season": "2025",
+  "format": "T20",
+  "date": "2025-04-01",
+  "venue": {
+    "code": "KOL01"
+  },
+  "teams": [
+    {
+      "code": "KOL",
+      "name": "Kolkata Tigers"
+    },
+    {
+      "code": "RAJ",
+      "name": "Rajasthan Titans"
+    }
+  ],
+  "toss": {
+    "winner": "KOL",
+    "decision": "Field"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "RAJ",
+    "margin": 11,
+    "margin_type": "Runs",
+    "man_of_match": "P0059"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "RAJ",
+      "bowling_team": "KOL",
+      "runs": 164,
+      "wickets": 9,
+      "overs": 20.0,
+      "extras": 4
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "KOL",
+      "bowling_team": "RAJ",
+      "runs": 153,
+      "wickets": 9,
+      "overs": 20.0,
+      "extras": 9
+    }
+  ]
+}

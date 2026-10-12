@@ -1,0 +1,50 @@
+{
+  "match_id": "M0021",
+  "season": "2023",
+  "format": "T20",
+  "date": "2023-05-11",
+  "venue": {
+    "code": "HYD01"
+  },
+  "teams": [
+    {
+      "code": "HYD",
+      "name": "Hyderabad Hawks"
+    },
+    {
+      "code": "RAJ",
+      "name": "Rajasthan Titans"
+    }
+  ],
+  "toss": {
+    "winner": "RAJ",
+    "decision": "Field"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "RAJ",
+    "margin": 4,
+    "margin_type": "Wickets",
+    "man_of_match": "P0110"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "HYD",
+      "bowling_team": "RAJ",
+      "runs": 167,
+      "wickets": 4,
+      "overs": 20.0,
+      "extras": 4
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "RAJ",
+      "bowling_team": "HYD",
+      "runs": 188,
+      "wickets": 6,
+      "overs": 20.0,
+      "extras": 10
+    }
+  ]
+}

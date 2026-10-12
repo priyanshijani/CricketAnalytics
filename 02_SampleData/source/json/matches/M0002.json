@@ -1,0 +1,50 @@
+{
+  "match_id": "M0002",
+  "season": "2023",
+  "format": "T20",
+  "date": "2023-04-03",
+  "venue": {
+    "code": "KOL01"
+  },
+  "teams": [
+    {
+      "code": "KOL",
+      "name": "Kolkata Tigers"
+    },
+    {
+      "code": "HYD",
+      "name": "Hyderabad Hawks"
+    }
+  ],
+  "toss": {
+    "winner": "HYD",
+    "decision": "Field"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "KOL",
+    "margin": 23,
+    "margin_type": "Runs",
+    "man_of_match": "P0058"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "KOL",
+      "bowling_team": "HYD",
+      "runs": 167,
+      "wickets": 8,
+      "overs": 20.0,
+      "extras": 9
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "HYD",
+      "bowling_team": "KOL",
+      "runs": 144,
+      "wickets": 10,
+      "overs": 17.3,
+      "extras": 4
+    }
+  ]
+}

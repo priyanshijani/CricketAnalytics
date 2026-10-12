@@ -1,0 +1,50 @@
+{
+  "match_id": "M0105",
+  "season": "2025",
+  "format": "T20",
+  "date": "2025-05-19",
+  "venue": {
+    "code": "MUM01"
+  },
+  "teams": [
+    {
+      "code": "MUM",
+      "name": "Mumbai Sharks"
+    },
+    {
+      "code": "CHE",
+      "name": "Chennai Kings"
+    }
+  ],
+  "toss": {
+    "winner": "MUM",
+    "decision": "Bat"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "MUM",
+    "margin": 45,
+    "margin_type": "Runs",
+    "man_of_match": "P0001"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "MUM",
+      "bowling_team": "CHE",
+      "runs": 173,
+      "wickets": 9,
+      "overs": 20.0,
+      "extras": 10
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "CHE",
+      "bowling_team": "MUM",
+      "runs": 128,
+      "wickets": 10,
+      "overs": 13.5,
+      "extras": 9
+    }
+  ]
+}

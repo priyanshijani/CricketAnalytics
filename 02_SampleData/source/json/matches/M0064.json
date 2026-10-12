@@ -1,0 +1,50 @@
+{
+  "match_id": "M0064",
+  "season": "2024",
+  "format": "T20",
+  "date": "2024-05-17",
+  "venue": {
+    "code": "PUN01"
+  },
+  "teams": [
+    {
+      "code": "PUN",
+      "name": "Punjab Warriors"
+    },
+    {
+      "code": "KOL",
+      "name": "Kolkata Tigers"
+    }
+  ],
+  "toss": {
+    "winner": "PUN",
+    "decision": "Field"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "KOL",
+    "margin": 39,
+    "margin_type": "Runs",
+    "man_of_match": "P0124"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "KOL",
+      "bowling_team": "PUN",
+      "runs": 198,
+      "wickets": 10,
+      "overs": 19.4,
+      "extras": 7
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "PUN",
+      "bowling_team": "KOL",
+      "runs": 159,
+      "wickets": 6,
+      "overs": 20.0,
+      "extras": 11
+    }
+  ]
+}

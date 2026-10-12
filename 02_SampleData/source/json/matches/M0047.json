@@ -1,0 +1,50 @@
+{
+  "match_id": "M0047",
+  "season": "2024",
+  "format": "T20",
+  "date": "2024-04-13",
+  "venue": {
+    "code": "DEL01"
+  },
+  "teams": [
+    {
+      "code": "DEL",
+      "name": "Delhi Comets"
+    },
+    {
+      "code": "CHE",
+      "name": "Chennai Kings"
+    }
+  ],
+  "toss": {
+    "winner": "DEL",
+    "decision": "Field"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "CHE",
+    "margin": 13,
+    "margin_type": "Runs",
+    "man_of_match": "P0043"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "CHE",
+      "bowling_team": "DEL",
+      "runs": 185,
+      "wickets": 8,
+      "overs": 20.0,
+      "extras": 7
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "DEL",
+      "bowling_team": "CHE",
+      "runs": 172,
+      "wickets": 9,
+      "overs": 20.0,
+      "extras": 12
+    }
+  ]
+}

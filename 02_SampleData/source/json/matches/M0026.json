@@ -1,0 +1,50 @@
+{
+  "match_id": "M0026",
+  "season": "2023",
+  "format": "T20",
+  "date": "2023-05-21",
+  "venue": {
+    "code": "BLR01"
+  },
+  "teams": [
+    {
+      "code": "BLR",
+      "name": "Bangalore Royals"
+    },
+    {
+      "code": "KOL",
+      "name": "Kolkata Tigers"
+    }
+  ],
+  "toss": {
+    "winner": "KOL",
+    "decision": "Field"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "BLR",
+    "margin": 12,
+    "margin_type": "Runs",
+    "man_of_match": "P0066"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "BLR",
+      "bowling_team": "KOL",
+      "runs": 179,
+      "wickets": 8,
+      "overs": 20.0,
+      "extras": 6
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "KOL",
+      "bowling_team": "BLR",
+      "runs": 167,
+      "wickets": 5,
+      "overs": 20.0,
+      "extras": 3
+    }
+  ]
+}

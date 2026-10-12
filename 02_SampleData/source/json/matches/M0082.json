@@ -1,0 +1,50 @@
+{
+  "match_id": "M0082",
+  "season": "2025",
+  "format": "T20",
+  "date": "2025-04-03",
+  "venue": {
+    "code": "CHE01"
+  },
+  "teams": [
+    {
+      "code": "CHE",
+      "name": "Chennai Kings"
+    },
+    {
+      "code": "DEL",
+      "name": "Delhi Comets"
+    }
+  ],
+  "toss": {
+    "winner": "CHE",
+    "decision": "Field"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "DEL",
+    "margin": 33,
+    "margin_type": "Runs",
+    "man_of_match": "P0046"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "DEL",
+      "bowling_team": "CHE",
+      "runs": 197,
+      "wickets": 8,
+      "overs": 20.0,
+      "extras": 10
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "CHE",
+      "bowling_team": "DEL",
+      "runs": 164,
+      "wickets": 5,
+      "overs": 20.0,
+      "extras": 6
+    }
+  ]
+}

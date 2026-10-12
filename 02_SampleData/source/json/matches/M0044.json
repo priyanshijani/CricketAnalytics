@@ -1,0 +1,50 @@
+{
+  "match_id": "M0044",
+  "season": "2024",
+  "format": "T20",
+  "date": "2024-04-07",
+  "venue": {
+    "code": "CHE01"
+  },
+  "teams": [
+    {
+      "code": "CHE",
+      "name": "Chennai Kings"
+    },
+    {
+      "code": "KOL",
+      "name": "Kolkata Tigers"
+    }
+  ],
+  "toss": {
+    "winner": "CHE",
+    "decision": "Field"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "CHE",
+    "margin": 4,
+    "margin_type": "Wickets",
+    "man_of_match": "P0057"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "KOL",
+      "bowling_team": "CHE",
+      "runs": 180,
+      "wickets": 8,
+      "overs": 20.0,
+      "extras": 6
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "CHE",
+      "bowling_team": "KOL",
+      "runs": 226,
+      "wickets": 6,
+      "overs": 20.0,
+      "extras": 9
+    }
+  ]
+}

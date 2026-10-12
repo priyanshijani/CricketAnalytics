@@ -1,0 +1,50 @@
+{
+  "match_id": "M0027",
+  "season": "2023",
+  "format": "T20",
+  "date": "2023-05-23",
+  "venue": {
+    "code": "MUM01"
+  },
+  "teams": [
+    {
+      "code": "MUM",
+      "name": "Mumbai Sharks"
+    },
+    {
+      "code": "HYD",
+      "name": "Hyderabad Hawks"
+    }
+  ],
+  "toss": {
+    "winner": "HYD",
+    "decision": "Bat"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "HYD",
+    "margin": 56,
+    "margin_type": "Runs",
+    "man_of_match": "P0105"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "HYD",
+      "bowling_team": "MUM",
+      "runs": 153,
+      "wickets": 9,
+      "overs": 20.0,
+      "extras": 9
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "MUM",
+      "bowling_team": "HYD",
+      "runs": 97,
+      "wickets": 10,
+      "overs": 14.3,
+      "extras": 1
+    }
+  ]
+}

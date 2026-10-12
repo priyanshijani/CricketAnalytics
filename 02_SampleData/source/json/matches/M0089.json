@@ -1,0 +1,50 @@
+{
+  "match_id": "M0089",
+  "season": "2025",
+  "format": "T20",
+  "date": "2025-04-17",
+  "venue": {
+    "code": "RAJ01"
+  },
+  "teams": [
+    {
+      "code": "RAJ",
+      "name": "Rajasthan Titans"
+    },
+    {
+      "code": "HYD",
+      "name": "Hyderabad Hawks"
+    }
+  ],
+  "toss": {
+    "winner": "RAJ",
+    "decision": "Bat"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "RAJ",
+    "margin": 6,
+    "margin_type": "Runs",
+    "man_of_match": "P0134"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "RAJ",
+      "bowling_team": "HYD",
+      "runs": 169,
+      "wickets": 8,
+      "overs": 20.0,
+      "extras": 3
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "HYD",
+      "bowling_team": "RAJ",
+      "runs": 163,
+      "wickets": 6,
+      "overs": 20.0,
+      "extras": 8
+    }
+  ]
+}

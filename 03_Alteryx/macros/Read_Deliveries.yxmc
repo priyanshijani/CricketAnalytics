@@ -1,0 +1,390 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2026.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="102" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>ControlIn</Name>
+          <Abbrev />
+          <ShowFieldMap value="True" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="0" />
+              <Fields>
+                <Field name="FullPath" />
+                <Field name="FileName" />
+                <Field name="SourceFileHash" />
+              </Fields>
+              <Data />
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>ControlIn - all file rows (FullPath, FileName, SourceFileHash) from the main workflow's hash branch. Filter (6) keeps only this iteration's file.</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="FullPath" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="FileName" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="SourceFileHash" size="1073741823" source="TextInput:" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="186" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression><![CDATA[[FullPath] = "__FULLPATH__"]]></Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Keeps only this iteration's file row. Action (11) replaces __FULLPATH__ with the FullPath control parameter on every batch iteration.</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="FullPath" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="FileName" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="SourceFileHash" size="1073741823" source="TextInput:" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="FullPath" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="FileName" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="SourceFileHash" size="1073741823" source="TextInput:" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DynamicInput.DynamicInput">
+        <Position x="318" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <InputConfiguration>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">..\..\02_SampleData\source\csv\deliveries\deliveries_2023.csv</File>
+              <FormatSpecificOptions>
+                <CodePage>65001</CodePage>
+                <Delimeter>,</Delimeter>
+                <IgnoreErrors>False</IgnoreErrors>
+                <FieldLen>254</FieldLen>
+                <AllowShareWrite>False</AllowShareWrite>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <ImportLine>1</ImportLine>
+              </FormatSpecificOptions>
+            </Configuration>
+          </InputConfiguration>
+          <Mode>ReadList</Mode>
+          <ReadList_Field>FullPath</ReadList_Field>
+          <ReadList_Type>Path</ReadList_Type>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Reads this iteration's one file (FullPath). Template = deliveries_2023.csv (relative path to 02_SampleData\source, so it exists even when _runtime\inbound is empty).</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="match_id" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+            <Field name="innings_no" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+            <Field name="over_no" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+            <Field name="ball_no" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+            <Field name="batsman_code" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+            <Field name="bowler_code" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+            <Field name="runs_off_bat" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+            <Field name="extra_runs" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+            <Field name="extra_type" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+            <Field name="is_wicket" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+            <Field name="dismissal_type" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+            <Field name="dismissed_player_code" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDynamicInput" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="450" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Broadcasts the one filtered ControlIn row (FullPath, FileName, SourceFileHash) onto every data row. Errors if Source ever has more than one row.</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="match_id" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+            <Field name="innings_no" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+            <Field name="over_no" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+            <Field name="ball_no" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+            <Field name="batsman_code" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+            <Field name="bowler_code" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+            <Field name="runs_off_bat" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+            <Field name="extra_runs" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+            <Field name="extra_type" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+            <Field name="is_wicket" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+            <Field name="dismissal_type" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+            <Field name="dismissed_player_code" size="254" source="File: D:\Learnings\Gateway-Alteryx-Tableau\CricketAnalytics\02_SampleData\source\csv\deliveries\deliveries_2023.csv" type="V_WString" />
+            <Field name="FullPath" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="FileName" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="SourceFileHash" size="1073741823" source="TextInput:" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="582" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>DataOut</Name>
+          <Abbrev />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>DataOut</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.ControlParam.ControlParam">
+        <Position x="186" y="54" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name>FullPath</Name>
+          <AnnotationText>FullPath</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="186" y="120" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name>ControlParam.FullPath</Name>
+          <AnnotationText>Update Value</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Action" />
+      <Destination ToolID="6" Connection="Action" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="True" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="True" />
+      <Destination ToolID="8" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="8" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection name="ControlParam.FullPath" Wireless="True">
+      <Origin ToolID="10" Connection="Question" />
+      <Destination ToolID="11" Connection="Question" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <DefaultTZ value="Local" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <Constants>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>ControlParam.FullPath</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Read_Deliveries</Name>
+      <Description>Batch macro: reads one deliveries CSV per iteration (driven by the FullPath control parameter), tags every row with that file's SourceFileHash/FileName/FullPath.</Description>
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="30a65f2d-acf2-4f1f-b88e-8c971589ee54" />
+      <Telemetry>
+        <PreviousWorkflowId value="eb7030b3-c413-420a-b2cf-73f66bce54a8" />
+        <OriginWorkflowId value="30a65f2d-acf2-4f1f-b88e-8c971589ee54" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions>
+        <NoCondition>
+          <Type>NoCondition</Type>
+          <Description>(Always Run)</Description>
+          <True>
+            <Action>
+              <Type>UpdateValue</Type>
+              <Description>ControlParam.FullPath</Description>
+              <ToolId value="11" />
+              <Mode>Simple</Mode>
+              <Variable>ControlParam.FullPath</Variable>
+              <Replace value="True" />
+              <ReplaceText>__FULLPATH__</ReplaceText>
+              <Destination>6/Expression</Destination>
+            </Action>
+          </True>
+        </NoCondition>
+      </Actions>
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (2)</Name>
+          <ToolId value="2" />
+          <Questions>
+            <Question>
+              <Type>ControlParam</Type>
+              <Description>FullPath</Description>
+              <Name>FullPath</Name>
+              <ToolId value="10" />
+            </Question>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description>Macro Input (5)</Description>
+              <Name>Macro Input (5)</Name>
+              <ToolId value="5" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>DataOut</Description>
+              <Name>DataOut</Name>
+              <ToolId value="9" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <BatchMacro>
+        <OutputMode>AutoByName</OutputMode>
+        <ControlParams>
+          <ControlParam>
+            <Name>FullPath</Name>
+            <Description>FullPath</Description>
+          </ControlParam>
+        </ControlParams>
+      </BatchMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="5" Selected="True" />
+        <Tool ToolId="9" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>

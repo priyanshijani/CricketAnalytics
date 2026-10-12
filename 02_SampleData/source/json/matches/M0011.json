@@ -1,0 +1,50 @@
+{
+  "match_id": "M0011",
+  "season": "2023",
+  "format": "T20",
+  "date": "2023-04-21",
+  "venue": {
+    "code": "BLR01"
+  },
+  "teams": [
+    {
+      "code": "BLR",
+      "name": "Bangalore Royals"
+    },
+    {
+      "code": "PUN",
+      "name": "Punjab Warriors"
+    }
+  ],
+  "toss": {
+    "winner": "PUN",
+    "decision": "Bat"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "BLR",
+    "margin": 6,
+    "margin_type": "Wickets",
+    "man_of_match": "P0082"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "PUN",
+      "bowling_team": "BLR",
+      "runs": 139,
+      "wickets": 8,
+      "overs": 20.0,
+      "extras": 5
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "BLR",
+      "bowling_team": "PUN",
+      "runs": 182,
+      "wickets": 4,
+      "overs": 20.0,
+      "extras": 5
+    }
+  ]
+}

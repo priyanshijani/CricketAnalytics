@@ -1,0 +1,50 @@
+{
+  "match_id": "M0104",
+  "season": "2025",
+  "format": "T20",
+  "date": "2025-05-17",
+  "venue": {
+    "code": "CHE01"
+  },
+  "teams": [
+    {
+      "code": "CHE",
+      "name": "Chennai Kings"
+    },
+    {
+      "code": "HYD",
+      "name": "Hyderabad Hawks"
+    }
+  ],
+  "toss": {
+    "winner": "CHE",
+    "decision": "Bat"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "CHE",
+    "margin": 21,
+    "margin_type": "Runs",
+    "man_of_match": "P0056"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "CHE",
+      "bowling_team": "HYD",
+      "runs": 165,
+      "wickets": 9,
+      "overs": 20.0,
+      "extras": 5
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "HYD",
+      "bowling_team": "CHE",
+      "runs": 144,
+      "wickets": 10,
+      "overs": 14.3,
+      "extras": 7
+    }
+  ]
+}

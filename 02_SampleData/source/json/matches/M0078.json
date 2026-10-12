@@ -1,0 +1,50 @@
+{
+  "match_id": "M0078",
+  "season": "2024",
+  "format": "T20",
+  "date": "2024-06-14",
+  "venue": {
+    "code": "RAJ01"
+  },
+  "teams": [
+    {
+      "code": "RAJ",
+      "name": "Rajasthan Titans"
+    },
+    {
+      "code": "PUN",
+      "name": "Punjab Warriors"
+    }
+  ],
+  "toss": {
+    "winner": "RAJ",
+    "decision": "Bat"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "RAJ",
+    "margin": 61,
+    "margin_type": "Runs",
+    "man_of_match": "P0117"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "RAJ",
+      "bowling_team": "PUN",
+      "runs": 143,
+      "wickets": 9,
+      "overs": 20.0,
+      "extras": 4
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "PUN",
+      "bowling_team": "RAJ",
+      "runs": 82,
+      "wickets": 10,
+      "overs": 14.0,
+      "extras": 4
+    }
+  ]
+}

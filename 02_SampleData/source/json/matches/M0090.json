@@ -1,0 +1,50 @@
+{
+  "match_id": "M0090",
+  "season": "2025",
+  "format": "T20",
+  "date": "2025-04-19",
+  "venue": {
+    "code": "PUN01"
+  },
+  "teams": [
+    {
+      "code": "PUN",
+      "name": "Punjab Warriors"
+    },
+    {
+      "code": "HYD",
+      "name": "Hyderabad Hawks"
+    }
+  ],
+  "toss": {
+    "winner": "PUN",
+    "decision": "Field"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "HYD",
+    "margin": 4,
+    "margin_type": "Runs",
+    "man_of_match": "P0123"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "HYD",
+      "bowling_team": "PUN",
+      "runs": 201,
+      "wickets": 6,
+      "overs": 20.0,
+      "extras": 4
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "PUN",
+      "bowling_team": "HYD",
+      "runs": 197,
+      "wickets": 5,
+      "overs": 20.0,
+      "extras": 3
+    }
+  ]
+}

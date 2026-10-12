@@ -1,0 +1,23 @@
+﻿FileName,SourceView,RowCount,BatchId,GeneratedAt
+rpt_BattingInnings.csv,rpt.BattingInnings,2046,06_export_reporting_20261007165649,2026-10-07 16:57:22
+rpt_BowlingInnings.csv,rpt.BowlingInnings,1246,06_export_reporting_20261007165649,2026-10-07 16:57:22
+rpt_DQFileStatus.csv,rpt.DQFileStatus,129,06_export_reporting_20261007165649,2026-10-07 16:57:22
+rpt_DQIssue.csv,rpt.DQIssue,1076,06_export_reporting_20261007165649,2026-10-07 16:57:22
+rpt_DQRowOutcome.csv,rpt.DQRowOutcome,33,06_export_reporting_20261007165649,2026-10-07 16:57:22
+rpt_DQScoreTrend.csv,rpt.DQScoreTrend,54,06_export_reporting_20261007165649,2026-10-07 16:57:22
+rpt_FallOfWicket.csv,rpt.FallOfWicket,1673,06_export_reporting_20261007165649,2026-10-07 16:57:22
+rpt_LoadStatus.csv,rpt.LoadStatus,8,06_export_reporting_20261007165649,2026-10-07 16:57:22
+rpt_Match.csv,rpt.Match,119,06_export_reporting_20261007165649,2026-10-07 16:57:22
+rpt_OverProgression.csv,rpt.OverProgression,4424,06_export_reporting_20261007165649,2026-10-07 16:57:22
+rpt_Partnership.csv,rpt.Partnership,1839,06_export_reporting_20261007165649,2026-10-07 16:57:22
+rpt_Player.csv,rpt.Player,152,06_export_reporting_20261007165649,2026-10-07 16:57:22
+rpt_PlayerCareer.csv,rpt.PlayerCareer,149,06_export_reporting_20261007165649,2026-10-07 16:57:22
+rpt_PlayerMatch.csv,rpt.PlayerMatch,2273,06_export_reporting_20261007165649,2026-10-07 16:57:22
+rpt_PlayerPhase.csv,rpt.PlayerPhase,1501,06_export_reporting_20261007165649,2026-10-07 16:57:22
+rpt_PlayerRanking.csv,rpt.PlayerRanking,756,06_export_reporting_20261007165649,2026-10-07 16:57:22
+rpt_PlayerSeason.csv,rpt.PlayerSeason,394,06_export_reporting_20261007165649,2026-10-07 16:57:22
+rpt_PlayerSeasonHistory.csv,rpt.PlayerSeasonHistory,395,06_export_reporting_20261007165649,2026-10-07 16:57:22
+rpt_PointsTable.csv,rpt.PointsTable,24,06_export_reporting_20261007165649,2026-10-07 16:57:22
+rpt_SeasonList.csv,rpt.SeasonList,4,06_export_reporting_20261007165649,2026-10-07 16:57:22
+rpt_TeamMatch.csv,rpt.TeamMatch,238,06_export_reporting_20261007165649,2026-10-07 16:57:22
+rpt_TeamSeason.csv,rpt.TeamSeason,24,06_export_reporting_20261007165649,2026-10-07 16:57:22

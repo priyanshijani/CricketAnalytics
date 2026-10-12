@@ -1,0 +1,50 @@
+{
+  "match_id": "M0035",
+  "season": "2023",
+  "format": "T20",
+  "date": "2023-06-08",
+  "venue": {
+    "code": "MUM01"
+  },
+  "teams": [
+    {
+      "code": "MUM",
+      "name": "Mumbai Sharks"
+    },
+    {
+      "code": "RAJ",
+      "name": "Rajasthan Titans"
+    }
+  ],
+  "toss": {
+    "winner": "MUM",
+    "decision": "Bat"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "MUM",
+    "margin": 35,
+    "margin_type": "Runs",
+    "man_of_match": "P0140"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "MUM",
+      "bowling_team": "RAJ",
+      "runs": 179,
+      "wickets": 9,
+      "overs": 20.0,
+      "extras": 10
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "RAJ",
+      "bowling_team": "MUM",
+      "runs": 144,
+      "wickets": 6,
+      "overs": 20.0,
+      "extras": 9
+    }
+  ]
+}

@@ -1,0 +1,1674 @@
+﻿MatchId,Season,InningsNo,BattingTeamCode,WicketNumber,ScoreAtFall,OverAtFall,PlayerOutCode,PlayerOutName,BowlerName,DismissalType
+M0002,2023,1,KOL,1,18,1.3,P0059,Qasim Sharma,Vikram Agarwal,Stumped
+M0002,2023,1,KOL,2,59,5.5,P0060,Vishal Verma,Rohan Sinha,Bowled
+M0002,2023,1,KOL,3,91,8.5,P0058,Eshan Yadav,,RunOut
+M0002,2023,1,KOL,4,103,10.5,P0062,Pranav Naidu,Qasim Bose,LBW
+M0002,2023,1,KOL,5,104,11.1,P0063,Arjun Chopra,,RunOut
+M0002,2023,1,KOL,6,127,14.5,P0064,Kabir Rao,Vikram Sinha,Bowled
+M0002,2023,1,KOL,7,135,16.3,P0065,Vikram Desai,Vishal Trivedi,Stumped
+M0002,2023,1,KOL,8,141,17.1,P0061,Sanjay Shetty,Vikram Sinha,LBW
+M0002,2023,2,HYD,1,4,0.3,P0107,Jayant Malhotra,,RunOut
+M0002,2023,2,HYD,2,17,1.3,P0098,Gautam Rao,,RunOut
+M0002,2023,2,HYD,3,46,4.2,P0099,Rohan Sinha,Devendra Malhotra,Stumped
+M0002,2023,2,HYD,4,52,5.3,P0097,Vikram Sinha,Arjun Chopra,Stumped
+M0002,2023,2,HYD,5,75,8.3,P0101,Vishal Trivedi,Naveen Mehta,Stumped
+M0002,2023,2,HYD,6,77,9.3,P0100,Amit Gill,Arjun Chopra,LBW
+M0002,2023,2,HYD,7,77,9.5,P0103,Vikram Agarwal,Arjun Chopra,LBW
+M0002,2023,2,HYD,8,102,12.2,P0102,Harish Mehta,Amit Sinha,Bowled
+M0002,2023,2,HYD,9,106,13.3,P0104,Qasim Bose,Eshan Yadav,Stumped
+M0002,2023,2,HYD,10,144,17.3,P0105,Rajat Trivedi,,RunOut
+M0003,2023,1,HYD,1,0,0.1,P0096,Uday Verma,Sanjay Naidu,LBW
+M0003,2023,1,HYD,2,120,12.2,P0098,Gautam Rao,Qasim Iyer,Stumped
+M0003,2023,1,HYD,3,158,16.5,P0099,Rohan Sinha,Amit Pillai,Caught
+M0003,2023,1,HYD,4,158,17.2,P0097,Vikram Sinha,,RunOut
+M0003,2023,1,HYD,5,158,17.4,P0101,Vishal Trivedi,Amit Pillai,Bowled
+M0003,2023,2,PUN,1,76,8.5,P0116,Rahul Rao,,RunOut
+M0003,2023,2,PUN,2,86,9.5,P0115,Varun Reddy,Vikram Agarwal,Bowled
+M0003,2023,2,PUN,3,86,10.0,P0118,Amit Pillai,Vikram Agarwal,Bowled
+M0003,2023,2,PUN,4,93,11.0,P0117,Imran Kulkarni,,RunOut
+M0003,2023,2,PUN,5,116,13.2,P0120,Kabir Reddy,,RunOut
+M0003,2023,2,PUN,6,187,19.2,P0121,Imran Trivedi,Harish Mehta,LBW
+M0004,2023,1,RAJ,1,2,0.2,P0134,Vikram Trivedi,Arjun Chopra,Bowled
+M0004,2023,1,RAJ,2,13,1.5,P0136,Kabir Malhotra,,RunOut
+M0004,2023,1,RAJ,3,19,2.4,P0135,Jayant Pandey,,RunOut
+M0004,2023,1,RAJ,4,29,4.2,P0137,Manish Yadav,Eshan Yadav,Bowled
+M0004,2023,1,RAJ,5,48,6.4,P0138,Aditya Ghosh,Eshan Yadav,Caught
+M0004,2023,1,RAJ,6,51,7.1,P0139,Nikhil Kapoor,Naveen Mehta,Stumped
+M0004,2023,1,RAJ,7,56,7.5,P0141,Dhruv Kapoor,Naveen Mehta,Stumped
+M0004,2023,1,RAJ,8,84,10.1,P0140,Manish Iyer,Amit Sinha,Stumped
+M0004,2023,1,RAJ,9,150,17.5,P0142,Arjun Ghosh,Devendra Malhotra,Stumped
+M0004,2023,1,RAJ,10,153,18.2,P0144,Karan Kapoor,Arjun Chopra,LBW
+M0004,2023,2,KOL,1,15,1.4,P0058,Eshan Yadav,Kabir Malhotra,Stumped
+M0004,2023,2,KOL,2,42,3.5,P0059,Qasim Sharma,Jayant Pandey,Caught
+M0004,2023,2,KOL,3,83,8.2,P0061,Sanjay Shetty,,RunOut
+M0004,2023,2,KOL,4,88,8.5,P0060,Vishal Verma,Nikhil Kapoor,Stumped
+M0004,2023,2,KOL,5,89,9.2,P0063,Arjun Chopra,,RunOut
+M0004,2023,2,KOL,6,95,10.0,P0064,Kabir Rao,Kabir Malhotra,Caught
+M0004,2023,2,KOL,7,163,19.3,P0065,Vikram Desai,,RunOut
+M0004,2023,2,KOL,8,163,19.5,P0066,Devendra Malhotra,,RunOut
+M0005,2023,1,CHE,1,30,3.1,P0039,Ishaan Yadav,Omar Dhawan,Stumped
+M0005,2023,1,CHE,2,70,7.2,P0040,Farhan Mehta,Suresh Kulkarni,Caught
+M0005,2023,1,CHE,3,80,8.5,P0042,Karan Chauhan,Omar Dhawan,LBW
+M0005,2023,1,CHE,4,80,9.1,P0041,Pranav Agarwal,Suresh Kulkarni,LBW
+M0005,2023,1,CHE,5,107,12.5,P0043,Chetan Chopra,Rohan Nair,Bowled
+M0005,2023,1,CHE,6,141,17.3,P0045,Eshan Desai,Rohan Nair,Stumped
+M0005,2023,2,BLR,1,0,0.1,P0077,Rahul Trivedi,,RunOut
+M0005,2023,2,BLR,2,53,6.2,P0078,Sanjay Menon,,RunOut
+M0005,2023,2,BLR,3,104,11.0,P0079,Naveen Bhatt,,RunOut
+M0005,2023,2,BLR,4,105,11.4,P0080,Lakshay Sharma,Eshan Agarwal,Caught
+M0005,2023,2,BLR,5,138,15.1,P0095,Omar Ghosh,,RunOut
+M0005,2023,2,BLR,6,140,15.3,P0083,Rohan Nair,Eshan Desai,LBW
+M0005,2023,2,BLR,7,176,19.5,P0084,Suresh Kulkarni,Chetan Chopra,Caught
+M0005,2023,2,BLR,8,176,20.0,P0085,Omar Dhawan,Chetan Chopra,Bowled
+M0007,2023,1,MUM,1,14,1.4,P0002,Vikram Chauhan,Arjun Chopra,Caught
+M0007,2023,1,MUM,2,144,13.4,P0003,Arjun Pandey,Devendra Malhotra,Stumped
+M0007,2023,1,MUM,3,156,16.2,P0001,Vikram Sharma,,RunOut
+M0007,2023,1,MUM,4,161,17.1,P0004,Naveen Saxena,Arjun Chopra,Caught
+M0007,2023,1,MUM,5,187,20.0,P0005,Rohan Desai,Uday Iyer,Caught
+M0007,2023,2,KOL,1,28,3.1,P0059,Qasim Sharma,Rohan Desai,LBW
+M0007,2023,2,KOL,2,33,3.5,P0071,Uday Iyer,Rohan Desai,LBW
+M0007,2023,2,KOL,3,107,12.3,P0061,Sanjay Shetty,Arjun Pandey,Bowled
+M0007,2023,2,KOL,4,109,13.0,P0062,Pranav Naidu,Arjun Pandey,Caught
+M0007,2023,2,KOL,5,122,15.2,P0073,Amit Joshi,Tarun Trivedi,Bowled
+M0009,2023,1,DEL,1,16,2.1,P0021,Naveen Sinha,Vikram Trivedi,Caught
+M0009,2023,1,DEL,2,43,5.2,P0033,Suresh Naidu,,RunOut
+M0009,2023,1,DEL,3,53,7.1,P0022,Uday Sharma,Manish Nair,LBW
+M0009,2023,1,DEL,4,139,15.5,P0024,Lakshay Naidu,Vikram Trivedi,LBW
+M0009,2023,1,DEL,5,154,18.5,P0037,Rohan Reddy,Imran Yadav,Caught
+M0009,2023,1,DEL,6,161,19.1,P0023,Bhavesh Dhawan,Imran Yadav,Bowled
+M0009,2023,2,RAJ,1,19,2.4,P0134,Vikram Trivedi,Rohan Reddy,Stumped
+M0009,2023,2,RAJ,2,27,4.4,P0149,Rahul Gill,Rohan Reddy,Caught
+M0009,2023,2,RAJ,3,103,12.5,P0137,Manish Yadav,Suresh Naidu,Caught
+M0009,2023,2,RAJ,4,116,15.0,P0135,Jayant Pandey,Uday Sharma,Stumped
+M0010,2023,1,DEL,1,19,1.0,P0020,Omar Naidu,,RunOut
+M0010,2023,1,DEL,2,67,5.2,P0036,Gautam Kapoor,,RunOut
+M0010,2023,1,DEL,3,91,8.1,P0021,Naveen Sinha,Qasim Iyer,Stumped
+M0010,2023,1,DEL,4,105,9.4,P0024,Lakshay Naidu,Nikhil Menon,LBW
+M0010,2023,1,DEL,5,123,12.2,P0025,Imran Naidu,Amit Pillai,Bowled
+M0010,2023,1,DEL,6,123,12.3,P0026,Eshan Bhatt,Amit Pillai,Stumped
+M0010,2023,1,DEL,7,135,15.2,P0027,Vikram Pandey,,RunOut
+M0010,2023,1,DEL,8,148,17.3,P0028,Mohit Joshi,,RunOut
+M0010,2023,1,DEL,9,148,17.4,P0029,Ishaan Mehta,Sanjay Naidu,Caught
+M0010,2023,1,DEL,10,166,19.5,P0023,Bhavesh Dhawan,Nikhil Menon,Stumped
+M0010,2023,2,PUN,1,0,0.2,P0115,Varun Reddy,Gautam Kapoor,Bowled
+M0010,2023,2,PUN,2,46,4.4,P0132,Uday Khan,Omar Naidu,Caught
+M0010,2023,2,PUN,3,48,5.2,P0117,Imran Kulkarni,,RunOut
+M0010,2023,2,PUN,4,62,7.1,P0118,Amit Pillai,Gautam Kapoor,Bowled
+M0010,2023,2,PUN,5,68,8.0,P0127,Nikhil Menon,Gautam Kapoor,Bowled
+M0010,2023,2,PUN,6,84,11.1,P0119,Dhruv Chauhan,Naveen Sinha,Stumped
+M0010,2023,2,PUN,7,111,13.4,P0126,Vishal Ghosh,,RunOut
+M0010,2023,2,PUN,8,119,15.1,P0122,Sanjay Naidu,Gautam Kapoor,Stumped
+M0011,2023,1,PUN,1,1,0.3,P0116,Rahul Rao,Rohan Nair,Bowled
+M0011,2023,1,PUN,2,8,1.3,P0117,Imran Kulkarni,Suresh Kulkarni,Bowled
+M0011,2023,1,PUN,3,35,4.1,P0118,Amit Pillai,Arjun Trivedi,Caught
+M0011,2023,1,PUN,4,104,11.2,P0119,Dhruv Chauhan,Suresh Kulkarni,LBW
+M0011,2023,1,PUN,5,109,12.1,P0115,Varun Reddy,Naveen Bhatt,Stumped
+M0011,2023,1,PUN,6,123,15.2,P0121,Imran Trivedi,Suresh Kulkarni,LBW
+M0011,2023,1,PUN,7,129,17.3,P0122,Sanjay Naidu,Naveen Bhatt,Stumped
+M0011,2023,1,PUN,8,136,19.1,P0120,Kabir Reddy,Omar Dhawan,Caught
+M0011,2023,2,BLR,1,6,1.1,P0078,Sanjay Menon,,RunOut
+M0011,2023,2,BLR,2,51,5.5,P0079,Naveen Bhatt,,RunOut
+M0011,2023,2,BLR,3,84,8.4,P0092,Devendra Nair,Amit Pillai,Caught
+M0011,2023,2,BLR,4,109,11.4,P0077,Rahul Trivedi,,RunOut
+M0012,2023,1,CHE,1,0,0.3,P0039,Ishaan Yadav,Amit Pillai,Stumped
+M0012,2023,1,CHE,2,10,1.3,P0040,Farhan Mehta,,RunOut
+M0012,2023,1,CHE,3,31,4.2,P0042,Karan Chauhan,Dhruv Chauhan,Stumped
+M0012,2023,1,CHE,4,31,4.4,P0043,Chetan Chopra,Dhruv Chauhan,Stumped
+M0012,2023,1,CHE,5,41,6.2,P0044,Gautam Sharma,Amit Pillai,Bowled
+M0012,2023,1,CHE,6,58,7.3,P0041,Pranav Agarwal,,RunOut
+M0012,2023,1,CHE,7,79,10.5,P0053,Siddharth Malhotra,,RunOut
+M0012,2023,1,CHE,8,79,11.1,P0045,Eshan Desai,,RunOut
+M0012,2023,1,CHE,9,90,12.5,P0047,Manish Reddy,Sanjay Naidu,LBW
+M0012,2023,1,CHE,10,136,16.5,P0049,Dhruv Sharma,Amit Pillai,Caught
+M0012,2023,2,PUN,1,22,1.4,P0116,Rahul Rao,Eshan Agarwal,Caught
+M0012,2023,2,PUN,2,59,7.3,P0117,Imran Kulkarni,Chetan Chopra,Bowled
+M0014,2023,1,BLR,1,17,2.1,P0077,Rahul Trivedi,Uday Sharma,Caught
+M0014,2023,1,BLR,2,50,4.2,P0078,Sanjay Menon,,RunOut
+M0014,2023,1,BLR,3,130,13.1,P0079,Naveen Bhatt,,RunOut
+M0014,2023,1,BLR,4,139,14.1,P0081,Ishaan Chauhan,,RunOut
+M0014,2023,1,BLR,5,170,17.4,P0080,Lakshay Sharma,Omar Naidu,Caught
+M0014,2023,2,DEL,1,24,2.3,P0020,Omar Naidu,,RunOut
+M0014,2023,2,DEL,2,33,3.5,P0022,Uday Sharma,Arjun Trivedi,Caught
+M0014,2023,2,DEL,3,55,6.2,P0023,Bhavesh Dhawan,Arjun Trivedi,LBW
+M0014,2023,2,DEL,4,60,7.0,P0021,Naveen Sinha,,RunOut
+M0014,2023,2,DEL,5,84,9.5,P0025,Imran Naidu,Naveen Bhatt,LBW
+M0014,2023,2,DEL,6,98,12.2,P0024,Lakshay Naidu,Naveen Bhatt,Stumped
+M0014,2023,2,DEL,7,105,13.2,P0027,Vikram Pandey,Rohan Nair,Stumped
+M0014,2023,2,DEL,8,133,16.5,P0028,Mohit Joshi,Suresh Kulkarni,Caught
+M0014,2023,2,DEL,9,153,18.4,P0029,Ishaan Mehta,Naveen Bhatt,Bowled
+M0014,2023,2,DEL,10,159,19.4,P0026,Eshan Bhatt,Ishaan Chauhan,Caught
+M0015,2023,1,PUN,1,26,3.0,P0132,Uday Khan,Amit Sinha,Caught
+M0015,2023,1,PUN,2,58,7.4,P0115,Varun Reddy,,RunOut
+M0015,2023,1,PUN,3,82,9.1,P0117,Imran Kulkarni,Devendra Malhotra,Stumped
+M0015,2023,1,PUN,4,150,16.4,P0127,Nikhil Menon,Naveen Mehta,Bowled
+M0015,2023,2,KOL,1,41,3.0,P0058,Eshan Yadav,Sanjay Naidu,LBW
+M0015,2023,2,KOL,2,83,9.3,P0059,Qasim Sharma,Nikhil Menon,LBW
+M0015,2023,2,KOL,3,106,11.3,P0060,Vishal Verma,Uday Khan,Bowled
+M0015,2023,2,KOL,4,118,12.3,P0061,Sanjay Shetty,,RunOut
+M0015,2023,2,KOL,5,176,18.2,P0063,Arjun Chopra,Sanjay Ghosh,Bowled
+M0016,2023,1,CHE,1,74,10.0,P0053,Siddharth Malhotra,Lakshay Naidu,Caught
+M0016,2023,1,CHE,2,74,10.1,P0054,Mohit Ghosh,Naveen Sinha,Bowled
+M0016,2023,1,CHE,3,80,10.4,P0042,Karan Chauhan,Naveen Sinha,Caught
+M0016,2023,1,CHE,4,89,11.3,P0043,Chetan Chopra,,RunOut
+M0016,2023,1,CHE,5,89,12.0,P0054,Mohit Ghosh,Lakshay Naidu,Caught
+M0016,2023,1,CHE,6,116,14.5,P0045,Eshan Desai,Vikram Pandey,Caught
+M0016,2023,2,DEL,1,8,0.3,P0020,Omar Naidu,Eshan Agarwal,LBW
+M0016,2023,2,DEL,2,43,4.0,P0032,Qasim Saxena,,RunOut
+M0016,2023,2,DEL,3,58,6.3,P0023,Bhavesh Dhawan,Eshan Desai,Bowled
+M0016,2023,2,DEL,4,102,12.2,P0024,Lakshay Naidu,Chetan Chopra,Bowled
+M0016,2023,2,DEL,5,147,18.2,P0021,Naveen Sinha,Eshan Agarwal,Caught
+M0017,2023,1,BLR,1,86,8.0,P0077,Rahul Trivedi,Rohan Sinha,Stumped
+M0017,2023,1,BLR,2,86,8.1,P0078,Sanjay Menon,Vikram Sinha,Caught
+M0017,2023,1,BLR,3,118,12.0,P0095,Omar Ghosh,Vishal Trivedi,Stumped
+M0017,2023,1,BLR,4,120,12.3,P0081,Ishaan Chauhan,Vikram Sinha,Bowled
+M0017,2023,1,BLR,5,123,14.0,P0080,Lakshay Sharma,Harish Mehta,Caught
+M0017,2023,1,BLR,6,152,17.2,P0083,Rohan Nair,Rohan Sinha,Stumped
+M0017,2023,2,HYD,1,26,2.0,P0096,Uday Verma,Ishaan Chauhan,Stumped
+M0017,2023,2,HYD,2,79,6.2,P0097,Vikram Sinha,Suresh Kulkarni,Caught
+M0017,2023,2,HYD,3,80,7.0,P0098,Gautam Rao,Suresh Kulkarni,Stumped
+M0017,2023,2,HYD,4,80,7.1,P0099,Rohan Sinha,Rohan Nair,Caught
+M0017,2023,2,HYD,5,124,13.3,P0101,Vishal Trivedi,Rohan Nair,Caught
+M0017,2023,2,HYD,6,154,18.1,P0102,Harish Mehta,,RunOut
+M0017,2023,2,HYD,7,166,19.2,P0100,Amit Gill,Omar Dhawan,LBW
+M0018,2023,1,HYD,1,9,1.3,P0111,Chetan Bhatt,,RunOut
+M0018,2023,1,HYD,2,11,2.0,P0098,Gautam Rao,,RunOut
+M0018,2023,1,HYD,3,11,2.2,P0097,Vikram Sinha,Tarun Trivedi,Stumped
+M0018,2023,1,HYD,4,53,8.1,P0100,Amit Gill,,RunOut
+M0018,2023,1,HYD,5,106,14.1,P0099,Rohan Sinha,Arjun Pandey,Caught
+M0018,2023,1,HYD,6,123,16.1,P0102,Harish Mehta,Arjun Pandey,LBW
+M0018,2023,1,HYD,7,123,16.3,P0103,Vikram Agarwal,,RunOut
+M0018,2023,1,HYD,8,130,17.1,P0104,Qasim Bose,Amit Mehta,Stumped
+M0018,2023,2,MUM,1,4,0.3,P0001,Vikram Sharma,,RunOut
+M0018,2023,2,MUM,2,15,2.0,P0002,Vikram Chauhan,,RunOut
+M0018,2023,2,MUM,3,27,2.4,P0004,Naveen Saxena,Chetan Bhatt,Stumped
+M0018,2023,2,MUM,4,27,3.1,P0003,Arjun Pandey,Vikram Agarwal,Stumped
+M0018,2023,2,MUM,5,38,4.2,P0017,Farhan Agarwal,,RunOut
+M0018,2023,2,MUM,6,46,5.0,P0007,Chetan Desai,Vikram Sinha,LBW
+M0018,2023,2,MUM,7,117,13.0,P0008,Amit Verma,Gautam Rao,Stumped
+M0018,2023,2,MUM,8,154,17.4,P0009,Amit Mehta,Qasim Bose,Caught
+M0019,2023,1,KOL,1,19,3.0,P0076,Ishaan Shetty,Rohan Sinha,Bowled
+M0019,2023,1,KOL,2,24,4.0,P0059,Qasim Sharma,Vikram Sinha,Stumped
+M0019,2023,1,KOL,3,166,18.1,P0061,Sanjay Shetty,Qasim Bose,Stumped
+M0019,2023,1,KOL,4,166,18.2,P0062,Pranav Naidu,Qasim Bose,Stumped
+M0019,2023,1,KOL,5,176,19.4,P0060,Vishal Verma,Harish Mehta,Bowled
+M0019,2023,2,HYD,1,9,1.0,P0097,Vikram Sinha,Arjun Chopra,LBW
+M0019,2023,2,HYD,2,35,4.2,P0096,Uday Verma,Devendra Malhotra,LBW
+M0019,2023,2,HYD,3,51,6.2,P0099,Rohan Sinha,Arjun Chopra,Caught
+M0019,2023,2,HYD,4,93,14.3,P0098,Gautam Rao,Devendra Malhotra,Bowled
+M0019,2023,2,HYD,5,120,17.3,P0101,Vishal Trivedi,Arjun Chopra,Stumped
+M0020,2023,1,MUM,1,44,4.0,P0001,Vikram Sharma,Farhan Mehta,Stumped
+M0020,2023,1,MUM,2,59,5.4,P0003,Arjun Pandey,Farhan Mehta,Stumped
+M0020,2023,1,MUM,3,65,6.0,P0004,Naveen Saxena,Farhan Mehta,Stumped
+M0020,2023,1,MUM,4,72,8.2,P0005,Rohan Desai,Chetan Chopra,Stumped
+M0020,2023,1,MUM,5,100,10.5,P0006,Naveen Iyer,Ishaan Yadav,LBW
+M0020,2023,1,MUM,6,110,11.2,P0002,Vikram Chauhan,Uday Nair,Stumped
+M0020,2023,1,MUM,7,130,12.5,P0007,Chetan Desai,,RunOut
+M0020,2023,1,MUM,8,171,16.5,P0009,Amit Mehta,,RunOut
+M0020,2023,2,CHE,1,24,1.5,P0040,Farhan Mehta,Tarun Trivedi,Caught
+M0020,2023,2,CHE,2,32,2.4,P0055,Uday Nair,Imran Bose,LBW
+M0020,2023,2,CHE,3,61,6.0,P0039,Ishaan Yadav,Arjun Pandey,LBW
+M0020,2023,2,CHE,4,83,9.5,P0043,Chetan Chopra,Rohan Desai,Caught
+M0020,2023,2,CHE,5,127,16.2,P0042,Karan Chauhan,Amit Mehta,LBW
+M0020,2023,2,CHE,6,135,17.2,P0044,Gautam Sharma,Imran Bose,LBW
+M0020,2023,2,CHE,7,139,18.1,P0045,Eshan Desai,Amit Mehta,Caught
+M0021,2023,1,HYD,1,35,4.5,P0097,Vikram Sinha,Imran Yadav,Bowled
+M0021,2023,1,HYD,2,76,8.1,P0098,Gautam Rao,Harish Joshi,Bowled
+M0021,2023,1,HYD,3,88,10.3,P0099,Rohan Sinha,Nikhil Kapoor,Caught
+M0021,2023,1,HYD,4,153,17.2,P0100,Amit Gill,Harish Joshi,Caught
+M0021,2023,2,RAJ,1,41,4.0,P0135,Jayant Pandey,Nikhil Bhatt,Bowled
+M0021,2023,2,RAJ,2,74,8.1,P0151,Harish Joshi,Harish Mehta,Stumped
+M0021,2023,2,RAJ,3,93,10.1,P0151,Harish Joshi,Gautam Rao,LBW
+M0021,2023,2,RAJ,4,122,13.2,P0138,Aditya Ghosh,Qasim Bose,LBW
+M0021,2023,2,RAJ,5,127,13.5,P0136,Kabir Malhotra,Qasim Bose,LBW
+M0021,2023,2,RAJ,6,158,17.4,P0139,Nikhil Kapoor,Vikram Sinha,Caught
+M0022,2023,1,BLR,1,12,1.0,P0077,Rahul Trivedi,,RunOut
+M0022,2023,1,BLR,2,31,2.3,P0078,Sanjay Menon,Arjun Pandey,Caught
+M0022,2023,1,BLR,3,31,2.5,P0080,Lakshay Sharma,Arjun Pandey,Caught
+M0022,2023,1,BLR,4,171,19.4,P0081,Ishaan Chauhan,Amit Mehta,Bowled
+M0022,2023,2,MUM,1,83,5.5,P0001,Vikram Sharma,Suresh Kulkarni,LBW
+M0022,2023,2,MUM,2,103,8.1,P0003,Arjun Pandey,Naveen Bhatt,Stumped
+M0022,2023,2,MUM,3,111,10.0,P0002,Vikram Chauhan,Omar Dhawan,Bowled
+M0022,2023,2,MUM,4,112,10.3,P0005,Rohan Desai,Arjun Trivedi,Bowled
+M0022,2023,2,MUM,5,142,12.4,P0006,Naveen Iyer,,RunOut
+M0022,2023,2,MUM,6,142,13.3,P0016,Dhruv Khan,,RunOut
+M0022,2023,2,MUM,7,170,15.4,P0015,Devendra Kapoor,Ishaan Chauhan,Bowled
+M0022,2023,2,MUM,8,175,16.3,P0009,Amit Mehta,Naveen Bhatt,LBW
+M0022,2023,2,MUM,9,183,17.4,P0013,Lakshay Joshi,,RunOut
+M0022,2023,2,MUM,10,189,19.0,P0015,Devendra Kapoor,Omar Dhawan,Stumped
+M0023,2023,1,HYD,1,8,0.3,P0096,Uday Verma,,RunOut
+M0023,2023,1,HYD,2,8,0.4,P0098,Gautam Rao,Uday Sharma,Bowled
+M0023,2023,1,HYD,3,19,1.2,P0099,Rohan Sinha,Vikram Pandey,LBW
+M0023,2023,1,HYD,4,23,1.5,P0100,Amit Gill,Vikram Pandey,Caught
+M0023,2023,1,HYD,5,29,2.3,P0097,Vikram Sinha,Naveen Sinha,LBW
+M0023,2023,1,HYD,6,37,3.1,P0101,Vishal Trivedi,,RunOut
+M0023,2023,1,HYD,7,37,3.2,P0103,Vikram Agarwal,Omar Naidu,Stumped
+M0023,2023,1,HYD,8,89,9.2,P0102,Harish Mehta,Omar Naidu,Stumped
+M0023,2023,1,HYD,9,137,14.4,P0111,Chetan Bhatt,,RunOut
+M0023,2023,1,HYD,10,139,15.1,P0105,Rajat Trivedi,Uday Sharma,Caught
+M0023,2023,2,DEL,1,9,1.1,P0021,Naveen Sinha,Rohan Sinha,LBW
+M0023,2023,2,DEL,2,23,3.4,P0022,Uday Sharma,Vikram Sinha,Caught
+M0023,2023,2,DEL,3,48,5.5,P0020,Omar Naidu,Vishal Trivedi,Caught
+M0023,2023,2,DEL,4,49,6.1,P0024,Lakshay Naidu,Chetan Bhatt,LBW
+M0023,2023,2,DEL,5,74,11.0,P0023,Bhavesh Dhawan,,RunOut
+M0023,2023,2,DEL,6,87,12.0,P0025,Imran Naidu,Harish Mehta,Bowled
+M0023,2023,2,DEL,7,122,15.3,P0027,Vikram Pandey,Vikram Agarwal,Caught
+M0024,2023,1,HYD,1,58,4.5,P0096,Uday Verma,Chetan Chopra,Bowled
+M0024,2023,1,HYD,2,71,7.0,P0097,Vikram Sinha,,RunOut
+M0024,2023,1,HYD,3,73,7.5,P0098,Gautam Rao,,RunOut
+M0024,2023,1,HYD,4,73,8.0,P0100,Amit Gill,Eshan Agarwal,LBW
+M0024,2023,1,HYD,5,84,9.4,P0099,Rohan Sinha,Eshan Desai,LBW
+M0024,2023,1,HYD,6,91,10.2,P0101,Vishal Trivedi,,RunOut
+M0024,2023,1,HYD,7,115,13.3,P0102,Harish Mehta,Eshan Agarwal,LBW
+M0024,2023,1,HYD,8,115,13.4,P0104,Qasim Bose,Eshan Agarwal,Caught
+M0024,2023,1,HYD,9,178,18.4,P0103,Vikram Agarwal,Eshan Desai,Stumped
+M0024,2023,2,CHE,1,62,5.2,P0040,Farhan Mehta,Vikram Sinha,Bowled
+M0024,2023,2,CHE,2,66,5.4,P0039,Ishaan Yadav,Vikram Sinha,Bowled
+M0024,2023,2,CHE,3,115,8.5,P0041,Pranav Agarwal,Vikram Agarwal,Caught
+M0024,2023,2,CHE,4,119,9.3,P0042,Karan Chauhan,Rohan Sinha,Stumped
+M0024,2023,2,CHE,5,123,9.5,P0044,Gautam Sharma,Rohan Sinha,Caught
+M0024,2023,2,CHE,6,149,14.0,P0045,Eshan Desai,,RunOut
+M0024,2023,2,CHE,7,184,19.0,P0046,Tarun Khan,Vikram Agarwal,Stumped
+M0024,2023,2,CHE,8,184,19.1,P0043,Chetan Chopra,Gautam Rao,Bowled
+M0025,2023,1,CHE,1,10,2.3,P0040,Farhan Mehta,Arjun Pandey,Stumped
+M0025,2023,1,CHE,2,33,7.1,P0039,Ishaan Yadav,Vikram Sharma,Bowled
+M0025,2023,1,CHE,3,41,8.3,P0041,Pranav Agarwal,Rohan Desai,Bowled
+M0025,2023,1,CHE,4,41,8.5,P0043,Chetan Chopra,Rohan Desai,Stumped
+M0025,2023,1,CHE,5,82,11.3,P0044,Gautam Sharma,Tarun Trivedi,Stumped
+M0025,2023,1,CHE,6,152,17.3,P0042,Karan Chauhan,Tarun Trivedi,LBW
+M0025,2023,2,MUM,1,22,3.3,P0001,Vikram Sharma,Eshan Desai,Stumped
+M0025,2023,2,MUM,2,57,7.3,P0003,Arjun Pandey,,RunOut
+M0025,2023,2,MUM,3,58,7.5,P0002,Vikram Chauhan,Farhan Mehta,LBW
+M0025,2023,2,MUM,4,73,9.0,P0004,Naveen Saxena,Eshan Agarwal,Caught
+M0025,2023,2,MUM,5,119,14.1,P0006,Naveen Iyer,Farhan Mehta,Bowled
+M0026,2023,1,BLR,1,7,1.3,P0077,Rahul Trivedi,Kabir Gill,Stumped
+M0026,2023,1,BLR,2,36,4.1,P0078,Sanjay Menon,Kabir Gill,LBW
+M0026,2023,1,BLR,3,38,4.4,P0079,Naveen Bhatt,Kabir Gill,LBW
+M0026,2023,1,BLR,4,53,6.0,P0081,Ishaan Chauhan,,RunOut
+M0026,2023,1,BLR,5,67,7.2,P0089,Rajat Pillai,Rahul Sinha,Caught
+M0026,2023,1,BLR,6,81,9.2,P0083,Rohan Nair,Amit Sinha,Bowled
+M0026,2023,1,BLR,7,123,14.3,P0082,Farhan Saxena,Devendra Malhotra,Caught
+M0026,2023,1,BLR,8,135,15.5,P0084,Suresh Kulkarni,Kabir Gill,Stumped
+M0026,2023,2,KOL,1,117,12.4,P0059,Qasim Sharma,Ishaan Chauhan,Bowled
+M0026,2023,2,KOL,2,118,13.2,P0060,Vishal Verma,Rajat Pillai,LBW
+M0026,2023,2,KOL,3,124,14.4,P0061,Sanjay Shetty,Ishaan Chauhan,Caught
+M0026,2023,2,KOL,4,126,15.0,P0062,Pranav Naidu,,RunOut
+M0026,2023,2,KOL,5,151,17.2,P0063,Arjun Chopra,Suresh Kulkarni,Stumped
+M0027,2023,1,HYD,1,0,0.1,P0096,Uday Verma,Farhan Agarwal,Stumped
+M0027,2023,1,HYD,2,5,1.1,P0097,Vikram Sinha,Amit Mehta,Stumped
+M0027,2023,1,HYD,3,11,3.0,P0098,Gautam Rao,Farhan Agarwal,Caught
+M0027,2023,1,HYD,4,19,4.2,P0100,Amit Gill,,RunOut
+M0027,2023,1,HYD,5,40,7.2,P0101,Vishal Trivedi,,RunOut
+M0027,2023,1,HYD,6,45,8.0,P0099,Rohan Sinha,Rohan Desai,Stumped
+M0027,2023,1,HYD,7,80,11.4,P0102,Harish Mehta,Arjun Pandey,Caught
+M0027,2023,1,HYD,8,128,16.1,P0104,Qasim Bose,Tarun Trivedi,Bowled
+M0027,2023,1,HYD,9,148,19.0,P0103,Vikram Agarwal,Arjun Pandey,Stumped
+M0027,2023,2,MUM,1,3,1.0,P0002,Vikram Chauhan,Rohan Sinha,Stumped
+M0027,2023,2,MUM,2,19,2.0,P0001,Vikram Sharma,Qasim Bose,Bowled
+M0027,2023,2,MUM,3,36,3.2,P0004,Naveen Saxena,Vishal Trivedi,Stumped
+M0027,2023,2,MUM,4,39,3.5,P0003,Arjun Pandey,Vishal Trivedi,LBW
+M0027,2023,2,MUM,5,67,7.5,P0017,Farhan Agarwal,,RunOut
+M0027,2023,2,MUM,6,69,9.3,P0007,Chetan Desai,Vishal Trivedi,LBW
+M0027,2023,2,MUM,7,75,10.3,P0005,Rohan Desai,Gautam Rao,LBW
+M0027,2023,2,MUM,8,78,10.5,P0008,Amit Verma,Gautam Rao,Stumped
+M0027,2023,2,MUM,9,82,12.2,P0010,Tarun Trivedi,Rohan Sinha,Caught
+M0027,2023,2,MUM,10,97,14.3,P0009,Amit Mehta,,RunOut
+M0028,2023,1,KOL,1,26,2.4,P0069,Devendra Kulkarni,Vikram Pandey,Stumped
+M0028,2023,1,KOL,2,35,4.2,P0060,Vishal Verma,Vikram Pandey,LBW
+M0028,2023,1,KOL,3,35,4.3,P0061,Sanjay Shetty,,RunOut
+M0028,2023,1,KOL,4,38,5.3,P0075,Pranav Dhawan,Uday Sharma,LBW
+M0028,2023,1,KOL,5,83,10.2,P0063,Arjun Chopra,Naveen Sinha,Caught
+M0028,2023,1,KOL,6,104,12.1,P0064,Kabir Rao,Omar Naidu,Bowled
+M0028,2023,1,KOL,7,136,16.3,P0065,Vikram Desai,Naveen Sinha,Bowled
+M0028,2023,2,DEL,1,36,3.3,P0021,Naveen Sinha,,RunOut
+M0028,2023,2,DEL,2,40,4.4,P0022,Uday Sharma,,RunOut
+M0028,2023,2,DEL,3,40,5.0,P0023,Bhavesh Dhawan,,RunOut
+M0028,2023,2,DEL,4,82,8.1,P0024,Lakshay Naidu,Amit Sinha,LBW
+M0028,2023,2,DEL,5,103,9.5,P0025,Imran Naidu,Naveen Mehta,LBW
+M0028,2023,2,DEL,6,107,10.2,P0026,Eshan Bhatt,Pranav Dhawan,LBW
+M0028,2023,2,DEL,7,117,11.0,P0027,Vikram Pandey,Pranav Dhawan,LBW
+M0028,2023,2,DEL,8,126,11.4,P0020,Omar Naidu,,RunOut
+M0028,2023,2,DEL,9,154,14.2,P0029,Ishaan Mehta,Arjun Chopra,Caught
+M0028,2023,2,DEL,10,160,15.1,P0028,Mohit Joshi,Devendra Malhotra,Stumped
+M0029,2023,1,CHE,1,17,1.0,P0039,Ishaan Yadav,Imran Yadav,Bowled
+M0029,2023,1,CHE,2,119,9.3,P0040,Farhan Mehta,Imran Yadav,LBW
+M0029,2023,1,CHE,3,124,10.0,P0053,Siddharth Malhotra,,RunOut
+M0029,2023,1,CHE,4,133,11.2,P0042,Karan Chauhan,Kabir Malhotra,LBW
+M0029,2023,1,CHE,5,143,14.0,P0043,Chetan Chopra,Kabir Malhotra,Stumped
+M0029,2023,1,CHE,6,160,15.5,P0044,Gautam Sharma,Jayant Pandey,LBW
+M0029,2023,1,CHE,7,160,16.0,P0046,Tarun Khan,Jayant Pandey,LBW
+M0029,2023,2,RAJ,1,52,4.5,P0135,Jayant Pandey,Chetan Chopra,Bowled
+M0029,2023,2,RAJ,2,53,5.2,P0136,Kabir Malhotra,Siddharth Malhotra,LBW
+M0029,2023,2,RAJ,3,167,19.0,P0137,Manish Yadav,,RunOut
+M0030,2023,1,KOL,1,43,3.1,P0058,Eshan Yadav,Arjun Pandey,Stumped
+M0030,2023,1,KOL,2,44,3.4,P0059,Qasim Sharma,Arjun Pandey,Stumped
+M0030,2023,1,KOL,3,102,10.5,P0061,Sanjay Shetty,Rohan Desai,Stumped
+M0030,2023,1,KOL,4,103,11.1,P0062,Pranav Naidu,Arjun Pandey,Caught
+M0030,2023,1,KOL,5,113,12.3,P0063,Arjun Chopra,,RunOut
+M0030,2023,1,KOL,6,171,18.2,P0064,Kabir Rao,Vikram Chauhan,LBW
+M0030,2023,2,MUM,1,2,0.2,P0002,Vikram Chauhan,Arjun Chopra,Caught
+M0030,2023,2,MUM,2,36,3.1,P0001,Vikram Sharma,Arjun Chopra,Caught
+M0030,2023,2,MUM,3,73,8.5,P0003,Arjun Pandey,Arjun Chopra,Caught
+M0030,2023,2,MUM,4,105,12.5,P0004,Naveen Saxena,Uday Iyer,Bowled
+M0030,2023,2,MUM,5,105,13.0,P0006,Naveen Iyer,,RunOut
+M0030,2023,2,MUM,6,105,13.1,P0005,Rohan Desai,,RunOut
+M0030,2023,2,MUM,7,147,19.0,P0008,Amit Verma,Devendra Malhotra,Bowled
+M0030,2023,2,MUM,8,147,19.1,P0007,Chetan Desai,Uday Iyer,LBW
+M0031,2023,1,DEL,1,90,10.3,P0021,Naveen Sinha,Amit Mehta,Caught
+M0031,2023,1,DEL,2,108,12.5,P0020,Omar Naidu,Amit Mehta,Stumped
+M0031,2023,1,DEL,3,130,15.1,P0023,Bhavesh Dhawan,Tarun Trivedi,Bowled
+M0031,2023,1,DEL,4,150,17.0,P0022,Uday Sharma,Rohan Desai,Bowled
+M0031,2023,1,DEL,5,152,17.3,P0025,Imran Naidu,Tarun Trivedi,Caught
+M0031,2023,1,DEL,6,154,18.0,P0024,Lakshay Naidu,Tarun Trivedi,Caught
+M0031,2023,1,DEL,7,155,18.2,P0027,Vikram Pandey,Rohan Desai,Stumped
+M0031,2023,2,MUM,1,6,0.3,P0001,Vikram Sharma,Lakshay Naidu,Caught
+M0031,2023,2,MUM,2,26,3.2,P0003,Arjun Pandey,Uday Sharma,LBW
+M0031,2023,2,MUM,3,28,4.0,P0002,Vikram Chauhan,,RunOut
+M0031,2023,2,MUM,4,29,4.2,P0005,Rohan Desai,Lakshay Naidu,Stumped
+M0031,2023,2,MUM,5,61,8.2,P0006,Naveen Iyer,Naveen Sinha,LBW
+M0031,2023,2,MUM,6,74,9.4,P0004,Naveen Saxena,,RunOut
+M0031,2023,2,MUM,7,102,13.0,P0008,Amit Verma,,RunOut
+M0031,2023,2,MUM,8,102,13.1,P0007,Chetan Desai,Uday Sharma,LBW
+M0031,2023,2,MUM,9,102,13.3,P0010,Tarun Trivedi,,RunOut
+M0031,2023,2,MUM,10,134,17.3,P0011,Gautam Malhotra,Omar Naidu,Stumped
+M0032,2023,1,MUM,1,29,3.3,P0017,Farhan Agarwal,Rahul Gill,Stumped
+M0032,2023,1,MUM,2,46,6.3,P0017,Farhan Agarwal,Vikram Trivedi,Caught
+M0032,2023,1,MUM,3,76,9.5,P0002,Vikram Chauhan,Imran Yadav,Caught
+M0032,2023,1,MUM,4,100,12.4,P0004,Naveen Saxena,,RunOut
+M0032,2023,1,MUM,5,139,15.4,P0005,Rohan Desai,Vikram Trivedi,Bowled
+M0032,2023,1,MUM,6,141,16.2,P0006,Naveen Iyer,Jayant Pandey,Caught
+M0032,2023,1,MUM,7,157,18.0,P0007,Chetan Desai,,RunOut
+M0032,2023,2,RAJ,1,34,3.3,P0135,Jayant Pandey,Vikram Chauhan,Bowled
+M0032,2023,2,RAJ,2,38,4.2,P0134,Vikram Trivedi,Farhan Agarwal,Stumped
+M0032,2023,2,RAJ,3,63,7.2,P0137,Manish Yadav,Farhan Agarwal,Stumped
+M0032,2023,2,RAJ,4,97,10.2,P0138,Aditya Ghosh,Farhan Agarwal,Caught
+M0032,2023,2,RAJ,5,111,12.1,P0139,Nikhil Kapoor,Amit Mehta,LBW
+M0032,2023,2,RAJ,6,148,15.3,P0140,Manish Iyer,Vikram Chauhan,Bowled
+M0032,2023,2,RAJ,7,169,17.3,P0149,Rahul Gill,Farhan Agarwal,Caught
+M0032,2023,2,RAJ,8,172,18.1,P0142,Arjun Ghosh,Amit Mehta,Caught
+M0032,2023,2,RAJ,9,187,19.5,P0146,Sanjay Rao,,RunOut
+M0033,2023,1,DEL,1,7,1.1,P0020,Omar Naidu,,RunOut
+M0033,2023,1,DEL,2,69,9.0,P0022,Uday Sharma,Ishaan Chauhan,Stumped
+M0033,2023,1,DEL,3,80,10.5,P0023,Bhavesh Dhawan,,RunOut
+M0033,2023,1,DEL,4,150,17.0,P0021,Naveen Sinha,Devendra Nair,Bowled
+M0033,2023,1,DEL,5,151,17.3,P0025,Imran Naidu,Omar Dhawan,Stumped
+M0033,2023,1,DEL,6,151,17.5,P0034,Arjun Rao,Omar Dhawan,Bowled
+M0033,2023,2,BLR,1,25,2.2,P0077,Rahul Trivedi,Vikram Pandey,Stumped
+M0033,2023,2,BLR,2,59,5.3,P0078,Sanjay Menon,Uday Sharma,LBW
+M0033,2023,2,BLR,3,151,13.0,P0079,Naveen Bhatt,Arjun Rao,Caught
+M0033,2023,2,BLR,4,160,13.5,P0080,Lakshay Sharma,,RunOut
+M0033,2023,2,BLR,5,208,18.4,P0081,Ishaan Chauhan,,RunOut
+M0034,2023,1,RAJ,1,13,1.2,P0135,Jayant Pandey,Omar Dhawan,Caught
+M0034,2023,1,RAJ,2,17,2.1,P0134,Vikram Trivedi,,RunOut
+M0034,2023,1,RAJ,3,27,5.2,P0136,Kabir Malhotra,Arjun Trivedi,Bowled
+M0034,2023,1,RAJ,4,72,9.1,P0137,Manish Yadav,Omar Dhawan,LBW
+M0034,2023,1,RAJ,5,74,9.3,P0139,Nikhil Kapoor,Omar Dhawan,Bowled
+M0034,2023,1,RAJ,6,113,13.5,P0140,Manish Iyer,Rajat Pillai,Stumped
+M0034,2023,1,RAJ,7,114,14.2,P0141,Dhruv Kapoor,Naveen Bhatt,Caught
+M0034,2023,1,RAJ,8,134,16.0,P0145,Manish Nair,Ishaan Chauhan,LBW
+M0034,2023,1,RAJ,9,172,19.1,P0142,Arjun Ghosh,Omar Dhawan,Stumped
+M0034,2023,2,BLR,1,102,10.4,P0078,Sanjay Menon,Vikram Trivedi,Caught
+M0034,2023,2,BLR,2,108,11.4,P0077,Rahul Trivedi,,RunOut
+M0034,2023,2,BLR,3,121,12.5,P0080,Lakshay Sharma,Vikram Trivedi,Stumped
+M0034,2023,2,BLR,4,129,13.3,P0079,Naveen Bhatt,Kabir Malhotra,Stumped
+M0034,2023,2,BLR,5,137,14.5,P0082,Farhan Saxena,Imran Yadav,LBW
+M0034,2023,2,BLR,6,146,15.4,P0081,Ishaan Chauhan,,RunOut
+M0035,2023,1,MUM,1,29,3.0,P0002,Vikram Chauhan,Harish Joshi,LBW
+M0035,2023,1,MUM,2,46,4.2,P0001,Vikram Sharma,Kabir Malhotra,LBW
+M0035,2023,1,MUM,3,48,5.1,P0003,Arjun Pandey,,RunOut
+M0035,2023,1,MUM,4,66,7.1,P0005,Rohan Desai,Vikram Trivedi,LBW
+M0035,2023,1,MUM,5,71,8.0,P0004,Naveen Saxena,Vikram Trivedi,Caught
+M0035,2023,1,MUM,6,110,11.1,P0006,Naveen Iyer,Kabir Malhotra,LBW
+M0035,2023,1,MUM,7,121,12.2,P0008,Amit Verma,,RunOut
+M0035,2023,1,MUM,8,127,12.5,P0009,Amit Mehta,Vikram Trivedi,Bowled
+M0035,2023,1,MUM,9,138,13.5,P0010,Tarun Trivedi,Gautam Trivedi,Caught
+M0035,2023,2,RAJ,1,16,3.4,P0135,Jayant Pandey,Amit Mehta,Stumped
+M0035,2023,2,RAJ,2,36,6.1,P0136,Kabir Malhotra,Tarun Trivedi,Stumped
+M0035,2023,2,RAJ,3,91,13.1,P0137,Manish Yadav,Vikram Sharma,LBW
+M0035,2023,2,RAJ,4,91,13.3,P0138,Aditya Ghosh,,RunOut
+M0035,2023,2,RAJ,5,118,16.4,P0134,Vikram Trivedi,,RunOut
+M0035,2023,2,RAJ,6,132,18.4,P0140,Manish Iyer,Amit Mehta,LBW
+M0036,2023,1,KOL,1,6,0.3,P0058,Eshan Yadav,Naveen Bhatt,Stumped
+M0036,2023,1,KOL,2,25,2.0,P0059,Qasim Sharma,Rahul Chauhan,LBW
+M0036,2023,1,KOL,3,38,3.0,P0076,Ishaan Shetty,Omar Dhawan,Bowled
+M0036,2023,1,KOL,4,43,4.0,P0062,Pranav Naidu,Suresh Kulkarni,Caught
+M0036,2023,1,KOL,5,140,15.4,P0076,Ishaan Shetty,Ishaan Chauhan,Stumped
+M0036,2023,2,BLR,1,8,1.0,P0077,Rahul Trivedi,Amit Sinha,Stumped
+M0036,2023,2,BLR,2,10,1.4,P0078,Sanjay Menon,Uday Iyer,LBW
+M0036,2023,2,BLR,3,35,4.1,P0080,Lakshay Sharma,Amit Sinha,Caught
+M0036,2023,2,BLR,4,51,5.3,P0079,Naveen Bhatt,Uday Iyer,Caught
+M0036,2023,2,BLR,5,53,6.2,P0081,Ishaan Chauhan,Ishaan Shetty,LBW
+M0036,2023,2,BLR,6,80,9.4,P0083,Rohan Nair,Naveen Mehta,LBW
+M0036,2023,2,BLR,7,87,10.4,P0084,Suresh Kulkarni,Amit Sinha,Caught
+M0036,2023,2,BLR,8,89,11.2,P0085,Omar Dhawan,Ishaan Shetty,Bowled
+M0036,2023,2,BLR,9,111,14.1,P0086,Arjun Trivedi,Devendra Malhotra,Bowled
+M0036,2023,2,BLR,10,127,15.3,P0087,Pranav Trivedi,,RunOut
+M0037,2023,1,RAJ,1,25,1.4,P0134,Vikram Trivedi,Vishal Trivedi,Bowled
+M0037,2023,1,RAJ,2,33,2.1,P0152,Rajat Dhawan,,RunOut
+M0037,2023,1,RAJ,3,73,7.0,P0137,Manish Yadav,Harish Mehta,LBW
+M0037,2023,1,RAJ,4,92,8.4,P0136,Kabir Malhotra,Harish Mehta,Stumped
+M0037,2023,1,RAJ,5,101,9.4,P0139,Nikhil Kapoor,,RunOut
+M0037,2023,1,RAJ,6,133,12.4,P0140,Manish Iyer,,RunOut
+M0037,2023,1,RAJ,7,142,13.3,P0141,Dhruv Kapoor,Harish Mehta,Caught
+M0037,2023,1,RAJ,8,148,14.4,P0151,Harish Joshi,Vikram Sinha,Bowled
+M0037,2023,1,RAJ,9,150,15.1,P0142,Arjun Ghosh,,RunOut
+M0037,2023,1,RAJ,10,150,15.2,P0144,Karan Kapoor,,RunOut
+M0037,2023,2,HYD,1,4,0.2,P0096,Uday Verma,Nikhil Kapoor,Stumped
+M0037,2023,2,HYD,2,23,3.4,P0097,Vikram Sinha,Kabir Malhotra,LBW
+M0037,2023,2,HYD,3,71,10.3,P0099,Rohan Sinha,Imran Yadav,Bowled
+M0037,2023,2,HYD,4,85,11.4,P0098,Gautam Rao,,RunOut
+M0037,2023,2,HYD,5,93,13.0,P0101,Vishal Trivedi,Harish Joshi,Stumped
+M0037,2023,2,HYD,6,151,18.4,P0100,Amit Gill,Nikhil Kapoor,Stumped
+M0038,2023,1,RAJ,1,17,2.3,P0135,Jayant Pandey,Eshan Desai,Bowled
+M0038,2023,1,RAJ,2,41,5.4,P0134,Vikram Trivedi,Ishaan Yadav,Stumped
+M0038,2023,1,RAJ,3,53,6.5,P0137,Manish Yadav,Chetan Chopra,Stumped
+M0038,2023,1,RAJ,4,57,7.3,P0136,Kabir Malhotra,Farhan Mehta,LBW
+M0038,2023,1,RAJ,5,72,8.5,P0139,Nikhil Kapoor,Chetan Chopra,Caught
+M0038,2023,1,RAJ,6,89,10.4,P0140,Manish Iyer,Farhan Mehta,Caught
+M0038,2023,1,RAJ,7,92,11.1,P0141,Dhruv Kapoor,,RunOut
+M0038,2023,1,RAJ,8,99,12.0,P0138,Aditya Ghosh,,RunOut
+M0038,2023,1,RAJ,9,136,17.1,P0143,Imran Yadav,Farhan Mehta,Bowled
+M0038,2023,2,CHE,1,8,0.4,P0039,Ishaan Yadav,,RunOut
+M0038,2023,2,CHE,2,28,3.4,P0040,Farhan Mehta,Kabir Malhotra,Caught
+M0038,2023,2,CHE,3,79,7.4,P0042,Karan Chauhan,Imran Yadav,Caught
+M0038,2023,2,CHE,4,95,9.2,P0043,Chetan Chopra,Nikhil Kapoor,Bowled
+M0038,2023,2,CHE,5,135,12.0,P0044,Gautam Sharma,Nikhil Kapoor,LBW
+M0038,2023,2,CHE,6,154,13.5,P0045,Eshan Desai,Jayant Pandey,Caught
+M0038,2023,2,CHE,7,208,19.4,P0041,Pranav Agarwal,,RunOut
+M0039,2023,1,CHE,1,0,0.2,P0039,Ishaan Yadav,,RunOut
+M0039,2023,1,CHE,2,15,2.3,P0040,Farhan Mehta,,RunOut
+M0039,2023,1,CHE,3,15,2.4,P0042,Karan Chauhan,Dhruv Chauhan,Stumped
+M0039,2023,1,CHE,4,25,4.0,P0043,Chetan Chopra,Sanjay Ghosh,Bowled
+M0039,2023,1,CHE,5,62,9.2,P0041,Pranav Agarwal,,RunOut
+M0039,2023,1,CHE,6,141,18.3,P0045,Eshan Desai,,RunOut
+M0039,2023,2,PUN,1,2,0.3,P0116,Rahul Rao,Ishaan Yadav,LBW
+M0039,2023,2,PUN,2,3,0.5,P0115,Varun Reddy,,RunOut
+M0039,2023,2,PUN,3,16,1.3,P0117,Imran Kulkarni,Eshan Desai,Bowled
+M0039,2023,2,PUN,4,16,2.1,P0118,Amit Pillai,Farhan Mehta,Bowled
+M0039,2023,2,PUN,5,85,11.0,P0120,Kabir Reddy,Eshan Desai,Caught
+M0039,2023,2,PUN,6,136,15.1,P0119,Dhruv Chauhan,,RunOut
+M0040,2023,1,PUN,1,53,3.4,P0128,Bhavesh Chopra,Vikram Agarwal,Caught
+M0040,2023,1,PUN,2,101,7.1,P0115,Varun Reddy,Vishal Trivedi,Bowled
+M0040,2023,1,PUN,3,140,11.2,P0129,Aditya Kapoor,Gautam Rao,Bowled
+M0040,2023,1,PUN,4,144,12.1,P0119,Dhruv Chauhan,,RunOut
+M0040,2023,1,PUN,5,154,13.2,P0120,Kabir Reddy,Qasim Bose,Caught
+M0040,2023,1,PUN,6,157,14.1,P0121,Imran Trivedi,Nikhil Bhatt,Stumped
+M0040,2023,1,PUN,7,191,18.2,P0117,Imran Kulkarni,Nikhil Bhatt,Stumped
+M0040,2023,1,PUN,8,215,20.0,P0131,Siddharth Naidu,,RunOut
+M0040,2023,2,HYD,1,140,18.0,P0096,Uday Verma,Sanjay Naidu,Stumped
+M0041,2024,1,MUM,1,8,1.2,P0002,Vikram Chauhan,Imran Yadav,Caught
+M0041,2024,1,MUM,2,20,3.0,P0013,Lakshay Joshi,Kabir Malhotra,Bowled
+M0041,2024,1,MUM,3,20,3.1,P0003,Arjun Pandey,Jayant Pandey,Bowled
+M0041,2024,1,MUM,4,34,4.4,P0005,Rohan Desai,,RunOut
+M0041,2024,1,MUM,5,34,5.0,P0006,Naveen Iyer,Kabir Malhotra,Bowled
+M0041,2024,1,MUM,6,40,6.1,P0007,Chetan Desai,Nikhil Kapoor,Stumped
+M0041,2024,1,MUM,7,68,9.1,P0008,Amit Verma,Vikram Trivedi,Stumped
+M0041,2024,1,MUM,8,68,9.2,P0009,Amit Mehta,Vikram Trivedi,Stumped
+M0041,2024,1,MUM,9,90,11.5,P0010,Tarun Trivedi,,RunOut
+M0041,2024,1,MUM,10,90,12.0,P0011,Gautam Malhotra,Imran Yadav,Caught
+M0041,2024,2,RAJ,1,6,0.5,P0134,Vikram Trivedi,Tarun Trivedi,Bowled
+M0041,2024,2,RAJ,2,14,1.2,P0135,Jayant Pandey,Lakshay Joshi,Bowled
+M0041,2024,2,RAJ,3,17,2.2,P0152,Rajat Dhawan,Amit Mehta,Bowled
+M0041,2024,2,RAJ,4,112,13.2,P0136,Kabir Malhotra,Rohan Desai,Stumped
+M0041,2024,2,RAJ,5,183,18.5,P0139,Nikhil Kapoor,Arjun Pandey,LBW
+M0042,2024,1,PUN,1,34,3.5,P0133,Eshan Malhotra,,RunOut
+M0042,2024,1,PUN,2,57,6.4,P0116,Rahul Rao,,RunOut
+M0042,2024,1,PUN,3,69,9.0,P0117,Imran Kulkarni,Amit Sinha,Bowled
+M0042,2024,1,PUN,4,77,9.3,P0118,Amit Pillai,,RunOut
+M0042,2024,1,PUN,5,82,10.2,P0120,Kabir Reddy,Devendra Malhotra,Caught
+M0042,2024,1,PUN,6,99,12.1,P0121,Imran Trivedi,Arjun Chopra,LBW
+M0042,2024,1,PUN,7,122,14.2,P0119,Dhruv Chauhan,Naveen Mehta,Stumped
+M0042,2024,1,PUN,8,128,15.1,P0122,Sanjay Naidu,,RunOut
+M0042,2024,2,KOL,1,11,1.5,P0059,Qasim Sharma,Amit Pillai,LBW
+M0042,2024,2,KOL,2,41,4.4,P0058,Eshan Yadav,Dhruv Chauhan,Bowled
+M0042,2024,2,KOL,3,43,5.3,P0072,Kabir Gill,Sanjay Ghosh,Bowled
+M0042,2024,2,KOL,4,55,6.4,P0061,Sanjay Shetty,Sanjay Naidu,Caught
+M0042,2024,2,KOL,5,93,10.1,P0062,Pranav Naidu,Qasim Iyer,LBW
+M0042,2024,2,KOL,6,126,14.1,P0076,Ishaan Shetty,Qasim Iyer,LBW
+M0042,2024,2,KOL,7,135,15.2,P0065,Vikram Desai,Amit Pillai,LBW
+M0042,2024,2,KOL,8,164,17.5,P0063,Arjun Chopra,Amit Pillai,Caught
+M0042,2024,2,KOL,9,165,18.2,P0067,Naveen Mehta,Dhruv Chauhan,LBW
+M0042,2024,2,KOL,10,172,19.3,P0066,Devendra Malhotra,Amit Pillai,Caught
+M0043,2024,1,CHE,1,36,5.5,P0052,Vikram Pillai,Omar Dhawan,LBW
+M0043,2024,1,CHE,2,41,6.5,P0052,Vikram Pillai,Naveen Bhatt,LBW
+M0043,2024,1,CHE,3,49,9.4,P0040,Farhan Mehta,Naveen Bhatt,Stumped
+M0043,2024,1,CHE,4,49,9.5,P0043,Chetan Chopra,Naveen Bhatt,Stumped
+M0043,2024,1,CHE,5,75,13.0,P0042,Karan Chauhan,Ishaan Chauhan,Stumped
+M0043,2024,1,CHE,6,92,14.3,P0052,Vikram Pillai,Amit Chauhan,Bowled
+M0043,2024,1,CHE,7,123,19.3,P0045,Eshan Desai,Omar Dhawan,LBW
+M0043,2024,1,CHE,8,129,20.0,P0047,Manish Reddy,Omar Dhawan,Stumped
+M0043,2024,2,BLR,1,16,2.4,P0077,Rahul Trivedi,Eshan Desai,Stumped
+M0043,2024,2,BLR,2,38,6.2,P0078,Sanjay Menon,,RunOut
+M0043,2024,2,BLR,3,54,8.4,P0080,Lakshay Sharma,Vikram Pillai,Stumped
+M0043,2024,2,BLR,4,55,9.1,P0081,Ishaan Chauhan,Eshan Agarwal,Caught
+M0043,2024,2,BLR,5,126,17.0,P0079,Naveen Bhatt,Eshan Agarwal,Caught
+M0044,2024,1,KOL,1,5,1.0,P0059,Qasim Sharma,Farhan Mehta,Bowled
+M0044,2024,1,KOL,2,21,3.1,P0060,Vishal Verma,Chetan Chopra,Caught
+M0044,2024,1,KOL,3,29,3.4,P0061,Sanjay Shetty,Chetan Chopra,Caught
+M0044,2024,1,KOL,4,76,8.5,P0058,Eshan Yadav,Varun Menon,Bowled
+M0044,2024,1,KOL,5,78,9.4,P0062,Pranav Naidu,,RunOut
+M0044,2024,1,KOL,6,78,10.0,P0064,Kabir Rao,Eshan Desai,Caught
+M0044,2024,1,KOL,7,109,13.5,P0065,Vikram Desai,,RunOut
+M0044,2024,1,KOL,8,149,16.4,P0063,Arjun Chopra,Varun Menon,Bowled
+M0044,2024,2,CHE,1,27,1.1,P0051,Eshan Shetty,,RunOut
+M0044,2024,2,CHE,2,52,3.1,P0040,Farhan Mehta,,RunOut
+M0044,2024,2,CHE,3,89,5.3,P0051,Eshan Shetty,Amit Sinha,Stumped
+M0044,2024,2,CHE,4,160,13.0,P0041,Pranav Agarwal,,RunOut
+M0044,2024,2,CHE,5,178,16.0,P0044,Gautam Sharma,Naveen Mehta,Bowled
+M0044,2024,2,CHE,6,186,17.2,P0045,Eshan Desai,Devendra Malhotra,Caught
+M0045,2024,1,DEL,1,47,5.0,P0021,Naveen Sinha,Vikram Trivedi,Bowled
+M0045,2024,1,DEL,2,89,10.0,P0020,Omar Naidu,Kabir Malhotra,Bowled
+M0045,2024,2,RAJ,1,37,3.3,P0135,Jayant Pandey,Omar Naidu,Caught
+M0045,2024,2,RAJ,2,39,4.1,P0136,Kabir Malhotra,Naveen Sinha,Stumped
+M0045,2024,2,RAJ,3,39,4.2,P0137,Manish Yadav,,RunOut
+M0045,2024,2,RAJ,4,60,6.2,P0134,Vikram Trivedi,Vikram Pandey,Bowled
+M0045,2024,2,RAJ,5,61,7.1,P0139,Nikhil Kapoor,Uday Sharma,LBW
+M0045,2024,2,RAJ,6,89,9.0,P0140,Manish Iyer,,RunOut
+M0045,2024,2,RAJ,7,107,12.3,P0141,Dhruv Kapoor,Uday Sharma,Stumped
+M0045,2024,2,RAJ,8,107,12.4,P0146,Sanjay Rao,,RunOut
+M0045,2024,2,RAJ,9,145,16.2,P0138,Aditya Ghosh,Lakshay Naidu,Stumped
+M0046,2024,1,HYD,1,24,3.2,P0096,Uday Verma,,RunOut
+M0046,2024,1,HYD,2,156,17.2,P0097,Vikram Sinha,,RunOut
+M0046,2024,2,BLR,1,3,1.0,P0078,Sanjay Menon,,RunOut
+M0046,2024,2,BLR,2,118,13.0,P0079,Naveen Bhatt,Qasim Bose,LBW
+M0046,2024,2,BLR,3,144,16.0,P0089,Rajat Pillai,Farhan Sharma,Stumped
+M0046,2024,2,BLR,4,144,16.1,P0080,Lakshay Sharma,Rohan Sinha,Bowled
+M0046,2024,2,BLR,5,157,17.2,P0082,Farhan Saxena,Qasim Bose,Caught
+M0046,2024,2,BLR,6,158,18.0,P0081,Ishaan Chauhan,,RunOut
+M0046,2024,2,BLR,7,158,18.1,P0091,Qasim Kapoor,Farhan Sharma,LBW
+M0047,2024,1,CHE,1,1,0.3,P0040,Farhan Mehta,Uday Sharma,Stumped
+M0047,2024,1,CHE,2,5,2.0,P0039,Ishaan Yadav,Omar Naidu,Caught
+M0047,2024,1,CHE,3,13,3.1,P0041,Pranav Agarwal,Uday Sharma,LBW
+M0047,2024,1,CHE,4,44,6.1,P0042,Karan Chauhan,Uday Sharma,LBW
+M0047,2024,1,CHE,5,45,6.3,P0043,Chetan Chopra,Uday Sharma,Caught
+M0047,2024,1,CHE,6,85,11.5,P0044,Gautam Sharma,Lakshay Naidu,Bowled
+M0047,2024,1,CHE,7,124,14.5,P0046,Tarun Khan,Vikram Pandey,Bowled
+M0047,2024,1,CHE,8,150,16.5,P0045,Eshan Desai,Vikram Pandey,Bowled
+M0047,2024,2,DEL,1,16,2.1,P0021,Naveen Sinha,Chetan Chopra,Bowled
+M0047,2024,2,DEL,2,35,4.1,P0020,Omar Naidu,Eshan Desai,Stumped
+M0047,2024,2,DEL,3,89,10.0,P0023,Bhavesh Dhawan,Ishaan Yadav,Stumped
+M0047,2024,2,DEL,4,97,10.5,P0022,Uday Sharma,Eshan Agarwal,Bowled
+M0047,2024,2,DEL,5,101,11.3,P0024,Lakshay Naidu,Chetan Chopra,Bowled
+M0047,2024,2,DEL,6,113,13.0,P0026,Eshan Bhatt,Eshan Agarwal,Bowled
+M0047,2024,2,DEL,7,126,14.2,P0027,Vikram Pandey,Chetan Chopra,Stumped
+M0047,2024,2,DEL,8,144,16.2,P0028,Mohit Joshi,Ishaan Yadav,LBW
+M0047,2024,2,DEL,9,146,16.5,P0038,Chetan Sinha,Ishaan Yadav,Caught
+M0048,2024,1,RAJ,1,7,2.0,P0134,Vikram Trivedi,Gautam Rao,Stumped
+M0048,2024,1,RAJ,2,9,3.0,P0135,Jayant Pandey,Vishal Trivedi,Stumped
+M0048,2024,1,RAJ,3,11,3.4,P0148,Gautam Trivedi,Gautam Rao,Caught
+M0048,2024,1,RAJ,4,49,7.1,P0138,Aditya Ghosh,Vikram Sinha,LBW
+M0048,2024,1,RAJ,5,65,9.5,P0139,Nikhil Kapoor,Vikram Agarwal,Stumped
+M0048,2024,1,RAJ,6,108,14.2,P0137,Manish Yadav,Qasim Bose,LBW
+M0048,2024,2,HYD,1,9,2.5,P0096,Uday Verma,,RunOut
+M0048,2024,2,HYD,2,15,4.1,P0098,Gautam Rao,Vikram Trivedi,Stumped
+M0048,2024,2,HYD,3,15,4.2,P0099,Rohan Sinha,Vikram Trivedi,Caught
+M0048,2024,2,HYD,4,49,6.5,P0097,Vikram Sinha,Nikhil Kapoor,Bowled
+M0048,2024,2,HYD,5,51,7.2,P0100,Amit Gill,Vikram Trivedi,Caught
+M0048,2024,2,HYD,6,67,9.5,P0102,Harish Mehta,Vikram Trivedi,Bowled
+M0048,2024,2,HYD,7,67,10.2,P0101,Vishal Trivedi,Gautam Trivedi,Bowled
+M0048,2024,2,HYD,8,101,14.0,P0104,Qasim Bose,Nikhil Kapoor,Caught
+M0048,2024,2,HYD,9,124,16.4,P0105,Rajat Trivedi,Vikram Trivedi,Stumped
+M0049,2024,1,RAJ,1,23,1.5,P0134,Vikram Trivedi,Arjun Chopra,LBW
+M0049,2024,1,RAJ,2,49,5.3,P0135,Jayant Pandey,Amit Sinha,LBW
+M0049,2024,1,RAJ,3,97,11.1,P0137,Manish Yadav,Amit Sinha,Stumped
+M0049,2024,1,RAJ,4,103,12.1,P0136,Kabir Malhotra,Naveen Mehta,LBW
+M0049,2024,1,RAJ,5,120,14.5,P0148,Gautam Trivedi,Uday Iyer,LBW
+M0049,2024,1,RAJ,6,121,15.0,P0140,Manish Iyer,Uday Iyer,LBW
+M0049,2024,1,RAJ,7,121,15.3,P0139,Nikhil Kapoor,Amit Sinha,LBW
+M0049,2024,1,RAJ,8,140,18.0,P0141,Dhruv Kapoor,Naveen Mehta,Caught
+M0049,2024,1,RAJ,9,149,20.0,P0142,Arjun Ghosh,Naveen Mehta,LBW
+M0049,2024,2,KOL,1,50,4.5,P0071,Uday Iyer,Kabir Malhotra,LBW
+M0049,2024,2,KOL,2,63,6.4,P0059,Qasim Sharma,Vikram Trivedi,Caught
+M0049,2024,2,KOL,3,76,9.1,P0060,Vishal Verma,Vikram Trivedi,LBW
+M0049,2024,2,KOL,4,85,10.2,P0061,Sanjay Shetty,Nikhil Kapoor,Stumped
+M0049,2024,2,KOL,5,120,14.4,P0062,Pranav Naidu,Nikhil Kapoor,Stumped
+M0049,2024,2,KOL,6,144,16.5,P0064,Kabir Rao,Nikhil Kapoor,Caught
+M0049,2024,2,KOL,7,153,17.5,P0063,Arjun Chopra,Vikram Trivedi,Caught
+M0050,2024,1,RAJ,1,4,0.3,P0134,Vikram Trivedi,,RunOut
+M0050,2024,1,RAJ,2,23,3.3,P0135,Jayant Pandey,,RunOut
+M0050,2024,1,RAJ,3,23,3.5,P0137,Manish Yadav,,RunOut
+M0050,2024,1,RAJ,4,23,4.1,P0136,Kabir Malhotra,Harish Mehta,Bowled
+M0050,2024,1,RAJ,5,68,7.3,P0139,Nikhil Kapoor,,RunOut
+M0050,2024,1,RAJ,6,78,9.4,P0140,Manish Iyer,Harish Mehta,Bowled
+M0050,2024,1,RAJ,7,82,10.0,P0141,Dhruv Kapoor,Harish Mehta,Stumped
+M0050,2024,1,RAJ,8,120,14.1,P0142,Arjun Ghosh,Vishal Trivedi,LBW
+M0050,2024,1,RAJ,9,159,17.3,P0143,Imran Yadav,,RunOut
+M0050,2024,1,RAJ,10,165,18.1,P0144,Karan Kapoor,Qasim Bose,Caught
+M0050,2024,2,HYD,1,15,1.3,P0096,Uday Verma,Nikhil Kapoor,Bowled
+M0050,2024,2,HYD,2,15,1.5,P0098,Gautam Rao,Nikhil Kapoor,Stumped
+M0050,2024,2,HYD,3,25,2.5,P0097,Vikram Sinha,Kabir Malhotra,LBW
+M0050,2024,2,HYD,4,66,7.1,P0100,Amit Gill,Nikhil Kapoor,LBW
+M0050,2024,2,HYD,5,89,8.4,P0099,Rohan Sinha,Imran Yadav,LBW
+M0050,2024,2,HYD,6,123,12.0,P0101,Vishal Trivedi,Imran Yadav,Caught
+M0050,2024,2,HYD,7,133,13.3,P0103,Vikram Agarwal,,RunOut
+M0051,2024,1,BLR,1,20,2.2,P0078,Sanjay Menon,Farhan Agarwal,Bowled
+M0051,2024,1,BLR,2,143,14.2,P0079,Naveen Bhatt,Rohan Desai,Stumped
+M0051,2024,1,BLR,3,145,15.3,P0080,Lakshay Sharma,Amit Mehta,Caught
+M0051,2024,1,BLR,4,145,15.4,P0081,Ishaan Chauhan,Amit Mehta,Bowled
+M0051,2024,1,BLR,5,187,19.4,P0077,Rahul Trivedi,Farhan Agarwal,LBW
+M0051,2024,1,BLR,6,189,20.0,P0082,Farhan Saxena,Farhan Agarwal,Caught
+M0051,2024,2,MUM,1,8,0.4,P0018,Imran Bose,Naveen Bhatt,Bowled
+M0051,2024,2,MUM,2,24,2.1,P0017,Farhan Agarwal,Omar Dhawan,LBW
+M0051,2024,2,MUM,3,42,3.0,P0004,Naveen Saxena,Omar Dhawan,LBW
+M0051,2024,2,MUM,4,42,3.2,P0002,Vikram Chauhan,Arjun Trivedi,Caught
+M0051,2024,2,MUM,5,55,6.0,P0005,Rohan Desai,,RunOut
+M0051,2024,2,MUM,6,61,6.4,P0007,Chetan Desai,Omar Dhawan,LBW
+M0051,2024,2,MUM,7,71,7.4,P0008,Amit Verma,,RunOut
+M0051,2024,2,MUM,8,74,8.4,P0009,Amit Mehta,Suresh Kulkarni,LBW
+M0051,2024,2,MUM,9,96,11.4,P0006,Naveen Iyer,Naveen Bhatt,Caught
+M0051,2024,2,MUM,10,116,15.0,P0017,Farhan Agarwal,Omar Dhawan,LBW
+M0052,2024,1,BLR,1,16,1.3,P0078,Sanjay Menon,Rohan Sinha,Stumped
+M0052,2024,1,BLR,2,29,2.3,P0079,Naveen Bhatt,Gautam Rao,Stumped
+M0052,2024,1,BLR,3,67,8.4,P0080,Lakshay Sharma,Harish Mehta,Stumped
+M0052,2024,1,BLR,4,82,12.4,P0077,Rahul Trivedi,Harish Mehta,Stumped
+M0052,2024,1,BLR,5,108,15.2,P0093,Mohit Iyer,Gautam Rao,Stumped
+M0052,2024,1,BLR,6,119,16.5,P0089,Rajat Pillai,Vikram Sinha,LBW
+M0052,2024,1,BLR,7,126,17.3,P0084,Suresh Kulkarni,Vikram Agarwal,Caught
+M0052,2024,1,BLR,8,139,19.0,P0085,Omar Dhawan,Gautam Rao,Bowled
+M0052,2024,2,HYD,1,9,1.4,P0096,Uday Verma,Omar Dhawan,LBW
+M0052,2024,2,HYD,2,26,2.4,P0098,Gautam Rao,Rohan Nair,Stumped
+M0052,2024,2,HYD,3,35,3.3,P0097,Vikram Sinha,Arjun Trivedi,Stumped
+M0052,2024,2,HYD,4,35,3.4,P0100,Amit Gill,Arjun Trivedi,Bowled
+M0052,2024,2,HYD,5,41,4.0,P0101,Vishal Trivedi,Arjun Trivedi,Stumped
+M0052,2024,2,HYD,6,47,5.2,P0102,Harish Mehta,Rajat Pillai,Stumped
+M0052,2024,2,HYD,7,79,8.3,P0099,Rohan Sinha,Naveen Bhatt,Stumped
+M0052,2024,2,HYD,8,93,10.0,P0104,Qasim Bose,Suresh Kulkarni,Caught
+M0052,2024,2,HYD,9,99,11.3,P0112,Farhan Sharma,Suresh Kulkarni,Bowled
+M0052,2024,2,HYD,10,111,12.2,P0103,Vikram Agarwal,,RunOut
+M0053,2024,1,KOL,1,11,1.3,P0059,Qasim Sharma,Naveen Sinha,Bowled
+M0053,2024,1,KOL,2,34,4.4,P0060,Vishal Verma,Naveen Sinha,Bowled
+M0053,2024,1,KOL,3,74,7.4,P0061,Sanjay Shetty,Uday Sharma,Bowled
+M0053,2024,1,KOL,4,91,9.3,P0058,Eshan Yadav,Vikram Pandey,Caught
+M0053,2024,1,KOL,5,97,10.1,P0063,Arjun Chopra,Omar Naidu,Bowled
+M0053,2024,1,KOL,6,97,10.2,P0064,Kabir Rao,Omar Naidu,LBW
+M0053,2024,1,KOL,7,102,10.5,P0062,Pranav Naidu,Omar Naidu,Caught
+M0053,2024,1,KOL,8,151,15.2,P0065,Vikram Desai,Omar Naidu,Bowled
+M0053,2024,1,KOL,9,175,18.1,P0066,Devendra Malhotra,Lakshay Naidu,Caught
+M0053,2024,1,KOL,10,192,19.2,P0072,Kabir Gill,Lakshay Naidu,Caught
+M0053,2024,2,DEL,1,44,4.0,P0020,Omar Naidu,Eshan Yadav,LBW
+M0053,2024,2,DEL,2,97,7.4,P0022,Uday Sharma,Naveen Mehta,Caught
+M0053,2024,2,DEL,3,97,7.5,P0023,Bhavesh Dhawan,Naveen Mehta,Caught
+M0053,2024,2,DEL,4,107,9.2,P0024,Lakshay Naidu,Devendra Malhotra,Caught
+M0053,2024,2,DEL,5,130,11.2,P0021,Naveen Sinha,Naveen Mehta,LBW
+M0053,2024,2,DEL,6,142,13.5,P0026,Eshan Bhatt,,RunOut
+M0053,2024,2,DEL,7,159,15.3,P0025,Imran Naidu,Naveen Mehta,LBW
+M0053,2024,2,DEL,8,163,15.5,P0028,Mohit Joshi,,RunOut
+M0054,2024,1,HYD,1,8,0.5,P0096,Uday Verma,Farhan Mehta,Bowled
+M0054,2024,1,HYD,2,52,6.0,P0097,Vikram Sinha,Farhan Mehta,LBW
+M0054,2024,1,HYD,3,56,6.5,P0114,Qasim Shetty,Chetan Chopra,Stumped
+M0054,2024,1,HYD,4,56,7.2,P0098,Gautam Rao,Ishaan Yadav,LBW
+M0054,2024,1,HYD,5,94,11.3,P0101,Vishal Trivedi,Eshan Desai,Stumped
+M0054,2024,1,HYD,6,102,12.2,P0102,Harish Mehta,Eshan Agarwal,Caught
+M0054,2024,1,HYD,7,102,12.3,P0103,Vikram Agarwal,Eshan Agarwal,Stumped
+M0054,2024,1,HYD,8,115,14.0,P0104,Qasim Bose,Eshan Desai,LBW
+M0054,2024,1,HYD,9,136,16.5,P0105,Rajat Trivedi,Chetan Chopra,LBW
+M0054,2024,1,HYD,10,148,18.4,P0106,Rahul Chopra,Ishaan Yadav,Bowled
+M0054,2024,2,CHE,1,12,1.3,P0040,Farhan Mehta,Vikram Sinha,LBW
+M0054,2024,2,CHE,2,45,5.1,P0039,Ishaan Yadav,Vikram Sinha,Stumped
+M0054,2024,2,CHE,3,67,8.2,P0041,Pranav Agarwal,,RunOut
+M0054,2024,2,CHE,4,74,9.0,P0042,Karan Chauhan,Qasim Bose,Caught
+M0054,2024,2,CHE,5,80,9.4,P0044,Gautam Sharma,Gautam Rao,LBW
+M0054,2024,2,CHE,6,136,15.3,P0043,Chetan Chopra,Qasim Bose,Caught
+M0054,2024,2,CHE,7,153,17.3,P0045,Eshan Desai,Vishal Trivedi,Stumped
+M0055,2024,1,KOL,1,26,4.3,P0058,Eshan Yadav,Rahul Chauhan,LBW
+M0055,2024,1,KOL,2,57,7.4,P0060,Vishal Verma,,RunOut
+M0055,2024,1,KOL,3,69,9.1,P0061,Sanjay Shetty,Suresh Kulkarni,Bowled
+M0055,2024,1,KOL,4,86,11.0,P0059,Qasim Sharma,Arjun Trivedi,Stumped
+M0055,2024,1,KOL,5,129,16.2,P0074,Dhruv Bhatt,Naveen Bhatt,Caught
+M0055,2024,1,KOL,6,148,18.2,P0062,Pranav Naidu,Suresh Kulkarni,LBW
+M0055,2024,1,KOL,7,153,19.1,P0065,Vikram Desai,Omar Dhawan,Bowled
+M0055,2024,1,KOL,8,155,19.4,P0066,Devendra Malhotra,,RunOut
+M0055,2024,2,BLR,1,16,2.0,P0078,Sanjay Menon,Dhruv Bhatt,Caught
+M0055,2024,2,BLR,2,32,4.2,P0077,Rahul Trivedi,Naveen Mehta,Caught
+M0055,2024,2,BLR,3,64,8.4,P0079,Naveen Bhatt,Eshan Yadav,LBW
+M0055,2024,2,BLR,4,128,15.4,P0081,Ishaan Chauhan,Devendra Malhotra,Caught
+M0055,2024,2,BLR,5,132,16.3,P0082,Farhan Saxena,,RunOut
+M0055,2024,2,BLR,6,163,19.5,P0083,Rohan Nair,,RunOut
+M0056,2024,1,KOL,1,11,1.4,P0058,Eshan Yadav,,RunOut
+M0056,2024,1,KOL,2,19,2.1,P0059,Qasim Sharma,Rohan Sinha,Bowled
+M0056,2024,1,KOL,3,33,3.2,P0060,Vishal Verma,Qasim Bose,Stumped
+M0056,2024,1,KOL,4,85,8.2,P0062,Pranav Naidu,Gautam Rao,Bowled
+M0056,2024,1,KOL,5,103,9.4,P0071,Uday Iyer,Harish Mehta,Bowled
+M0056,2024,1,KOL,6,104,10.1,P0064,Kabir Rao,Vikram Sinha,Bowled
+M0056,2024,1,KOL,7,119,12.1,P0061,Sanjay Shetty,Vikram Sinha,Bowled
+M0056,2024,1,KOL,8,150,14.3,P0065,Vikram Desai,,RunOut
+M0056,2024,1,KOL,9,153,15.2,P0066,Devendra Malhotra,Qasim Bose,Caught
+M0056,2024,1,KOL,10,167,16.1,P0068,Amit Sinha,Vishal Trivedi,Stumped
+M0056,2024,2,HYD,1,63,4.0,P0097,Vikram Sinha,Eshan Yadav,Stumped
+M0056,2024,2,HYD,2,126,9.4,P0098,Gautam Rao,Eshan Yadav,Caught
+M0056,2024,2,HYD,3,173,14.0,P0096,Uday Verma,Devendra Malhotra,LBW
+M0056,2024,2,HYD,4,194,17.1,P0099,Rohan Sinha,Devendra Malhotra,Bowled
+M0056,2024,2,HYD,5,194,17.2,P0101,Vishal Trivedi,Devendra Malhotra,Bowled
+M0056,2024,2,HYD,6,212,19.3,P0100,Amit Gill,Naveen Mehta,LBW
+M0057,2024,1,DEL,1,42,6.2,P0021,Naveen Sinha,,RunOut
+M0057,2024,1,DEL,2,43,6.5,P0020,Omar Naidu,Vishal Trivedi,Bowled
+M0057,2024,1,DEL,3,52,8.2,P0022,Uday Sharma,,RunOut
+M0057,2024,1,DEL,4,55,9.5,P0024,Lakshay Naidu,Vikram Sinha,LBW
+M0057,2024,1,DEL,5,75,12.2,P0037,Rohan Reddy,,RunOut
+M0057,2024,1,DEL,6,121,18.2,P0023,Bhavesh Dhawan,Qasim Bose,Caught
+M0057,2024,1,DEL,7,134,19.5,P0026,Eshan Bhatt,Vikram Agarwal,LBW
+M0057,2024,2,HYD,1,55,7.0,P0096,Uday Verma,Lakshay Naidu,LBW
+M0057,2024,2,HYD,2,124,14.3,P0097,Vikram Sinha,,RunOut
+M0057,2024,2,HYD,3,137,16.1,P0098,Gautam Rao,Uday Sharma,Caught
+M0057,2024,2,HYD,4,181,19.5,P0099,Rohan Sinha,Suresh Naidu,LBW
+M0058,2024,1,BLR,1,4,0.3,P0077,Rahul Trivedi,,RunOut
+M0058,2024,1,BLR,2,37,3.2,P0078,Sanjay Menon,Kabir Gill,LBW
+M0058,2024,1,BLR,3,39,4.2,P0079,Naveen Bhatt,Naveen Mehta,Stumped
+M0058,2024,1,BLR,4,50,5.3,P0080,Lakshay Sharma,Arjun Chopra,Bowled
+M0058,2024,1,BLR,5,60,7.0,P0081,Ishaan Chauhan,Amit Sinha,Bowled
+M0058,2024,1,BLR,6,72,8.1,P0083,Rohan Nair,Amit Sinha,LBW
+M0058,2024,1,BLR,7,101,11.3,P0095,Omar Ghosh,,RunOut
+M0058,2024,1,BLR,8,104,12.0,P0082,Farhan Saxena,Amit Sinha,Stumped
+M0058,2024,1,BLR,9,114,12.5,P0085,Omar Dhawan,Naveen Mehta,Caught
+M0058,2024,1,BLR,10,119,13.3,P0087,Pranav Trivedi,Kabir Gill,Bowled
+M0058,2024,2,KOL,1,0,0.1,P0058,Eshan Yadav,Arjun Trivedi,Caught
+M0058,2024,2,KOL,2,7,0.4,P0060,Vishal Verma,Arjun Trivedi,Stumped
+M0058,2024,2,KOL,3,11,1.0,P0061,Sanjay Shetty,Arjun Trivedi,Stumped
+M0058,2024,2,KOL,4,65,7.0,P0059,Qasim Sharma,Ishaan Chauhan,Caught
+M0058,2024,2,KOL,5,109,12.5,P0062,Pranav Naidu,Naveen Bhatt,Stumped
+M0058,2024,2,KOL,6,119,14.0,P0063,Arjun Chopra,Arjun Trivedi,Bowled
+M0058,2024,2,KOL,7,159,18.0,P0072,Kabir Gill,,RunOut
+M0059,2024,1,BLR,1,32,2.4,P0077,Rahul Trivedi,Dhruv Chauhan,LBW
+M0059,2024,1,BLR,2,135,12.1,P0079,Naveen Bhatt,,RunOut
+M0059,2024,1,BLR,3,135,12.2,P0080,Lakshay Sharma,Sanjay Naidu,Bowled
+M0059,2024,1,BLR,4,139,13.3,P0078,Sanjay Menon,Sanjay Ghosh,Caught
+M0059,2024,1,BLR,5,139,13.4,P0082,Farhan Saxena,,RunOut
+M0059,2024,1,BLR,6,139,13.5,P0083,Rohan Nair,,RunOut
+M0059,2024,1,BLR,7,155,15.2,P0081,Ishaan Chauhan,Qasim Iyer,LBW
+M0059,2024,2,PUN,1,18,2.1,P0116,Rahul Rao,Suresh Kulkarni,Stumped
+M0059,2024,2,PUN,2,37,4.4,P0117,Imran Kulkarni,Ishaan Chauhan,Stumped
+M0059,2024,2,PUN,3,68,7.5,P0118,Amit Pillai,Rohan Nair,LBW
+M0059,2024,2,PUN,4,81,9.0,P0119,Dhruv Chauhan,Arjun Trivedi,Caught
+M0059,2024,2,PUN,5,124,14.5,P0115,Varun Reddy,Suresh Kulkarni,Bowled
+M0059,2024,2,PUN,6,137,16.0,P0120,Kabir Reddy,Ishaan Chauhan,Bowled
+M0060,2024,1,MUM,1,7,0.3,P0002,Vikram Chauhan,Suresh Kulkarni,Stumped
+M0060,2024,1,MUM,2,20,2.4,P0001,Vikram Sharma,Suresh Kulkarni,Bowled
+M0060,2024,1,MUM,3,38,4.5,P0004,Naveen Saxena,Amit Chauhan,LBW
+M0060,2024,1,MUM,4,39,5.3,P0005,Rohan Desai,,RunOut
+M0060,2024,1,MUM,5,72,9.2,P0006,Naveen Iyer,,RunOut
+M0060,2024,1,MUM,6,97,13.2,P0007,Chetan Desai,Rohan Nair,Stumped
+M0060,2024,1,MUM,7,102,14.1,P0008,Amit Verma,Omar Ghosh,LBW
+M0060,2024,1,MUM,8,148,20.0,P0003,Arjun Pandey,Amit Chauhan,Bowled
+M0060,2024,2,BLR,1,7,0.4,P0078,Sanjay Menon,,RunOut
+M0060,2024,2,BLR,2,11,1.3,P0077,Rahul Trivedi,Amit Mehta,LBW
+M0060,2024,2,BLR,3,26,3.2,P0079,Naveen Bhatt,Arjun Pandey,LBW
+M0060,2024,2,BLR,4,117,15.4,P0081,Ishaan Chauhan,Vikram Sharma,Bowled
+M0060,2024,2,BLR,5,169,19.4,P0082,Farhan Saxena,Rohan Desai,Bowled
+M0062,2024,1,HYD,1,52,5.0,P0097,Vikram Sinha,Rohan Desai,Stumped
+M0062,2024,1,HYD,2,52,5.2,P0096,Uday Verma,Amit Mehta,Bowled
+M0062,2024,1,HYD,3,104,10.1,P0099,Rohan Sinha,Tarun Trivedi,Caught
+M0062,2024,1,HYD,4,123,13.1,P0100,Amit Gill,Rohan Desai,Bowled
+M0062,2024,1,HYD,5,177,17.4,P0101,Vishal Trivedi,,RunOut
+M0062,2024,2,MUM,1,1,0.2,P0002,Vikram Chauhan,Rohan Sinha,Bowled
+M0062,2024,2,MUM,2,4,1.2,P0003,Arjun Pandey,Vikram Sinha,Bowled
+M0062,2024,2,MUM,3,42,5.3,P0004,Naveen Saxena,Farhan Sharma,Stumped
+M0062,2024,2,MUM,4,48,6.1,P0001,Vikram Sharma,Vishal Trivedi,Caught
+M0062,2024,2,MUM,5,78,8.3,P0016,Dhruv Khan,Farhan Sharma,LBW
+M0062,2024,2,MUM,6,84,9.3,P0005,Rohan Desai,Qasim Bose,Stumped
+M0062,2024,2,MUM,7,146,16.2,P0008,Amit Verma,Vishal Trivedi,LBW
+M0062,2024,2,MUM,8,168,19.4,P0007,Chetan Desai,Harish Mehta,Caught
+M0063,2024,1,HYD,1,1,0.2,P0097,Vikram Sinha,Rahul Sinha,Stumped
+M0063,2024,1,HYD,2,14,2.2,P0098,Gautam Rao,Naveen Mehta,Stumped
+M0063,2024,1,HYD,3,50,7.5,P0099,Rohan Sinha,Rahul Sinha,Caught
+M0063,2024,1,HYD,4,51,8.2,P0100,Amit Gill,,RunOut
+M0063,2024,1,HYD,5,51,8.4,P0101,Vishal Trivedi,Arjun Chopra,Bowled
+M0063,2024,1,HYD,6,65,9.3,P0102,Harish Mehta,Naveen Mehta,LBW
+M0063,2024,1,HYD,7,68,10.0,P0096,Uday Verma,Naveen Mehta,Bowled
+M0063,2024,1,HYD,8,110,14.3,P0104,Qasim Bose,Arjun Chopra,Stumped
+M0063,2024,1,HYD,9,120,15.1,P0103,Vikram Agarwal,,RunOut
+M0063,2024,1,HYD,10,126,15.4,P0111,Chetan Bhatt,,RunOut
+M0063,2024,2,KOL,1,73,6.4,P0059,Qasim Sharma,Vikram Agarwal,Caught
+M0063,2024,2,KOL,2,89,8.0,P0058,Eshan Yadav,,RunOut
+M0063,2024,2,KOL,3,107,9.3,P0060,Vishal Verma,,RunOut
+M0063,2024,2,KOL,4,109,10.2,P0061,Sanjay Shetty,Rohan Sinha,Bowled
+M0063,2024,2,KOL,5,113,11.0,P0063,Arjun Chopra,Rohan Sinha,Stumped
+M0063,2024,2,KOL,6,168,18.1,P0064,Kabir Rao,Qasim Bose,Bowled
+M0064,2024,1,KOL,1,28,3.3,P0059,Qasim Sharma,Uday Khan,Caught
+M0064,2024,1,KOL,2,54,5.1,P0060,Vishal Verma,Amit Pillai,LBW
+M0064,2024,1,KOL,3,114,10.1,P0061,Sanjay Shetty,Amit Pillai,Bowled
+M0064,2024,1,KOL,4,123,11.0,P0058,Eshan Yadav,Amit Pillai,LBW
+M0064,2024,1,KOL,5,147,14.4,P0063,Arjun Chopra,Amit Pillai,Bowled
+M0064,2024,1,KOL,6,155,15.2,P0073,Amit Joshi,Qasim Iyer,LBW
+M0064,2024,1,KOL,7,174,17.0,P0064,Kabir Rao,Uday Khan,LBW
+M0064,2024,1,KOL,8,174,17.2,P0065,Vikram Desai,Dhruv Chauhan,Bowled
+M0064,2024,1,KOL,9,188,18.3,P0067,Naveen Mehta,Uday Khan,Stumped
+M0064,2024,1,KOL,10,198,19.4,P0066,Devendra Malhotra,Dhruv Chauhan,Stumped
+M0064,2024,2,PUN,1,42,3.2,P0116,Rahul Rao,,RunOut
+M0064,2024,2,PUN,2,45,4.1,P0115,Varun Reddy,Naveen Mehta,Bowled
+M0064,2024,2,PUN,3,65,6.4,P0118,Amit Pillai,Devendra Malhotra,Caught
+M0064,2024,2,PUN,4,86,10.2,P0119,Dhruv Chauhan,Amit Joshi,Stumped
+M0064,2024,2,PUN,5,135,16.0,P0120,Kabir Reddy,Naveen Mehta,Bowled
+M0064,2024,2,PUN,6,135,16.1,P0117,Imran Kulkarni,Arjun Chopra,Bowled
+M0065,2024,1,DEL,1,18,1.5,P0021,Naveen Sinha,,RunOut
+M0065,2024,1,DEL,2,34,3.4,P0022,Uday Sharma,Jayant Pandey,Bowled
+M0065,2024,1,DEL,3,38,4.4,P0020,Omar Naidu,Imran Yadav,LBW
+M0065,2024,1,DEL,4,47,5.3,P0023,Bhavesh Dhawan,Jayant Pandey,Stumped
+M0065,2024,1,DEL,5,52,6.0,P0025,Imran Naidu,,RunOut
+M0065,2024,1,DEL,6,73,8.3,P0024,Lakshay Naidu,Jayant Pandey,Stumped
+M0065,2024,1,DEL,7,78,9.1,P0027,Vikram Pandey,Nikhil Kapoor,LBW
+M0065,2024,1,DEL,8,161,16.0,P0036,Gautam Kapoor,Vikram Trivedi,Caught
+M0065,2024,1,DEL,9,180,17.4,P0028,Mohit Joshi,Vikram Trivedi,LBW
+M0065,2024,1,DEL,10,189,18.2,P0029,Ishaan Mehta,,RunOut
+M0065,2024,2,RAJ,1,66,6.0,P0134,Vikram Trivedi,Vikram Pandey,LBW
+M0065,2024,2,RAJ,2,72,6.3,P0135,Jayant Pandey,,RunOut
+M0065,2024,2,RAJ,3,114,12.2,P0137,Manish Yadav,Uday Sharma,Stumped
+M0065,2024,2,RAJ,4,117,13.3,P0138,Aditya Ghosh,,RunOut
+M0065,2024,2,RAJ,5,145,18.4,P0139,Nikhil Kapoor,Vikram Pandey,Stumped
+M0065,2024,2,RAJ,6,153,19.2,P0136,Kabir Malhotra,Vikram Pandey,Caught
+M0066,2024,1,RAJ,1,47,5.3,P0134,Vikram Trivedi,,RunOut
+M0066,2024,1,RAJ,2,64,7.1,P0135,Jayant Pandey,Eshan Desai,Caught
+M0066,2024,1,RAJ,3,79,9.0,P0136,Kabir Malhotra,Farhan Mehta,LBW
+M0066,2024,1,RAJ,4,79,9.1,P0137,Manish Yadav,,RunOut
+M0066,2024,1,RAJ,5,114,11.4,P0139,Nikhil Kapoor,Farhan Mehta,LBW
+M0066,2024,1,RAJ,6,123,12.5,P0138,Aditya Ghosh,Chetan Chopra,Bowled
+M0066,2024,1,RAJ,7,192,17.5,P0141,Dhruv Kapoor,Ishaan Yadav,Stumped
+M0066,2024,1,RAJ,8,193,18.3,P0142,Arjun Ghosh,Chetan Chopra,Caught
+M0066,2024,1,RAJ,9,195,18.5,P0143,Imran Yadav,Chetan Chopra,LBW
+M0067,2024,1,MUM,1,15,1.3,P0015,Devendra Kapoor,,RunOut
+M0067,2024,1,MUM,2,34,2.4,P0003,Arjun Pandey,Eshan Agarwal,Bowled
+M0067,2024,1,MUM,3,35,3.2,P0004,Naveen Saxena,Ishaan Yadav,Bowled
+M0067,2024,1,MUM,4,35,3.4,P0005,Rohan Desai,Ishaan Yadav,Stumped
+M0067,2024,1,MUM,5,72,6.4,P0002,Vikram Chauhan,Ishaan Yadav,Bowled
+M0067,2024,1,MUM,6,76,7.3,P0006,Naveen Iyer,Eshan Desai,Caught
+M0067,2024,1,MUM,7,117,11.4,P0008,Amit Verma,Chetan Chopra,Bowled
+M0067,2024,1,MUM,8,144,14.0,P0007,Chetan Desai,,RunOut
+M0067,2024,1,MUM,9,150,14.4,P0009,Amit Mehta,Chetan Chopra,Bowled
+M0067,2024,1,MUM,10,150,15.1,P0010,Tarun Trivedi,Eshan Agarwal,LBW
+M0067,2024,2,CHE,1,47,4.3,P0040,Farhan Mehta,Rohan Desai,Caught
+M0067,2024,2,CHE,2,57,6.2,P0041,Pranav Agarwal,Amit Mehta,Caught
+M0067,2024,2,CHE,3,102,11.0,P0039,Ishaan Yadav,,RunOut
+M0067,2024,2,CHE,4,112,12.2,P0042,Karan Chauhan,Devendra Kapoor,Bowled
+M0067,2024,2,CHE,5,126,13.2,P0043,Chetan Chopra,,RunOut
+M0067,2024,2,CHE,6,197,19.0,P0044,Gautam Sharma,Arjun Pandey,LBW
+M0067,2024,2,CHE,7,200,19.4,P0046,Tarun Khan,,RunOut
+M0068,2024,1,KOL,1,9,1.5,P0058,Eshan Yadav,Imran Yadav,Stumped
+M0068,2024,1,KOL,2,26,3.2,P0059,Qasim Sharma,Imran Yadav,LBW
+M0068,2024,1,KOL,3,30,4.4,P0074,Dhruv Bhatt,,RunOut
+M0068,2024,1,KOL,4,51,7.0,P0061,Sanjay Shetty,,RunOut
+M0068,2024,1,KOL,5,70,9.2,P0062,Pranav Naidu,Nikhil Kapoor,LBW
+M0068,2024,1,KOL,6,83,10.5,P0064,Kabir Rao,,RunOut
+M0068,2024,1,KOL,7,102,13.4,P0065,Vikram Desai,Kabir Malhotra,Bowled
+M0068,2024,1,KOL,8,118,15.1,P0063,Arjun Chopra,Vikram Trivedi,Stumped
+M0068,2024,1,KOL,9,185,19.5,P0067,Naveen Mehta,Vikram Trivedi,Caught
+M0068,2024,2,RAJ,1,22,2.0,P0135,Jayant Pandey,,RunOut
+M0068,2024,2,RAJ,2,44,4.3,P0136,Kabir Malhotra,Amit Sinha,Caught
+M0068,2024,2,RAJ,3,81,9.0,P0137,Manish Yadav,Dhruv Bhatt,LBW
+M0068,2024,2,RAJ,4,105,12.0,P0138,Aditya Ghosh,,RunOut
+M0068,2024,2,RAJ,5,105,12.1,P0134,Vikram Trivedi,Dhruv Bhatt,Caught
+M0068,2024,2,RAJ,6,184,19.4,P0140,Manish Iyer,Amit Sinha,Caught
+M0068,2024,2,RAJ,7,184,19.5,P0141,Dhruv Kapoor,Amit Sinha,Caught
+M0069,2024,1,RAJ,1,98,11.4,P0135,Jayant Pandey,Rohan Nair,LBW
+M0069,2024,1,RAJ,2,125,14.1,P0146,Sanjay Rao,Arjun Trivedi,Caught
+M0069,2024,1,RAJ,3,132,14.5,P0136,Kabir Malhotra,Arjun Trivedi,Stumped
+M0069,2024,1,RAJ,4,138,15.4,P0137,Manish Yadav,Suresh Kulkarni,LBW
+M0069,2024,1,RAJ,5,149,17.4,P0138,Aditya Ghosh,Arjun Trivedi,Stumped
+M0069,2024,1,RAJ,6,158,18.3,P0140,Manish Iyer,Naveen Bhatt,Stumped
+M0069,2024,2,BLR,1,2,0.2,P0077,Rahul Trivedi,,RunOut
+M0069,2024,2,BLR,2,2,0.3,P0079,Naveen Bhatt,,RunOut
+M0069,2024,2,BLR,3,6,0.5,P0080,Lakshay Sharma,Imran Yadav,Bowled
+M0069,2024,2,BLR,4,39,5.2,P0078,Sanjay Menon,,RunOut
+M0069,2024,2,BLR,5,70,8.1,P0082,Farhan Saxena,Manish Yadav,Stumped
+M0069,2024,2,BLR,6,82,10.3,P0083,Rohan Nair,,RunOut
+M0069,2024,2,BLR,7,122,14.3,P0084,Suresh Kulkarni,Kabir Malhotra,LBW
+M0069,2024,2,BLR,8,122,14.4,P0085,Omar Dhawan,Kabir Malhotra,LBW
+M0069,2024,2,BLR,9,138,17.4,P0086,Arjun Trivedi,Sanjay Rao,LBW
+M0069,2024,2,BLR,10,153,19.3,P0081,Ishaan Chauhan,Sanjay Rao,Stumped
+M0070,2024,1,PUN,1,16,2.2,P0116,Rahul Rao,,RunOut
+M0070,2024,1,PUN,2,30,3.2,P0115,Varun Reddy,Ishaan Yadav,Caught
+M0070,2024,1,PUN,3,30,3.3,P0118,Amit Pillai,Ishaan Yadav,Caught
+M0070,2024,1,PUN,4,30,3.4,P0119,Dhruv Chauhan,Ishaan Yadav,Caught
+M0070,2024,1,PUN,5,30,3.5,P0120,Kabir Reddy,Ishaan Yadav,Stumped
+M0070,2024,1,PUN,6,93,10.4,P0132,Uday Khan,Farhan Mehta,Bowled
+M0070,2024,1,PUN,7,93,11.0,P0122,Sanjay Naidu,Farhan Mehta,Bowled
+M0070,2024,1,PUN,8,162,19.3,P0121,Imran Trivedi,Karan Chauhan,Stumped
+M0070,2024,2,CHE,1,25,4.0,P0039,Ishaan Yadav,Amit Pillai,LBW
+M0070,2024,2,CHE,2,26,4.2,P0041,Pranav Agarwal,Sanjay Naidu,LBW
+M0070,2024,2,CHE,3,33,5.0,P0040,Farhan Mehta,,RunOut
+M0070,2024,2,CHE,4,54,8.0,P0042,Karan Chauhan,Sanjay Ghosh,Caught
+M0070,2024,2,CHE,5,69,9.3,P0052,Vikram Pillai,Amit Pillai,Stumped
+M0070,2024,2,CHE,6,85,11.2,P0045,Eshan Desai,Uday Khan,Caught
+M0070,2024,2,CHE,7,86,11.4,P0044,Gautam Sharma,Uday Khan,Bowled
+M0070,2024,2,CHE,8,142,17.3,P0046,Tarun Khan,Amit Pillai,LBW
+M0070,2024,2,CHE,9,145,18.4,P0052,Vikram Pillai,Uday Khan,Stumped
+M0071,2024,1,KOL,1,10,1.2,P0059,Qasim Sharma,Eshan Agarwal,Stumped
+M0071,2024,1,KOL,2,68,9.0,P0070,Rahul Sinha,Eshan Agarwal,LBW
+M0071,2024,1,KOL,3,68,9.2,P0070,Rahul Sinha,Chetan Chopra,Caught
+M0071,2024,1,KOL,4,77,10.2,P0061,Sanjay Shetty,,RunOut
+M0071,2024,1,KOL,5,111,13.3,P0063,Arjun Chopra,Eshan Agarwal,Stumped
+M0071,2024,1,KOL,6,111,14.0,P0064,Kabir Rao,Eshan Agarwal,LBW
+M0071,2024,1,KOL,7,126,15.0,P0065,Vikram Desai,Chetan Chopra,Caught
+M0071,2024,1,KOL,8,126,15.2,P0062,Pranav Naidu,,RunOut
+M0071,2024,1,KOL,9,159,18.0,P0067,Naveen Mehta,Eshan Desai,Bowled
+M0071,2024,2,CHE,1,39,4.0,P0056,Rohan Ghosh,Naveen Mehta,Caught
+M0071,2024,2,CHE,2,65,7.2,P0041,Pranav Agarwal,,RunOut
+M0071,2024,2,CHE,3,73,9.0,P0042,Karan Chauhan,Devendra Malhotra,Caught
+M0071,2024,2,CHE,4,101,11.3,P0043,Chetan Chopra,Arjun Chopra,Stumped
+M0071,2024,2,CHE,5,134,15.0,P0040,Farhan Mehta,Rahul Sinha,Stumped
+M0071,2024,2,CHE,6,145,16.2,P0045,Eshan Desai,Rahul Sinha,Stumped
+M0071,2024,2,CHE,7,150,17.2,P0046,Tarun Khan,Naveen Mehta,Caught
+M0072,2024,1,MUM,1,0,0.1,P0016,Dhruv Khan,Ishaan Yadav,Stumped
+M0072,2024,1,MUM,2,7,1.1,P0002,Vikram Chauhan,Farhan Mehta,Stumped
+M0072,2024,1,MUM,3,24,3.1,P0013,Lakshay Joshi,Farhan Mehta,Caught
+M0072,2024,1,MUM,4,69,7.4,P0016,Dhruv Khan,Ishaan Yadav,Bowled
+M0072,2024,1,MUM,5,85,9.1,P0006,Naveen Iyer,,RunOut
+M0072,2024,1,MUM,6,112,12.3,P0007,Chetan Desai,Rohan Ghosh,Stumped
+M0072,2024,1,MUM,7,130,15.4,P0008,Amit Verma,Eshan Desai,LBW
+M0072,2024,1,MUM,8,141,17.0,P0009,Amit Mehta,Rohan Ghosh,Bowled
+M0072,2024,2,CHE,1,68,5.2,P0039,Ishaan Yadav,,RunOut
+M0072,2024,2,CHE,2,158,16.2,P0040,Farhan Mehta,Lakshay Joshi,Bowled
+M0072,2024,2,CHE,3,159,17.1,P0042,Karan Chauhan,Tarun Trivedi,LBW
+M0073,2024,1,DEL,1,37,4.0,P0020,Omar Naidu,Tarun Trivedi,Caught
+M0073,2024,1,DEL,2,71,7.4,P0022,Uday Sharma,Tarun Trivedi,LBW
+M0073,2024,1,DEL,3,75,8.2,P0021,Naveen Sinha,Vikram Sharma,Stumped
+M0073,2024,1,DEL,4,79,8.5,P0024,Lakshay Naidu,,RunOut
+M0073,2024,1,DEL,5,85,9.3,P0023,Bhavesh Dhawan,Amit Mehta,LBW
+M0073,2024,1,DEL,6,110,11.5,P0025,Imran Naidu,,RunOut
+M0073,2024,1,DEL,7,186,19.5,P0027,Vikram Pandey,Rohan Desai,Stumped
+M0073,2024,2,MUM,1,49,5.5,P0002,Vikram Chauhan,Omar Naidu,LBW
+M0073,2024,2,MUM,2,51,6.3,P0001,Vikram Sharma,,RunOut
+M0073,2024,2,MUM,3,58,7.0,P0004,Naveen Saxena,,RunOut
+M0073,2024,2,MUM,4,151,15.3,P0005,Rohan Desai,Lakshay Naidu,Bowled
+M0073,2024,2,MUM,5,159,16.3,P0003,Arjun Pandey,,RunOut
+M0073,2024,2,MUM,6,159,16.4,P0007,Chetan Desai,Omar Naidu,Bowled
+M0074,2024,1,MUM,1,1,0.3,P0001,Vikram Sharma,Qasim Iyer,Stumped
+M0074,2024,1,MUM,2,4,1.1,P0002,Vikram Chauhan,Sanjay Ghosh,Stumped
+M0074,2024,1,MUM,3,55,4.5,P0004,Naveen Saxena,Sanjay Ghosh,Caught
+M0074,2024,1,MUM,4,57,5.1,P0003,Arjun Pandey,Sanjay Naidu,Caught
+M0074,2024,1,MUM,5,69,6.0,P0006,Naveen Iyer,Sanjay Naidu,LBW
+M0074,2024,1,MUM,6,106,9.3,P0005,Rohan Desai,Sanjay Ghosh,Stumped
+M0074,2024,1,MUM,7,109,10.3,P0007,Chetan Desai,Sanjay Naidu,Stumped
+M0074,2024,1,MUM,8,219,19.3,P0008,Amit Verma,,RunOut
+M0074,2024,2,PUN,1,0,0.1,P0115,Varun Reddy,Arjun Pandey,LBW
+M0074,2024,2,PUN,2,10,2.0,P0116,Rahul Rao,Amit Mehta,LBW
+M0074,2024,2,PUN,3,42,4.5,P0118,Amit Pillai,Tarun Trivedi,Stumped
+M0074,2024,2,PUN,4,57,7.3,P0119,Dhruv Chauhan,Arjun Pandey,Bowled
+M0074,2024,2,PUN,5,57,7.4,P0120,Kabir Reddy,Arjun Pandey,Bowled
+M0074,2024,2,PUN,6,59,8.3,P0117,Imran Kulkarni,Rohan Desai,LBW
+M0074,2024,2,PUN,7,88,11.2,P0121,Imran Trivedi,Amit Mehta,LBW
+M0074,2024,2,PUN,8,126,13.5,P0123,Qasim Iyer,Rohan Desai,Bowled
+M0074,2024,2,PUN,9,133,14.2,P0124,Devendra Pandey,Tarun Trivedi,LBW
+M0074,2024,2,PUN,10,133,14.3,P0125,Sanjay Ghosh,Tarun Trivedi,Bowled
+M0075,2024,1,CHE,1,13,1.4,P0040,Farhan Mehta,Omar Naidu,LBW
+M0075,2024,1,CHE,2,53,5.5,P0041,Pranav Agarwal,Naveen Sinha,Caught
+M0075,2024,1,CHE,3,84,10.4,P0042,Karan Chauhan,Uday Sharma,LBW
+M0075,2024,1,CHE,4,91,11.4,P0043,Chetan Chopra,Naveen Sinha,LBW
+M0075,2024,1,CHE,5,98,12.0,P0044,Gautam Sharma,Naveen Sinha,LBW
+M0075,2024,1,CHE,6,139,15.4,P0052,Vikram Pillai,Omar Naidu,LBW
+M0075,2024,1,CHE,7,140,15.5,P0046,Tarun Khan,Omar Naidu,Stumped
+M0075,2024,1,CHE,8,162,17.4,P0045,Eshan Desai,Omar Naidu,Bowled
+M0075,2024,1,CHE,9,170,18.4,P0047,Manish Reddy,Vikram Pandey,Bowled
+M0075,2024,2,DEL,1,25,1.5,P0020,Omar Naidu,Farhan Mehta,Stumped
+M0075,2024,2,DEL,2,40,3.5,P0022,Uday Sharma,,RunOut
+M0075,2024,2,DEL,3,102,10.4,P0023,Bhavesh Dhawan,Eshan Desai,Caught
+M0075,2024,2,DEL,4,135,15.2,P0021,Naveen Sinha,,RunOut
+M0075,2024,2,DEL,5,165,19.0,P0025,Imran Naidu,Chetan Chopra,Bowled
+M0076,2024,1,HYD,1,4,0.2,P0096,Uday Verma,Lakshay Naidu,Caught
+M0076,2024,1,HYD,2,24,3.1,P0097,Vikram Sinha,Naveen Sinha,Stumped
+M0076,2024,1,HYD,3,26,3.4,P0099,Rohan Sinha,Naveen Sinha,Stumped
+M0076,2024,1,HYD,4,32,4.0,P0114,Qasim Shetty,Naveen Sinha,LBW
+M0076,2024,1,HYD,5,116,12.2,P0101,Vishal Trivedi,Chetan Sinha,LBW
+M0076,2024,1,HYD,6,127,13.4,P0102,Harish Mehta,Lakshay Naidu,LBW
+M0076,2024,2,DEL,1,42,3.5,P0020,Omar Naidu,Qasim Bose,Bowled
+M0076,2024,2,DEL,2,110,11.5,P0022,Uday Sharma,Gautam Rao,LBW
+M0077,2024,1,BLR,1,21,2.0,P0077,Rahul Trivedi,Chetan Chopra,Stumped
+M0077,2024,1,BLR,2,39,4.4,P0078,Sanjay Menon,Pranav Agarwal,Bowled
+M0077,2024,1,BLR,3,82,9.0,P0080,Lakshay Sharma,Eshan Agarwal,LBW
+M0077,2024,1,BLR,4,82,9.2,P0079,Naveen Bhatt,Pranav Agarwal,Caught
+M0077,2024,1,BLR,5,104,12.2,P0082,Farhan Saxena,Eshan Agarwal,Bowled
+M0077,2024,1,BLR,6,114,13.2,P0081,Ishaan Chauhan,,RunOut
+M0077,2024,1,BLR,7,184,19.2,P0091,Qasim Kapoor,,RunOut
+M0077,2024,2,CHE,1,20,1.5,P0040,Farhan Mehta,Arjun Trivedi,Caught
+M0077,2024,2,CHE,2,79,8.5,P0041,Pranav Agarwal,Suresh Kulkarni,Caught
+M0077,2024,2,CHE,3,87,9.5,P0039,Ishaan Yadav,Naveen Bhatt,LBW
+M0077,2024,2,CHE,4,87,10.0,P0043,Chetan Chopra,Naveen Bhatt,Bowled
+M0077,2024,2,CHE,5,104,12.2,P0042,Karan Chauhan,Arjun Trivedi,Caught
+M0077,2024,2,CHE,6,129,15.0,P0044,Gautam Sharma,,RunOut
+M0077,2024,2,CHE,7,143,16.1,P0046,Tarun Khan,,RunOut
+M0077,2024,2,CHE,8,148,16.5,P0047,Manish Reddy,Suresh Kulkarni,Bowled
+M0077,2024,2,CHE,9,149,17.3,P0051,Eshan Shetty,Ishaan Chauhan,LBW
+M0077,2024,2,CHE,10,161,18.3,P0048,Eshan Agarwal,Omar Dhawan,LBW
+M0078,2024,1,RAJ,1,28,3.2,P0135,Jayant Pandey,,RunOut
+M0078,2024,1,RAJ,2,52,7.4,P0134,Vikram Trivedi,Qasim Iyer,Caught
+M0078,2024,1,RAJ,3,79,11.2,P0137,Manish Yadav,Qasim Iyer,LBW
+M0078,2024,1,RAJ,4,93,13.3,P0151,Harish Joshi,,RunOut
+M0078,2024,1,RAJ,5,99,13.5,P0139,Nikhil Kapoor,Sanjay Ghosh,LBW
+M0078,2024,1,RAJ,6,99,14.0,P0140,Manish Iyer,Sanjay Ghosh,Caught
+M0078,2024,1,RAJ,7,140,18.4,P0152,Rajat Dhawan,,RunOut
+M0078,2024,1,RAJ,8,141,19.0,P0152,Rajat Dhawan,Dhruv Chauhan,Bowled
+M0078,2024,1,RAJ,9,142,19.3,P0146,Sanjay Rao,Sanjay Ghosh,LBW
+M0078,2024,2,PUN,1,6,1.4,P0116,Rahul Rao,Nikhil Kapoor,Caught
+M0078,2024,2,PUN,2,6,1.5,P0117,Imran Kulkarni,,RunOut
+M0078,2024,2,PUN,3,24,5.1,P0118,Amit Pillai,Rajat Dhawan,Bowled
+M0078,2024,2,PUN,4,24,5.3,P0119,Dhruv Chauhan,Rajat Dhawan,Stumped
+M0078,2024,2,PUN,5,26,5.5,P0115,Varun Reddy,Rajat Dhawan,Stumped
+M0078,2024,2,PUN,6,45,8.1,P0121,Imran Trivedi,Harish Joshi,Caught
+M0078,2024,2,PUN,7,56,9.5,P0122,Sanjay Naidu,Rajat Dhawan,LBW
+M0078,2024,2,PUN,8,74,12.1,P0123,Qasim Iyer,Rajat Dhawan,LBW
+M0078,2024,2,PUN,9,82,13.5,P0120,Kabir Reddy,Jayant Pandey,Bowled
+M0078,2024,2,PUN,10,82,14.0,P0125,Sanjay Ghosh,Jayant Pandey,LBW
+M0079,2024,1,BLR,1,12,1.1,P0078,Sanjay Menon,Naveen Sinha,LBW
+M0079,2024,1,BLR,2,27,3.3,P0077,Rahul Trivedi,Omar Malhotra,Stumped
+M0079,2024,1,BLR,3,27,3.4,P0092,Devendra Nair,,RunOut
+M0079,2024,1,BLR,4,34,5.3,P0079,Naveen Bhatt,Omar Naidu,LBW
+M0079,2024,1,BLR,5,52,8.0,P0082,Farhan Saxena,Omar Naidu,Stumped
+M0079,2024,1,BLR,6,110,13.3,P0081,Ishaan Chauhan,Omar Naidu,LBW
+M0079,2024,1,BLR,7,159,18.4,P0083,Rohan Nair,,RunOut
+M0079,2024,1,BLR,8,159,19.3,P0084,Suresh Kulkarni,,RunOut
+M0079,2024,2,DEL,1,4,0.3,P0020,Omar Naidu,Omar Dhawan,Bowled
+M0079,2024,2,DEL,2,11,1.2,P0022,Uday Sharma,Rohan Nair,Bowled
+M0079,2024,2,DEL,3,15,1.4,P0023,Bhavesh Dhawan,Rohan Nair,LBW
+M0079,2024,2,DEL,4,16,2.2,P0024,Lakshay Naidu,Suresh Kulkarni,Caught
+M0079,2024,2,DEL,5,95,9.4,P0021,Naveen Sinha,Suresh Kulkarni,Caught
+M0079,2024,2,DEL,6,123,12.2,P0025,Imran Naidu,,RunOut
+M0079,2024,2,DEL,7,127,13.3,P0026,Eshan Bhatt,Naveen Bhatt,Caught
+M0079,2024,2,DEL,8,149,15.5,P0028,Mohit Joshi,Naveen Bhatt,Bowled
+M0079,2024,2,DEL,9,149,16.0,P0035,Omar Malhotra,Naveen Bhatt,Caught
+M0079,2024,2,DEL,10,162,18.3,P0030,Nikhil Trivedi,Ishaan Chauhan,LBW
+M0080,2024,1,BLR,1,27,4.0,P0078,Sanjay Menon,Sanjay Ghosh,Stumped
+M0080,2024,1,BLR,2,80,9.5,P0079,Naveen Bhatt,Sanjay Naidu,Stumped
+M0080,2024,1,BLR,3,95,11.0,P0077,Rahul Trivedi,Sanjay Ghosh,Stumped
+M0080,2024,1,BLR,4,128,14.3,P0080,Lakshay Sharma,Qasim Iyer,Bowled
+M0080,2024,1,BLR,5,128,14.4,P0082,Farhan Saxena,Qasim Iyer,Caught
+M0080,2024,1,BLR,6,171,18.2,P0083,Rohan Nair,,RunOut
+M0080,2024,2,PUN,1,82,7.3,P0116,Rahul Rao,Rohan Nair,Stumped
+M0080,2024,2,PUN,2,155,17.5,P0115,Varun Reddy,,RunOut
+M0081,2025,1,RAJ,1,54,5.0,P0134,Vikram Trivedi,,RunOut
+M0081,2025,1,RAJ,2,56,5.3,P0135,Jayant Pandey,Qasim Sharma,Bowled
+M0081,2025,1,RAJ,3,62,6.3,P0136,Kabir Malhotra,Arjun Chopra,Bowled
+M0081,2025,1,RAJ,4,85,10.0,P0138,Aditya Ghosh,Naveen Mehta,Bowled
+M0081,2025,1,RAJ,5,109,13.4,P0139,Nikhil Kapoor,Amit Sinha,LBW
+M0081,2025,1,RAJ,6,114,14.3,P0137,Manish Yadav,Eshan Yadav,Caught
+M0081,2025,1,RAJ,7,124,16.4,P0147,Eshan Pandey,Amit Sinha,LBW
+M0081,2025,1,RAJ,8,124,16.5,P0142,Arjun Ghosh,Amit Sinha,Stumped
+M0081,2025,1,RAJ,9,160,19.5,P0141,Dhruv Kapoor,Amit Sinha,Caught
+M0081,2025,2,KOL,1,36,5.3,P0059,Qasim Sharma,Kabir Malhotra,Stumped
+M0081,2025,2,KOL,2,38,6.0,P0060,Vishal Verma,Kabir Malhotra,Bowled
+M0081,2025,2,KOL,3,55,8.1,P0058,Eshan Yadav,Vikram Trivedi,Stumped
+M0081,2025,2,KOL,4,65,9.4,P0061,Sanjay Shetty,Nikhil Kapoor,Stumped
+M0081,2025,2,KOL,5,75,11.1,P0063,Arjun Chopra,Jayant Pandey,LBW
+M0081,2025,2,KOL,6,109,14.5,P0064,Kabir Rao,Nikhil Kapoor,LBW
+M0081,2025,2,KOL,7,137,18.2,P0062,Pranav Naidu,Imran Yadav,Caught
+M0081,2025,2,KOL,8,141,19.0,P0065,Vikram Desai,,RunOut
+M0081,2025,2,KOL,9,151,19.4,P0067,Naveen Mehta,,RunOut
+M0082,2025,1,DEL,1,37,3.0,P0020,Omar Naidu,Ishaan Yadav,Caught
+M0082,2025,1,DEL,2,82,5.5,P0022,Uday Sharma,Farhan Mehta,Bowled
+M0082,2025,1,DEL,3,88,7.0,P0033,Suresh Naidu,Chetan Chopra,LBW
+M0082,2025,1,DEL,4,88,7.1,P0034,Arjun Rao,,RunOut
+M0082,2025,1,DEL,5,137,10.5,P0024,Lakshay Naidu,Siddharth Malhotra,Bowled
+M0082,2025,1,DEL,6,140,11.5,P0026,Eshan Bhatt,Chetan Chopra,Caught
+M0082,2025,1,DEL,7,168,16.2,P0025,Imran Naidu,Ishaan Yadav,LBW
+M0082,2025,1,DEL,8,194,19.1,P0028,Mohit Joshi,,RunOut
+M0082,2025,2,CHE,1,24,4.0,P0040,Farhan Mehta,,RunOut
+M0082,2025,2,CHE,2,26,4.4,P0039,Ishaan Yadav,Uday Sharma,Bowled
+M0082,2025,2,CHE,3,69,9.0,P0041,Pranav Agarwal,Omar Naidu,LBW
+M0082,2025,2,CHE,4,94,12.4,P0042,Karan Chauhan,,RunOut
+M0082,2025,2,CHE,5,130,16.1,P0043,Chetan Chopra,Suresh Naidu,Bowled
+M0083,2025,1,MUM,1,10,1.3,P0001,Vikram Sharma,Harish Mehta,Stumped
+M0083,2025,1,MUM,2,52,6.0,P0003,Arjun Pandey,,RunOut
+M0083,2025,1,MUM,3,97,12.5,P0002,Vikram Chauhan,Rohan Sinha,Bowled
+M0083,2025,1,MUM,4,134,16.2,P0004,Naveen Saxena,Gautam Rao,Bowled
+M0083,2025,1,MUM,5,142,17.2,P0005,Rohan Desai,Vishal Trivedi,LBW
+M0083,2025,2,HYD,1,3,0.4,P0097,Vikram Sinha,Tarun Trivedi,LBW
+M0083,2025,2,HYD,2,39,3.1,P0098,Gautam Rao,Amit Mehta,Caught
+M0083,2025,2,HYD,3,40,4.1,P0099,Rohan Sinha,,RunOut
+M0083,2025,2,HYD,4,70,8.2,P0096,Uday Verma,,RunOut
+M0083,2025,2,HYD,5,92,12.4,P0101,Vishal Trivedi,Arjun Pandey,LBW
+M0083,2025,2,HYD,6,106,14.5,P0102,Harish Mehta,Rohan Desai,LBW
+M0083,2025,2,HYD,7,122,18.0,P0100,Amit Gill,,RunOut
+M0083,2025,2,HYD,8,141,19.4,P0104,Qasim Bose,Tarun Trivedi,Caught
+M0084,2025,1,KOL,1,5,0.3,P0058,Eshan Yadav,Qasim Bose,Bowled
+M0084,2025,1,KOL,2,10,1.0,P0059,Qasim Sharma,,RunOut
+M0084,2025,1,KOL,3,36,3.0,P0061,Sanjay Shetty,Rohan Sinha,Bowled
+M0084,2025,1,KOL,4,82,7.3,P0062,Pranav Naidu,Qasim Bose,Stumped
+M0084,2025,1,KOL,5,96,9.4,P0073,Amit Joshi,Vishal Trivedi,Caught
+M0084,2025,1,KOL,6,114,12.0,P0063,Arjun Chopra,Vikram Sinha,LBW
+M0084,2025,1,KOL,7,116,12.3,P0065,Vikram Desai,Qasim Bose,Stumped
+M0084,2025,1,KOL,8,136,15.3,P0066,Devendra Malhotra,Gautam Rao,Bowled
+M0084,2025,1,KOL,9,136,15.4,P0067,Naveen Mehta,,RunOut
+M0084,2025,2,HYD,1,44,4.0,P0097,Vikram Sinha,,RunOut
+M0084,2025,2,HYD,2,59,6.0,P0096,Uday Verma,Amit Joshi,LBW
+M0084,2025,2,HYD,3,66,7.2,P0098,Gautam Rao,Amit Sinha,Bowled
+M0084,2025,2,HYD,4,91,9.5,P0099,Rohan Sinha,Amit Sinha,LBW
+M0084,2025,2,HYD,5,92,10.0,P0101,Vishal Trivedi,Amit Sinha,LBW
+M0084,2025,2,HYD,6,192,20.0,P0100,Amit Gill,Amit Joshi,Bowled
+M0085,2025,1,PUN,1,12,1.5,P0116,Rahul Rao,Vikram Sharma,Caught
+M0085,2025,1,PUN,2,24,3.0,P0115,Varun Reddy,Rohan Desai,Bowled
+M0085,2025,1,PUN,3,43,4.1,P0117,Imran Kulkarni,Rohan Desai,Stumped
+M0085,2025,1,PUN,4,73,6.5,P0119,Dhruv Chauhan,Tarun Trivedi,Bowled
+M0085,2025,1,PUN,5,78,7.4,P0120,Kabir Reddy,Rohan Desai,Stumped
+M0085,2025,1,PUN,6,100,10.5,P0118,Amit Pillai,,RunOut
+M0085,2025,1,PUN,7,118,12.3,P0122,Sanjay Naidu,Arjun Pandey,Caught
+M0085,2025,1,PUN,8,123,14.1,P0121,Imran Trivedi,Vikram Sharma,LBW
+M0085,2025,1,PUN,9,128,15.2,P0124,Devendra Pandey,Amit Mehta,Caught
+M0085,2025,1,PUN,10,142,17.4,P0050,Devendra Chauhan,Arjun Pandey,Stumped
+M0085,2025,2,MUM,1,38,4.5,P0001,Vikram Sharma,Amit Pillai,Bowled
+M0085,2025,2,MUM,2,45,6.0,P0003,Arjun Pandey,Sanjay Naidu,Bowled
+M0085,2025,2,MUM,3,45,6.1,P0002,Vikram Chauhan,Varun Reddy,Stumped
+M0085,2025,2,MUM,4,54,7.1,P0005,Rohan Desai,,RunOut
+M0085,2025,2,MUM,5,57,7.5,P0004,Naveen Saxena,,RunOut
+M0085,2025,2,MUM,6,76,10.2,P0006,Naveen Iyer,Dhruv Chauhan,LBW
+M0085,2025,2,MUM,7,88,11.1,P0016,Dhruv Khan,Sanjay Naidu,Stumped
+M0085,2025,2,MUM,8,89,11.3,P0008,Amit Verma,Sanjay Naidu,Caught
+M0085,2025,2,MUM,9,100,13.2,P0009,Amit Mehta,Dhruv Chauhan,Bowled
+M0085,2025,2,MUM,10,132,17.2,P0011,Gautam Malhotra,Qasim Iyer,Caught
+M0086,2025,1,HYD,1,12,3.0,P0096,Uday Verma,Naveen Sinha,LBW
+M0086,2025,1,HYD,2,12,3.1,P0097,Vikram Sinha,Rohan Reddy,Stumped
+M0086,2025,1,HYD,3,12,3.3,P0099,Rohan Sinha,Rohan Reddy,Bowled
+M0086,2025,1,HYD,4,30,5.5,P0100,Amit Gill,,RunOut
+M0086,2025,1,HYD,5,30,6.1,P0069,Devendra Kulkarni,Rohan Reddy,Caught
+M0086,2025,1,HYD,6,41,7.5,P0102,Harish Mehta,Vikram Pandey,Caught
+M0086,2025,1,HYD,7,41,8.0,P0103,Vikram Agarwal,Vikram Pandey,Bowled
+M0086,2025,1,HYD,8,50,9.1,P0101,Vishal Trivedi,Naveen Sinha,LBW
+M0086,2025,1,HYD,9,55,10.2,P0104,Qasim Bose,Omar Naidu,LBW
+M0086,2025,1,HYD,10,60,11.4,P0105,Rajat Trivedi,,RunOut
+M0086,2025,2,DEL,1,15,1.1,P0020,Omar Naidu,Harish Mehta,Caught
+M0086,2025,2,DEL,2,15,1.2,P0022,Uday Sharma,,RunOut
+M0086,2025,2,DEL,3,34,5.2,P0021,Naveen Sinha,Rohan Sinha,Bowled
+M0086,2025,2,DEL,4,48,6.2,P0023,Bhavesh Dhawan,Devendra Kulkarni,Caught
+M0086,2025,2,DEL,5,56,7.1,P0035,Omar Malhotra,Rohan Sinha,Bowled
+M0086,2025,2,DEL,6,62,7.5,P0025,Imran Naidu,Rohan Sinha,Caught
+M0086,2025,2,DEL,7,64,8.2,P0037,Rohan Reddy,Qasim Bose,Stumped
+M0086,2025,2,DEL,8,78,9.4,P0028,Mohit Joshi,,RunOut
+M0086,2025,2,DEL,9,92,11.2,P0027,Vikram Pandey,Vikram Agarwal,LBW
+M0086,2025,2,DEL,10,99,12.0,P0029,Ishaan Mehta,Vikram Agarwal,Bowled
+M0087,2025,1,PUN,1,4,0.4,P0115,Varun Reddy,Qasim Bose,Bowled
+M0087,2025,1,PUN,2,115,11.3,P0117,Imran Kulkarni,Vishal Trivedi,Stumped
+M0087,2025,1,PUN,3,160,15.0,P0116,Rahul Rao,Vikram Agarwal,Caught
+M0087,2025,2,HYD,1,18,2.4,P0097,Vikram Sinha,Dhruv Chauhan,Stumped
+M0087,2025,2,HYD,2,23,3.2,P0098,Gautam Rao,,RunOut
+M0087,2025,2,HYD,3,70,7.0,P0096,Uday Verma,,RunOut
+M0087,2025,2,HYD,4,113,10.4,P0113,Ishaan Bose,Sanjay Naidu,LBW
+M0087,2025,2,HYD,5,131,13.2,P0101,Vishal Trivedi,Dhruv Chauhan,LBW
+M0087,2025,2,HYD,6,159,16.0,P0102,Harish Mehta,Sanjay Naidu,Bowled
+M0087,2025,2,HYD,7,177,19.0,P0103,Vikram Agarwal,Amit Pillai,Stumped
+M0088,2025,1,RAJ,1,0,0.2,P0134,Vikram Trivedi,Pranav Agarwal,Stumped
+M0088,2025,1,RAJ,2,94,8.5,P0136,Kabir Malhotra,Eshan Agarwal,LBW
+M0088,2025,1,RAJ,3,102,11.2,P0137,Manish Yadav,Farhan Mehta,Bowled
+M0088,2025,1,RAJ,4,117,12.5,P0135,Jayant Pandey,Eshan Desai,Stumped
+M0088,2025,1,RAJ,5,118,13.2,P0139,Nikhil Kapoor,Pranav Agarwal,Stumped
+M0088,2025,1,RAJ,6,122,14.1,P0138,Aditya Ghosh,Farhan Mehta,Caught
+M0088,2025,1,RAJ,7,163,17.5,P0140,Manish Iyer,Ishaan Yadav,Bowled
+M0088,2025,2,CHE,1,43,5.0,P0040,Farhan Mehta,,RunOut
+M0088,2025,2,CHE,2,43,5.1,P0039,Ishaan Yadav,Kabir Malhotra,LBW
+M0088,2025,2,CHE,3,57,7.0,P0041,Pranav Agarwal,Imran Yadav,Bowled
+M0088,2025,2,CHE,4,61,7.2,P0052,Vikram Pillai,Vikram Trivedi,LBW
+M0088,2025,2,CHE,5,71,8.1,P0054,Mohit Ghosh,,RunOut
+M0088,2025,2,CHE,6,75,8.4,P0045,Eshan Desai,,RunOut
+M0088,2025,2,CHE,7,114,12.3,P0044,Gautam Sharma,,RunOut
+M0088,2025,2,CHE,8,123,13.3,P0047,Manish Reddy,Manish Nair,Stumped
+M0088,2025,2,CHE,9,123,13.4,P0048,Eshan Agarwal,Manish Nair,Bowled
+M0089,2025,1,RAJ,1,0,0.1,P0134,Vikram Trivedi,Harish Mehta,Stumped
+M0089,2025,1,RAJ,2,73,7.2,P0136,Kabir Malhotra,Vikram Agarwal,Bowled
+M0089,2025,1,RAJ,3,82,8.3,P0137,Manish Yadav,Vishal Trivedi,Caught
+M0089,2025,1,RAJ,4,85,9.2,P0138,Aditya Ghosh,,RunOut
+M0089,2025,1,RAJ,5,86,9.5,P0135,Jayant Pandey,Rohan Sinha,Bowled
+M0089,2025,1,RAJ,6,94,11.3,P0140,Manish Iyer,,RunOut
+M0089,2025,1,RAJ,7,150,16.3,P0151,Harish Joshi,Harish Mehta,Bowled
+M0089,2025,1,RAJ,8,167,19.0,P0147,Eshan Pandey,Chetan Bhatt,LBW
+M0089,2025,2,HYD,1,6,1.0,P0096,Uday Verma,Harish Joshi,Caught
+M0089,2025,2,HYD,2,40,4.2,P0097,Vikram Sinha,Kabir Malhotra,LBW
+M0089,2025,2,HYD,3,72,8.2,P0098,Gautam Rao,Vikram Trivedi,Stumped
+M0089,2025,2,HYD,4,79,10.1,P0111,Chetan Bhatt,,RunOut
+M0089,2025,2,HYD,5,116,14.5,P0101,Vishal Trivedi,Vikram Trivedi,LBW
+M0089,2025,2,HYD,6,131,16.5,P0102,Harish Mehta,,RunOut
+M0090,2025,1,HYD,1,10,2.0,P0097,Vikram Sinha,Amit Pillai,Stumped
+M0090,2025,1,HYD,2,48,5.2,P0098,Gautam Rao,Amit Pillai,Caught
+M0090,2025,1,HYD,3,133,13.4,P0096,Uday Verma,Qasim Iyer,Caught
+M0090,2025,1,HYD,4,146,15.1,P0099,Rohan Sinha,,RunOut
+M0090,2025,1,HYD,5,159,16.1,P0101,Vishal Trivedi,,RunOut
+M0090,2025,1,HYD,6,164,16.4,P0100,Amit Gill,,RunOut
+M0090,2025,2,PUN,1,99,9.2,P0116,Rahul Rao,,RunOut
+M0090,2025,2,PUN,2,107,10.0,P0117,Imran Kulkarni,Rohan Sinha,Caught
+M0090,2025,2,PUN,3,114,11.3,P0115,Varun Reddy,,RunOut
+M0090,2025,2,PUN,4,141,14.4,P0118,Amit Pillai,Gautam Rao,LBW
+M0090,2025,2,PUN,5,197,20.0,P0120,Kabir Reddy,Harish Mehta,Stumped
+M0091,2025,1,MUM,1,10,1.1,P0001,Vikram Sharma,Amit Sinha,Stumped
+M0091,2025,1,MUM,2,115,11.1,P0002,Vikram Chauhan,Naveen Mehta,LBW
+M0091,2025,1,MUM,3,124,12.2,P0004,Naveen Saxena,Arjun Chopra,Bowled
+M0091,2025,1,MUM,4,139,13.2,P0003,Arjun Pandey,Amit Sinha,Stumped
+M0091,2025,1,MUM,5,140,13.4,P0005,Rohan Desai,Amit Sinha,LBW
+M0091,2025,1,MUM,6,140,13.5,P0007,Chetan Desai,Amit Sinha,Bowled
+M0091,2025,1,MUM,7,152,15.0,P0006,Naveen Iyer,Kabir Gill,Stumped
+M0091,2025,1,MUM,8,159,16.1,P0019,Suresh Reddy,,RunOut
+M0091,2025,1,MUM,9,188,18.5,P0010,Tarun Trivedi,Kabir Gill,Caught
+M0091,2025,2,KOL,1,0,0.1,P0058,Eshan Yadav,Rohan Desai,Bowled
+M0091,2025,2,KOL,2,35,4.5,P0060,Vishal Verma,Tarun Trivedi,Bowled
+M0091,2025,2,KOL,3,48,6.4,P0072,Kabir Gill,Suresh Reddy,LBW
+M0091,2025,2,KOL,4,59,7.3,P0062,Pranav Naidu,Arjun Pandey,Bowled
+M0091,2025,2,KOL,5,60,8.1,P0063,Arjun Chopra,Imran Bose,Stumped
+M0091,2025,2,KOL,6,103,13.0,P0061,Sanjay Shetty,,RunOut
+M0092,2025,1,DEL,1,26,2.1,P0020,Omar Naidu,Amit Sinha,Caught
+M0092,2025,1,DEL,2,73,8.0,P0021,Naveen Sinha,Amit Sinha,Caught
+M0092,2025,1,DEL,3,73,8.4,P0022,Uday Sharma,Naveen Mehta,Caught
+M0092,2025,1,DEL,4,88,10.0,P0023,Bhavesh Dhawan,Ishaan Shetty,LBW
+M0092,2025,1,DEL,5,88,10.1,P0024,Lakshay Naidu,Amit Sinha,Bowled
+M0092,2025,1,DEL,6,178,19.3,P0025,Imran Naidu,Arjun Chopra,LBW
+M0092,2025,2,KOL,1,123,8.5,P0058,Eshan Yadav,Naveen Sinha,LBW
+M0092,2025,2,KOL,2,140,10.0,P0059,Qasim Sharma,Lakshay Naidu,LBW
+M0092,2025,2,KOL,3,158,12.1,P0061,Sanjay Shetty,,RunOut
+M0093,2025,1,PUN,1,1,0.2,P0116,Rahul Rao,Chetan Chopra,Stumped
+M0093,2025,1,PUN,2,4,1.2,P0117,Imran Kulkarni,Eshan Agarwal,Bowled
+M0093,2025,1,PUN,3,35,4.3,P0118,Amit Pillai,Eshan Agarwal,LBW
+M0093,2025,1,PUN,4,117,17.0,P0119,Dhruv Chauhan,,RunOut
+M0093,2025,1,PUN,5,131,18.4,P0115,Varun Reddy,,RunOut
+M0093,2025,2,CHE,1,68,7.0,P0040,Farhan Mehta,Dhruv Chauhan,Stumped
+M0093,2025,2,CHE,2,69,7.3,P0041,Pranav Agarwal,,RunOut
+M0093,2025,2,CHE,3,91,9.3,P0039,Ishaan Yadav,Sanjay Naidu,LBW
+M0093,2025,2,CHE,4,93,10.1,P0043,Chetan Chopra,Dhruv Chauhan,LBW
+M0093,2025,2,CHE,5,93,10.2,P0044,Gautam Sharma,Dhruv Chauhan,LBW
+M0093,2025,2,CHE,6,97,10.4,P0045,Eshan Desai,Dhruv Chauhan,Stumped
+M0093,2025,2,CHE,7,119,12.5,P0046,Tarun Khan,Varun Reddy,Stumped
+M0093,2025,2,CHE,8,144,14.5,P0042,Karan Chauhan,Qasim Iyer,Caught
+M0093,2025,2,CHE,9,144,15.0,P0048,Eshan Agarwal,Qasim Iyer,Caught
+M0093,2025,2,CHE,10,150,15.3,P0047,Manish Reddy,Sanjay Naidu,Bowled
+M0094,2025,1,CHE,1,68,6.0,P0040,Farhan Mehta,Amit Pillai,Caught
+M0094,2025,1,CHE,2,69,6.1,P0039,Ishaan Yadav,,RunOut
+M0094,2025,1,CHE,3,88,8.0,P0042,Karan Chauhan,Sanjay Naidu,Bowled
+M0094,2025,1,CHE,4,88,8.2,P0051,Eshan Shetty,Bhavesh Chopra,LBW
+M0094,2025,1,CHE,5,172,19.3,P0044,Gautam Sharma,Bhavesh Chopra,LBW
+M0094,2025,1,CHE,6,172,19.5,P0045,Eshan Desai,Bhavesh Chopra,Bowled
+M0094,2025,2,PUN,1,17,2.1,P0115,Varun Reddy,,RunOut
+M0094,2025,2,PUN,2,57,7.0,P0117,Imran Kulkarni,Chetan Chopra,Caught
+M0094,2025,2,PUN,3,112,12.0,P0118,Amit Pillai,Eshan Agarwal,LBW
+M0094,2025,2,PUN,4,119,14.2,P0119,Dhruv Chauhan,,RunOut
+M0094,2025,2,PUN,5,157,19.2,P0120,Kabir Reddy,Farhan Mehta,LBW
+M0095,2025,1,BLR,1,10,1.1,P0078,Sanjay Menon,Suresh Reddy,Bowled
+M0095,2025,1,BLR,2,28,2.4,P0077,Rahul Trivedi,Amit Mehta,Caught
+M0095,2025,1,BLR,3,109,12.4,P0012,Amit Chauhan,Tarun Trivedi,Bowled
+M0095,2025,1,BLR,4,109,13.0,P0081,Ishaan Chauhan,Tarun Trivedi,Bowled
+M0095,2025,2,MUM,1,27,1.4,P0019,Suresh Reddy,Omar Dhawan,Stumped
+M0095,2025,2,MUM,2,36,3.1,P0003,Arjun Pandey,Amit Chauhan,Bowled
+M0095,2025,2,MUM,3,70,7.1,P0004,Naveen Saxena,Naveen Bhatt,Bowled
+M0095,2025,2,MUM,4,138,14.5,P0001,Vikram Sharma,,RunOut
+M0095,2025,2,MUM,5,170,18.2,P0005,Rohan Desai,Omar Dhawan,Stumped
+M0096,2025,1,HYD,1,8,1.2,P0097,Vikram Sinha,Jayant Pandey,Stumped
+M0096,2025,1,HYD,2,16,2.4,P0096,Uday Verma,Imran Yadav,Stumped
+M0096,2025,1,HYD,3,17,3.1,P0099,Rohan Sinha,,RunOut
+M0096,2025,1,HYD,4,27,4.1,P0098,Gautam Rao,Vikram Trivedi,Caught
+M0096,2025,1,HYD,5,37,5.2,P0100,Amit Gill,Jayant Pandey,Stumped
+M0096,2025,1,HYD,6,40,5.5,P0101,Vishal Trivedi,Jayant Pandey,Caught
+M0096,2025,1,HYD,7,42,6.2,P0102,Harish Mehta,Imran Yadav,LBW
+M0096,2025,1,HYD,8,64,9.4,P0104,Qasim Bose,Nikhil Kapoor,LBW
+M0096,2025,1,HYD,9,68,10.1,P0103,Vikram Agarwal,Jayant Pandey,LBW
+M0096,2025,1,HYD,10,95,13.1,P0106,Rahul Chopra,Kabir Malhotra,Bowled
+M0096,2025,2,RAJ,1,0,0.2,P0134,Vikram Trivedi,,RunOut
+M0096,2025,2,RAJ,2,14,1.3,P0136,Kabir Malhotra,Vikram Agarwal,Bowled
+M0096,2025,2,RAJ,3,15,2.0,P0135,Jayant Pandey,Vikram Agarwal,Stumped
+M0096,2025,2,RAJ,4,29,3.1,P0137,Manish Yadav,Qasim Bose,LBW
+M0096,2025,2,RAJ,5,67,7.2,P0138,Aditya Ghosh,Vishal Trivedi,Bowled
+M0096,2025,2,RAJ,6,88,9.4,P0139,Nikhil Kapoor,Qasim Bose,Stumped
+M0096,2025,2,RAJ,7,104,11.4,P0141,Dhruv Kapoor,Vikram Agarwal,Caught
+M0096,2025,2,RAJ,8,116,12.4,P0142,Arjun Ghosh,,RunOut
+M0096,2025,2,RAJ,9,127,13.5,P0143,Imran Yadav,Qasim Bose,Stumped
+M0096,2025,2,RAJ,10,171,19.2,P0140,Manish Iyer,Gautam Rao,LBW
+M0097,2025,1,RAJ,1,41,5.2,P0134,Vikram Trivedi,,RunOut
+M0097,2025,1,RAJ,2,68,7.3,P0136,Kabir Malhotra,Ishaan Yadav,LBW
+M0097,2025,1,RAJ,3,68,7.5,P0137,Manish Yadav,,RunOut
+M0097,2025,1,RAJ,4,85,9.3,P0135,Jayant Pandey,Chetan Chopra,Caught
+M0097,2025,1,RAJ,5,99,11.1,P0138,Aditya Ghosh,,RunOut
+M0097,2025,1,RAJ,6,117,13.4,P0140,Manish Iyer,Eshan Desai,Stumped
+M0097,2025,1,RAJ,7,153,16.3,P0141,Dhruv Kapoor,Eshan Agarwal,LBW
+M0097,2025,1,RAJ,8,169,17.3,P0142,Arjun Ghosh,,RunOut
+M0097,2025,1,RAJ,9,186,19.2,P0139,Nikhil Kapoor,Eshan Desai,Bowled
+M0097,2025,1,RAJ,10,188,19.5,P0144,Karan Kapoor,Eshan Desai,Bowled
+M0097,2025,2,CHE,1,23,3.5,P0040,Farhan Mehta,Imran Yadav,Bowled
+M0097,2025,2,CHE,2,24,4.1,P0057,Varun Menon,Nikhil Kapoor,Caught
+M0097,2025,2,CHE,3,25,4.3,P0039,Ishaan Yadav,Nikhil Kapoor,Bowled
+M0097,2025,2,CHE,4,71,9.1,P0042,Karan Chauhan,Imran Yadav,Stumped
+M0097,2025,2,CHE,5,78,10.1,P0044,Gautam Sharma,Vikram Trivedi,Bowled
+M0097,2025,2,CHE,6,80,11.1,P0043,Chetan Chopra,Nikhil Kapoor,Bowled
+M0097,2025,2,CHE,7,90,11.5,P0046,Tarun Khan,,RunOut
+M0097,2025,2,CHE,8,91,12.1,P0047,Manish Reddy,,RunOut
+M0097,2025,2,CHE,9,98,12.5,P0048,Eshan Agarwal,Imran Yadav,Caught
+M0097,2025,2,CHE,10,154,18.3,P0049,Dhruv Sharma,Kabir Malhotra,Caught
+M0098,2025,1,KOL,1,3,0.4,P0059,Qasim Sharma,,RunOut
+M0098,2025,1,KOL,2,21,2.4,P0058,Eshan Yadav,Sanjay Naidu,Caught
+M0098,2025,1,KOL,3,99,11.5,P0061,Sanjay Shetty,Amit Pillai,Stumped
+M0098,2025,1,KOL,4,99,12.0,P0062,Pranav Naidu,,RunOut
+M0098,2025,1,KOL,5,112,12.5,P0063,Arjun Chopra,Qasim Iyer,LBW
+M0098,2025,2,PUN,1,2,0.3,P0115,Varun Reddy,Amit Sinha,Stumped
+M0098,2025,2,PUN,2,32,4.4,P0117,Imran Kulkarni,Dhruv Bhatt,Stumped
+M0098,2025,2,PUN,3,40,6.1,P0118,Amit Pillai,Ishaan Shetty,Bowled
+M0098,2025,2,PUN,4,70,10.0,P0116,Rahul Rao,Amit Sinha,Bowled
+M0098,2025,2,PUN,5,88,12.4,P0119,Dhruv Chauhan,Arjun Chopra,Stumped
+M0098,2025,2,PUN,6,102,14.0,P0120,Kabir Reddy,,RunOut
+M0098,2025,2,PUN,7,134,17.2,P0122,Sanjay Naidu,,RunOut
+M0098,2025,2,PUN,8,139,18.4,P0121,Imran Trivedi,,RunOut
+M0098,2025,2,PUN,9,139,19.2,P0123,Qasim Iyer,,RunOut
+M0098,2025,2,PUN,10,139,19.3,P0125,Sanjay Ghosh,Ishaan Shetty,LBW
+M0099,2025,1,KOL,1,29,4.1,P0072,Kabir Gill,Arjun Pandey,Caught
+M0099,2025,1,KOL,2,44,6.0,P0060,Vishal Verma,Amit Mehta,LBW
+M0099,2025,1,KOL,3,45,6.5,P0058,Eshan Yadav,Tarun Trivedi,LBW
+M0099,2025,1,KOL,4,79,11.0,P0062,Pranav Naidu,Amit Mehta,Stumped
+M0099,2025,1,KOL,5,150,18.4,P0063,Arjun Chopra,,RunOut
+M0099,2025,2,MUM,1,20,2.2,P0002,Vikram Chauhan,,RunOut
+M0099,2025,2,MUM,2,39,4.2,P0001,Vikram Sharma,,RunOut
+M0099,2025,2,MUM,3,39,4.3,P0004,Naveen Saxena,Naveen Mehta,LBW
+M0099,2025,2,MUM,4,73,8.1,P0003,Arjun Pandey,Arjun Chopra,LBW
+M0099,2025,2,MUM,5,84,9.3,P0006,Naveen Iyer,,RunOut
+M0099,2025,2,MUM,6,105,12.2,P0007,Chetan Desai,,RunOut
+M0099,2025,2,MUM,7,116,13.3,P0008,Amit Verma,Dhruv Bhatt,LBW
+M0099,2025,2,MUM,8,116,13.5,P0009,Amit Mehta,Dhruv Bhatt,Caught
+M0099,2025,2,MUM,9,121,16.0,P0005,Rohan Desai,,RunOut
+M0099,2025,2,MUM,10,143,19.0,P0010,Tarun Trivedi,Kabir Gill,Bowled
+M0100,2025,1,KOL,1,9,0.4,P0058,Eshan Yadav,Ishaan Yadav,Bowled
+M0100,2025,1,KOL,2,12,3.0,P0059,Qasim Sharma,Farhan Mehta,LBW
+M0100,2025,1,KOL,3,28,4.5,P0061,Sanjay Shetty,Farhan Mehta,Stumped
+M0100,2025,1,KOL,4,49,6.5,P0060,Vishal Verma,,RunOut
+M0100,2025,1,KOL,5,49,7.2,P0062,Pranav Naidu,Farhan Mehta,Caught
+M0100,2025,1,KOL,6,58,9.0,P0064,Kabir Rao,Ishaan Yadav,Caught
+M0100,2025,1,KOL,7,67,9.5,P0065,Vikram Desai,Farhan Mehta,Bowled
+M0100,2025,1,KOL,8,97,12.5,P0063,Arjun Chopra,Eshan Agarwal,LBW
+M0100,2025,1,KOL,9,118,15.3,P0067,Naveen Mehta,Eshan Agarwal,Bowled
+M0100,2025,1,KOL,10,144,19.2,P0066,Devendra Malhotra,Chetan Chopra,LBW
+M0100,2025,2,CHE,1,0,0.3,P0039,Ishaan Yadav,Devendra Malhotra,Caught
+M0100,2025,2,CHE,2,16,2.1,P0041,Pranav Agarwal,Naveen Mehta,Caught
+M0100,2025,2,CHE,3,23,3.0,P0042,Karan Chauhan,,RunOut
+M0100,2025,2,CHE,4,38,4.4,P0040,Farhan Mehta,Arjun Chopra,Stumped
+M0100,2025,2,CHE,5,44,5.4,P0043,Chetan Chopra,Eshan Yadav,Stumped
+M0100,2025,2,CHE,6,81,9.5,P0044,Gautam Sharma,Devendra Malhotra,Caught
+M0100,2025,2,CHE,7,89,11.0,P0045,Eshan Desai,Amit Sinha,Bowled
+M0100,2025,2,CHE,8,103,12.3,P0047,Manish Reddy,Eshan Yadav,Bowled
+M0100,2025,2,CHE,9,155,18.2,P0048,Eshan Agarwal,Arjun Chopra,Caught
+M0100,2025,2,CHE,10,158,19.1,P0046,Tarun Khan,Arjun Chopra,Caught
+M0101,2025,1,BLR,1,21,2.0,P0077,Rahul Trivedi,Gautam Rao,Stumped
+M0101,2025,1,BLR,2,25,2.4,P0078,Sanjay Menon,Vishal Trivedi,Caught
+M0101,2025,1,BLR,3,27,3.1,P0080,Lakshay Sharma,Harish Mehta,Stumped
+M0101,2025,1,BLR,4,48,4.5,P0081,Ishaan Chauhan,Vikram Agarwal,LBW
+M0101,2025,1,BLR,5,94,8.5,P0082,Farhan Saxena,Rohan Sinha,Stumped
+M0101,2025,1,BLR,6,117,11.4,P0079,Naveen Bhatt,,RunOut
+M0101,2025,1,BLR,7,118,12.1,P0084,Suresh Kulkarni,Harish Mehta,LBW
+M0101,2025,1,BLR,8,126,13.0,P0012,Amit Chauhan,,RunOut
+M0101,2025,1,BLR,9,158,16.3,P0083,Rohan Nair,,RunOut
+M0101,2025,2,HYD,1,19,4.1,P0114,Qasim Shetty,Ishaan Chauhan,Bowled
+M0101,2025,2,HYD,2,19,4.2,P0098,Gautam Rao,Ishaan Chauhan,Caught
+M0101,2025,2,HYD,3,42,7.0,P0099,Rohan Sinha,Ishaan Chauhan,Bowled
+M0101,2025,2,HYD,4,96,12.2,P0100,Amit Gill,Naveen Bhatt,Bowled
+M0102,2025,1,DEL,1,20,3.0,P0021,Naveen Sinha,Arjun Chopra,Stumped
+M0102,2025,1,DEL,2,72,9.0,P0020,Omar Naidu,Amit Sinha,LBW
+M0102,2025,1,DEL,3,110,13.3,P0022,Uday Sharma,Eshan Yadav,Bowled
+M0102,2025,1,DEL,4,110,13.4,P0024,Lakshay Naidu,,RunOut
+M0102,2025,1,DEL,5,140,17.1,P0025,Imran Naidu,Naveen Mehta,Bowled
+M0102,2025,1,DEL,6,151,19.4,P0023,Bhavesh Dhawan,Naveen Mehta,Caught
+M0102,2025,2,KOL,1,16,1.0,P0058,Eshan Yadav,,RunOut
+M0102,2025,2,KOL,2,27,3.3,P0060,Vishal Verma,Lakshay Naidu,Bowled
+M0102,2025,2,KOL,3,35,4.5,P0059,Qasim Sharma,Omar Naidu,Stumped
+M0102,2025,2,KOL,4,43,5.2,P0061,Sanjay Shetty,,RunOut
+M0102,2025,2,KOL,5,44,5.4,P0062,Pranav Naidu,Uday Sharma,Caught
+M0102,2025,2,KOL,6,94,9.2,P0064,Kabir Rao,Vikram Pandey,LBW
+M0102,2025,2,KOL,7,103,10.3,P0065,Vikram Desai,Lakshay Naidu,Stumped
+M0102,2025,2,KOL,8,112,12.1,P0063,Arjun Chopra,,RunOut
+M0102,2025,2,KOL,9,117,13.1,P0066,Devendra Malhotra,Uday Sharma,Bowled
+M0102,2025,2,KOL,10,134,15.5,P0068,Amit Sinha,,RunOut
+M0103,2025,1,RAJ,1,8,0.4,P0134,Vikram Trivedi,Ishaan Shetty,LBW
+M0103,2025,1,RAJ,2,77,9.5,P0136,Kabir Malhotra,Kabir Gill,LBW
+M0103,2025,1,RAJ,3,133,15.5,P0148,Gautam Trivedi,,RunOut
+M0103,2025,1,RAJ,4,134,16.1,P0135,Jayant Pandey,Amit Sinha,LBW
+M0103,2025,2,KOL,1,6,1.0,P0075,Pranav Dhawan,Vikram Trivedi,Bowled
+M0103,2025,2,KOL,2,46,4.1,P0075,Pranav Dhawan,Vikram Trivedi,Bowled
+M0103,2025,2,KOL,3,64,6.0,P0061,Sanjay Shetty,Nikhil Kapoor,Stumped
+M0103,2025,2,KOL,4,75,7.4,P0076,Ishaan Shetty,Nikhil Kapoor,LBW
+M0103,2025,2,KOL,5,87,8.1,P0062,Pranav Naidu,Vikram Trivedi,Caught
+M0103,2025,2,KOL,6,100,9.2,P0072,Kabir Gill,Gautam Trivedi,Stumped
+M0103,2025,2,KOL,7,106,9.5,P0065,Vikram Desai,Gautam Trivedi,Caught
+M0103,2025,2,KOL,8,119,11.5,P0072,Kabir Gill,Gautam Trivedi,Bowled
+M0103,2025,2,KOL,9,139,15.1,P0067,Naveen Mehta,Gautam Trivedi,Caught
+M0103,2025,2,KOL,10,149,16.5,P0066,Devendra Malhotra,Imran Yadav,LBW
+M0104,2025,1,CHE,1,1,0.2,P0040,Farhan Mehta,,RunOut
+M0104,2025,1,CHE,2,29,3.5,P0041,Pranav Agarwal,Harish Mehta,Bowled
+M0104,2025,1,CHE,3,72,7.1,P0042,Karan Chauhan,Vikram Sinha,Bowled
+M0104,2025,1,CHE,4,78,7.4,P0043,Chetan Chopra,,RunOut
+M0104,2025,1,CHE,5,81,8.2,P0044,Gautam Sharma,Vishal Trivedi,Bowled
+M0104,2025,1,CHE,6,100,10.2,P0039,Ishaan Yadav,Vishal Trivedi,Caught
+M0104,2025,1,CHE,7,142,15.0,P0046,Tarun Khan,Vikram Agarwal,Bowled
+M0104,2025,1,CHE,8,151,16.5,P0045,Eshan Desai,Qasim Bose,Caught
+M0104,2025,1,CHE,9,162,19.4,P0056,Rohan Ghosh,Qasim Bose,Stumped
+M0104,2025,2,HYD,1,27,3.1,P0096,Uday Verma,Chetan Chopra,Bowled
+M0104,2025,2,HYD,2,27,3.2,P0098,Gautam Rao,Chetan Chopra,Stumped
+M0104,2025,2,HYD,3,32,4.0,P0097,Vikram Sinha,,RunOut
+M0104,2025,2,HYD,4,41,4.4,P0100,Amit Gill,Ishaan Yadav,Bowled
+M0104,2025,2,HYD,5,54,6.1,P0112,Farhan Sharma,Eshan Desai,Bowled
+M0104,2025,2,HYD,6,70,7.2,P0101,Vishal Trivedi,,RunOut
+M0104,2025,2,HYD,7,105,9.4,P0103,Vikram Agarwal,,RunOut
+M0104,2025,2,HYD,8,132,13.0,P0104,Qasim Bose,,RunOut
+M0104,2025,2,HYD,9,137,13.5,P0105,Rajat Trivedi,Farhan Mehta,Bowled
+M0104,2025,2,HYD,10,144,14.3,P0106,Rahul Chopra,Ishaan Yadav,LBW
+M0105,2025,1,MUM,1,26,2.5,P0001,Vikram Sharma,Eshan Desai,LBW
+M0105,2025,1,MUM,2,52,5.3,P0003,Arjun Pandey,Farhan Mehta,Stumped
+M0105,2025,1,MUM,3,52,5.4,P0017,Farhan Agarwal,,RunOut
+M0105,2025,1,MUM,4,60,6.4,P0005,Rohan Desai,Eshan Desai,Stumped
+M0105,2025,1,MUM,5,88,9.3,P0002,Vikram Chauhan,Eshan Desai,Caught
+M0105,2025,1,MUM,6,96,10.3,P0007,Chetan Desai,,RunOut
+M0105,2025,1,MUM,7,123,13.4,P0008,Amit Verma,Farhan Mehta,LBW
+M0105,2025,1,MUM,8,138,14.5,P0006,Naveen Iyer,Chetan Chopra,Bowled
+M0105,2025,1,MUM,9,145,15.5,P0009,Amit Mehta,,RunOut
+M0105,2025,2,CHE,1,45,4.5,P0040,Farhan Mehta,,RunOut
+M0105,2025,2,CHE,2,59,5.5,P0041,Pranav Agarwal,Farhan Agarwal,Bowled
+M0105,2025,2,CHE,3,68,7.0,P0042,Karan Chauhan,Tarun Trivedi,Bowled
+M0105,2025,2,CHE,4,69,7.2,P0043,Chetan Chopra,Amit Mehta,Stumped
+M0105,2025,2,CHE,5,91,9.1,P0044,Gautam Sharma,Amit Mehta,Stumped
+M0105,2025,2,CHE,6,107,10.5,P0039,Ishaan Yadav,Rohan Desai,Stumped
+M0105,2025,2,CHE,7,109,11.1,P0046,Tarun Khan,Tarun Trivedi,LBW
+M0105,2025,2,CHE,8,127,13.1,P0047,Manish Reddy,Arjun Pandey,Caught
+M0105,2025,2,CHE,9,128,13.3,P0048,Eshan Agarwal,,RunOut
+M0105,2025,2,CHE,10,128,13.5,P0049,Dhruv Sharma,Arjun Pandey,Bowled
+M0106,2025,1,KOL,1,1,1.0,P0059,Qasim Sharma,Ishaan Chauhan,Stumped
+M0106,2025,1,KOL,2,6,1.3,P0060,Vishal Verma,Suresh Kulkarni,Caught
+M0106,2025,1,KOL,3,33,3.3,P0058,Eshan Yadav,Omar Dhawan,Caught
+M0106,2025,1,KOL,4,98,10.3,P0061,Sanjay Shetty,Rohan Nair,Caught
+M0106,2025,1,KOL,5,98,11.1,P0062,Pranav Naidu,Rajat Pillai,Bowled
+M0106,2025,1,KOL,6,124,14.1,P0064,Kabir Rao,,RunOut
+M0106,2025,1,KOL,7,133,16.0,P0065,Vikram Desai,Rajat Pillai,Caught
+M0106,2025,1,KOL,8,151,18.3,P0076,Ishaan Shetty,Rohan Nair,Caught
+M0106,2025,1,KOL,9,163,19.2,P0063,Arjun Chopra,Naveen Bhatt,Caught
+M0106,2025,2,BLR,1,7,1.3,P0077,Rahul Trivedi,Eshan Yadav,Caught
+M0106,2025,2,BLR,2,51,6.1,P0078,Sanjay Menon,,RunOut
+M0106,2025,2,BLR,3,65,8.1,P0080,Lakshay Sharma,Amit Sinha,Stumped
+M0106,2025,2,BLR,4,85,10.2,P0081,Ishaan Chauhan,,RunOut
+M0106,2025,2,BLR,5,120,15.0,P0082,Farhan Saxena,Eshan Yadav,Bowled
+M0107,2025,1,DEL,1,18,2.3,P0021,Naveen Sinha,Farhan Agarwal,Bowled
+M0107,2025,1,DEL,2,39,5.1,P0022,Uday Sharma,Arjun Pandey,LBW
+M0107,2025,1,DEL,3,40,5.2,P0035,Omar Malhotra,Arjun Pandey,LBW
+M0107,2025,1,DEL,4,61,7.2,P0033,Suresh Naidu,Rohan Desai,Bowled
+M0107,2025,1,DEL,5,107,11.3,P0024,Lakshay Naidu,,RunOut
+M0107,2025,1,DEL,6,114,12.3,P0026,Eshan Bhatt,,RunOut
+M0107,2025,1,DEL,7,186,17.0,P0025,Imran Naidu,Tarun Trivedi,Bowled
+M0107,2025,1,DEL,8,192,17.4,P0028,Mohit Joshi,,RunOut
+M0107,2025,1,DEL,9,204,19.1,P0029,Ishaan Mehta,Amit Mehta,LBW
+M0107,2025,2,MUM,1,4,0.3,P0017,Farhan Agarwal,Suresh Naidu,LBW
+M0107,2025,2,MUM,2,10,1.5,P0002,Vikram Chauhan,,RunOut
+M0107,2025,2,MUM,3,16,3.1,P0003,Arjun Pandey,Omar Malhotra,Caught
+M0107,2025,2,MUM,4,24,3.4,P0004,Naveen Saxena,Omar Malhotra,Bowled
+M0107,2025,2,MUM,5,46,5.3,P0006,Naveen Iyer,Naveen Sinha,Bowled
+M0107,2025,2,MUM,6,47,6.0,P0005,Rohan Desai,Naveen Sinha,Stumped
+M0107,2025,2,MUM,7,57,9.0,P0007,Chetan Desai,,RunOut
+M0107,2025,2,MUM,8,75,10.2,P0009,Amit Mehta,,RunOut
+M0107,2025,2,MUM,9,82,11.0,P0008,Amit Verma,Uday Sharma,LBW
+M0107,2025,2,MUM,10,107,14.2,P0011,Gautam Malhotra,,RunOut
+M0108,2025,1,RAJ,1,30,2.5,P0135,Jayant Pandey,Naveen Sinha,Caught
+M0108,2025,1,RAJ,2,31,3.1,P0136,Kabir Malhotra,Uday Sharma,Bowled
+M0108,2025,1,RAJ,3,31,3.2,P0137,Manish Yadav,Uday Sharma,LBW
+M0108,2025,1,RAJ,4,78,8.0,P0138,Aditya Ghosh,Naveen Sinha,Caught
+M0108,2025,1,RAJ,5,96,9.3,P0139,Nikhil Kapoor,Uday Sharma,Stumped
+M0108,2025,1,RAJ,6,106,11.3,P0140,Manish Iyer,Omar Naidu,Bowled
+M0108,2025,1,RAJ,7,172,17.4,P0141,Dhruv Kapoor,Uday Sharma,Bowled
+M0108,2025,1,RAJ,8,177,18.4,P0142,Arjun Ghosh,Naveen Sinha,LBW
+M0108,2025,2,DEL,1,26,3.1,P0021,Naveen Sinha,Nikhil Kapoor,LBW
+M0108,2025,2,DEL,2,37,4.5,P0022,Uday Sharma,Kabir Malhotra,LBW
+M0108,2025,2,DEL,3,45,7.2,P0023,Bhavesh Dhawan,Nikhil Kapoor,LBW
+M0108,2025,2,DEL,4,46,7.4,P0020,Omar Naidu,,RunOut
+M0108,2025,2,DEL,5,99,14.0,P0024,Lakshay Naidu,,RunOut
+M0108,2025,2,DEL,6,113,15.5,P0025,Imran Naidu,Imran Yadav,Stumped
+M0108,2025,2,DEL,7,114,16.2,P0026,Eshan Bhatt,Vikram Trivedi,Stumped
+M0109,2025,1,KOL,1,33,4.3,P0058,Eshan Yadav,Rohan Nair,Stumped
+M0109,2025,1,KOL,2,65,7.4,P0060,Vishal Verma,Arjun Trivedi,Caught
+M0109,2025,1,KOL,3,71,8.0,P0061,Sanjay Shetty,Arjun Trivedi,Bowled
+M0109,2025,1,KOL,4,108,11.5,P0062,Pranav Naidu,Naveen Bhatt,Bowled
+M0109,2025,1,KOL,5,114,12.4,P0059,Qasim Sharma,Suresh Kulkarni,Bowled
+M0109,2025,1,KOL,6,146,15.4,P0063,Arjun Chopra,Omar Dhawan,LBW
+M0109,2025,2,BLR,1,8,3.0,P0077,Rahul Trivedi,Arjun Chopra,LBW
+M0109,2025,2,BLR,2,23,5.0,P0079,Naveen Bhatt,Devendra Malhotra,Bowled
+M0109,2025,2,BLR,3,23,5.2,P0078,Sanjay Menon,,RunOut
+M0109,2025,2,BLR,4,23,5.3,P0081,Ishaan Chauhan,Naveen Mehta,Caught
+M0109,2025,2,BLR,5,39,7.5,P0082,Farhan Saxena,Naveen Mehta,Bowled
+M0109,2025,2,BLR,6,45,8.5,P0083,Rohan Nair,Amit Sinha,Caught
+M0109,2025,2,BLR,7,46,9.2,P0080,Lakshay Sharma,Naveen Mehta,Stumped
+M0109,2025,2,BLR,8,61,11.0,P0084,Suresh Kulkarni,Devendra Malhotra,LBW
+M0109,2025,2,BLR,9,65,13.2,P0085,Omar Dhawan,Eshan Yadav,LBW
+M0109,2025,2,BLR,10,82,17.0,P0087,Pranav Trivedi,Amit Sinha,Caught
+M0110,2025,1,BLR,1,9,0.5,P0078,Sanjay Menon,Eshan Agarwal,Bowled
+M0110,2025,1,BLR,2,16,2.1,P0077,Rahul Trivedi,Chetan Chopra,Bowled
+M0110,2025,1,BLR,3,18,2.5,P0080,Lakshay Sharma,Chetan Chopra,Caught
+M0110,2025,1,BLR,4,25,3.3,P0081,Ishaan Chauhan,Farhan Mehta,Caught
+M0110,2025,1,BLR,5,25,3.4,P0082,Farhan Saxena,Farhan Mehta,Caught
+M0110,2025,1,BLR,6,25,4.0,P0083,Rohan Nair,Farhan Mehta,Caught
+M0110,2025,1,BLR,7,30,4.5,P0084,Suresh Kulkarni,Eshan Agarwal,Caught
+M0110,2025,1,BLR,8,48,7.1,P0079,Naveen Bhatt,Uday Nair,Stumped
+M0110,2025,1,BLR,9,66,8.5,P0090,Qasim Malhotra,Chetan Chopra,Caught
+M0110,2025,1,BLR,10,77,9.5,P0087,Pranav Trivedi,Ishaan Yadav,LBW
+M0110,2025,2,CHE,1,36,4.5,P0040,Farhan Mehta,Naveen Bhatt,Bowled
+M0110,2025,2,CHE,2,49,6.1,P0041,Pranav Agarwal,Suresh Kulkarni,Stumped
+M0110,2025,2,CHE,3,89,10.3,P0039,Ishaan Yadav,Ishaan Chauhan,LBW
+M0110,2025,2,CHE,4,93,11.1,P0042,Karan Chauhan,,RunOut
+M0110,2025,2,CHE,5,147,16.1,P0043,Chetan Chopra,Rohan Nair,Caught
+M0111,2025,1,CHE,1,37,4.2,P0039,Ishaan Yadav,,RunOut
+M0111,2025,1,CHE,2,66,8.1,P0041,Pranav Agarwal,Devendra Malhotra,LBW
+M0111,2025,1,CHE,3,67,8.3,P0051,Eshan Shetty,Devendra Malhotra,LBW
+M0111,2025,1,CHE,4,123,12.4,P0043,Chetan Chopra,,RunOut
+M0111,2025,1,CHE,5,174,18.4,P0044,Gautam Sharma,Devendra Malhotra,Stumped
+M0111,2025,2,KOL,1,73,6.5,P0058,Eshan Yadav,Chetan Chopra,Bowled
+M0111,2025,2,KOL,2,83,9.0,P0076,Ishaan Shetty,,RunOut
+M0111,2025,2,KOL,3,97,11.2,P0059,Qasim Sharma,,RunOut
+M0112,2025,1,DEL,1,24,3.0,P0020,Omar Naidu,Rohan Nair,Caught
+M0112,2025,1,DEL,2,57,6.0,P0022,Uday Sharma,Ishaan Chauhan,LBW
+M0112,2025,1,DEL,3,73,7.4,P0023,Bhavesh Dhawan,,RunOut
+M0112,2025,1,DEL,4,75,8.3,P0021,Naveen Sinha,Rohan Nair,LBW
+M0112,2025,1,DEL,5,75,9.2,P0024,Lakshay Naidu,Rahul Chauhan,LBW
+M0112,2025,1,DEL,6,90,12.1,P0026,Eshan Bhatt,,RunOut
+M0112,2025,1,DEL,7,98,13.3,P0027,Vikram Pandey,Rahul Chauhan,Bowled
+M0112,2025,1,DEL,8,144,17.2,P0028,Mohit Joshi,Naveen Bhatt,Bowled
+M0112,2025,1,DEL,9,145,17.4,P0025,Imran Naidu,,RunOut
+M0112,2025,2,BLR,1,24,2.0,P0078,Sanjay Menon,Lakshay Naidu,Bowled
+M0112,2025,2,BLR,2,63,6.0,P0077,Rahul Trivedi,,RunOut
+M0112,2025,2,BLR,3,77,7.2,P0079,Naveen Bhatt,Vikram Pandey,Caught
+M0112,2025,2,BLR,4,138,13.4,P0080,Lakshay Sharma,,RunOut
+M0112,2025,2,BLR,5,149,14.3,P0082,Farhan Saxena,Uday Sharma,Bowled
+M0112,2025,2,BLR,6,178,17.4,P0083,Rohan Nair,,RunOut
+M0112,2025,2,BLR,7,178,18.0,P0094,Rahul Chauhan,,RunOut
+M0112,2025,2,BLR,8,178,18.1,P0081,Ishaan Chauhan,Omar Naidu,Bowled
+M0113,2025,1,HYD,1,77,7.1,P0096,Uday Verma,Amit Sinha,LBW
+M0113,2025,1,HYD,2,91,9.2,P0098,Gautam Rao,Arjun Chopra,LBW
+M0113,2025,1,HYD,3,101,10.3,P0097,Vikram Sinha,Naveen Mehta,Stumped
+M0113,2025,1,HYD,4,121,12.5,P0100,Amit Gill,,RunOut
+M0113,2025,1,HYD,5,163,17.0,P0099,Rohan Sinha,Uday Iyer,LBW
+M0113,2025,2,KOL,1,80,7.3,P0059,Qasim Sharma,,RunOut
+M0113,2025,2,KOL,2,102,9.3,P0060,Vishal Verma,Harish Mehta,Bowled
+M0113,2025,2,KOL,3,110,10.0,P0073,Amit Joshi,Harish Mehta,Caught
+M0113,2025,2,KOL,4,114,10.3,P0058,Eshan Yadav,Vikram Sinha,Stumped
+M0113,2025,2,KOL,5,143,14.5,P0062,Pranav Naidu,,RunOut
+M0113,2025,2,KOL,6,162,17.3,P0063,Arjun Chopra,,RunOut
+M0114,2025,1,MUM,1,36,4.4,P0001,Vikram Sharma,Vikram Agarwal,LBW
+M0114,2025,1,MUM,2,42,5.5,P0003,Arjun Pandey,Vishal Trivedi,Stumped
+M0114,2025,1,MUM,3,56,7.1,P0004,Naveen Saxena,Harish Mehta,Bowled
+M0114,2025,1,MUM,4,83,10.4,P0002,Vikram Chauhan,Vikram Sinha,LBW
+M0114,2025,1,MUM,5,83,10.5,P0006,Naveen Iyer,Vikram Sinha,Caught
+M0114,2025,1,MUM,6,108,12.5,P0005,Rohan Desai,,RunOut
+M0114,2025,1,MUM,7,110,13.2,P0016,Dhruv Khan,Gautam Rao,Bowled
+M0114,2025,1,MUM,8,111,13.5,P0017,Farhan Agarwal,Gautam Rao,LBW
+M0114,2025,1,MUM,9,139,17.4,P0010,Tarun Trivedi,Gautam Rao,Caught
+M0114,2025,2,HYD,1,12,1.5,P0097,Vikram Sinha,Farhan Agarwal,Stumped
+M0114,2025,2,HYD,2,13,2.2,P0098,Gautam Rao,Arjun Pandey,Caught
+M0114,2025,2,HYD,3,30,4.1,P0099,Rohan Sinha,Arjun Pandey,LBW
+M0114,2025,2,HYD,4,107,14.0,P0100,Amit Gill,,RunOut
+M0114,2025,2,HYD,5,172,19.0,P0096,Uday Verma,Amit Mehta,Bowled
+M0115,2025,1,BLR,1,27,2.0,P0077,Rahul Trivedi,Rohan Desai,LBW
+M0115,2025,1,BLR,2,37,2.5,P0078,Sanjay Menon,Lakshay Joshi,Bowled
+M0115,2025,1,BLR,3,71,7.4,P0080,Lakshay Sharma,Tarun Trivedi,Caught
+M0115,2025,1,BLR,4,105,10.3,P0081,Ishaan Chauhan,,RunOut
+M0115,2025,1,BLR,5,186,18.0,P0079,Naveen Bhatt,Lakshay Joshi,LBW
+M0115,2025,1,BLR,6,208,20.0,P0083,Rohan Nair,Lakshay Joshi,Bowled
+M0115,2025,2,MUM,1,18,2.3,P0013,Lakshay Joshi,Ishaan Chauhan,Bowled
+M0115,2025,2,MUM,2,39,3.3,P0001,Vikram Sharma,Rohan Nair,LBW
+M0115,2025,2,MUM,3,73,6.5,P0004,Naveen Saxena,Arjun Trivedi,Caught
+M0115,2025,2,MUM,4,81,8.3,P0005,Rohan Desai,Naveen Bhatt,LBW
+M0115,2025,2,MUM,5,95,11.2,P0006,Naveen Iyer,Omar Dhawan,LBW
+M0115,2025,2,MUM,6,95,11.3,P0007,Chetan Desai,Omar Dhawan,Caught
+M0115,2025,2,MUM,7,137,15.5,P0013,Lakshay Joshi,,RunOut
+M0115,2025,2,MUM,8,150,17.5,P0008,Amit Verma,Rohan Nair,Caught
+M0116,2025,1,BLR,1,11,1.0,P0078,Sanjay Menon,Vikram Sinha,LBW
+M0116,2025,1,BLR,2,38,4.4,P0077,Rahul Trivedi,,RunOut
+M0116,2025,1,BLR,3,45,5.1,P0080,Lakshay Sharma,,RunOut
+M0116,2025,1,BLR,4,53,6.0,P0081,Ishaan Chauhan,Vikram Sinha,Bowled
+M0116,2025,1,BLR,5,100,9.2,P0079,Naveen Bhatt,,RunOut
+M0116,2025,1,BLR,6,143,12.4,P0083,Rohan Nair,,RunOut
+M0116,2025,1,BLR,7,145,13.1,P0082,Farhan Saxena,,RunOut
+M0116,2025,1,BLR,8,148,13.3,P0084,Suresh Kulkarni,,RunOut
+M0116,2025,1,BLR,9,175,16.3,P0085,Omar Dhawan,Gautam Rao,Caught
+M0116,2025,1,BLR,10,193,18.2,P0086,Arjun Trivedi,Qasim Bose,Caught
+M0116,2025,2,HYD,1,0,0.1,P0096,Uday Verma,Rohan Nair,Stumped
+M0116,2025,2,HYD,2,13,1.3,P0098,Gautam Rao,,RunOut
+M0116,2025,2,HYD,3,13,1.4,P0099,Rohan Sinha,Ishaan Chauhan,Stumped
+M0116,2025,2,HYD,4,14,2.0,P0097,Vikram Sinha,,RunOut
+M0116,2025,2,HYD,5,19,2.5,P0100,Amit Gill,Arjun Trivedi,Caught
+M0116,2025,2,HYD,6,39,4.5,P0101,Vishal Trivedi,Rohan Nair,Bowled
+M0116,2025,2,HYD,7,112,11.1,P0102,Harish Mehta,,RunOut
+M0116,2025,2,HYD,8,138,15.1,P0103,Vikram Agarwal,,RunOut
+M0116,2025,2,HYD,9,146,16.4,P0104,Qasim Bose,Arjun Trivedi,Stumped
+M0116,2025,2,HYD,10,168,19.0,P0106,Rahul Chopra,Suresh Kulkarni,Caught
+M0117,2025,1,PUN,1,17,1.4,P0115,Varun Reddy,Vikram Pandey,LBW
+M0117,2025,1,PUN,2,17,1.5,P0117,Imran Kulkarni,Vikram Pandey,Stumped
+M0117,2025,1,PUN,3,31,3.0,P0116,Rahul Rao,Arjun Rao,Caught
+M0117,2025,1,PUN,4,43,4.2,P0119,Dhruv Chauhan,,RunOut
+M0117,2025,1,PUN,5,48,5.1,P0120,Kabir Reddy,Vikram Pandey,Bowled
+M0117,2025,2,DEL,1,10,1.2,P0034,Arjun Rao,,RunOut
+M0117,2025,2,DEL,2,10,1.3,P0022,Uday Sharma,Sanjay Naidu,Stumped
+M0117,2025,2,DEL,3,39,4.2,P0023,Bhavesh Dhawan,Sanjay Naidu,LBW
+M0117,2025,2,DEL,4,52,6.0,P0024,Lakshay Naidu,Qasim Iyer,Stumped
+M0117,2025,2,DEL,5,59,7.1,P0020,Omar Naidu,Amit Pillai,LBW
+M0117,2025,2,DEL,6,70,9.4,P0026,Eshan Bhatt,Dhruv Chauhan,Bowled
+M0117,2025,2,DEL,7,70,10.0,P0027,Vikram Pandey,Dhruv Chauhan,Caught
+M0117,2025,2,DEL,8,103,12.5,P0025,Imran Naidu,Qasim Iyer,LBW
+M0117,2025,2,DEL,9,103,13.2,P0028,Mohit Joshi,Dhruv Chauhan,Caught
+M0117,2025,2,DEL,10,136,16.2,P0030,Nikhil Trivedi,Amit Pillai,LBW
+M0118,2025,1,MUM,1,22,3.3,P0014,Gautam Ghosh,Jayant Pandey,LBW
+M0118,2025,1,MUM,2,35,4.4,P0003,Arjun Pandey,,RunOut
+M0118,2025,1,MUM,3,61,7.2,P0015,Devendra Kapoor,Nikhil Kapoor,Caught
+M0118,2025,1,MUM,4,80,9.3,P0004,Naveen Saxena,Rajat Dhawan,LBW
+M0118,2025,1,MUM,5,145,16.1,P0006,Naveen Iyer,Vikram Trivedi,Stumped
+M0118,2025,1,MUM,6,151,17.1,P0007,Chetan Desai,Imran Yadav,Stumped
+M0118,2025,1,MUM,7,156,17.4,P0008,Amit Verma,Imran Yadav,LBW
+M0118,2025,1,MUM,8,162,18.3,P0005,Rohan Desai,Nikhil Kapoor,Stumped
+M0118,2025,2,RAJ,1,36,3.4,P0135,Jayant Pandey,Amit Mehta,Stumped
+M0118,2025,2,RAJ,2,39,4.2,P0152,Rajat Dhawan,Tarun Trivedi,Caught
+M0118,2025,2,RAJ,3,80,9.1,P0134,Vikram Trivedi,Amit Mehta,Stumped
+M0118,2025,2,RAJ,4,100,12.5,P0146,Sanjay Rao,Gautam Ghosh,Bowled
+M0118,2025,2,RAJ,5,142,16.3,P0139,Nikhil Kapoor,Rohan Desai,Caught
+M0118,2025,2,RAJ,6,155,19.0,P0140,Manish Iyer,Rohan Desai,LBW
+M0119,2025,1,RAJ,1,17,1.4,P0146,Sanjay Rao,Arjun Pandey,Bowled
+M0119,2025,1,RAJ,2,17,1.5,P0136,Kabir Malhotra,Arjun Pandey,Stumped
+M0119,2025,1,RAJ,3,20,2.4,P0137,Manish Yadav,Tarun Trivedi,Stumped
+M0119,2025,1,RAJ,4,26,4.0,P0134,Vikram Trivedi,Arjun Pandey,Caught
+M0119,2025,1,RAJ,5,40,5.4,P0152,Rajat Dhawan,,RunOut
+M0119,2025,1,RAJ,6,100,14.0,P0140,Manish Iyer,Amit Mehta,Stumped
+M0119,2025,1,RAJ,7,156,19.5,P0138,Aditya Ghosh,Vikram Sharma,LBW
+M0119,2025,2,MUM,1,7,1.3,P0001,Vikram Sharma,Vikram Trivedi,Caught
+M0119,2025,2,MUM,2,8,2.0,P0002,Vikram Chauhan,Vikram Trivedi,Stumped
+M0119,2025,2,MUM,3,56,7.0,P0003,Arjun Pandey,Imran Yadav,Stumped
+M0119,2025,2,MUM,4,85,9.5,P0004,Naveen Saxena,,RunOut
+M0119,2025,2,MUM,5,94,11.0,P0006,Naveen Iyer,Manish Yadav,LBW
+M0119,2025,2,MUM,6,122,13.2,P0005,Rohan Desai,Vikram Trivedi,Caught
+M0119,2025,2,MUM,7,138,15.5,P0008,Amit Verma,Imran Yadav,LBW
+M0120,2025,1,MUM,1,0,0.1,P0001,Vikram Sharma,Vikram Pandey,Bowled
+M0120,2025,1,MUM,2,24,2.2,P0003,Arjun Pandey,Naveen Sinha,LBW
+M0120,2025,1,MUM,3,40,4.2,P0004,Naveen Saxena,Naveen Sinha,Bowled
+M0120,2025,1,MUM,4,42,4.5,P0005,Rohan Desai,,RunOut
+M0120,2025,1,MUM,5,49,6.1,P0006,Naveen Iyer,Naveen Sinha,Bowled
+M0120,2025,1,MUM,6,82,9.0,P0002,Vikram Chauhan,Naveen Sinha,Bowled
+M0120,2025,1,MUM,7,115,13.1,P0008,Amit Verma,Lakshay Naidu,Bowled
+M0120,2025,2,DEL,1,20,1.5,P0020,Omar Naidu,Arjun Pandey,Stumped
+M0120,2025,2,DEL,2,53,5.1,P0022,Uday Sharma,Rohan Desai,Stumped
+M0120,2025,2,DEL,3,83,7.3,P0021,Naveen Sinha,,RunOut
+M0120,2025,2,DEL,4,83,7.4,P0024,Lakshay Naidu,Vikram Sharma,Caught
+M0120,2025,2,DEL,5,107,10.5,P0025,Imran Naidu,Rohan Desai,Caught
+M0120,2025,2,DEL,6,115,12.0,P0023,Bhavesh Dhawan,Amit Mehta,Bowled
+M0120,2025,2,DEL,7,119,12.4,P0026,Eshan Bhatt,,RunOut
+M0120,2025,2,DEL,8,149,16.1,P0027,Vikram Pandey,Tarun Trivedi,Stumped

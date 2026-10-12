@@ -1,0 +1,50 @@
+{
+  "match_id": "M0022",
+  "season": "2023",
+  "format": "T20",
+  "date": "2023-05-13",
+  "venue": {
+    "code": "MUM01"
+  },
+  "teams": [
+    {
+      "code": "MUM",
+      "name": "Mumbai Sharks"
+    },
+    {
+      "code": "BLR",
+      "name": "Bangalore Royals"
+    }
+  ],
+  "toss": {
+    "winner": "MUM",
+    "decision": "Field"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "MUM",
+    "margin": 0,
+    "margin_type": "Wickets",
+    "man_of_match": "P0079"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "BLR",
+      "bowling_team": "MUM",
+      "runs": 172,
+      "wickets": 4,
+      "overs": 20.0,
+      "extras": 5
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "MUM",
+      "bowling_team": "BLR",
+      "runs": 189,
+      "wickets": 10,
+      "overs": 19.0,
+      "extras": 5
+    }
+  ]
+}

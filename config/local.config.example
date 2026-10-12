@@ -1,0 +1,27 @@
+# Local machine configuration for the Cricket Analytics Platform.
+#
+# 01_Setup\check_prerequisites.bat copies this file to local.config (same folder) on first run;
+# then set SQL_INSTANCE there. Every setup script reads it.
+# local.config is gitignored - it never gets committed. Nothing in this repo hardcodes
+# an instance name, credential, or absolute path; everything reads from this file.
+
+# SQL Server instance name, exactly as you'd pass it to sqlcmd -S.
+# Examples: localhost | .\SQLEXPRESS | MYPC\SQLEXPRESS2019
+SQL_INSTANCE=
+
+# Authentication mode for setup/ETL scripts: WINDOWS or SQL
+SQL_AUTH_MODE=WINDOWS
+
+# Only used when SQL_AUTH_MODE=SQL. Leave blank for Windows Auth.
+SQL_USER=
+SQL_PASSWORD=
+
+# Database names (defaults match the DDL scripts - change only if you also change the DDL).
+SOURCE_DB_NAME=CricketSource
+WAREHOUSE_DB_NAME=CricketDW
+
+# Passwords for the three least-privilege SQL logins created by 01_Setup/sql/09_security.sql.
+# Use strong passwords (Windows password policy applies). Avoid quotes, %, !, ^, &, |, <, > and =.
+SOURCE_READER_PASSWORD=
+ETL_WRITER_PASSWORD=
+RPT_READER_PASSWORD=

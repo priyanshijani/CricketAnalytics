@@ -1,0 +1,50 @@
+{
+  "match_id": "M0025",
+  "season": "2023",
+  "format": "T20",
+  "date": "2023-05-19",
+  "venue": {
+    "code": "MUM01"
+  },
+  "teams": [
+    {
+      "code": "MUM",
+      "name": "Mumbai Sharks"
+    },
+    {
+      "code": "CHE",
+      "name": "Chennai Kings"
+    }
+  ],
+  "toss": {
+    "winner": "MUM",
+    "decision": "Field"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "CHE",
+    "margin": 8,
+    "margin_type": "Runs",
+    "man_of_match": "P0041"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "CHE",
+      "bowling_team": "MUM",
+      "runs": 183,
+      "wickets": 6,
+      "overs": 20.0,
+      "extras": 8
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "MUM",
+      "bowling_team": "CHE",
+      "runs": 175,
+      "wickets": 5,
+      "overs": 20.0,
+      "extras": 7
+    }
+  ]
+}

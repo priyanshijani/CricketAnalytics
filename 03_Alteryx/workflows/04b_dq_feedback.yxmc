@@ -1,0 +1,1761 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2026.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="74" y="45" width="514" height="133" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>0. Run log - Started</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>0. Run log - Started</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="2">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+            <Position x="99" y="94" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <NumRows value="1" />
+              <Fields>
+                <Field name="Run" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>1</c>
+                </r>
+              </Data>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>One row so the Started log call fires.</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Run" source="TextInput:" type="Int32" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+        </Node>
+        <Node ToolID="3">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="234" y="94" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="&quot;04b_dq_feedback&quot;" field="WorkflowName" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="&quot;Started&quot;" field="Status" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="0" field="RowsIn" size="8" type="Int64" enabled="true" />
+                <FormulaField expression="0" field="RowsOut" size="8" type="Int64" enabled="true" />
+                <FormulaField expression="0" field="RowsRejected" size="8" type="Int64" enabled="true" />
+                <FormulaField expression="&quot;&quot;" field="ErrorMessage" size="1073741823" type="V_WString" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Started row</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Run" source="TextInput:" type="Int32" />
+                <Field name="WorkflowName" size="1073741823" source="Formula: &quot;04b_dq_feedback&quot;" type="V_WString" />
+                <Field name="Status" size="1073741823" source="Formula: &quot;Started&quot;" type="V_WString" />
+                <Field name="RowsIn" source="Formula: 0" type="Int64" />
+                <Field name="RowsOut" source="Formula: 0" type="Int64" />
+                <Field name="RowsRejected" source="Formula: 0" type="Int64" />
+                <Field name="ErrorMessage" size="1073741823" source="Formula: &quot;&quot;" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="4">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="369" y="94" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Run" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Drop helper field</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="WorkflowName" size="1073741823" source="Formula: &quot;04b_dq_feedback&quot;" type="V_WString" />
+                <Field name="Status" size="1073741823" source="Formula: &quot;Started&quot;" type="V_WString" />
+                <Field name="RowsIn" source="Formula: 0" type="Int64" />
+                <Field name="RowsOut" source="Formula: 0" type="Int64" />
+                <Field name="RowsRejected" source="Formula: 0" type="Int64" />
+                <Field name="ErrorMessage" size="1073741823" source="Formula: &quot;&quot;" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="5">
+          <GuiSettings Plugin="Log_ETL_Event.yxmc">
+            <Position x="504" y="94" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="Input.Input5"><![CDATA[WorkflowName=WorkflowName
+Status=Status
+RowsIn=RowsIn
+RowsOut=RowsOut
+RowsRejected=RowsRejected
+ErrorMessage=ErrorMessage
+]]></Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Audit_ETLRunLog: Started</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="..\macros\Log_ETL_Event.yxmc" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="74" y="234" width="1729" height="534" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>1. Analyse - quality score per entity and dimension (latest 04 run)</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>1. Analyse - quality score per entity and dimension (latest 04 run)</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="7">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="99" y="283" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File />
+              <FormatSpecificOptions UseDcm="true" Format="23" RecordLimit="">
+                <SingleRowFetch>False</SingleRowFetch>
+                <ReadCentroids>False</ReadCentroids>
+                <Query>SELECT LoadRunId, EntityType, RowsIn FROM audit.DQRunEntity WHERE LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND RowsIn &gt; 0</Query>
+                <TableStyle>Quoted</TableStyle>
+                <PostSQL />
+                <CacheData>False</CacheData>
+                <Table />
+                <SessionReadOnly>True</SessionReadOnly>
+                <ReadUncommitted>False</ReadUncommitted>
+                <Connection DcmType="ConnectionId" DcmTitle="CricketDW_DSN" DcmSchemaId="database-odbc-dsn-mssql-nocreds">f2959105-04cd-4379-a3c1-64baa7fb78b9</Connection>
+                <NoProgress>True</NoProgress>
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <PreSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Rows checked per entity in the latest 04 run (measured by 04)</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="LoadRunId" size="50" source="File: SELECT LoadRunId, EntityType, RowsIn FROM audit.DQRunEntity WHERE LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND RowsIn &gt; 0" type="V_String" />
+                <Field name="EntityType" size="30" source="File: SELECT LoadRunId, EntityType, RowsIn FROM audit.DQRunEntity WHERE LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND RowsIn &gt; 0" type="V_String" />
+                <Field name="RowsIn" source="File: SELECT LoadRunId, EntityType, RowsIn FROM audit.DQRunEntity WHERE LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND RowsIn &gt; 0" type="Int32" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="8">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="99" y="417" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File />
+              <FormatSpecificOptions UseDcm="true" Format="23" RecordLimit="">
+                <SingleRowFetch>False</SingleRowFetch>
+                <ReadCentroids>False</ReadCentroids>
+                <Query>SELECT DISTINCT EntityType, Dimension FROM config.DQRule WHERE IsActive = 1 AND EntityType &lt;&gt; 'File' UNION SELECT DISTINCT EntityType, 'Overall' FROM config.DQRule WHERE EntityType &lt;&gt; 'File'</Query>
+                <TableStyle>Quoted</TableStyle>
+                <PostSQL />
+                <CacheData>False</CacheData>
+                <Table />
+                <SessionReadOnly>True</SessionReadOnly>
+                <ReadUncommitted>False</ReadUncommitted>
+                <Connection DcmType="ConnectionId" DcmTitle="CricketDW_DSN" DcmSchemaId="database-odbc-dsn-mssql-nocreds">f2959105-04cd-4379-a3c1-64baa7fb78b9</Connection>
+                <NoProgress>True</NoProgress>
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <PreSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Every dimension each entity is checked on, plus Overall (row accepted)</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="EntityType" size="30" source="File: SELECT DISTINCT EntityType, Dimension FROM config.DQRule WHERE IsActive = 1 AND EntityType &lt;&gt; 'File' UNION SELECT DISTINCT EntityType, 'Overall' FROM config.DQRule WHERE EntityType &lt;&gt; 'File'" type="V_String" />
+                <Field name="Dimension" size="20" source="File: SELECT DISTINCT EntityType, Dimension FROM config.DQRule WHERE IsActive = 1 AND EntityType &lt;&gt; 'File' UNION SELECT DISTINCT EntityType, 'Overall' FROM config.DQRule WHERE EntityType &lt;&gt; 'File'" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="9">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="99" y="564" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File />
+              <FormatSpecificOptions UseDcm="true" Format="23" RecordLimit="">
+                <SingleRowFetch>False</SingleRowFetch>
+                <ReadCentroids>False</ReadCentroids>
+                <Query>SELECT x.EntityType, r.Dimension, x.StgRowId, x.ActionTaken FROM audit.Audit_DQException AS x JOIN config.DQRule AS r ON r.RuleId = x.RuleId WHERE x.LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND x.EntityType &lt;&gt; 'File'</Query>
+                <TableStyle>Quoted</TableStyle>
+                <PostSQL />
+                <CacheData>False</CacheData>
+                <Table />
+                <SessionReadOnly>True</SessionReadOnly>
+                <ReadUncommitted>False</ReadUncommitted>
+                <Connection DcmType="ConnectionId" DcmTitle="CricketDW_DSN" DcmSchemaId="database-odbc-dsn-mssql-nocreds">f2959105-04cd-4379-a3c1-64baa7fb78b9</Connection>
+                <NoProgress>True</NoProgress>
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <PreSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Violations of the latest run with their dimension</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="EntityType" size="30" source="File: SELECT x.EntityType, r.Dimension, x.StgRowId, x.ActionTaken FROM audit.Audit_DQException AS x JOIN config.DQRule AS r ON r.RuleId = x.RuleId WHERE x.LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND x.EntityType &lt;&gt; 'File'" type="V_String" />
+                <Field name="Dimension" size="20" source="File: SELECT x.EntityType, r.Dimension, x.StgRowId, x.ActionTaken FROM audit.Audit_DQException AS x JOIN config.DQRule AS r ON r.RuleId = x.RuleId WHERE x.LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND x.EntityType &lt;&gt; 'File'" type="V_String" />
+                <Field name="StgRowId" source="File: SELECT x.EntityType, r.Dimension, x.StgRowId, x.ActionTaken FROM audit.Audit_DQException AS x JOIN config.DQRule AS r ON r.RuleId = x.RuleId WHERE x.LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND x.EntityType &lt;&gt; 'File'" type="Int64" />
+                <Field name="ActionTaken" size="20" source="File: SELECT x.EntityType, r.Dimension, x.StgRowId, x.ActionTaken FROM audit.Audit_DQException AS x JOIN config.DQRule AS r ON r.RuleId = x.RuleId WHERE x.LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND x.EntityType &lt;&gt; 'File'" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="10">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="234" y="283" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="EntityType" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="EntityType" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_EntityType" selected="False" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Score grid: every checked entity x its dimensions</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Left">
+              <RecordInfo>
+                <Field name="LoadRunId" size="50" source="File: SELECT LoadRunId, EntityType, RowsIn FROM audit.DQRunEntity WHERE LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND RowsIn &gt; 0" type="V_String" />
+                <Field name="EntityType" size="30" source="File: SELECT LoadRunId, EntityType, RowsIn FROM audit.DQRunEntity WHERE LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND RowsIn &gt; 0" type="V_String" />
+                <Field name="RowsIn" source="File: SELECT LoadRunId, EntityType, RowsIn FROM audit.DQRunEntity WHERE LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND RowsIn &gt; 0" type="Int32" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="Join">
+              <RecordInfo>
+                <Field name="LoadRunId" size="50" source="File: SELECT LoadRunId, EntityType, RowsIn FROM audit.DQRunEntity WHERE LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND RowsIn &gt; 0" type="V_String" />
+                <Field name="EntityType" size="30" source="File: SELECT LoadRunId, EntityType, RowsIn FROM audit.DQRunEntity WHERE LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND RowsIn &gt; 0" type="V_String" />
+                <Field name="RowsIn" source="File: SELECT LoadRunId, EntityType, RowsIn FROM audit.DQRunEntity WHERE LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND RowsIn &gt; 0" type="Int32" />
+                <Field name="Dimension" size="20" source="File: SELECT DISTINCT EntityType, Dimension FROM config.DQRule WHERE IsActive = 1 AND EntityType &lt;&gt; 'File' UNION SELECT DISTINCT EntityType, 'Overall' FROM config.DQRule WHERE EntityType &lt;&gt; 'File'" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="Right">
+              <RecordInfo>
+                <Field name="EntityType" size="30" source="File: SELECT DISTINCT EntityType, Dimension FROM config.DQRule WHERE IsActive = 1 AND EntityType &lt;&gt; 'File' UNION SELECT DISTINCT EntityType, 'Overall' FROM config.DQRule WHERE EntityType &lt;&gt; 'File'" type="V_String" />
+                <Field name="Dimension" size="20" source="File: SELECT DISTINCT EntityType, Dimension FROM config.DQRule WHERE IsActive = 1 AND EntityType &lt;&gt; 'File' UNION SELECT DISTINCT EntityType, 'Overall' FROM config.DQRule WHERE EntityType &lt;&gt; 'File'" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="11">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="234" y="564" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="EntityType" action="GroupBy" rename="EntityType" />
+                <SummarizeField field="Dimension" action="GroupBy" rename="Dimension" />
+                <SummarizeField field="StgRowId" action="GroupBy" rename="StgRowId" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Distinct failing rows per dimension</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="EntityType" size="30" source="Summarize: GroupBy - EntityType" type="V_String" />
+                <Field name="Dimension" size="20" source="Summarize: GroupBy - Dimension" type="V_String" />
+                <Field name="StgRowId" source="Summarize: GroupBy - StgRowId" type="Int64" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="12">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="368" y="564" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="EntityType" action="GroupBy" rename="EntityType" />
+                <SummarizeField field="Dimension" action="GroupBy" rename="Dimension" />
+                <SummarizeField field="StgRowId" action="Count" rename="RowsFailed" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Failing rows per dimension</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="EntityType" size="30" source="Summarize: GroupBy - EntityType" type="V_String" />
+                <Field name="Dimension" size="20" source="Summarize: GroupBy - Dimension" type="V_String" />
+                <Field name="RowsFailed" source="Summarize: Count - EntityType" type="Int64" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="13">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="233" y="685" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[ActionTaken] = "Rejected"</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Rejected rows = not accepted</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="True">
+              <RecordInfo>
+                <Field name="EntityType" size="30" source="File: SELECT x.EntityType, r.Dimension, x.StgRowId, x.ActionTaken FROM audit.Audit_DQException AS x JOIN config.DQRule AS r ON r.RuleId = x.RuleId WHERE x.LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND x.EntityType &lt;&gt; 'File'" type="V_String" />
+                <Field name="Dimension" size="20" source="File: SELECT x.EntityType, r.Dimension, x.StgRowId, x.ActionTaken FROM audit.Audit_DQException AS x JOIN config.DQRule AS r ON r.RuleId = x.RuleId WHERE x.LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND x.EntityType &lt;&gt; 'File'" type="V_String" />
+                <Field name="StgRowId" source="File: SELECT x.EntityType, r.Dimension, x.StgRowId, x.ActionTaken FROM audit.Audit_DQException AS x JOIN config.DQRule AS r ON r.RuleId = x.RuleId WHERE x.LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND x.EntityType &lt;&gt; 'File'" type="Int64" />
+                <Field name="ActionTaken" size="20" source="File: SELECT x.EntityType, r.Dimension, x.StgRowId, x.ActionTaken FROM audit.Audit_DQException AS x JOIN config.DQRule AS r ON r.RuleId = x.RuleId WHERE x.LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND x.EntityType &lt;&gt; 'File'" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="False">
+              <RecordInfo>
+                <Field name="EntityType" size="30" source="File: SELECT x.EntityType, r.Dimension, x.StgRowId, x.ActionTaken FROM audit.Audit_DQException AS x JOIN config.DQRule AS r ON r.RuleId = x.RuleId WHERE x.LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND x.EntityType &lt;&gt; 'File'" type="V_String" />
+                <Field name="Dimension" size="20" source="File: SELECT x.EntityType, r.Dimension, x.StgRowId, x.ActionTaken FROM audit.Audit_DQException AS x JOIN config.DQRule AS r ON r.RuleId = x.RuleId WHERE x.LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND x.EntityType &lt;&gt; 'File'" type="V_String" />
+                <Field name="StgRowId" source="File: SELECT x.EntityType, r.Dimension, x.StgRowId, x.ActionTaken FROM audit.Audit_DQException AS x JOIN config.DQRule AS r ON r.RuleId = x.RuleId WHERE x.LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND x.EntityType &lt;&gt; 'File'" type="Int64" />
+                <Field name="ActionTaken" size="20" source="File: SELECT x.EntityType, r.Dimension, x.StgRowId, x.ActionTaken FROM audit.Audit_DQException AS x JOIN config.DQRule AS r ON r.RuleId = x.RuleId WHERE x.LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND x.EntityType &lt;&gt; 'File'" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="14">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="369" y="684" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="EntityType" action="GroupBy" rename="EntityType" />
+                <SummarizeField field="StgRowId" action="GroupBy" rename="StgRowId" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Distinct rejected rows</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="EntityType" size="30" source="Summarize: GroupBy - EntityType" type="V_String" />
+                <Field name="StgRowId" source="Summarize: GroupBy - StgRowId" type="Int64" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="15">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="504" y="685" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="EntityType" action="GroupBy" rename="EntityType" />
+                <SummarizeField field="StgRowId" action="Count" rename="RowsFailed" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Rejected rows per entity</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="EntityType" size="30" source="Summarize: GroupBy - EntityType" type="V_String" />
+                <Field name="RowsFailed" source="Summarize: Count - EntityType" type="Int64" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="16">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="639" y="685" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="&quot;Overall&quot;" field="Dimension" size="1073741823" type="V_WString" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Dimension = Overall</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="EntityType" size="30" source="Summarize: GroupBy - EntityType" type="V_String" />
+                <Field name="RowsFailed" source="Summarize: Count - EntityType" type="Int64" />
+                <Field name="Dimension" size="1073741823" source="Formula: &quot;Overall&quot;" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="17">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="774" y="564" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Warning</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Failing rows per entity x dimension</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="EntityType" size="30" source="Summarize: GroupBy - EntityType" type="V_String" />
+                <Field name="Dimension" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+                <Field name="RowsFailed" source="Summarize: Count - EntityType" type="Int64" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+        <Node ToolID="18">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="909" y="417" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="EntityType" />
+                <Field field="Dimension" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="EntityType" />
+                <Field field="Dimension" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_EntityType" selected="False" />
+                    <SelectField field="Right_Dimension" selected="False" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>J = dimension with failures, L = clean dimension</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Left">
+              <RecordInfo>
+                <Field name="LoadRunId" size="50" source="File: SELECT LoadRunId, EntityType, RowsIn FROM audit.DQRunEntity WHERE LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND RowsIn &gt; 0" type="V_String" />
+                <Field name="EntityType" size="30" source="File: SELECT LoadRunId, EntityType, RowsIn FROM audit.DQRunEntity WHERE LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND RowsIn &gt; 0" type="V_String" />
+                <Field name="RowsIn" source="File: SELECT LoadRunId, EntityType, RowsIn FROM audit.DQRunEntity WHERE LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND RowsIn &gt; 0" type="Int32" />
+                <Field name="Dimension" size="20" source="File: SELECT DISTINCT EntityType, Dimension FROM config.DQRule WHERE IsActive = 1 AND EntityType &lt;&gt; 'File' UNION SELECT DISTINCT EntityType, 'Overall' FROM config.DQRule WHERE EntityType &lt;&gt; 'File'" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="Join">
+              <RecordInfo>
+                <Field name="LoadRunId" size="50" source="File: SELECT LoadRunId, EntityType, RowsIn FROM audit.DQRunEntity WHERE LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND RowsIn &gt; 0" type="V_String" />
+                <Field name="EntityType" size="30" source="File: SELECT LoadRunId, EntityType, RowsIn FROM audit.DQRunEntity WHERE LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND RowsIn &gt; 0" type="V_String" />
+                <Field name="RowsIn" source="File: SELECT LoadRunId, EntityType, RowsIn FROM audit.DQRunEntity WHERE LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND RowsIn &gt; 0" type="Int32" />
+                <Field name="Dimension" size="20" source="File: SELECT DISTINCT EntityType, Dimension FROM config.DQRule WHERE IsActive = 1 AND EntityType &lt;&gt; 'File' UNION SELECT DISTINCT EntityType, 'Overall' FROM config.DQRule WHERE EntityType &lt;&gt; 'File'" type="V_String" />
+                <Field name="RowsFailed" source="Summarize: Count - EntityType" type="Int64" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="Right">
+              <RecordInfo>
+                <Field name="EntityType" size="30" source="Summarize: GroupBy - EntityType" type="V_String" />
+                <Field name="Dimension" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+                <Field name="RowsFailed" source="Summarize: Count - EntityType" type="Int64" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="19">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1044" y="417" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="0" field="RowsFailed" size="8" type="Int64" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>No failures in this dimension</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="LoadRunId" size="50" source="File: SELECT LoadRunId, EntityType, RowsIn FROM audit.DQRunEntity WHERE LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND RowsIn &gt; 0" type="V_String" />
+                <Field name="EntityType" size="30" source="File: SELECT LoadRunId, EntityType, RowsIn FROM audit.DQRunEntity WHERE LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND RowsIn &gt; 0" type="V_String" />
+                <Field name="RowsIn" source="File: SELECT LoadRunId, EntityType, RowsIn FROM audit.DQRunEntity WHERE LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND RowsIn &gt; 0" type="Int32" />
+                <Field name="Dimension" size="20" source="File: SELECT DISTINCT EntityType, Dimension FROM config.DQRule WHERE IsActive = 1 AND EntityType &lt;&gt; 'File' UNION SELECT DISTINCT EntityType, 'Overall' FROM config.DQRule WHERE EntityType &lt;&gt; 'File'" type="V_String" />
+                <Field name="RowsFailed" source="Formula: 0" type="Int64" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="20">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="1179" y="417" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Warning</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Full score grid</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="LoadRunId" size="50" source="File: SELECT LoadRunId, EntityType, RowsIn FROM audit.DQRunEntity WHERE LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND RowsIn &gt; 0" type="V_String" />
+                <Field name="EntityType" size="30" source="File: SELECT LoadRunId, EntityType, RowsIn FROM audit.DQRunEntity WHERE LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND RowsIn &gt; 0" type="V_String" />
+                <Field name="RowsIn" source="File: SELECT LoadRunId, EntityType, RowsIn FROM audit.DQRunEntity WHERE LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND RowsIn &gt; 0" type="Int32" />
+                <Field name="Dimension" size="20" source="File: SELECT DISTINCT EntityType, Dimension FROM config.DQRule WHERE IsActive = 1 AND EntityType &lt;&gt; 'File' UNION SELECT DISTINCT EntityType, 'Overall' FROM config.DQRule WHERE EntityType &lt;&gt; 'File'" type="V_String" />
+                <Field name="RowsFailed" source="(Multiple Sources)" type="Int64" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+        <Node ToolID="21">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1314" y="417" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="Round(100 * ([RowsIn] - [RowsFailed]) / [RowsIn], 0.01)" field="ScorePct" size="7.2" type="FixedDecimal" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Score = % of checked rows with no violation in this dimension</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="LoadRunId" size="50" source="File: SELECT LoadRunId, EntityType, RowsIn FROM audit.DQRunEntity WHERE LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND RowsIn &gt; 0" type="V_String" />
+                <Field name="EntityType" size="30" source="File: SELECT LoadRunId, EntityType, RowsIn FROM audit.DQRunEntity WHERE LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND RowsIn &gt; 0" type="V_String" />
+                <Field name="RowsIn" source="File: SELECT LoadRunId, EntityType, RowsIn FROM audit.DQRunEntity WHERE LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND RowsIn &gt; 0" type="Int32" />
+                <Field name="Dimension" size="20" source="File: SELECT DISTINCT EntityType, Dimension FROM config.DQRule WHERE IsActive = 1 AND EntityType &lt;&gt; 'File' UNION SELECT DISTINCT EntityType, 'Overall' FROM config.DQRule WHERE EntityType &lt;&gt; 'File'" type="V_String" />
+                <Field name="RowsFailed" source="(Multiple Sources)" type="Int64" />
+                <Field name="ScorePct" scale="2" size="7" source="Formula: Round(100 * ([RowsIn] - [RowsFailed]) / [RowsIn], 0.01)" type="FixedDecimal" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="22">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="1449" y="417" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="LoadRunId" selected="True" type="V_String" size="50" />
+                <SelectField field="EntityType" selected="True" type="V_String" size="30" />
+                <SelectField field="Dimension" selected="True" type="V_String" size="20" />
+                <SelectField field="RowsIn" selected="True" rename="RowsChecked" type="Int32" size="4" />
+                <SelectField field="RowsFailed" selected="True" type="Int32" size="4" />
+                <SelectField field="ScorePct" selected="True" type="FixedDecimal" size="7.2" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Exactly the audit.DQRunScore columns</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="LoadRunId" size="50" source="File: SELECT LoadRunId, EntityType, RowsIn FROM audit.DQRunEntity WHERE LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND RowsIn &gt; 0" type="V_String" />
+                <Field name="EntityType" size="30" source="File: SELECT LoadRunId, EntityType, RowsIn FROM audit.DQRunEntity WHERE LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND RowsIn &gt; 0" type="V_String" />
+                <Field name="Dimension" size="20" source="File: SELECT DISTINCT EntityType, Dimension FROM config.DQRule WHERE IsActive = 1 AND EntityType &lt;&gt; 'File' UNION SELECT DISTINCT EntityType, 'Overall' FROM config.DQRule WHERE EntityType &lt;&gt; 'File'" type="V_String" />
+                <Field name="RowsChecked" source="File: SELECT LoadRunId, EntityType, RowsIn FROM audit.DQRunEntity WHERE LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND RowsIn &gt; 0" type="Int32" />
+                <Field name="RowsFailed" source="(Multiple Sources)" type="Int32" />
+                <Field name="ScorePct" scale="2" size="7" source="Formula: Round(100 * ([RowsIn] - [RowsFailed]) / [RowsIn], 0.01)" type="FixedDecimal" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="23">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="1584" y="417" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File />
+              <Passwords />
+              <Disable>False</Disable>
+              <FormatSpecificOptions UseDcm="true" MaxRecords="" Format="23">
+                <SpatialObjSize>8000</SpatialObjSize>
+                <TableStyle>Quoted</TableStyle>
+                <TransactionMessages>False</TransactionMessages>
+                <Geometry>True</Geometry>
+                <Table>audit.DQRunScore</Table>
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <OutputOption>Append</OutputOption>
+                <Connection DcmType="ConnectionId" DcmTitle="CricketDW_DSN" DcmSchemaId="database-odbc-dsn-mssql-nocreds">f2959105-04cd-4379-a3c1-64baa7fb78b9</Connection>
+                <Projection />
+                <PostSQL />
+                <TransactionSize>10000</TransactionSize>
+                <PreSQL>DELETE FROM audit.DQRunScore WHERE LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity)</PreSQL>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Append - PreSQL first deletes this run's scores, so re-running 04b is safe</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="24">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+            <Position x="1584" y="564" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SortInfo locale="0">
+                <Field field="EntityType" order="Ascending" />
+                <Field field="Dimension" order="Ascending" />
+              </SortInfo>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Scorecard order</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="LoadRunId" size="50" source="File: SELECT LoadRunId, EntityType, RowsIn FROM audit.DQRunEntity WHERE LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND RowsIn &gt; 0" type="V_String" />
+                <Field name="EntityType" size="30" source="File: SELECT LoadRunId, EntityType, RowsIn FROM audit.DQRunEntity WHERE LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND RowsIn &gt; 0" type="V_String" />
+                <Field name="Dimension" size="20" source="File: SELECT DISTINCT EntityType, Dimension FROM config.DQRule WHERE IsActive = 1 AND EntityType &lt;&gt; 'File' UNION SELECT DISTINCT EntityType, 'Overall' FROM config.DQRule WHERE EntityType &lt;&gt; 'File'" type="V_String" />
+                <Field name="RowsChecked" source="File: SELECT LoadRunId, EntityType, RowsIn FROM audit.DQRunEntity WHERE LoadRunId = (SELECT MAX(LoadRunId) FROM audit.DQRunEntity) AND RowsIn &gt; 0" type="Int32" />
+                <Field name="RowsFailed" source="(Multiple Sources)" type="Int32" />
+                <Field name="ScorePct" scale="2" size="7" source="Formula: Round(100 * ([RowsIn] - [RowsFailed]) / [RowsIn], 0.01)" type="FixedDecimal" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+        </Node>
+        <Node ToolID="25">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="1719" y="564" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="0">..\..\02_SampleData\_runtime\dq_reports\dq_scorecard_latest_run.csv</File>
+              <Passwords />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <LineEndStyle>CRLF</LineEndStyle>
+                <Delimeter>,</Delimeter>
+                <ForceQuotes>False</ForceQuotes>
+                <HeaderRow>True</HeaderRow>
+                <CodePage>65001</CodePage>
+                <WriteBOM>True</WriteBOM>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Scorecard of the latest run (overwritten each run)</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="74" y="812" width="379" height="133" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>2. Analyse - root causes of open issues</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>2. Analyse - root causes of open issues</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="27">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="99" y="861" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File />
+              <FormatSpecificOptions UseDcm="true" Format="23" RecordLimit="">
+                <SingleRowFetch>False</SingleRowFetch>
+                <ReadCentroids>False</ReadCentroids>
+                <Query>SELECT RootCauseCategory, OwnerName, EntityType, RuleViolated, ActionTaken, OpenIssues, SourcesAffected, OldestAgeDays FROM audit.vw_DQRootCause</Query>
+                <TableStyle>Quoted</TableStyle>
+                <PostSQL />
+                <CacheData>False</CacheData>
+                <Table />
+                <SessionReadOnly>True</SessionReadOnly>
+                <ReadUncommitted>False</ReadUncommitted>
+                <Connection DcmType="ConnectionId" DcmTitle="CricketDW_DSN" DcmSchemaId="database-odbc-dsn-mssql-nocreds">f2959105-04cd-4379-a3c1-64baa7fb78b9</Connection>
+                <NoProgress>True</NoProgress>
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <PreSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Open issues rolled up by root cause, owner and rule</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="RootCauseCategory" size="40" source="File: SELECT RootCauseCategory, OwnerName, EntityType, RuleViolated, ActionTaken, OpenIssues, SourcesAffected, OldestAgeDays FROM audit.vw_DQRootCause" type="V_String" />
+                <Field name="OwnerName" size="100" source="File: SELECT RootCauseCategory, OwnerName, EntityType, RuleViolated, ActionTaken, OpenIssues, SourcesAffected, OldestAgeDays FROM audit.vw_DQRootCause" type="V_String" />
+                <Field name="EntityType" size="30" source="File: SELECT RootCauseCategory, OwnerName, EntityType, RuleViolated, ActionTaken, OpenIssues, SourcesAffected, OldestAgeDays FROM audit.vw_DQRootCause" type="V_String" />
+                <Field name="RuleViolated" size="100" source="File: SELECT RootCauseCategory, OwnerName, EntityType, RuleViolated, ActionTaken, OpenIssues, SourcesAffected, OldestAgeDays FROM audit.vw_DQRootCause" type="V_String" />
+                <Field name="ActionTaken" size="20" source="File: SELECT RootCauseCategory, OwnerName, EntityType, RuleViolated, ActionTaken, OpenIssues, SourcesAffected, OldestAgeDays FROM audit.vw_DQRootCause" type="V_String" />
+                <Field name="OpenIssues" source="File: SELECT RootCauseCategory, OwnerName, EntityType, RuleViolated, ActionTaken, OpenIssues, SourcesAffected, OldestAgeDays FROM audit.vw_DQRootCause" type="Int32" />
+                <Field name="SourcesAffected" source="File: SELECT RootCauseCategory, OwnerName, EntityType, RuleViolated, ActionTaken, OpenIssues, SourcesAffected, OldestAgeDays FROM audit.vw_DQRootCause" type="Int32" />
+                <Field name="OldestAgeDays" source="File: SELECT RootCauseCategory, OwnerName, EntityType, RuleViolated, ActionTaken, OpenIssues, SourcesAffected, OldestAgeDays FROM audit.vw_DQRootCause" type="Int32" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="28">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+            <Position x="234" y="861" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SortInfo locale="0">
+                <Field field="OpenIssues" order="Descending" />
+                <Field field="RootCauseCategory" order="Ascending" />
+                <Field field="RuleViolated" order="Ascending" />
+              </SortInfo>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Pareto order - biggest causes first</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="RootCauseCategory" size="40" source="File: SELECT RootCauseCategory, OwnerName, EntityType, RuleViolated, ActionTaken, OpenIssues, SourcesAffected, OldestAgeDays FROM audit.vw_DQRootCause" type="V_String" />
+                <Field name="OwnerName" size="100" source="File: SELECT RootCauseCategory, OwnerName, EntityType, RuleViolated, ActionTaken, OpenIssues, SourcesAffected, OldestAgeDays FROM audit.vw_DQRootCause" type="V_String" />
+                <Field name="EntityType" size="30" source="File: SELECT RootCauseCategory, OwnerName, EntityType, RuleViolated, ActionTaken, OpenIssues, SourcesAffected, OldestAgeDays FROM audit.vw_DQRootCause" type="V_String" />
+                <Field name="RuleViolated" size="100" source="File: SELECT RootCauseCategory, OwnerName, EntityType, RuleViolated, ActionTaken, OpenIssues, SourcesAffected, OldestAgeDays FROM audit.vw_DQRootCause" type="V_String" />
+                <Field name="ActionTaken" size="20" source="File: SELECT RootCauseCategory, OwnerName, EntityType, RuleViolated, ActionTaken, OpenIssues, SourcesAffected, OldestAgeDays FROM audit.vw_DQRootCause" type="V_String" />
+                <Field name="OpenIssues" source="File: SELECT RootCauseCategory, OwnerName, EntityType, RuleViolated, ActionTaken, OpenIssues, SourcesAffected, OldestAgeDays FROM audit.vw_DQRootCause" type="Int32" />
+                <Field name="SourcesAffected" source="File: SELECT RootCauseCategory, OwnerName, EntityType, RuleViolated, ActionTaken, OpenIssues, SourcesAffected, OldestAgeDays FROM audit.vw_DQRootCause" type="Int32" />
+                <Field name="OldestAgeDays" source="File: SELECT RootCauseCategory, OwnerName, EntityType, RuleViolated, ActionTaken, OpenIssues, SourcesAffected, OldestAgeDays FROM audit.vw_DQRootCause" type="Int32" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+        </Node>
+        <Node ToolID="29">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="369" y="861" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="0">..\..\02_SampleData\_runtime\dq_reports\dq_root_cause_summary.csv</File>
+              <Passwords />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <LineEndStyle>CRLF</LineEndStyle>
+                <Delimeter>,</Delimeter>
+                <ForceQuotes>False</ForceQuotes>
+                <HeaderRow>True</HeaderRow>
+                <CodePage>65001</CodePage>
+                <WriteBOM>True</WriteBOM>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Root-cause summary (overwritten each run)</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="74" y="1001" width="1189" height="293" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>3. Improve - open-issues report per owner</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>3. Improve - open-issues report per owner</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="31">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="99" y="1050" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File />
+              <FormatSpecificOptions UseDcm="true" Format="23" RecordLimit="">
+                <SingleRowFetch>False</SingleRowFetch>
+                <ReadCentroids>False</ReadCentroids>
+                <Query>SELECT OwnerCode, OwnerName, RootCauseCategory, EntityType, RuleViolated, ActionTaken, SourceFile, NaturalKey, RawValue, RemediationHint, FirstSeenUtc, RunsSeen, AgeDays, PlantedIssue FROM audit.vw_DQIssue WHERE IssueStatus = 'Open'</Query>
+                <TableStyle>Quoted</TableStyle>
+                <PostSQL />
+                <CacheData>False</CacheData>
+                <Table />
+                <SessionReadOnly>True</SessionReadOnly>
+                <ReadUncommitted>False</ReadUncommitted>
+                <Connection DcmType="ConnectionId" DcmTitle="CricketDW_DSN" DcmSchemaId="database-odbc-dsn-mssql-nocreds">f2959105-04cd-4379-a3c1-64baa7fb78b9</Connection>
+                <NoProgress>True</NoProgress>
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <PreSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Open issues with owner, root cause and remediation (lifecycle derived in audit.vw_DQIssue)</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="OwnerCode" size="40" source="File: SELECT OwnerCode, OwnerName, RootCauseCategory, EntityType, RuleViolated, ActionTaken, SourceFile, NaturalKey, RawValue, RemediationHint, FirstSeenUtc, RunsSeen, AgeDays, PlantedIssue FROM audit.vw_DQIssue WHERE IssueStatus = 'Open'" type="V_String" />
+                <Field name="OwnerName" size="100" source="File: SELECT OwnerCode, OwnerName, RootCauseCategory, EntityType, RuleViolated, ActionTaken, SourceFile, NaturalKey, RawValue, RemediationHint, FirstSeenUtc, RunsSeen, AgeDays, PlantedIssue FROM audit.vw_DQIssue WHERE IssueStatus = 'Open'" type="V_String" />
+                <Field name="RootCauseCategory" size="40" source="File: SELECT OwnerCode, OwnerName, RootCauseCategory, EntityType, RuleViolated, ActionTaken, SourceFile, NaturalKey, RawValue, RemediationHint, FirstSeenUtc, RunsSeen, AgeDays, PlantedIssue FROM audit.vw_DQIssue WHERE IssueStatus = 'Open'" type="V_String" />
+                <Field name="EntityType" size="30" source="File: SELECT OwnerCode, OwnerName, RootCauseCategory, EntityType, RuleViolated, ActionTaken, SourceFile, NaturalKey, RawValue, RemediationHint, FirstSeenUtc, RunsSeen, AgeDays, PlantedIssue FROM audit.vw_DQIssue WHERE IssueStatus = 'Open'" type="V_String" />
+                <Field name="RuleViolated" size="100" source="File: SELECT OwnerCode, OwnerName, RootCauseCategory, EntityType, RuleViolated, ActionTaken, SourceFile, NaturalKey, RawValue, RemediationHint, FirstSeenUtc, RunsSeen, AgeDays, PlantedIssue FROM audit.vw_DQIssue WHERE IssueStatus = 'Open'" type="V_String" />
+                <Field name="ActionTaken" size="20" source="File: SELECT OwnerCode, OwnerName, RootCauseCategory, EntityType, RuleViolated, ActionTaken, SourceFile, NaturalKey, RawValue, RemediationHint, FirstSeenUtc, RunsSeen, AgeDays, PlantedIssue FROM audit.vw_DQIssue WHERE IssueStatus = 'Open'" type="V_String" />
+                <Field name="SourceFile" size="260" source="File: SELECT OwnerCode, OwnerName, RootCauseCategory, EntityType, RuleViolated, ActionTaken, SourceFile, NaturalKey, RawValue, RemediationHint, FirstSeenUtc, RunsSeen, AgeDays, PlantedIssue FROM audit.vw_DQIssue WHERE IssueStatus = 'Open'" type="V_String" />
+                <Field name="NaturalKey" size="100" source="File: SELECT OwnerCode, OwnerName, RootCauseCategory, EntityType, RuleViolated, ActionTaken, SourceFile, NaturalKey, RawValue, RemediationHint, FirstSeenUtc, RunsSeen, AgeDays, PlantedIssue FROM audit.vw_DQIssue WHERE IssueStatus = 'Open'" type="V_String" />
+                <Field name="RawValue" size="200" source="File: SELECT OwnerCode, OwnerName, RootCauseCategory, EntityType, RuleViolated, ActionTaken, SourceFile, NaturalKey, RawValue, RemediationHint, FirstSeenUtc, RunsSeen, AgeDays, PlantedIssue FROM audit.vw_DQIssue WHERE IssueStatus = 'Open'" type="V_String" />
+                <Field name="RemediationHint" size="300" source="File: SELECT OwnerCode, OwnerName, RootCauseCategory, EntityType, RuleViolated, ActionTaken, SourceFile, NaturalKey, RawValue, RemediationHint, FirstSeenUtc, RunsSeen, AgeDays, PlantedIssue FROM audit.vw_DQIssue WHERE IssueStatus = 'Open'" type="V_String" />
+                <Field name="FirstSeenUtc" size="19" source="File: SELECT OwnerCode, OwnerName, RootCauseCategory, EntityType, RuleViolated, ActionTaken, SourceFile, NaturalKey, RawValue, RemediationHint, FirstSeenUtc, RunsSeen, AgeDays, PlantedIssue FROM audit.vw_DQIssue WHERE IssueStatus = 'Open'" type="DateTime" />
+                <Field name="RunsSeen" source="File: SELECT OwnerCode, OwnerName, RootCauseCategory, EntityType, RuleViolated, ActionTaken, SourceFile, NaturalKey, RawValue, RemediationHint, FirstSeenUtc, RunsSeen, AgeDays, PlantedIssue FROM audit.vw_DQIssue WHERE IssueStatus = 'Open'" type="Int32" />
+                <Field name="AgeDays" source="File: SELECT OwnerCode, OwnerName, RootCauseCategory, EntityType, RuleViolated, ActionTaken, SourceFile, NaturalKey, RawValue, RemediationHint, FirstSeenUtc, RunsSeen, AgeDays, PlantedIssue FROM audit.vw_DQIssue WHERE IssueStatus = 'Open'" type="Int32" />
+                <Field name="PlantedIssue" size="10" source="File: SELECT OwnerCode, OwnerName, RootCauseCategory, EntityType, RuleViolated, ActionTaken, SourceFile, NaturalKey, RawValue, RemediationHint, FirstSeenUtc, RunsSeen, AgeDays, PlantedIssue FROM audit.vw_DQIssue WHERE IssueStatus = 'Open'" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="32">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="234" y="1210" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File />
+              <FormatSpecificOptions UseDcm="true" Format="23" RecordLimit="">
+                <SingleRowFetch>False</SingleRowFetch>
+                <ReadCentroids>False</ReadCentroids>
+                <Query>SELECT DISTINCT OwnerCode, OwnerName FROM config.DQEntity WHERE OwnerCode IS NOT NULL</Query>
+                <TableStyle>Quoted</TableStyle>
+                <PostSQL />
+                <CacheData>False</CacheData>
+                <Table />
+                <SessionReadOnly>True</SessionReadOnly>
+                <ReadUncommitted>False</ReadUncommitted>
+                <Connection DcmType="ConnectionId" DcmTitle="CricketDW_DSN" DcmSchemaId="database-odbc-dsn-mssql-nocreds">f2959105-04cd-4379-a3c1-64baa7fb78b9</Connection>
+                <NoProgress>True</NoProgress>
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <PreSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Every owner</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="OwnerCode" size="40" source="File: SELECT DISTINCT OwnerCode, OwnerName FROM config.DQEntity WHERE OwnerCode IS NOT NULL" type="V_String" />
+                <Field name="OwnerName" size="100" source="File: SELECT DISTINCT OwnerCode, OwnerName FROM config.DQEntity WHERE OwnerCode IS NOT NULL" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="33">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="234" y="1050" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="OwnerCode" action="GroupBy" rename="OwnerCode" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Owners with open issues</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="OwnerCode" size="40" source="Summarize: GroupBy - OwnerCode" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="34">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="369" y="1050" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="OwnerCode" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="OwnerCode" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_OwnerCode" selected="False" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>L = owner with nothing open</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Left">
+              <RecordInfo>
+                <Field name="OwnerCode" size="40" source="File: SELECT DISTINCT OwnerCode, OwnerName FROM config.DQEntity WHERE OwnerCode IS NOT NULL" type="V_String" />
+                <Field name="OwnerName" size="100" source="File: SELECT DISTINCT OwnerCode, OwnerName FROM config.DQEntity WHERE OwnerCode IS NOT NULL" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="Join">
+              <RecordInfo>
+                <Field name="OwnerCode" size="40" source="File: SELECT DISTINCT OwnerCode, OwnerName FROM config.DQEntity WHERE OwnerCode IS NOT NULL" type="V_String" />
+                <Field name="OwnerName" size="100" source="File: SELECT DISTINCT OwnerCode, OwnerName FROM config.DQEntity WHERE OwnerCode IS NOT NULL" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="Right">
+              <RecordInfo>
+                <Field name="OwnerCode" size="40" source="Summarize: GroupBy - OwnerCode" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="35">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="504" y="1050" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="&quot;(none)&quot;" field="RuleViolated" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="&quot;No open issues.&quot;" field="RemediationHint" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="Null()" field="RootCauseCategory" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="Null()" field="EntityType" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="Null()" field="ActionTaken" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="Null()" field="SourceFile" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="Null()" field="NaturalKey" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="Null()" field="RawValue" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="Null()" field="PlantedIssue" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="Null()" field="FirstSeenUtc" size="19" type="DateTime" enabled="true" />
+                <FormulaField expression="0" field="RunsSeen" size="4" type="Int32" enabled="true" />
+                <FormulaField expression="0" field="AgeDays" size="4" type="Int32" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>All-clear row, so every owner's file is rewritten and never shows stale issues</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="OwnerCode" size="40" source="File: SELECT DISTINCT OwnerCode, OwnerName FROM config.DQEntity WHERE OwnerCode IS NOT NULL" type="V_String" />
+                <Field name="OwnerName" size="100" source="File: SELECT DISTINCT OwnerCode, OwnerName FROM config.DQEntity WHERE OwnerCode IS NOT NULL" type="V_String" />
+                <Field name="RuleViolated" size="1073741823" source="Formula: &quot;(none)&quot;" type="V_WString" />
+                <Field name="RemediationHint" size="1073741823" source="Formula: &quot;No open issues.&quot;" type="V_WString" />
+                <Field name="RootCauseCategory" size="1073741823" source="Formula: Null()" type="V_WString" />
+                <Field name="EntityType" size="1073741823" source="Formula: Null()" type="V_WString" />
+                <Field name="ActionTaken" size="1073741823" source="Formula: Null()" type="V_WString" />
+                <Field name="SourceFile" size="1073741823" source="Formula: Null()" type="V_WString" />
+                <Field name="NaturalKey" size="1073741823" source="Formula: Null()" type="V_WString" />
+                <Field name="RawValue" size="1073741823" source="Formula: Null()" type="V_WString" />
+                <Field name="PlantedIssue" size="1073741823" source="Formula: Null()" type="V_WString" />
+                <Field name="FirstSeenUtc" size="19" source="Formula: Null()" type="DateTime" />
+                <Field name="RunsSeen" source="Formula: 0" type="Int32" />
+                <Field name="AgeDays" source="Formula: 0" type="Int32" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="36">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="639" y="1050" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Warning</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Report rows</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="OwnerCode" size="40" source="File: (Multiple Sources)" type="V_String" />
+                <Field name="OwnerName" size="100" source="File: (Multiple Sources)" type="V_String" />
+                <Field name="RootCauseCategory" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+                <Field name="EntityType" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+                <Field name="RuleViolated" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+                <Field name="ActionTaken" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+                <Field name="SourceFile" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+                <Field name="NaturalKey" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+                <Field name="RawValue" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+                <Field name="RemediationHint" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+                <Field name="FirstSeenUtc" size="19" source="(Multiple Sources)" type="DateTime" />
+                <Field name="RunsSeen" source="(Multiple Sources)" type="Int32" />
+                <Field name="AgeDays" source="(Multiple Sources)" type="Int32" />
+                <Field name="PlantedIssue" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+        <Node ToolID="37">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="774" y="1050" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="&quot;04b_dq_feedback_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" field="ReportRunId" size="1073741823" type="V_WString" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Report run id</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="OwnerCode" size="40" source="File: (Multiple Sources)" type="V_String" />
+                <Field name="OwnerName" size="100" source="File: (Multiple Sources)" type="V_String" />
+                <Field name="RootCauseCategory" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+                <Field name="EntityType" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+                <Field name="RuleViolated" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+                <Field name="ActionTaken" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+                <Field name="SourceFile" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+                <Field name="NaturalKey" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+                <Field name="RawValue" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+                <Field name="RemediationHint" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+                <Field name="FirstSeenUtc" size="19" source="(Multiple Sources)" type="DateTime" />
+                <Field name="RunsSeen" source="(Multiple Sources)" type="Int32" />
+                <Field name="AgeDays" source="(Multiple Sources)" type="Int32" />
+                <Field name="PlantedIssue" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+                <Field name="ReportRunId" size="1073741823" source="Formula: &quot;04b_dq_feedback_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="38">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+            <Position x="909" y="1050" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SortInfo locale="0">
+                <Field field="OwnerCode" order="Ascending" />
+                <Field field="RootCauseCategory" order="Ascending" />
+                <Field field="RuleViolated" order="Ascending" />
+                <Field field="SourceFile" order="Ascending" />
+                <Field field="NaturalKey" order="Ascending" />
+              </SortInfo>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Owner, then root cause, then rule</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="OwnerCode" size="40" source="File: (Multiple Sources)" type="V_String" />
+                <Field name="OwnerName" size="100" source="File: (Multiple Sources)" type="V_String" />
+                <Field name="RootCauseCategory" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+                <Field name="EntityType" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+                <Field name="RuleViolated" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+                <Field name="ActionTaken" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+                <Field name="SourceFile" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+                <Field name="NaturalKey" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+                <Field name="RawValue" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+                <Field name="RemediationHint" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+                <Field name="FirstSeenUtc" size="19" source="(Multiple Sources)" type="DateTime" />
+                <Field name="RunsSeen" source="(Multiple Sources)" type="Int32" />
+                <Field name="AgeDays" source="(Multiple Sources)" type="Int32" />
+                <Field name="PlantedIssue" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+                <Field name="ReportRunId" size="1073741823" source="Formula: &quot;04b_dq_feedback_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+        </Node>
+        <Node ToolID="39">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="1044" y="1050" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="OwnerCode" selected="True" />
+                <SelectField field="OwnerName" selected="True" />
+                <SelectField field="RootCauseCategory" selected="True" />
+                <SelectField field="EntityType" selected="True" />
+                <SelectField field="RuleViolated" selected="True" />
+                <SelectField field="ActionTaken" selected="True" />
+                <SelectField field="SourceFile" selected="True" />
+                <SelectField field="NaturalKey" selected="True" />
+                <SelectField field="RawValue" selected="True" />
+                <SelectField field="RemediationHint" selected="True" />
+                <SelectField field="FirstSeenUtc" selected="True" />
+                <SelectField field="RunsSeen" selected="True" />
+                <SelectField field="AgeDays" selected="True" />
+                <SelectField field="PlantedIssue" selected="True" />
+                <SelectField field="ReportRunId" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Report columns</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="OwnerCode" size="40" source="File: (Multiple Sources)" type="V_String" />
+                <Field name="OwnerName" size="100" source="File: (Multiple Sources)" type="V_String" />
+                <Field name="RootCauseCategory" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+                <Field name="EntityType" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+                <Field name="RuleViolated" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+                <Field name="ActionTaken" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+                <Field name="SourceFile" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+                <Field name="NaturalKey" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+                <Field name="RawValue" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+                <Field name="RemediationHint" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+                <Field name="FirstSeenUtc" size="19" source="(Multiple Sources)" type="DateTime" />
+                <Field name="RunsSeen" source="(Multiple Sources)" type="Int32" />
+                <Field name="AgeDays" source="(Multiple Sources)" type="Int32" />
+                <Field name="PlantedIssue" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+                <Field name="ReportRunId" size="1073741823" source="Formula: &quot;04b_dq_feedback_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="40">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="1179" y="1050" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="0">..\..\02_SampleData\_runtime\dq_reports\dq_open_issues_.csv</File>
+              <Passwords />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <LineEndStyle>CRLF</LineEndStyle>
+                <Delimeter>,</Delimeter>
+                <ForceQuotes>False</ForceQuotes>
+                <HeaderRow>True</HeaderRow>
+                <CodePage>65001</CodePage>
+                <WriteBOM>True</WriteBOM>
+              </FormatSpecificOptions>
+              <MultiFile value="True" />
+              <MultiFileType>Suffix</MultiFileType>
+              <MultiFileField>OwnerCode</MultiFileField>
+              <KeepField value="True" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>One file per owner: dq_open_issues_&lt;OwnerCode&gt;.csv (overwritten each run)</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="46">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="41">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1253" y="833" width="517" height="133" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>4. Run log - Succeeded</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>4. Run log - Succeeded</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="42">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="1278" y="882" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="OwnerCode" action="Count" rename="RowsOut" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Report rows written (always &gt;= 1 per owner)</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="RowsOut" source="Summarize: Count - OwnerCode" type="Int64" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="43">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1410" y="882" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="&quot;04b_dq_feedback&quot;" field="WorkflowName" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="&quot;Succeeded&quot;" field="Status" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="[RowsOut]" field="RowsIn" size="8" type="Int64" enabled="true" />
+                <FormulaField expression="0" field="RowsRejected" size="8" type="Int64" enabled="true" />
+                <FormulaField expression="&quot;&quot;" field="ErrorMessage" size="1073741823" type="V_WString" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Succeeded row</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="RowsOut" source="Summarize: Count - OwnerCode" type="Int64" />
+                <Field name="WorkflowName" size="1073741823" source="Formula: &quot;04b_dq_feedback&quot;" type="V_WString" />
+                <Field name="Status" size="1073741823" source="Formula: &quot;Succeeded&quot;" type="V_WString" />
+                <Field name="RowsIn" source="Formula: [RowsOut]" type="Int64" />
+                <Field name="RowsRejected" source="Formula: 0" type="Int64" />
+                <Field name="ErrorMessage" size="1073741823" source="Formula: &quot;&quot;" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="44">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="1554" y="882" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="WorkflowName" selected="True" />
+                <SelectField field="Status" selected="True" />
+                <SelectField field="RowsIn" selected="True" type="Int64" size="8" />
+                <SelectField field="RowsOut" selected="True" type="Int64" size="8" />
+                <SelectField field="RowsRejected" selected="True" type="Int64" size="8" />
+                <SelectField field="ErrorMessage" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Log fields</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="WorkflowName" size="1073741823" source="Formula: &quot;04b_dq_feedback&quot;" type="V_WString" />
+                <Field name="Status" size="1073741823" source="Formula: &quot;Succeeded&quot;" type="V_WString" />
+                <Field name="RowsIn" source="Formula: [RowsOut]" type="Int64" />
+                <Field name="RowsOut" source="Summarize: Count - OwnerCode" type="Int64" />
+                <Field name="RowsRejected" source="Formula: 0" type="Int64" />
+                <Field name="ErrorMessage" size="1073741823" source="Formula: &quot;&quot;" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="45">
+          <GuiSettings Plugin="Log_ETL_Event.yxmc">
+            <Position x="1686" y="882" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="Input.Input5"><![CDATA[WorkflowName=WorkflowName
+Status=Status
+RowsIn=RowsIn
+RowsOut=RowsOut
+RowsRejected=RowsRejected
+ErrorMessage=ErrorMessage
+]]></Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Audit_ETLRunLog: Succeeded</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="..\macros\Log_ETL_Event.yxmc" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="5" Connection="Input5" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="10" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="10" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Join" />
+      <Destination ToolID="18" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="18" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="True" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Left" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="18" Connection="Join" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Output" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Output" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="Output" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="Output" />
+      <Destination ToolID="28" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="28" Connection="Output" />
+      <Destination ToolID="29" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="31" Connection="Output" />
+      <Destination ToolID="33" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="31" Connection="Output" />
+      <Destination ToolID="36" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="35" Connection="Output" />
+      <Destination ToolID="36" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="Output" />
+      <Destination ToolID="34" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="33" Connection="Output" />
+      <Destination ToolID="34" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Left" />
+      <Destination ToolID="35" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="36" Connection="Output" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="37" Connection="Output" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="Output" />
+      <Destination ToolID="39" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="39" Connection="Output" />
+      <Destination ToolID="40" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="39" Connection="Output" />
+      <Destination ToolID="42" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="42" Connection="Output" />
+      <Destination ToolID="43" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="43" Connection="Output" />
+      <Destination ToolID="44" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="44" Connection="Output" />
+      <Destination ToolID="45" Connection="Input5" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="False" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="True" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <DefaultTZ value="Local" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>04b_dq_feedback</Name>
+      <Description>DQ feedback loop (TDQM analyse + improve). Runs after 04_dq_validation: scores the latest run per entity and DQ dimension into audit.DQRunScore, and writes the files owners act on to 02_SampleData/_runtime/dq_reports - one open-issues report per owner (dq_open_issues_[OwnerCode].csv), a root-cause summary and the run scorecard. Never gates data.</Description>
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="5ef469bb-31ba-4b00-801a-ddb3b44af682" />
+      <Telemetry>
+        <PreviousWorkflowId value="c6527397-87a9-4a70-8c17-8317cca19074" />
+        <OriginWorkflowId value="c6527397-87a9-4a70-8c17-8317cca19074" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (46)</Name>
+          <ToolId value="46" />
+          <Questions />
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="5" Selected="True" />
+        <Tool ToolId="23" Selected="True" />
+        <Tool ToolId="25" Selected="True" />
+        <Tool ToolId="29" Selected="True" />
+        <Tool ToolId="40" Selected="True" />
+        <Tool ToolId="45" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>

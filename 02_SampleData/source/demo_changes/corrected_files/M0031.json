@@ -1,0 +1,50 @@
+{
+  "match_id": "M0031",
+  "season": "2023",
+  "format": "T20",
+  "date": "2023-05-31",
+  "venue": {
+    "code": "MUM01"
+  },
+  "teams": [
+    {
+      "code": "MUM",
+      "name": "Mumbai Sharks"
+    },
+    {
+      "code": "DEL",
+      "name": "Delhi Falcons"
+    }
+  ],
+  "toss": {
+    "winner": "MUM",
+    "decision": "Field"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "MUM",
+    "margin": 4,
+    "margin_type": "Wickets",
+    "man_of_match": "P0025"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "DEL",
+      "bowling_team": "MUM",
+      "runs": 165,
+      "wickets": 7,
+      "overs": 20.0,
+      "extras": 5
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "MUM",
+      "bowling_team": "DEL",
+      "runs": 168,
+      "wickets": 6,
+      "overs": 19.4,
+      "extras": 12
+    }
+  ]
+}

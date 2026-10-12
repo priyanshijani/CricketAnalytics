@@ -1,0 +1,50 @@
+{
+  "match_id": "M0014",
+  "season": "2023",
+  "format": "T20",
+  "date": "2023-04-27",
+  "venue": {
+    "code": "DEL01"
+  },
+  "teams": [
+    {
+      "code": "DEL",
+      "name": "Delhi Falcons"
+    },
+    {
+      "code": "BLR",
+      "name": "Bangalore Royals"
+    }
+  ],
+  "toss": {
+    "winner": "DEL",
+    "decision": "Field"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "BLR",
+    "margin": 38,
+    "margin_type": "Runs",
+    "man_of_match": "P0024"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "BLR",
+      "bowling_team": "DEL",
+      "runs": 197,
+      "wickets": 5,
+      "overs": 20.0,
+      "extras": 11
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "DEL",
+      "bowling_team": "BLR",
+      "runs": 159,
+      "wickets": 10,
+      "overs": 19.4,
+      "extras": 5
+    }
+  ]
+}

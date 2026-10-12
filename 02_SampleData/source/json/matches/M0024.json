@@ -1,0 +1,50 @@
+{
+  "match_id": "M0024",
+  "season": "2023",
+  "format": "T20",
+  "date": "2023-05-17",
+  "venue": {
+    "code": "CHE01"
+  },
+  "teams": [
+    {
+      "code": "CHE",
+      "name": "Chennai Kings"
+    },
+    {
+      "code": "HYD",
+      "name": "Hyderabad Hawks"
+    }
+  ],
+  "toss": {
+    "winner": "CHE",
+    "decision": "Field"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "CHE",
+    "margin": 2,
+    "margin_type": "Wickets",
+    "man_of_match": "P0104"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "HYD",
+      "bowling_team": "CHE",
+      "runs": 187,
+      "wickets": 9,
+      "overs": 20.0,
+      "extras": 12
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "CHE",
+      "bowling_team": "HYD",
+      "runs": 196,
+      "wickets": 8,
+      "overs": 20.0,
+      "extras": 8
+    }
+  ]
+}

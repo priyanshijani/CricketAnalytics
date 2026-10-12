@@ -1,0 +1,31 @@
+{
+  "match_id": "M0061",
+  "season": "2024",
+  "format": "T20",
+  "date": "2024-05-11",
+  "venue": {
+    "code": "MUM01"
+  },
+  "teams": [
+    {
+      "code": "MUM",
+      "name": "Mumbai Sharks"
+    },
+    {
+      "code": "HYD",
+      "name": "Hyderabad Hawks"
+    }
+  ],
+  "toss": {
+    "winner": "MUM",
+    "decision": "Bat"
+  },
+  "result": {
+    "method": "Abandoned",
+    "winner": null,
+    "margin": null,
+    "margin_type": null,
+    "man_of_match": null
+  },
+  "innings": []
+}

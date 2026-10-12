@@ -1,0 +1,50 @@
+{
+  "match_id": "M0028",
+  "season": "2023",
+  "format": "T20",
+  "date": "2023-05-25",
+  "venue": {
+    "code": "DEL01"
+  },
+  "teams": [
+    {
+      "code": "DEL",
+      "name": "Delhi Falcons"
+    },
+    {
+      "code": "KOL",
+      "name": "Kolkata Tigers"
+    }
+  ],
+  "toss": {
+    "winner": "KOL",
+    "decision": "Bat"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "KOL",
+    "margin": 6,
+    "margin_type": "Runs",
+    "man_of_match": "P0058"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "KOL",
+      "bowling_team": "DEL",
+      "runs": 166,
+      "wickets": 7,
+      "overs": 20.0,
+      "extras": 12
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "DEL",
+      "bowling_team": "KOL",
+      "runs": 160,
+      "wickets": 10,
+      "overs": 15.1,
+      "extras": 10
+    }
+  ]
+}

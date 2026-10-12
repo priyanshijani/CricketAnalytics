@@ -1,0 +1,1917 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2026.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="74" y="45" width="1369" height="366" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>0. Pre-flight checks</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>0. Pre-flight checks</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="2">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="504" y="94" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File />
+              <FormatSpecificOptions UseDcm="true" Format="23" RecordLimit="">
+                <SingleRowFetch>False</SingleRowFetch>
+                <ReadCentroids>False</ReadCentroids>
+                <Query>SELECT
+  (SELECT COUNT(*) FROM audit.vw_StuckRun) AS StuckRuns,
+  ISNULL((SELECT STRING_AGG(WorkflowName, ', ') FROM audit.vw_StuckRun), '') AS StuckList,
+  (SELECT COUNT(*) FROM config.Parameter WHERE ParameterName IN ('InboundFolderName','ArchiveFolderName','ErrorFolderName','PreparedFolderName','MaxWicketsPerInnings')) AS ConfigRows,
+  (SELECT COUNT(*) FROM config.DQRule WHERE IsActive = 1) AS ActiveRules,
+  (SELECT COUNT(*) FROM dw.Dim_Date) AS CalendarDays</Query>
+                <TableStyle>Quoted</TableStyle>
+                <PostSQL />
+                <CacheData>False</CacheData>
+                <Table />
+                <SessionReadOnly>True</SessionReadOnly>
+                <ReadUncommitted>False</ReadUncommitted>
+                <Connection DcmType="ConnectionId" DcmTitle="CricketDW_DSN" DcmSchemaId="database-odbc-dsn-mssql-nocreds">f2959105-04cd-4379-a3c1-64baa7fb78b9</Connection>
+                <NoProgress>True</NoProgress>
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <PreSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Database reachable; no run stuck in Started (crashed, cancelled or still running); config and DQ rules present; calendar loaded</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="StuckRuns" source="File: SELECT&#xA;  (SELECT COUNT(*) FROM audit.vw_StuckRun) AS StuckRuns,&#xA;  ISNULL((SELECT STRING_AGG(WorkflowName, ', ') FROM audit.vw_StuckRun), '') AS StuckList,&#xA;  (SELECT COUNT(*) FROM config.Parameter WHERE ParameterName IN ('InboundFolderName','ArchiveFo..." type="Int32" />
+                <Field name="StuckList" size="8000" source="File: SELECT&#xA;  (SELECT COUNT(*) FROM audit.vw_StuckRun) AS StuckRuns,&#xA;  ISNULL((SELECT STRING_AGG(WorkflowName, ', ') FROM audit.vw_StuckRun), '') AS StuckList,&#xA;  (SELECT COUNT(*) FROM config.Parameter WHERE ParameterName IN ('InboundFolderName','ArchiveFo..." type="V_String" />
+                <Field name="ConfigRows" source="File: SELECT&#xA;  (SELECT COUNT(*) FROM audit.vw_StuckRun) AS StuckRuns,&#xA;  ISNULL((SELECT STRING_AGG(WorkflowName, ', ') FROM audit.vw_StuckRun), '') AS StuckList,&#xA;  (SELECT COUNT(*) FROM config.Parameter WHERE ParameterName IN ('InboundFolderName','ArchiveFo..." type="Int32" />
+                <Field name="ActiveRules" source="File: SELECT&#xA;  (SELECT COUNT(*) FROM audit.vw_StuckRun) AS StuckRuns,&#xA;  ISNULL((SELECT STRING_AGG(WorkflowName, ', ') FROM audit.vw_StuckRun), '') AS StuckList,&#xA;  (SELECT COUNT(*) FROM config.Parameter WHERE ParameterName IN ('InboundFolderName','ArchiveFo..." type="Int32" />
+                <Field name="CalendarDays" source="File: SELECT&#xA;  (SELECT COUNT(*) FROM audit.vw_StuckRun) AS StuckRuns,&#xA;  ISNULL((SELECT STRING_AGG(WorkflowName, ', ') FROM audit.vw_StuckRun), '') AS StuckList,&#xA;  (SELECT COUNT(*) FROM config.Parameter WHERE ParameterName IN ('InboundFolderName','ArchiveFo..." type="Int32" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="3">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Directory.Directory">
+            <Position x="99" y="94" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Directory>%Engine.WorkflowDirectory%\..\..\02_SampleData\_runtime\inbound</Directory>
+              <FileSpec>*.*</FileSpec>
+              <IncludeSubDirs value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Files waiting in the inbound folder</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDirectory" />
+        </Node>
+        <Node ToolID="4">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+            <Position x="234" y="280" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <NumRows value="1" />
+              <Fields>
+                <Field name="InboundFiles" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>0</c>
+                </r>
+              </Data>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Zero seed - an empty folder still produces a count</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+        </Node>
+        <Node ToolID="5">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="234" y="94" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="FileName" action="Count" rename="InboundFiles" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Inbound file count</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="6">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="369" y="94" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Warning</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Count + seed</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+        <Node ToolID="7">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="504" y="280" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="InboundFiles" action="Sum" rename="InboundFiles" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Inbound files (1 row)</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="8">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+            <Position x="639" y="94" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <CartesianMode>Error</CartesianMode>
+              <SelectConfiguration>
+                <Configuration outputConnection="Output">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Checks in one row</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+        </Node>
+        <Node ToolID="9">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="774" y="94" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="DateTimeFormat(DateTimeStart(), &quot;%Y%m%d%H%M%S&quot;)" field="RunStamp" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="IIF([StuckRuns] &gt; 0, &quot;A previous run is stuck in Started (&quot; + [StuckList] + &quot;). Investigate, then EXEC audit.usp_AbandonStuckRuns @Reason = '...'. &quot;, &quot;&quot;) + IIF([ConfigRows] &lt; 5, &quot;config.Parameter is incomplete. &quot;, &quot;&quot;) + IIF([ActiveRules] = 0, &quot;No active DQ rules in config.DQRule. &quot;, &quot;&quot;) + IIF([CalendarDays] = 0, &quot;dw.Dim_Date is empty - run setup_database.bat. &quot;, &quot;&quot;) + IIF([InboundFiles] = 0, &quot;No files in 02_SampleData/_runtime/inbound - run stage_source_files.bat. &quot;, &quot;&quot;)" field="Problem" size="1073741823" type="V_WString" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Every failed check becomes part of one message</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="10">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="909" y="94" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>IsEmpty([Problem])</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>All checks passed</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="11">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Message.Message">
+            <Position x="1044" y="280" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <When>First</When>
+              <Filter />
+              <Type>Error</Type>
+              <Priority>High</Priority>
+              <Transient>False</Transient>
+              <MessageExpression>"Pre-flight failed: " + [Problem]</MessageExpression>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Refuse to start</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMessage" />
+        </Node>
+        <Node ToolID="12">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1044" y="94" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="&quot;00_orchestrator&quot;" field="WorkflowName" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="&quot;Started&quot;" field="Status" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="[InboundFiles]" field="RowsIn" size="8" type="Int64" enabled="true" />
+                <FormulaField expression="0" field="RowsOut" size="8" type="Int64" enabled="true" />
+                <FormulaField expression="0" field="RowsRejected" size="8" type="Int64" enabled="true" />
+                <FormulaField expression="&quot;&quot;" field="ErrorMessage" size="1073741823" type="V_WString" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Orchestrator Started row</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="13">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="1179" y="94" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="WorkflowName" selected="True" />
+                <SelectField field="Status" selected="True" />
+                <SelectField field="RowsIn" selected="True" />
+                <SelectField field="RowsOut" selected="True" />
+                <SelectField field="RowsRejected" selected="True" />
+                <SelectField field="ErrorMessage" selected="True" />
+                <SelectField field="StuckRuns" selected="False" />
+                <SelectField field="StuckList" selected="False" />
+                <SelectField field="ConfigRows" selected="False" />
+                <SelectField field="ActiveRules" selected="False" />
+                <SelectField field="CalendarDays" selected="False" />
+                <SelectField field="InboundFiles" selected="False" />
+                <SelectField field="RunStamp" selected="False" />
+                <SelectField field="Problem" selected="False" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Log fields</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="14">
+          <GuiSettings Plugin="Log_ETL_Event.yxmc">
+            <Position x="1314" y="94" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="Input.Input5"><![CDATA[WorkflowName=WorkflowName
+Status=Status
+RowsIn=RowsIn
+RowsOut=RowsOut
+RowsRejected=RowsRejected
+ErrorMessage=ErrorMessage
+]]></Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Audit_ETLRunLog: 00_orchestrator Started</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="..\macros\Log_ETL_Event.yxmc" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="59">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1274" y="721" width="531" height="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>7. gate</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>7. gate</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="60">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1299" y="770" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="IIF([MessageType] = &quot;Error&quot;, 1, 0)" field="IsError" size="4" type="Int32" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>06_export_reporting: error messages</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="61">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="1434" y="770" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="IsError" action="Sum" rename="Errors" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Errors in the stage</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="62">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1569" y="770" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[Errors] = 0</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>06_export_reporting finished without errors - start the next stage</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="63">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Message.Message">
+            <Position x="1704" y="770" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <When>First</When>
+              <Filter />
+              <Type>Error</Type>
+              <Priority>High</Priority>
+              <Transient>False</Transient>
+              <MessageExpression>"Pipeline stopped: 06_export_reporting reported " + ToString([Errors]) + " error(s). See its Results messages."</MessageExpression>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Stop the run</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMessage" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="64">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ControlContainer.ControlContainer">
+        <Position x="1874" y="532" width="1369" height="417" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>8. Run summary</Caption>
+          <Style TextColor="#314c4a" FillColor="#e8f0fb" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <SuppressErrorsDesignTime>Info</SuppressErrorsDesignTime>
+          <SuppressErrorsRunTime>Error</SuppressErrorsRunTime>
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>8. Run summary</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="65">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="1899" y="581" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File />
+              <FormatSpecificOptions UseDcm="true" Format="23" RecordLimit="">
+                <SingleRowFetch>False</SingleRowFetch>
+                <ReadCentroids>False</ReadCentroids>
+                <Query>SELECT RunStamp, WorkflowName, StartTime, EndTime, Status, RowsIn, RowsOut, RowsRejected FROM audit.vw_PipelineRun</Query>
+                <TableStyle>Quoted</TableStyle>
+                <PostSQL />
+                <CacheData>False</CacheData>
+                <Table />
+                <SessionReadOnly>True</SessionReadOnly>
+                <ReadUncommitted>False</ReadUncommitted>
+                <Connection DcmType="ConnectionId" DcmTitle="CricketDW_DSN" DcmSchemaId="database-odbc-dsn-mssql-nocreds">f2959105-04cd-4379-a3c1-64baa7fb78b9</Connection>
+                <NoProgress>True</NoProgress>
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <PreSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Every stage of every run (one row per RunStamp per workflow)</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="RunStamp" size="14" source="File: SELECT RunStamp, WorkflowName, StartTime, EndTime, Status, RowsIn, RowsOut, RowsRejected FROM audit.vw_PipelineRun" type="V_String" />
+                <Field name="WorkflowName" size="60" source="File: SELECT RunStamp, WorkflowName, StartTime, EndTime, Status, RowsIn, RowsOut, RowsRejected FROM audit.vw_PipelineRun" type="V_String" />
+                <Field name="StartTime" size="19" source="File: SELECT RunStamp, WorkflowName, StartTime, EndTime, Status, RowsIn, RowsOut, RowsRejected FROM audit.vw_PipelineRun" type="DateTime" />
+                <Field name="EndTime" size="19" source="File: SELECT RunStamp, WorkflowName, StartTime, EndTime, Status, RowsIn, RowsOut, RowsRejected FROM audit.vw_PipelineRun" type="DateTime" />
+                <Field name="Status" size="9" source="File: SELECT RunStamp, WorkflowName, StartTime, EndTime, Status, RowsIn, RowsOut, RowsRejected FROM audit.vw_PipelineRun" type="V_String" />
+                <Field name="RowsIn" source="File: SELECT RunStamp, WorkflowName, StartTime, EndTime, Status, RowsIn, RowsOut, RowsRejected FROM audit.vw_PipelineRun" type="Int32" />
+                <Field name="RowsOut" source="File: SELECT RunStamp, WorkflowName, StartTime, EndTime, Status, RowsIn, RowsOut, RowsRejected FROM audit.vw_PipelineRun" type="Int32" />
+                <Field name="RowsRejected" source="File: SELECT RunStamp, WorkflowName, StartTime, EndTime, Status, RowsIn, RowsOut, RowsRejected FROM audit.vw_PipelineRun" type="Int32" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="66">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="2034" y="581" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="DateTimeFormat(DateTimeStart(), &quot;%Y%m%d%H%M%S&quot;)" field="ThisRun" size="1073741823" type="V_WString" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>This run's stamp</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="67">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="2169" y="581" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[RunStamp] = [ThisRun] AND [WorkflowName] != "00_orchestrator"</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>This run's stages</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="68">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="2304" y="581" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="RunStamp" selected="True" />
+                <SelectField field="WorkflowName" selected="True" />
+                <SelectField field="Status" selected="True" />
+                <SelectField field="StartTime" selected="True" />
+                <SelectField field="EndTime" selected="True" />
+                <SelectField field="RowsIn" selected="True" />
+                <SelectField field="RowsOut" selected="True" />
+                <SelectField field="RowsRejected" selected="True" />
+                <SelectField field="ThisRun" selected="False" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Summary columns</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="69">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="2439" y="581" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="0">..\..\02_SampleData\_runtime\run_summary_latest.csv</File>
+              <Passwords />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <LineEndStyle>CRLF</LineEndStyle>
+                <Delimeter>,</Delimeter>
+                <ForceQuotes>False</ForceQuotes>
+                <HeaderRow>True</HeaderRow>
+                <CodePage>65001</CodePage>
+                <WriteBOM>True</WriteBOM>
+                <SuppressBlankFile>False</SuppressBlankFile>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>02_SampleData/_runtime/run_summary_latest.csv - this run, stage by stage</AnnotationText>
+              <DefaultAnnotationText>run_summary_latest.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="70">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="2439" y="728" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[Status] = "Succeeded"</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Succeeded stages</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="71">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="2574" y="728" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="WorkflowName" action="Count" rename="Stages" />
+                <SummarizeField field="RowsOut" action="Sum" rename="RowsOut" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Stages that succeeded in this run</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="72">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="2709" y="728" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[Stages] = 7</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>All 7 stages succeeded under this run stamp</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="73">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Message.Message">
+            <Position x="2844" y="849" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <When>First</When>
+              <Filter />
+              <Type>Error</Type>
+              <Priority>High</Priority>
+              <Transient>False</Transient>
+              <MessageExpression>"Run summary: only " + ToString([Stages]) + " of 7 stages logged a result for this run"</MessageExpression>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Fail loudly</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMessage" />
+        </Node>
+        <Node ToolID="74">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="2844" y="728" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="&quot;00_orchestrator&quot;" field="WorkflowName" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="&quot;Succeeded&quot;" field="Status" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="[Stages]" field="RowsIn" size="8" type="Int64" enabled="true" />
+                <FormulaField expression="0" field="RowsRejected" size="8" type="Int64" enabled="true" />
+                <FormulaField expression="&quot;&quot;" field="ErrorMessage" size="1073741823" type="V_WString" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Orchestrator Succeeded row (RowsIn = stages run)</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="75">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="2979" y="728" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="WorkflowName" selected="True" />
+                <SelectField field="Status" selected="True" />
+                <SelectField field="RowsIn" selected="True" />
+                <SelectField field="RowsOut" selected="True" />
+                <SelectField field="RowsRejected" selected="True" />
+                <SelectField field="ErrorMessage" selected="True" />
+                <SelectField field="Stages" selected="False" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Log fields</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="76">
+          <GuiSettings Plugin="Log_ETL_Event.yxmc">
+            <Position x="3114" y="728" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="Input.Input5"><![CDATA[WorkflowName=WorkflowName
+Status=Status
+RowsIn=RowsIn
+RowsOut=RowsOut
+RowsRejected=RowsRejected
+ErrorMessage=ErrorMessage
+]]></Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Audit_ETLRunLog: 00_orchestrator Succeeded</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="..\macros\Log_ETL_Event.yxmc" />
+        </Node>
+      </ChildNodes>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCtrlContainer" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ControlContainer.ControlContainer">
+        <Position x="1484" y="45" width="165" height="195" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>1. 01_ingest_sql</Caption>
+          <Style TextColor="#314c4a" FillColor="#e8f0fb" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <SuppressErrorsDesignTime>Info</SuppressErrorsDesignTime>
+          <SuppressErrorsRunTime>Error</SuppressErrorsRunTime>
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>1. 01_ingest_sql</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="82">
+          <GuiSettings Plugin="01_ingest_sql.yxmc">
+            <Position x="1509" y="94" />
+          </GuiSettings>
+          <Properties>
+            <Configuration />
+            <Annotation DisplayMode="0">
+              <Name>01_ingest_sql (16)</Name>
+              <AnnotationText>Master data from CricketSource into stg snapshots</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro=".\01_ingest_sql.yxmc" />
+        </Node>
+      </ChildNodes>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCtrlContainer" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1484" y="234" width="531" height="195" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>1. gate</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>1. gate</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="18">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1509" y="283" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="IIF([MessageType] = &quot;Error&quot;, 1, 0)" field="IsError" size="4" type="Int32" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>01_ingest_sql: error messages</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="19">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="1644" y="283" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="IsError" action="Sum" rename="Errors" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Errors in the stage</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="20">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1779" y="283" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[Errors] = 0</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>01_ingest_sql finished without errors - start the next stage</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="21">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Message.Message">
+            <Position x="1914" y="283" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <When>First</When>
+              <Filter />
+              <Type>Error</Type>
+              <Priority>High</Priority>
+              <Transient>False</Transient>
+              <MessageExpression>"Pipeline stopped: 01_ingest_sql reported " + ToString([Errors]) + " error(s). See its Results messages."</MessageExpression>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Stop the run</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMessage" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ControlContainer.ControlContainer">
+        <Position x="2084" y="45" width="172" height="195" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>2. 02_ingest_json</Caption>
+          <Style TextColor="#314c4a" FillColor="#e8f0fb" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <SuppressErrorsDesignTime>Info</SuppressErrorsDesignTime>
+          <SuppressErrorsRunTime>Error</SuppressErrorsRunTime>
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>2. 02_ingest_json</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="81">
+          <GuiSettings Plugin="02_ingest_json.yxmc">
+            <Position x="2109" y="94" />
+          </GuiSettings>
+          <Properties>
+            <Configuration />
+            <Annotation DisplayMode="0">
+              <Name>02_ingest_json (23)</Name>
+              <AnnotationText>Match JSON files into stg.MatchRaw / InningsRaw</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro=".\02_ingest_json.yxmc" />
+        </Node>
+      </ChildNodes>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCtrlContainer" />
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="2084" y="234" width="531" height="195" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>2. gate</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>2. gate</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="25">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="2109" y="283" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="IIF([MessageType] = &quot;Error&quot;, 1, 0)" field="IsError" size="4" type="Int32" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>02_ingest_json: error messages</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="26">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="2244" y="283" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="IsError" action="Sum" rename="Errors" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Errors in the stage</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="27">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="2379" y="283" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[Errors] = 0</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>02_ingest_json finished without errors - start the next stage</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="28">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Message.Message">
+            <Position x="2514" y="283" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <When>First</When>
+              <Filter />
+              <Type>Error</Type>
+              <Priority>High</Priority>
+              <Transient>False</Transient>
+              <MessageExpression>"Pipeline stopped: 02_ingest_json reported " + ToString([Errors]) + " error(s). See its Results messages."</MessageExpression>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Stop the run</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMessage" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="29">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ControlContainer.ControlContainer">
+        <Position x="2684" y="44" width="166" height="195" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>3. 03_ingest_csv</Caption>
+          <Style TextColor="#314c4a" FillColor="#e8f0fb" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <SuppressErrorsDesignTime>Info</SuppressErrorsDesignTime>
+          <SuppressErrorsRunTime>Error</SuppressErrorsRunTime>
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>3. 03_ingest_csv</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="80">
+          <GuiSettings Plugin="03_ingest_csv.yxmc">
+            <Position x="2709" y="93" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name>03_ingest_csv (30)</Name>
+              <AnnotationText>Deliveries, rankings, historical CSVs into staging</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro=".\03_ingest_csv.yxmc" />
+        </Node>
+      </ChildNodes>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCtrlContainer" />
+    </Node>
+    <Node ToolID="31">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="2684" y="234" width="531" height="195" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>3. gate</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>3. gate</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="32">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="2709" y="283" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="IIF([MessageType] = &quot;Error&quot;, 1, 0)" field="IsError" size="4" type="Int32" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>03_ingest_csv: error messages</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="33">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="2844" y="283" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="IsError" action="Sum" rename="Errors" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Errors in the stage</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="34">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="2979" y="283" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[Errors] = 0</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>03_ingest_csv finished without errors - start the next stage</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="35">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Message.Message">
+            <Position x="3114" y="283" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <When>First</When>
+              <Filter />
+              <Type>Error</Type>
+              <Priority>High</Priority>
+              <Transient>False</Transient>
+              <MessageExpression>"Pipeline stopped: 03_ingest_csv reported " + ToString([Errors]) + " error(s). See its Results messages."</MessageExpression>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Stop the run</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMessage" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="36">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ControlContainer.ControlContainer">
+        <Position x="3284" y="45" width="185" height="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>4. 04_dq_validation</Caption>
+          <Style TextColor="#314c4a" FillColor="#e8f0fb" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <SuppressErrorsDesignTime>Info</SuppressErrorsDesignTime>
+          <SuppressErrorsRunTime>Error</SuppressErrorsRunTime>
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>4. 04_dq_validation</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="79">
+          <GuiSettings Plugin="04_dq_validation.yxmc">
+            <Position x="3309" y="94" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name>04_dq_validation (37)</Name>
+              <AnnotationText>DQ gate: rules from config.DQRule, valid rows to the stg.*Valid queue</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro=".\04_dq_validation.yxmc" />
+        </Node>
+      </ChildNodes>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCtrlContainer" />
+    </Node>
+    <Node ToolID="38">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="3284" y="260" width="531" height="195" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>4. gate</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>4. gate</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="39">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="3309" y="309" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="IIF([MessageType] = &quot;Error&quot;, 1, 0)" field="IsError" size="4" type="Int32" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>04_dq_validation: error messages</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="40">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="3444" y="309" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="IsError" action="Sum" rename="Errors" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Errors in the stage</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="41">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="3579" y="309" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[Errors] = 0</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>04_dq_validation finished without errors - start the next stage</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="42">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Message.Message">
+            <Position x="3714" y="309" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <When>First</When>
+              <Filter />
+              <Type>Error</Type>
+              <Priority>High</Priority>
+              <Transient>False</Transient>
+              <MessageExpression>"Pipeline stopped: 04_dq_validation reported " + ToString([Errors]) + " error(s). See its Results messages."</MessageExpression>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Stop the run</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMessage" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="43">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ControlContainer.ControlContainer">
+        <Position x="74" y="532" width="187" height="165" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>5. 04b_dq_feedback</Caption>
+          <Style TextColor="#314c4a" FillColor="#e8f0fb" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <SuppressErrorsDesignTime>Info</SuppressErrorsDesignTime>
+          <SuppressErrorsRunTime>Error</SuppressErrorsRunTime>
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>5. 04b_dq_feedback</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="78">
+          <GuiSettings Plugin="04b_dq_feedback.yxmc">
+            <Position x="99" y="581" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name>04b_dq_feedback (44)</Name>
+              <AnnotationText>DQ scores and owner reports</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro=".\04b_dq_feedback.yxmc" />
+        </Node>
+      </ChildNodes>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCtrlContainer" />
+    </Node>
+    <Node ToolID="45">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="74" y="708" width="531" height="195" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>5. gate</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>5. gate</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="46">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="99" y="757" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="IIF([MessageType] = &quot;Error&quot;, 1, 0)" field="IsError" size="4" type="Int32" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>04b_dq_feedback: error messages</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="47">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="234" y="757" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="IsError" action="Sum" rename="Errors" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Errors in the stage</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="48">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="369" y="757" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[Errors] = 0</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>04b_dq_feedback finished without errors - start the next stage</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="49">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Message.Message">
+            <Position x="504" y="757" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <When>First</When>
+              <Filter />
+              <Type>Error</Type>
+              <Priority>High</Priority>
+              <Transient>False</Transient>
+              <MessageExpression>"Pipeline stopped: 04b_dq_feedback reported " + ToString([Errors]) + " error(s). See its Results messages."</MessageExpression>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Stop the run</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMessage" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="50">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ControlContainer.ControlContainer">
+        <Position x="674" y="532" width="194" height="240" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>6. 05_transform_load</Caption>
+          <Style TextColor="#314c4a" FillColor="#e8f0fb" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <SuppressErrorsDesignTime>Info</SuppressErrorsDesignTime>
+          <SuppressErrorsRunTime>Error</SuppressErrorsRunTime>
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>6. 05_transform_load</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="51">
+          <GuiSettings Plugin="05_transform_load.yxmc">
+            <Position x="699" y="581" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Warehouse load: Alteryx transforms, dw.usp_PublishWarehouse publishes in one transaction</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro=".\05_transform_load.yxmc" />
+        </Node>
+      </ChildNodes>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCtrlContainer" />
+    </Node>
+    <Node ToolID="52">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="674" y="760" width="531" height="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>6. gate</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>6. gate</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="53">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="699" y="809" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="IIF([MessageType] = &quot;Error&quot;, 1, 0)" field="IsError" size="4" type="Int32" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>05_transform_load: error messages</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="54">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="834" y="809" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="IsError" action="Sum" rename="Errors" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Errors in the stage</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="55">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="969" y="809" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[Errors] = 0</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>05_transform_load finished without errors - start the next stage</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="56">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Message.Message">
+            <Position x="1104" y="809" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <When>First</When>
+              <Filter />
+              <Type>Error</Type>
+              <Priority>High</Priority>
+              <Transient>False</Transient>
+              <MessageExpression>"Pipeline stopped: 05_transform_load reported " + ToString([Errors]) + " error(s). See its Results messages."</MessageExpression>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Stop the run</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMessage" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="57">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ControlContainer.ControlContainer">
+        <Position x="1274" y="532" width="204" height="180" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>7. 06_export_reporting</Caption>
+          <Style TextColor="#314c4a" FillColor="#e8f0fb" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <SuppressErrorsDesignTime>Info</SuppressErrorsDesignTime>
+          <SuppressErrorsRunTime>Error</SuppressErrorsRunTime>
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>7. 06_export_reporting</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="77">
+          <GuiSettings Plugin="06_export_reporting.yxmc">
+            <Position x="1299" y="581" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name>06_export_reporting (58)</Name>
+              <AnnotationText>rpt views to 04_Prepared CSVs + _manifest.csv</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro=".\06_export_reporting.yxmc" />
+        </Node>
+      </ChildNodes>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCtrlContainer" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="8" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="8" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="False" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="True" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="True" />
+      <Destination ToolID="15" Connection="Control" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="14" Connection="Input5" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="60" Connection="Output" />
+      <Destination ToolID="61" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="61" Connection="Output" />
+      <Destination ToolID="62" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="62" Connection="False" />
+      <Destination ToolID="63" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="62" Connection="True" />
+      <Destination ToolID="64" Connection="Control" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="65" Connection="Output" />
+      <Destination ToolID="66" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="66" Connection="Output" />
+      <Destination ToolID="67" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="67" Connection="True" />
+      <Destination ToolID="68" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="68" Connection="Output" />
+      <Destination ToolID="69" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="68" Connection="Output" />
+      <Destination ToolID="70" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="70" Connection="True" />
+      <Destination ToolID="71" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="71" Connection="Output" />
+      <Destination ToolID="72" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="72" Connection="False" />
+      <Destination ToolID="73" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="72" Connection="True" />
+      <Destination ToolID="74" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="74" Connection="Output" />
+      <Destination ToolID="75" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="75" Connection="Output" />
+      <Destination ToolID="76" Connection="Input5" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Log" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="False" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="True" />
+      <Destination ToolID="22" Connection="Control" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Log" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="25" Connection="Output" />
+      <Destination ToolID="26" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="Output" />
+      <Destination ToolID="27" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="False" />
+      <Destination ToolID="28" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="True" />
+      <Destination ToolID="29" Connection="Control" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="29" Connection="Log" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="Output" />
+      <Destination ToolID="33" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="33" Connection="Output" />
+      <Destination ToolID="34" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="False" />
+      <Destination ToolID="35" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="True" />
+      <Destination ToolID="36" Connection="Control" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="36" Connection="Log" />
+      <Destination ToolID="39" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="39" Connection="Output" />
+      <Destination ToolID="40" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="40" Connection="Output" />
+      <Destination ToolID="41" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="41" Connection="False" />
+      <Destination ToolID="42" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="41" Connection="True" />
+      <Destination ToolID="43" Connection="Control" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="43" Connection="Log" />
+      <Destination ToolID="46" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="46" Connection="Output" />
+      <Destination ToolID="47" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="47" Connection="Output" />
+      <Destination ToolID="48" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="48" Connection="False" />
+      <Destination ToolID="49" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="48" Connection="True" />
+      <Destination ToolID="50" Connection="Control" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="50" Connection="Log" />
+      <Destination ToolID="53" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="53" Connection="Output" />
+      <Destination ToolID="54" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="54" Connection="Output" />
+      <Destination ToolID="55" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="55" Connection="False" />
+      <Destination ToolID="56" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="55" Connection="True" />
+      <Destination ToolID="57" Connection="Control" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="57" Connection="Log" />
+      <Destination ToolID="60" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="True" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <DefaultTZ value="Local" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>00_orchestrator</Name>
+      <Description>One-click pipeline run. Pre-flight checks (database, no stuck run, config, DQ rules, calendar, inbound files), then the seven stages in dependency order - 01 ingest SQL, 02 ingest JSON, 03 ingest CSV, 04 DQ gate, 04b DQ feedback, 05 warehouse load, 06 export - each in a Control Container that starts only if the previous stage logged no error, then a run summary. Every stage shares this run's timestamp in its LoadRunId.</Description>
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="7c67b52e-082e-4581-9903-7fe4de7bd7de" />
+      <Telemetry>
+        <PreviousWorkflowId value="52781a8c-94e2-4d8f-a122-4bd525be9c86" />
+        <OriginWorkflowId value="af31f50b-2992-4bf6-9db4-27a312196354" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

@@ -1,0 +1,1921 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2026.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="74" y="44" width="379" height="133" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>ETL logging: Start of run Log</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>ETL logging: Start of run Log</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="1">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+            <Position x="99" y="93" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <NumRows value="0" />
+              <Fields>
+                <Field name="WorkflowName" />
+              </Fields>
+              <Data />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="WorkflowName" size="1073741823" source="TextInput:" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+        </Node>
+        <Node ToolID="2">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="234" y="94" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="&quot;02_ingest_json&quot;" field="WorkflowName" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="&quot;Started&quot;" field="Status" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="0" field="RowsIn" size="8" type="Int64" enabled="true" />
+                <FormulaField expression="0" field="RowsOut" size="8" type="Int64" enabled="true" />
+                <FormulaField expression="0" field="RowsRejected" size="8" type="Int64" enabled="true" />
+                <FormulaField expression="&quot;&quot;" field="ErrorMessage" size="1073741823" type="V_WString" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>WorkflowName = "02_ingest_json"
+Status = "Started"
+RowsIn = 0
+RowsOut =...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="WorkflowName" size="1073741823" source="Formula: &quot;02_ingest_json&quot;" type="V_WString" />
+                <Field name="Status" size="1073741823" source="Formula: &quot;Started&quot;" type="V_WString" />
+                <Field name="RowsIn" source="Formula: 0" type="Int64" />
+                <Field name="RowsOut" source="Formula: 0" type="Int64" />
+                <Field name="RowsRejected" source="Formula: 0" type="Int64" />
+                <Field name="ErrorMessage" size="1073741823" source="Formula: &quot;&quot;" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="3">
+          <GuiSettings Plugin="Log_ETL_Event.yxmc">
+            <Position x="369" y="94" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="Input.Input5"><![CDATA[WorkflowName=WorkflowName
+Status=Status
+RowsIn=RowsIn
+RowsOut=RowsOut
+RowsRejected=RowsRejected
+ErrorMessage=ErrorMessage
+]]></Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="..\macros\Log_ETL_Event.yxmc" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="74" y="273" width="244" height="133" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Input all json files</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Input all json files</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="5">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Directory.Directory">
+            <Position x="99" y="322" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Directory>%Engine.WorkflowDirectory%\..\..\02_SampleData\_runtime\inbound</Directory>
+              <FileSpec>*.*</FileSpec>
+              <IncludeSubDirs value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>dir %Engine.WorkflowDirectory%\..\..\02_SampleData\_runtime\inbound\*.*</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="FullPath" size="32767" type="V_WString" />
+                <Field name="Directory" size="32767" type="V_WString" />
+                <Field name="FileName" size="260" type="V_WString" />
+                <Field name="ShortFileName" size="14" type="V_WString" />
+                <Field name="CreationTime" size="19" type="DateTime" />
+                <Field name="LastAccessTime" size="19" type="DateTime" />
+                <Field name="LastWriteTime" size="19" type="DateTime" />
+                <Field name="Size" type="Int64" />
+                <Field name="AttributeArchive" type="Bool" />
+                <Field name="AttributeCompressed" type="Bool" />
+                <Field name="AttributeEncrypted" type="Bool" />
+                <Field name="AttributeHidden" type="Bool" />
+                <Field name="AttributeNormal" type="Bool" />
+                <Field name="AttributeOffline" type="Bool" />
+                <Field name="AttributeReadonly" type="Bool" />
+                <Field name="AttributeReparsePoint" type="Bool" />
+                <Field name="AttributeSparseFile" type="Bool" />
+                <Field name="AttributeSystem" type="Bool" />
+                <Field name="AttributeTemporary" type="Bool" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDirectory" />
+        </Node>
+        <Node ToolID="6">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="234" y="322" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>EndsWith([FileName],".json")</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>EndsWith([FileName],".json")</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="True">
+              <RecordInfo>
+                <Field name="FullPath" size="32767" type="V_WString" />
+                <Field name="Directory" size="32767" type="V_WString" />
+                <Field name="FileName" size="260" type="V_WString" />
+                <Field name="ShortFileName" size="14" type="V_WString" />
+                <Field name="CreationTime" size="19" type="DateTime" />
+                <Field name="LastAccessTime" size="19" type="DateTime" />
+                <Field name="LastWriteTime" size="19" type="DateTime" />
+                <Field name="Size" type="Int64" />
+                <Field name="AttributeArchive" type="Bool" />
+                <Field name="AttributeCompressed" type="Bool" />
+                <Field name="AttributeEncrypted" type="Bool" />
+                <Field name="AttributeHidden" type="Bool" />
+                <Field name="AttributeNormal" type="Bool" />
+                <Field name="AttributeOffline" type="Bool" />
+                <Field name="AttributeReadonly" type="Bool" />
+                <Field name="AttributeReparsePoint" type="Bool" />
+                <Field name="AttributeSparseFile" type="Bool" />
+                <Field name="AttributeSystem" type="Bool" />
+                <Field name="AttributeTemporary" type="Bool" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="False">
+              <RecordInfo>
+                <Field name="FullPath" size="32767" type="V_WString" />
+                <Field name="Directory" size="32767" type="V_WString" />
+                <Field name="FileName" size="260" type="V_WString" />
+                <Field name="ShortFileName" size="14" type="V_WString" />
+                <Field name="CreationTime" size="19" type="DateTime" />
+                <Field name="LastAccessTime" size="19" type="DateTime" />
+                <Field name="LastWriteTime" size="19" type="DateTime" />
+                <Field name="Size" type="Int64" />
+                <Field name="AttributeArchive" type="Bool" />
+                <Field name="AttributeCompressed" type="Bool" />
+                <Field name="AttributeEncrypted" type="Bool" />
+                <Field name="AttributeHidden" type="Bool" />
+                <Field name="AttributeNormal" type="Bool" />
+                <Field name="AttributeOffline" type="Bool" />
+                <Field name="AttributeReadonly" type="Bool" />
+                <Field name="AttributeReparsePoint" type="Bool" />
+                <Field name="AttributeSparseFile" type="Bool" />
+                <Field name="AttributeSystem" type="Bool" />
+                <Field name="AttributeTemporary" type="Bool" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="539" y="272" width="1189" height="630" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Parse the Json into Table format</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Parse the Json into Table format</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="7">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BlobInput.BlobInput">
+            <Position x="564" y="321" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FileName />
+              <ModifyMethod>Path</ModifyMethod>
+              <ModifyFilename_Field>FullPath</ModifyFilename_Field>
+              <ModifyFilename_StopOnError value="False" />
+              <SplitBlobs value="False" />
+              <BlobChunkSize>1024</BlobChunkSize>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="FullPath" size="32767" type="V_WString" />
+                <Field name="Directory" size="32767" type="V_WString" />
+                <Field name="FileName" size="260" type="V_WString" />
+                <Field name="ShortFileName" size="14" type="V_WString" />
+                <Field name="CreationTime" size="19" type="DateTime" />
+                <Field name="LastAccessTime" size="19" type="DateTime" />
+                <Field name="LastWriteTime" size="19" type="DateTime" />
+                <Field name="Size" type="Int64" />
+                <Field name="AttributeArchive" type="Bool" />
+                <Field name="AttributeCompressed" type="Bool" />
+                <Field name="AttributeEncrypted" type="Bool" />
+                <Field name="AttributeHidden" type="Bool" />
+                <Field name="AttributeNormal" type="Bool" />
+                <Field name="AttributeOffline" type="Bool" />
+                <Field name="AttributeReadonly" type="Bool" />
+                <Field name="AttributeReparsePoint" type="Bool" />
+                <Field name="AttributeSparseFile" type="Bool" />
+                <Field name="AttributeSystem" type="Bool" />
+                <Field name="AttributeTemporary" type="Bool" />
+                <Field name="Blob" size="2147483647" source="BlobInput: " type="Blob" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBlobInput" />
+        </Node>
+        <Node ToolID="8">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="699" y="321" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\PRIYAN~1.JAN\AppData\Local\Temp\Alteryx\Engine_19960_bb16d03a5d27415aa44641fc9345900a_\Engine_19960_94bbe9919beb48c1ad4d964d559f762d~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="11">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BlobConvert.BlobConvert">
+            <Position x="698" y="404" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ToBlob value="False" />
+              <from_Field>Blob</from_Field>
+              <from_Mode>Text</from_Mode>
+              <from_textCodePage>65001</from_textCodePage>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="FullPath" size="32767" type="V_WString" />
+                <Field name="Directory" size="32767" type="V_WString" />
+                <Field name="FileName" size="260" type="V_WString" />
+                <Field name="ShortFileName" size="14" type="V_WString" />
+                <Field name="CreationTime" size="19" type="DateTime" />
+                <Field name="LastAccessTime" size="19" type="DateTime" />
+                <Field name="LastWriteTime" size="19" type="DateTime" />
+                <Field name="Size" type="Int64" />
+                <Field name="AttributeArchive" type="Bool" />
+                <Field name="AttributeCompressed" type="Bool" />
+                <Field name="AttributeEncrypted" type="Bool" />
+                <Field name="AttributeHidden" type="Bool" />
+                <Field name="AttributeNormal" type="Bool" />
+                <Field name="AttributeOffline" type="Bool" />
+                <Field name="AttributeReadonly" type="Bool" />
+                <Field name="AttributeReparsePoint" type="Bool" />
+                <Field name="AttributeSparseFile" type="Bool" />
+                <Field name="AttributeSystem" type="Bool" />
+                <Field name="AttributeTemporary" type="Bool" />
+                <Field name="Blob" size="1073741823" source="BlobConvert: Text - CodePage: 65001" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBlobConvert" />
+        </Node>
+        <Node ToolID="9">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.JSONParse.JSONParse">
+            <Position x="969" y="404" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <JSON_Field>Blob</JSON_Field>
+              <IncludeInOutput value="False" />
+              <SingleField value="True" />
+              <Mode>SingleField</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="FullPath" size="32767" type="V_WString" />
+                <Field name="Directory" size="32767" type="V_WString" />
+                <Field name="FileName" size="260" type="V_WString" />
+                <Field name="ShortFileName" size="14" type="V_WString" />
+                <Field name="CreationTime" size="19" type="DateTime" />
+                <Field name="LastAccessTime" size="19" type="DateTime" />
+                <Field name="LastWriteTime" size="19" type="DateTime" />
+                <Field name="Size" type="Int64" />
+                <Field name="AttributeArchive" type="Bool" />
+                <Field name="AttributeCompressed" type="Bool" />
+                <Field name="AttributeEncrypted" type="Bool" />
+                <Field name="AttributeHidden" type="Bool" />
+                <Field name="AttributeNormal" type="Bool" />
+                <Field name="AttributeOffline" type="Bool" />
+                <Field name="AttributeReadonly" type="Bool" />
+                <Field name="AttributeReparsePoint" type="Bool" />
+                <Field name="AttributeSparseFile" type="Bool" />
+                <Field name="AttributeSystem" type="Bool" />
+                <Field name="AttributeTemporary" type="Bool" />
+                <Field name="SourceFileHash" size="1073741823" source="Formula: MD5_UTF8([Blob])" type="V_WString" />
+                <Field name="JSON_Name" size="1073741823" source="JSON_Parse" type="V_WString" />
+                <Field name="JSON_ValueString" size="1073741823" source="JSON_Parse" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJSONParse" />
+        </Node>
+        <Node ToolID="10">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1104" y="404" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\PRIYAN~1.JAN\AppData\Local\Temp\Alteryx\Engine_19960_bb16d03a5d27415aa44641fc9345900a_\Engine_19960_b844e318cbe04bf1a299d1616218513f~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="12">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1104" y="512" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression><![CDATA[[JSON_Name]="match_id" OR [JSON_Name]="season" OR [JSON_Name]="format" OR [JSON_Name]="date" OR [JSON_Name]="venue.code" OR [JSON_Name]="teams.0.code" OR [JSON_Name]="teams.0.name" OR
+[JSON_Name]="teams.1.code" OR [JSON_Name]="teams.1.name" OR [JSON_Name]="toss.winner" OR
+[JSON_Name]="toss.decision" OR [JSON_Name]="result.method" OR [JSON_Name]="result.winner" OR
+[JSON_Name]="result.margin" OR [JSON_Name]="result.margin_type" OR [JSON_Name]="result.man_of_match"
+]]></Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[JSON_Name]="match_id" OR [JSON_Name]="season" OR [JSON_Name]="format" OR [JSON_...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="True">
+              <RecordInfo>
+                <Field name="FullPath" size="32767" type="V_WString" />
+                <Field name="Directory" size="32767" type="V_WString" />
+                <Field name="FileName" size="260" type="V_WString" />
+                <Field name="ShortFileName" size="14" type="V_WString" />
+                <Field name="CreationTime" size="19" type="DateTime" />
+                <Field name="LastAccessTime" size="19" type="DateTime" />
+                <Field name="LastWriteTime" size="19" type="DateTime" />
+                <Field name="Size" type="Int64" />
+                <Field name="AttributeArchive" type="Bool" />
+                <Field name="AttributeCompressed" type="Bool" />
+                <Field name="AttributeEncrypted" type="Bool" />
+                <Field name="AttributeHidden" type="Bool" />
+                <Field name="AttributeNormal" type="Bool" />
+                <Field name="AttributeOffline" type="Bool" />
+                <Field name="AttributeReadonly" type="Bool" />
+                <Field name="AttributeReparsePoint" type="Bool" />
+                <Field name="AttributeSparseFile" type="Bool" />
+                <Field name="AttributeSystem" type="Bool" />
+                <Field name="AttributeTemporary" type="Bool" />
+                <Field name="SourceFileHash" size="1073741823" source="Formula: MD5_UTF8([Blob])" type="V_WString" />
+                <Field name="JSON_Name" size="1073741823" source="JSON_Parse" type="V_WString" />
+                <Field name="JSON_ValueString" size="1073741823" source="JSON_Parse" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="False">
+              <RecordInfo>
+                <Field name="FullPath" size="32767" type="V_WString" />
+                <Field name="Directory" size="32767" type="V_WString" />
+                <Field name="FileName" size="260" type="V_WString" />
+                <Field name="ShortFileName" size="14" type="V_WString" />
+                <Field name="CreationTime" size="19" type="DateTime" />
+                <Field name="LastAccessTime" size="19" type="DateTime" />
+                <Field name="LastWriteTime" size="19" type="DateTime" />
+                <Field name="Size" type="Int64" />
+                <Field name="AttributeArchive" type="Bool" />
+                <Field name="AttributeCompressed" type="Bool" />
+                <Field name="AttributeEncrypted" type="Bool" />
+                <Field name="AttributeHidden" type="Bool" />
+                <Field name="AttributeNormal" type="Bool" />
+                <Field name="AttributeOffline" type="Bool" />
+                <Field name="AttributeReadonly" type="Bool" />
+                <Field name="AttributeReparsePoint" type="Bool" />
+                <Field name="AttributeSparseFile" type="Bool" />
+                <Field name="AttributeSystem" type="Bool" />
+                <Field name="AttributeTemporary" type="Bool" />
+                <Field name="SourceFileHash" size="1073741823" source="Formula: MD5_UTF8([Blob])" type="V_WString" />
+                <Field name="JSON_Name" size="1073741823" source="JSON_Parse" type="V_WString" />
+                <Field name="JSON_ValueString" size="1073741823" source="JSON_Parse" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="15">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1104" y="659" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>StartsWith([JSON_Name], "innings.")</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>StartsWith([JSON_Name], "innings.")</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="True">
+              <RecordInfo>
+                <Field name="FullPath" size="32767" type="V_WString" />
+                <Field name="Directory" size="32767" type="V_WString" />
+                <Field name="FileName" size="260" type="V_WString" />
+                <Field name="ShortFileName" size="14" type="V_WString" />
+                <Field name="CreationTime" size="19" type="DateTime" />
+                <Field name="LastAccessTime" size="19" type="DateTime" />
+                <Field name="LastWriteTime" size="19" type="DateTime" />
+                <Field name="Size" type="Int64" />
+                <Field name="AttributeArchive" type="Bool" />
+                <Field name="AttributeCompressed" type="Bool" />
+                <Field name="AttributeEncrypted" type="Bool" />
+                <Field name="AttributeHidden" type="Bool" />
+                <Field name="AttributeNormal" type="Bool" />
+                <Field name="AttributeOffline" type="Bool" />
+                <Field name="AttributeReadonly" type="Bool" />
+                <Field name="AttributeReparsePoint" type="Bool" />
+                <Field name="AttributeSparseFile" type="Bool" />
+                <Field name="AttributeSystem" type="Bool" />
+                <Field name="AttributeTemporary" type="Bool" />
+                <Field name="SourceFileHash" size="1073741823" source="Formula: MD5_UTF8([Blob])" type="V_WString" />
+                <Field name="JSON_Name" size="1073741823" source="JSON_Parse" type="V_WString" />
+                <Field name="JSON_ValueString" size="1073741823" source="JSON_Parse" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="False">
+              <RecordInfo>
+                <Field name="FullPath" size="32767" type="V_WString" />
+                <Field name="Directory" size="32767" type="V_WString" />
+                <Field name="FileName" size="260" type="V_WString" />
+                <Field name="ShortFileName" size="14" type="V_WString" />
+                <Field name="CreationTime" size="19" type="DateTime" />
+                <Field name="LastAccessTime" size="19" type="DateTime" />
+                <Field name="LastWriteTime" size="19" type="DateTime" />
+                <Field name="Size" type="Int64" />
+                <Field name="AttributeArchive" type="Bool" />
+                <Field name="AttributeCompressed" type="Bool" />
+                <Field name="AttributeEncrypted" type="Bool" />
+                <Field name="AttributeHidden" type="Bool" />
+                <Field name="AttributeNormal" type="Bool" />
+                <Field name="AttributeOffline" type="Bool" />
+                <Field name="AttributeReadonly" type="Bool" />
+                <Field name="AttributeReparsePoint" type="Bool" />
+                <Field name="AttributeSparseFile" type="Bool" />
+                <Field name="AttributeSystem" type="Bool" />
+                <Field name="AttributeTemporary" type="Bool" />
+                <Field name="SourceFileHash" size="1073741823" source="Formula: MD5_UTF8([Blob])" type="V_WString" />
+                <Field name="JSON_Name" size="1073741823" source="JSON_Parse" type="V_WString" />
+                <Field name="JSON_ValueString" size="1073741823" source="JSON_Parse" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="13">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+            <Position x="1239" y="512" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <GroupFields>
+                <Field field="FullPath" />
+                <Field field="FileName" />
+                <Field field="SourceFileHash" />
+              </GroupFields>
+              <HeaderField field="JSON_Name" />
+              <DataField field="JSON_ValueString" />
+              <Methods>
+                <Method method="First" />
+                <Separator>,</Separator>
+                <FieldSize value="2048" />
+              </Methods>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="FullPath" size="32767" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="FileName" size="260" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="SourceFileHash" size="1073741823" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="date" size="1073741823" source="CrossTab:Header:JSON_Name:date:First:JSON_Parse" type="V_WString" />
+                <Field name="format" size="1073741823" source="CrossTab:Header:JSON_Name:format:First:JSON_Parse" type="V_WString" />
+                <Field name="match_id" size="1073741823" source="CrossTab:Header:JSON_Name:match_id:First:JSON_Parse" type="V_WString" />
+                <Field name="result_man_of_match" size="1073741823" source="CrossTab:Header:JSON_Name:result.man_of_match:First:JSON_Parse" type="V_WString" />
+                <Field name="result_margin" size="1073741823" source="CrossTab:Header:JSON_Name:result.margin:First:JSON_Parse" type="V_WString" />
+                <Field name="result_margin_type" size="1073741823" source="CrossTab:Header:JSON_Name:result.margin_type:First:JSON_Parse" type="V_WString" />
+                <Field name="result_method" size="1073741823" source="CrossTab:Header:JSON_Name:result.method:First:JSON_Parse" type="V_WString" />
+                <Field name="result_winner" size="1073741823" source="CrossTab:Header:JSON_Name:result.winner:First:JSON_Parse" type="V_WString" />
+                <Field name="season" size="1073741823" source="CrossTab:Header:JSON_Name:season:First:JSON_Parse" type="V_WString" />
+                <Field name="teams_0_code" size="1073741823" source="CrossTab:Header:JSON_Name:teams.0.code:First:JSON_Parse" type="V_WString" />
+                <Field name="teams_0_name" size="1073741823" source="CrossTab:Header:JSON_Name:teams.0.name:First:JSON_Parse" type="V_WString" />
+                <Field name="teams_1_code" size="1073741823" source="CrossTab:Header:JSON_Name:teams.1.code:First:JSON_Parse" type="V_WString" />
+                <Field name="teams_1_name" size="1073741823" source="CrossTab:Header:JSON_Name:teams.1.name:First:JSON_Parse" type="V_WString" />
+                <Field name="toss_decision" size="1073741823" source="CrossTab:Header:JSON_Name:toss.decision:First:JSON_Parse" type="V_WString" />
+                <Field name="toss_winner" size="1073741823" source="CrossTab:Header:JSON_Name:toss.winner:First:JSON_Parse" type="V_WString" />
+                <Field name="venue_code" size="1073741823" source="CrossTab:Header:JSON_Name:venue.code:First:JSON_Parse" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+        </Node>
+        <Node ToolID="16">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1239" y="659" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="ToNumber(Regex_Replace([JSON_Name], &quot;innings\.(\d+)\..*&quot;, &quot;$1&quot;))" field="InningsNo" size="4" type="Int32" enabled="true" />
+                <FormulaField expression="Regex_Replace([JSON_Name], &quot;innings\.\d+\.&quot;, &quot;&quot;)" field="FieldName" size="1073741823" type="V_WString" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>InningsNo = ToNumber(Regex_Replace([JSON_Name], "innings\.(\d+)\..*", "$1"))
+Fie...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="FullPath" size="32767" type="V_WString" />
+                <Field name="Directory" size="32767" type="V_WString" />
+                <Field name="FileName" size="260" type="V_WString" />
+                <Field name="ShortFileName" size="14" type="V_WString" />
+                <Field name="CreationTime" size="19" type="DateTime" />
+                <Field name="LastAccessTime" size="19" type="DateTime" />
+                <Field name="LastWriteTime" size="19" type="DateTime" />
+                <Field name="Size" type="Int64" />
+                <Field name="AttributeArchive" type="Bool" />
+                <Field name="AttributeCompressed" type="Bool" />
+                <Field name="AttributeEncrypted" type="Bool" />
+                <Field name="AttributeHidden" type="Bool" />
+                <Field name="AttributeNormal" type="Bool" />
+                <Field name="AttributeOffline" type="Bool" />
+                <Field name="AttributeReadonly" type="Bool" />
+                <Field name="AttributeReparsePoint" type="Bool" />
+                <Field name="AttributeSparseFile" type="Bool" />
+                <Field name="AttributeSystem" type="Bool" />
+                <Field name="AttributeTemporary" type="Bool" />
+                <Field name="SourceFileHash" size="1073741823" source="Formula: MD5_UTF8([Blob])" type="V_WString" />
+                <Field name="JSON_Name" size="1073741823" source="JSON_Parse" type="V_WString" />
+                <Field name="JSON_ValueString" size="1073741823" source="JSON_Parse" type="V_WString" />
+                <Field name="InningsNo" source="Formula: ToNumber(Regex_Replace([JSON_Name], &quot;innings\.(\d+)\..*&quot;, &quot;$1&quot;))" type="Int32" />
+                <Field name="FieldName" size="1073741823" source="Formula: Regex_Replace([JSON_Name], &quot;innings\.\d+\.&quot;, &quot;&quot;)" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="17">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1374" y="659" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\PRIYAN~1.JAN\AppData\Local\Temp\Alteryx\Engine_19960_bb16d03a5d27415aa44641fc9345900a_\Engine_19960_ee4e06a93ab242d290244e9d094130e4~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="18">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+            <Position x="1374" y="819" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <GroupFields>
+                <Field field="FullPath" />
+                <Field field="FileName" />
+                <Field field="SourceFileHash" />
+                <Field field="InningsNo" />
+              </GroupFields>
+              <HeaderField field="FieldName" />
+              <DataField field="JSON_ValueString" />
+              <Methods>
+                <Method method="First" />
+                <Separator>,</Separator>
+                <FieldSize value="2048" />
+              </Methods>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="FullPath" size="32767" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="FileName" size="260" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="SourceFileHash" size="1073741823" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="InningsNo" source="CrossTab:Group:First:" type="Int32" />
+                <Field name="batting_team" size="1073741823" source="CrossTab:Header:FieldName:batting_team:First:JSON_Parse" type="V_WString" />
+                <Field name="bowling_team" size="1073741823" source="CrossTab:Header:FieldName:bowling_team:First:JSON_Parse" type="V_WString" />
+                <Field name="extras" size="1073741823" source="CrossTab:Header:FieldName:extras:First:JSON_Parse" type="V_WString" />
+                <Field name="innings_no" size="1073741823" source="CrossTab:Header:FieldName:innings_no:First:JSON_Parse" type="V_WString" />
+                <Field name="overs" size="1073741823" source="CrossTab:Header:FieldName:overs:First:JSON_Parse" type="V_WString" />
+                <Field name="runs" size="1073741823" source="CrossTab:Header:FieldName:runs:First:JSON_Parse" type="V_WString" />
+                <Field name="wickets" size="1073741823" source="CrossTab:Header:FieldName:wickets:First:JSON_Parse" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+        </Node>
+        <Node ToolID="14">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1374" y="512" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\PRIYAN~1.JAN\AppData\Local\Temp\Alteryx\Engine_19960_bb16d03a5d27415aa44641fc9345900a_\Engine_19960_cbed5e5e63ec4d748c427d87724f343d~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="27">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="834" y="404" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="MD5_UTF8([Blob])" field="SourceFileHash" size="1073741823" type="V_WString" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[SourceFileHash = MD5_UTF8([Blob])
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="FullPath" size="32767" type="V_WString" />
+                <Field name="Directory" size="32767" type="V_WString" />
+                <Field name="FileName" size="260" type="V_WString" />
+                <Field name="ShortFileName" size="14" type="V_WString" />
+                <Field name="CreationTime" size="19" type="DateTime" />
+                <Field name="LastAccessTime" size="19" type="DateTime" />
+                <Field name="LastWriteTime" size="19" type="DateTime" />
+                <Field name="Size" type="Int64" />
+                <Field name="AttributeArchive" type="Bool" />
+                <Field name="AttributeCompressed" type="Bool" />
+                <Field name="AttributeEncrypted" type="Bool" />
+                <Field name="AttributeHidden" type="Bool" />
+                <Field name="AttributeNormal" type="Bool" />
+                <Field name="AttributeOffline" type="Bool" />
+                <Field name="AttributeReadonly" type="Bool" />
+                <Field name="AttributeReparsePoint" type="Bool" />
+                <Field name="AttributeSparseFile" type="Bool" />
+                <Field name="AttributeSystem" type="Bool" />
+                <Field name="AttributeTemporary" type="Bool" />
+                <Field name="Blob" size="1073741823" source="BlobConvert: Text - CodePage: 65001" type="V_WString" />
+                <Field name="SourceFileHash" size="1073741823" source="Formula: MD5_UTF8([Blob])" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="35">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="1644" y="659" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="date" selected="False" />
+                <SelectField field="format" selected="False" />
+                <SelectField field="match_id" selected="True" rename="MatchIdRaw" />
+                <SelectField field="result_man_of_match" selected="False" />
+                <SelectField field="result_margin" selected="False" />
+                <SelectField field="result_margin_type" selected="False" />
+                <SelectField field="result_method" selected="False" />
+                <SelectField field="result_winner" selected="False" />
+                <SelectField field="season" selected="False" />
+                <SelectField field="teams_0_code" selected="False" />
+                <SelectField field="teams_0_name" selected="False" />
+                <SelectField field="teams_1_code" selected="False" />
+                <SelectField field="teams_1_name" selected="False" />
+                <SelectField field="toss_decision" selected="False" />
+                <SelectField field="toss_winner" selected="False" />
+                <SelectField field="venue_code" selected="False" />
+                <SelectField field="Right_FullPath" selected="False" />
+                <SelectField field="Right_FileName" selected="False" />
+                <SelectField field="Right_SourceFileHash" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="FullPath" size="32767" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="FileName" size="260" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="SourceFileHash" size="1073741823" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="MatchIdRaw" size="1073741823" source="CrossTab:Header:JSON_Name:match_id:First:JSON_Parse" type="V_WString" />
+                <Field name="InningsNo" source="CrossTab:Group:First:" type="Int32" />
+                <Field name="batting_team" size="1073741823" source="CrossTab:Header:FieldName:batting_team:First:JSON_Parse" type="V_WString" />
+                <Field name="bowling_team" size="1073741823" source="CrossTab:Header:FieldName:bowling_team:First:JSON_Parse" type="V_WString" />
+                <Field name="extras" size="1073741823" source="CrossTab:Header:FieldName:extras:First:JSON_Parse" type="V_WString" />
+                <Field name="innings_no" size="1073741823" source="CrossTab:Header:FieldName:innings_no:First:JSON_Parse" type="V_WString" />
+                <Field name="overs" size="1073741823" source="CrossTab:Header:FieldName:overs:First:JSON_Parse" type="V_WString" />
+                <Field name="runs" size="1073741823" source="CrossTab:Header:FieldName:runs:First:JSON_Parse" type="V_WString" />
+                <Field name="wickets" size="1073741823" source="CrossTab:Header:FieldName:wickets:First:JSON_Parse" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="34">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="1509" y="659" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="FullPath" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="FullPath" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_FullPath" selected="True" rename="Right_FullPath" input="Right_" />
+                    <SelectField field="Right_FileName" selected="True" rename="Right_FileName" input="Right_" />
+                    <SelectField field="Right_SourceFileHash" selected="True" rename="Right_SourceFileHash" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Left">
+              <RecordInfo>
+                <Field name="FullPath" size="32767" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="FileName" size="260" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="SourceFileHash" size="1073741823" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="date" size="1073741823" source="CrossTab:Header:JSON_Name:date:First:JSON_Parse" type="V_WString" />
+                <Field name="format" size="1073741823" source="CrossTab:Header:JSON_Name:format:First:JSON_Parse" type="V_WString" />
+                <Field name="match_id" size="1073741823" source="CrossTab:Header:JSON_Name:match_id:First:JSON_Parse" type="V_WString" />
+                <Field name="result_man_of_match" size="1073741823" source="CrossTab:Header:JSON_Name:result.man_of_match:First:JSON_Parse" type="V_WString" />
+                <Field name="result_margin" size="1073741823" source="CrossTab:Header:JSON_Name:result.margin:First:JSON_Parse" type="V_WString" />
+                <Field name="result_margin_type" size="1073741823" source="CrossTab:Header:JSON_Name:result.margin_type:First:JSON_Parse" type="V_WString" />
+                <Field name="result_method" size="1073741823" source="CrossTab:Header:JSON_Name:result.method:First:JSON_Parse" type="V_WString" />
+                <Field name="result_winner" size="1073741823" source="CrossTab:Header:JSON_Name:result.winner:First:JSON_Parse" type="V_WString" />
+                <Field name="season" size="1073741823" source="CrossTab:Header:JSON_Name:season:First:JSON_Parse" type="V_WString" />
+                <Field name="teams_0_code" size="1073741823" source="CrossTab:Header:JSON_Name:teams.0.code:First:JSON_Parse" type="V_WString" />
+                <Field name="teams_0_name" size="1073741823" source="CrossTab:Header:JSON_Name:teams.0.name:First:JSON_Parse" type="V_WString" />
+                <Field name="teams_1_code" size="1073741823" source="CrossTab:Header:JSON_Name:teams.1.code:First:JSON_Parse" type="V_WString" />
+                <Field name="teams_1_name" size="1073741823" source="CrossTab:Header:JSON_Name:teams.1.name:First:JSON_Parse" type="V_WString" />
+                <Field name="toss_decision" size="1073741823" source="CrossTab:Header:JSON_Name:toss.decision:First:JSON_Parse" type="V_WString" />
+                <Field name="toss_winner" size="1073741823" source="CrossTab:Header:JSON_Name:toss.winner:First:JSON_Parse" type="V_WString" />
+                <Field name="venue_code" size="1073741823" source="CrossTab:Header:JSON_Name:venue.code:First:JSON_Parse" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="Join">
+              <RecordInfo>
+                <Field name="FullPath" size="32767" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="FileName" size="260" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="SourceFileHash" size="1073741823" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="date" size="1073741823" source="CrossTab:Header:JSON_Name:date:First:JSON_Parse" type="V_WString" />
+                <Field name="format" size="1073741823" source="CrossTab:Header:JSON_Name:format:First:JSON_Parse" type="V_WString" />
+                <Field name="match_id" size="1073741823" source="CrossTab:Header:JSON_Name:match_id:First:JSON_Parse" type="V_WString" />
+                <Field name="result_man_of_match" size="1073741823" source="CrossTab:Header:JSON_Name:result.man_of_match:First:JSON_Parse" type="V_WString" />
+                <Field name="result_margin" size="1073741823" source="CrossTab:Header:JSON_Name:result.margin:First:JSON_Parse" type="V_WString" />
+                <Field name="result_margin_type" size="1073741823" source="CrossTab:Header:JSON_Name:result.margin_type:First:JSON_Parse" type="V_WString" />
+                <Field name="result_method" size="1073741823" source="CrossTab:Header:JSON_Name:result.method:First:JSON_Parse" type="V_WString" />
+                <Field name="result_winner" size="1073741823" source="CrossTab:Header:JSON_Name:result.winner:First:JSON_Parse" type="V_WString" />
+                <Field name="season" size="1073741823" source="CrossTab:Header:JSON_Name:season:First:JSON_Parse" type="V_WString" />
+                <Field name="teams_0_code" size="1073741823" source="CrossTab:Header:JSON_Name:teams.0.code:First:JSON_Parse" type="V_WString" />
+                <Field name="teams_0_name" size="1073741823" source="CrossTab:Header:JSON_Name:teams.0.name:First:JSON_Parse" type="V_WString" />
+                <Field name="teams_1_code" size="1073741823" source="CrossTab:Header:JSON_Name:teams.1.code:First:JSON_Parse" type="V_WString" />
+                <Field name="teams_1_name" size="1073741823" source="CrossTab:Header:JSON_Name:teams.1.name:First:JSON_Parse" type="V_WString" />
+                <Field name="toss_decision" size="1073741823" source="CrossTab:Header:JSON_Name:toss.decision:First:JSON_Parse" type="V_WString" />
+                <Field name="toss_winner" size="1073741823" source="CrossTab:Header:JSON_Name:toss.winner:First:JSON_Parse" type="V_WString" />
+                <Field name="venue_code" size="1073741823" source="CrossTab:Header:JSON_Name:venue.code:First:JSON_Parse" type="V_WString" />
+                <Field name="Right_FullPath" size="32767" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="Right_FileName" size="260" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="Right_SourceFileHash" size="1073741823" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="InningsNo" source="CrossTab:Group:First:" type="Int32" />
+                <Field name="batting_team" size="1073741823" source="CrossTab:Header:FieldName:batting_team:First:JSON_Parse" type="V_WString" />
+                <Field name="bowling_team" size="1073741823" source="CrossTab:Header:FieldName:bowling_team:First:JSON_Parse" type="V_WString" />
+                <Field name="extras" size="1073741823" source="CrossTab:Header:FieldName:extras:First:JSON_Parse" type="V_WString" />
+                <Field name="innings_no" size="1073741823" source="CrossTab:Header:FieldName:innings_no:First:JSON_Parse" type="V_WString" />
+                <Field name="overs" size="1073741823" source="CrossTab:Header:FieldName:overs:First:JSON_Parse" type="V_WString" />
+                <Field name="runs" size="1073741823" source="CrossTab:Header:FieldName:runs:First:JSON_Parse" type="V_WString" />
+                <Field name="wickets" size="1073741823" source="CrossTab:Header:FieldName:wickets:First:JSON_Parse" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="Right">
+              <RecordInfo>
+                <Field name="FullPath" size="32767" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="FileName" size="260" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="SourceFileHash" size="1073741823" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="InningsNo" source="CrossTab:Group:First:" type="Int32" />
+                <Field name="batting_team" size="1073741823" source="CrossTab:Header:FieldName:batting_team:First:JSON_Parse" type="V_WString" />
+                <Field name="bowling_team" size="1073741823" source="CrossTab:Header:FieldName:bowling_team:First:JSON_Parse" type="V_WString" />
+                <Field name="extras" size="1073741823" source="CrossTab:Header:FieldName:extras:First:JSON_Parse" type="V_WString" />
+                <Field name="innings_no" size="1073741823" source="CrossTab:Header:FieldName:innings_no:First:JSON_Parse" type="V_WString" />
+                <Field name="overs" size="1073741823" source="CrossTab:Header:FieldName:overs:First:JSON_Parse" type="V_WString" />
+                <Field name="runs" size="1073741823" source="CrossTab:Header:FieldName:runs:First:JSON_Parse" type="V_WString" />
+                <Field name="wickets" size="1073741823" source="CrossTab:Header:FieldName:wickets:First:JSON_Parse" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="25">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1814" y="273" width="219" height="280" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>ETL Validation &amp; Logging</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>ETL Validation &amp; Logging</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="26">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1839" y="322" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="&quot;02_ingest_json_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" field="LoadRunId" size="1073741823" type="V_WString" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>LoadRunId = "02_ingest_json_" + DateTimeFormat(DateTimeStart(),"%Y%m%d%H%M%S")</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="FullPath" size="32767" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="FileName" size="260" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="SourceFileHash" size="1073741823" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="date" size="1073741823" source="CrossTab:Header:JSON_Name:date:First:JSON_Parse" type="V_WString" />
+                <Field name="format" size="1073741823" source="CrossTab:Header:JSON_Name:format:First:JSON_Parse" type="V_WString" />
+                <Field name="match_id" size="1073741823" source="CrossTab:Header:JSON_Name:match_id:First:JSON_Parse" type="V_WString" />
+                <Field name="result_man_of_match" size="1073741823" source="CrossTab:Header:JSON_Name:result.man_of_match:First:JSON_Parse" type="V_WString" />
+                <Field name="result_margin" size="1073741823" source="CrossTab:Header:JSON_Name:result.margin:First:JSON_Parse" type="V_WString" />
+                <Field name="result_margin_type" size="1073741823" source="CrossTab:Header:JSON_Name:result.margin_type:First:JSON_Parse" type="V_WString" />
+                <Field name="result_method" size="1073741823" source="CrossTab:Header:JSON_Name:result.method:First:JSON_Parse" type="V_WString" />
+                <Field name="result_winner" size="1073741823" source="CrossTab:Header:JSON_Name:result.winner:First:JSON_Parse" type="V_WString" />
+                <Field name="season" size="1073741823" source="CrossTab:Header:JSON_Name:season:First:JSON_Parse" type="V_WString" />
+                <Field name="teams_0_code" size="1073741823" source="CrossTab:Header:JSON_Name:teams.0.code:First:JSON_Parse" type="V_WString" />
+                <Field name="teams_0_name" size="1073741823" source="CrossTab:Header:JSON_Name:teams.0.name:First:JSON_Parse" type="V_WString" />
+                <Field name="teams_1_code" size="1073741823" source="CrossTab:Header:JSON_Name:teams.1.code:First:JSON_Parse" type="V_WString" />
+                <Field name="teams_1_name" size="1073741823" source="CrossTab:Header:JSON_Name:teams.1.name:First:JSON_Parse" type="V_WString" />
+                <Field name="toss_decision" size="1073741823" source="CrossTab:Header:JSON_Name:toss.decision:First:JSON_Parse" type="V_WString" />
+                <Field name="toss_winner" size="1073741823" source="CrossTab:Header:JSON_Name:toss.winner:First:JSON_Parse" type="V_WString" />
+                <Field name="venue_code" size="1073741823" source="CrossTab:Header:JSON_Name:venue.code:First:JSON_Parse" type="V_WString" />
+                <Field name="LoadRunId" size="1073741823" source="Formula: &quot;02_ingest_json_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="28">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1839" y="469" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="&quot;02_ingest_json_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" field="LoadRunId" size="1073741823" type="V_WString" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>LoadRunId = "02_ingest_json_" + DateTimeFormat(DateTimeStart(),"%Y%m%d%H%M%S")</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="FullPath" size="32767" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="FileName" size="260" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="SourceFileHash" size="1073741823" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="MatchIdRaw" size="1073741823" source="CrossTab:Header:JSON_Name:match_id:First:JSON_Parse" type="V_WString" />
+                <Field name="InningsNo" source="CrossTab:Group:First:" type="Int32" />
+                <Field name="batting_team" size="1073741823" source="CrossTab:Header:FieldName:batting_team:First:JSON_Parse" type="V_WString" />
+                <Field name="bowling_team" size="1073741823" source="CrossTab:Header:FieldName:bowling_team:First:JSON_Parse" type="V_WString" />
+                <Field name="extras" size="1073741823" source="CrossTab:Header:FieldName:extras:First:JSON_Parse" type="V_WString" />
+                <Field name="innings_no" size="1073741823" source="CrossTab:Header:FieldName:innings_no:First:JSON_Parse" type="V_WString" />
+                <Field name="overs" size="1073741823" source="CrossTab:Header:FieldName:overs:First:JSON_Parse" type="V_WString" />
+                <Field name="runs" size="1073741823" source="CrossTab:Header:FieldName:runs:First:JSON_Parse" type="V_WString" />
+                <Field name="wickets" size="1073741823" source="CrossTab:Header:FieldName:wickets:First:JSON_Parse" type="V_WString" />
+                <Field name="LoadRunId" size="1073741823" source="Formula: &quot;02_ingest_json_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="2009" y="273" width="300" height="254" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Output to Staging Tables (Bronze Layer)</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Output to Staging Tables (Bronze Layer)</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="20">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="2169" y="322" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File />
+              <Passwords />
+              <Disable>False</Disable>
+              <FormatSpecificOptions UseDcm="true" MaxRecords="" Format="23">
+                <SpatialObjSize>8000</SpatialObjSize>
+                <TableStyle>Quoted</TableStyle>
+                <TransactionMessages>False</TransactionMessages>
+                <Geometry>True</Geometry>
+                <Table>stg.MatchRaw</Table>
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <OutputOption>Delete</OutputOption>
+                <Connection DcmType="ConnectionId" DcmTitle="CricketDW_DSN" DcmSchemaId="database-odbc-dsn-mssql-nocreds">f2959105-04cd-4379-a3c1-64baa7fb78b9</Connection>
+                <Projection />
+                <PostSQL />
+                <TransactionSize>10000</TransactionSize>
+                <PreSQL />
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>dcm:CricketDW_DSN
+Table=stg.MatchRaw</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="19">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="2169" y="443" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File />
+              <Passwords />
+              <Disable>False</Disable>
+              <FormatSpecificOptions UseDcm="true" MaxRecords="" Format="23">
+                <SpatialObjSize>8000</SpatialObjSize>
+                <TableStyle>Quoted</TableStyle>
+                <TransactionMessages>False</TransactionMessages>
+                <Geometry>True</Geometry>
+                <Table>stg.InningsRaw</Table>
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <OutputOption>Delete</OutputOption>
+                <Connection DcmType="ConnectionId" DcmTitle="CricketDW_DSN" DcmSchemaId="database-odbc-dsn-mssql-nocreds">f2959105-04cd-4379-a3c1-64baa7fb78b9</Connection>
+                <Projection />
+                <PostSQL />
+                <TransactionSize>10000</TransactionSize>
+                <PreSQL />
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>dcm:CricketDW_DSN
+Table=stg.InningsRaw</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="24">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="2034" y="322" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="FullPath" selected="False" />
+                <SelectField field="FileName" selected="True" rename="SourceFileName" />
+                <SelectField field="date" selected="True" rename="MatchDateRaw" />
+                <SelectField field="format" selected="True" rename="FormatCodeRaw" />
+                <SelectField field="match_id" selected="True" rename="MatchIdRaw" />
+                <SelectField field="result_man_of_match" selected="True" rename="ManOfMatchCodeRaw" />
+                <SelectField field="result_margin" selected="True" rename="WinMarginRaw" />
+                <SelectField field="result_margin_type" selected="True" rename="WinMarginTypeRaw" />
+                <SelectField field="result_method" selected="True" rename="ResultMethodRaw" />
+                <SelectField field="result_winner" selected="True" rename="WinnerCodeRaw" />
+                <SelectField field="season" selected="True" rename="SeasonRaw" />
+                <SelectField field="teams_0_code" selected="True" rename="Team1CodeRaw" />
+                <SelectField field="teams_0_name" selected="True" rename="Team1NameRaw" type="V_String" size="100" />
+                <SelectField field="teams_1_code" selected="True" rename="Team2CodeRaw" />
+                <SelectField field="teams_1_name" selected="True" rename="Team2NameRaw" type="V_String" size="100" />
+                <SelectField field="toss_decision" selected="True" rename="TossDecisionRaw" />
+                <SelectField field="toss_winner" selected="True" rename="TossWinnerCodeRaw" />
+                <SelectField field="venue_code" selected="True" rename="VenueCodeRaw" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="SourceFileName" size="260" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="SourceFileHash" size="1073741823" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="MatchDateRaw" size="1073741823" source="CrossTab:Header:JSON_Name:date:First:JSON_Parse" type="V_WString" />
+                <Field name="FormatCodeRaw" size="1073741823" source="CrossTab:Header:JSON_Name:format:First:JSON_Parse" type="V_WString" />
+                <Field name="MatchIdRaw" size="1073741823" source="CrossTab:Header:JSON_Name:match_id:First:JSON_Parse" type="V_WString" />
+                <Field name="ManOfMatchCodeRaw" size="1073741823" source="CrossTab:Header:JSON_Name:result.man_of_match:First:JSON_Parse" type="V_WString" />
+                <Field name="WinMarginRaw" size="1073741823" source="CrossTab:Header:JSON_Name:result.margin:First:JSON_Parse" type="V_WString" />
+                <Field name="WinMarginTypeRaw" size="1073741823" source="CrossTab:Header:JSON_Name:result.margin_type:First:JSON_Parse" type="V_WString" />
+                <Field name="ResultMethodRaw" size="1073741823" source="CrossTab:Header:JSON_Name:result.method:First:JSON_Parse" type="V_WString" />
+                <Field name="WinnerCodeRaw" size="1073741823" source="CrossTab:Header:JSON_Name:result.winner:First:JSON_Parse" type="V_WString" />
+                <Field name="SeasonRaw" size="1073741823" source="CrossTab:Header:JSON_Name:season:First:JSON_Parse" type="V_WString" />
+                <Field name="Team1CodeRaw" size="1073741823" source="CrossTab:Header:JSON_Name:teams.0.code:First:JSON_Parse" type="V_WString" />
+                <Field name="Team1NameRaw" size="100" source="CrossTab:Header:JSON_Name:teams.0.name:First:JSON_Parse" type="V_String" />
+                <Field name="Team2CodeRaw" size="1073741823" source="CrossTab:Header:JSON_Name:teams.1.code:First:JSON_Parse" type="V_WString" />
+                <Field name="Team2NameRaw" size="100" source="CrossTab:Header:JSON_Name:teams.1.name:First:JSON_Parse" type="V_String" />
+                <Field name="TossDecisionRaw" size="1073741823" source="CrossTab:Header:JSON_Name:toss.decision:First:JSON_Parse" type="V_WString" />
+                <Field name="TossWinnerCodeRaw" size="1073741823" source="CrossTab:Header:JSON_Name:toss.winner:First:JSON_Parse" type="V_WString" />
+                <Field name="VenueCodeRaw" size="1073741823" source="CrossTab:Header:JSON_Name:venue.code:First:JSON_Parse" type="V_WString" />
+                <Field name="LoadRunId" size="1073741823" source="Formula: &quot;02_ingest_json_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="29">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="2034" y="443" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="FullPath" selected="False" />
+                <SelectField field="FileName" selected="True" rename="SourceFileName" />
+                <SelectField field="batting_team" selected="True" rename="BattingTeamCodeRaw" />
+                <SelectField field="bowling_team" selected="True" rename="BowlingTeamCodeRaw" />
+                <SelectField field="extras" selected="True" rename="ExtrasTotalRaw" />
+                <SelectField field="innings_no" selected="False" />
+                <SelectField field="overs" selected="True" rename="OversPlayedRaw" />
+                <SelectField field="runs" selected="True" rename="RunsScoredRaw" />
+                <SelectField field="wickets" selected="True" rename="WicketsLostRaw" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="SourceFileName" size="260" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="SourceFileHash" size="1073741823" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="MatchIdRaw" size="1073741823" source="CrossTab:Header:JSON_Name:match_id:First:JSON_Parse" type="V_WString" />
+                <Field name="InningsNo" source="CrossTab:Group:First:" type="Int32" />
+                <Field name="BattingTeamCodeRaw" size="1073741823" source="CrossTab:Header:FieldName:batting_team:First:JSON_Parse" type="V_WString" />
+                <Field name="BowlingTeamCodeRaw" size="1073741823" source="CrossTab:Header:FieldName:bowling_team:First:JSON_Parse" type="V_WString" />
+                <Field name="ExtrasTotalRaw" size="1073741823" source="CrossTab:Header:FieldName:extras:First:JSON_Parse" type="V_WString" />
+                <Field name="OversPlayedRaw" size="1073741823" source="CrossTab:Header:FieldName:overs:First:JSON_Parse" type="V_WString" />
+                <Field name="RunsScoredRaw" size="1073741823" source="CrossTab:Header:FieldName:runs:First:JSON_Parse" type="V_WString" />
+                <Field name="WicketsLostRaw" size="1073741823" source="CrossTab:Header:FieldName:wickets:First:JSON_Parse" type="V_WString" />
+                <Field name="LoadRunId" size="1073741823" source="Formula: &quot;02_ingest_json_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="42">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="2339" y="609" width="244" height="280" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Step 14: Plumbing Validation</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Step 14: Plumbing Validation</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="40">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="2364" y="658" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>IsNull([SourceFileName]) OR IsNull([LoadRunId]) OR IsNull([SourceFileHash])</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>MatchRaw stream: flag if SourceFileName, LoadRunId, or SourceFileHash is null</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="True">
+              <RecordInfo>
+                <Field name="SourceFileName" size="260" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="SourceFileHash" size="1073741823" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="MatchDateRaw" size="1073741823" source="CrossTab:Header:JSON_Name:date:First:JSON_Parse" type="V_WString" />
+                <Field name="FormatCodeRaw" size="1073741823" source="CrossTab:Header:JSON_Name:format:First:JSON_Parse" type="V_WString" />
+                <Field name="MatchIdRaw" size="1073741823" source="CrossTab:Header:JSON_Name:match_id:First:JSON_Parse" type="V_WString" />
+                <Field name="ManOfMatchCodeRaw" size="1073741823" source="CrossTab:Header:JSON_Name:result.man_of_match:First:JSON_Parse" type="V_WString" />
+                <Field name="WinMarginRaw" size="1073741823" source="CrossTab:Header:JSON_Name:result.margin:First:JSON_Parse" type="V_WString" />
+                <Field name="WinMarginTypeRaw" size="1073741823" source="CrossTab:Header:JSON_Name:result.margin_type:First:JSON_Parse" type="V_WString" />
+                <Field name="ResultMethodRaw" size="1073741823" source="CrossTab:Header:JSON_Name:result.method:First:JSON_Parse" type="V_WString" />
+                <Field name="WinnerCodeRaw" size="1073741823" source="CrossTab:Header:JSON_Name:result.winner:First:JSON_Parse" type="V_WString" />
+                <Field name="SeasonRaw" size="1073741823" source="CrossTab:Header:JSON_Name:season:First:JSON_Parse" type="V_WString" />
+                <Field name="Team1CodeRaw" size="1073741823" source="CrossTab:Header:JSON_Name:teams.0.code:First:JSON_Parse" type="V_WString" />
+                <Field name="Team1NameRaw" size="100" source="CrossTab:Header:JSON_Name:teams.0.name:First:JSON_Parse" type="V_String" />
+                <Field name="Team2CodeRaw" size="1073741823" source="CrossTab:Header:JSON_Name:teams.1.code:First:JSON_Parse" type="V_WString" />
+                <Field name="Team2NameRaw" size="100" source="CrossTab:Header:JSON_Name:teams.1.name:First:JSON_Parse" type="V_String" />
+                <Field name="TossDecisionRaw" size="1073741823" source="CrossTab:Header:JSON_Name:toss.decision:First:JSON_Parse" type="V_WString" />
+                <Field name="TossWinnerCodeRaw" size="1073741823" source="CrossTab:Header:JSON_Name:toss.winner:First:JSON_Parse" type="V_WString" />
+                <Field name="VenueCodeRaw" size="1073741823" source="CrossTab:Header:JSON_Name:venue.code:First:JSON_Parse" type="V_WString" />
+                <Field name="LoadRunId" size="1073741823" source="Formula: &quot;02_ingest_json_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="False">
+              <RecordInfo>
+                <Field name="SourceFileName" size="260" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="SourceFileHash" size="1073741823" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="MatchDateRaw" size="1073741823" source="CrossTab:Header:JSON_Name:date:First:JSON_Parse" type="V_WString" />
+                <Field name="FormatCodeRaw" size="1073741823" source="CrossTab:Header:JSON_Name:format:First:JSON_Parse" type="V_WString" />
+                <Field name="MatchIdRaw" size="1073741823" source="CrossTab:Header:JSON_Name:match_id:First:JSON_Parse" type="V_WString" />
+                <Field name="ManOfMatchCodeRaw" size="1073741823" source="CrossTab:Header:JSON_Name:result.man_of_match:First:JSON_Parse" type="V_WString" />
+                <Field name="WinMarginRaw" size="1073741823" source="CrossTab:Header:JSON_Name:result.margin:First:JSON_Parse" type="V_WString" />
+                <Field name="WinMarginTypeRaw" size="1073741823" source="CrossTab:Header:JSON_Name:result.margin_type:First:JSON_Parse" type="V_WString" />
+                <Field name="ResultMethodRaw" size="1073741823" source="CrossTab:Header:JSON_Name:result.method:First:JSON_Parse" type="V_WString" />
+                <Field name="WinnerCodeRaw" size="1073741823" source="CrossTab:Header:JSON_Name:result.winner:First:JSON_Parse" type="V_WString" />
+                <Field name="SeasonRaw" size="1073741823" source="CrossTab:Header:JSON_Name:season:First:JSON_Parse" type="V_WString" />
+                <Field name="Team1CodeRaw" size="1073741823" source="CrossTab:Header:JSON_Name:teams.0.code:First:JSON_Parse" type="V_WString" />
+                <Field name="Team1NameRaw" size="100" source="CrossTab:Header:JSON_Name:teams.0.name:First:JSON_Parse" type="V_String" />
+                <Field name="Team2CodeRaw" size="1073741823" source="CrossTab:Header:JSON_Name:teams.1.code:First:JSON_Parse" type="V_WString" />
+                <Field name="Team2NameRaw" size="100" source="CrossTab:Header:JSON_Name:teams.1.name:First:JSON_Parse" type="V_String" />
+                <Field name="TossDecisionRaw" size="1073741823" source="CrossTab:Header:JSON_Name:toss.decision:First:JSON_Parse" type="V_WString" />
+                <Field name="TossWinnerCodeRaw" size="1073741823" source="CrossTab:Header:JSON_Name:toss.winner:First:JSON_Parse" type="V_WString" />
+                <Field name="VenueCodeRaw" size="1073741823" source="CrossTab:Header:JSON_Name:venue.code:First:JSON_Parse" type="V_WString" />
+                <Field name="LoadRunId" size="1073741823" source="Formula: &quot;02_ingest_json_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="41">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Message.Message">
+            <Position x="2499" y="658" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <When>First</When>
+              <Filter />
+              <Type>Message</Type>
+              <Priority>Normal</Priority>
+              <Transient>False</Transient>
+              <MessageExpression>"Error"</MessageExpression>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="SourceFileName" size="260" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="SourceFileHash" size="1073741823" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="MatchDateRaw" size="1073741823" source="CrossTab:Header:JSON_Name:date:First:JSON_Parse" type="V_WString" />
+                <Field name="FormatCodeRaw" size="1073741823" source="CrossTab:Header:JSON_Name:format:First:JSON_Parse" type="V_WString" />
+                <Field name="MatchIdRaw" size="1073741823" source="CrossTab:Header:JSON_Name:match_id:First:JSON_Parse" type="V_WString" />
+                <Field name="ManOfMatchCodeRaw" size="1073741823" source="CrossTab:Header:JSON_Name:result.man_of_match:First:JSON_Parse" type="V_WString" />
+                <Field name="WinMarginRaw" size="1073741823" source="CrossTab:Header:JSON_Name:result.margin:First:JSON_Parse" type="V_WString" />
+                <Field name="WinMarginTypeRaw" size="1073741823" source="CrossTab:Header:JSON_Name:result.margin_type:First:JSON_Parse" type="V_WString" />
+                <Field name="ResultMethodRaw" size="1073741823" source="CrossTab:Header:JSON_Name:result.method:First:JSON_Parse" type="V_WString" />
+                <Field name="WinnerCodeRaw" size="1073741823" source="CrossTab:Header:JSON_Name:result.winner:First:JSON_Parse" type="V_WString" />
+                <Field name="SeasonRaw" size="1073741823" source="CrossTab:Header:JSON_Name:season:First:JSON_Parse" type="V_WString" />
+                <Field name="Team1CodeRaw" size="1073741823" source="CrossTab:Header:JSON_Name:teams.0.code:First:JSON_Parse" type="V_WString" />
+                <Field name="Team1NameRaw" size="100" source="CrossTab:Header:JSON_Name:teams.0.name:First:JSON_Parse" type="V_String" />
+                <Field name="Team2CodeRaw" size="1073741823" source="CrossTab:Header:JSON_Name:teams.1.code:First:JSON_Parse" type="V_WString" />
+                <Field name="Team2NameRaw" size="100" source="CrossTab:Header:JSON_Name:teams.1.name:First:JSON_Parse" type="V_String" />
+                <Field name="TossDecisionRaw" size="1073741823" source="CrossTab:Header:JSON_Name:toss.decision:First:JSON_Parse" type="V_WString" />
+                <Field name="TossWinnerCodeRaw" size="1073741823" source="CrossTab:Header:JSON_Name:toss.winner:First:JSON_Parse" type="V_WString" />
+                <Field name="VenueCodeRaw" size="1073741823" source="CrossTab:Header:JSON_Name:venue.code:First:JSON_Parse" type="V_WString" />
+                <Field name="LoadRunId" size="1073741823" source="Formula: &quot;02_ingest_json_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMessage" />
+        </Node>
+        <Node ToolID="43">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="2364" y="805" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>IsNull([SourceFileName]) OR IsNull([LoadRunId]) OR IsNull([SourceFileHash]) OR IsNull([MatchIdRaw])</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>InningsRaw stream: flag if SourceFileName, LoadRunId, SourceFileHash, or MatchIdRaw is null</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="True">
+              <RecordInfo>
+                <Field name="SourceFileName" size="260" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="SourceFileHash" size="1073741823" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="MatchIdRaw" size="1073741823" source="CrossTab:Header:JSON_Name:match_id:First:JSON_Parse" type="V_WString" />
+                <Field name="InningsNo" source="CrossTab:Group:First:" type="Int32" />
+                <Field name="BattingTeamCodeRaw" size="1073741823" source="CrossTab:Header:FieldName:batting_team:First:JSON_Parse" type="V_WString" />
+                <Field name="BowlingTeamCodeRaw" size="1073741823" source="CrossTab:Header:FieldName:bowling_team:First:JSON_Parse" type="V_WString" />
+                <Field name="ExtrasTotalRaw" size="1073741823" source="CrossTab:Header:FieldName:extras:First:JSON_Parse" type="V_WString" />
+                <Field name="OversPlayedRaw" size="1073741823" source="CrossTab:Header:FieldName:overs:First:JSON_Parse" type="V_WString" />
+                <Field name="RunsScoredRaw" size="1073741823" source="CrossTab:Header:FieldName:runs:First:JSON_Parse" type="V_WString" />
+                <Field name="WicketsLostRaw" size="1073741823" source="CrossTab:Header:FieldName:wickets:First:JSON_Parse" type="V_WString" />
+                <Field name="LoadRunId" size="1073741823" source="Formula: &quot;02_ingest_json_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="False">
+              <RecordInfo>
+                <Field name="SourceFileName" size="260" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="SourceFileHash" size="1073741823" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="MatchIdRaw" size="1073741823" source="CrossTab:Header:JSON_Name:match_id:First:JSON_Parse" type="V_WString" />
+                <Field name="InningsNo" source="CrossTab:Group:First:" type="Int32" />
+                <Field name="BattingTeamCodeRaw" size="1073741823" source="CrossTab:Header:FieldName:batting_team:First:JSON_Parse" type="V_WString" />
+                <Field name="BowlingTeamCodeRaw" size="1073741823" source="CrossTab:Header:FieldName:bowling_team:First:JSON_Parse" type="V_WString" />
+                <Field name="ExtrasTotalRaw" size="1073741823" source="CrossTab:Header:FieldName:extras:First:JSON_Parse" type="V_WString" />
+                <Field name="OversPlayedRaw" size="1073741823" source="CrossTab:Header:FieldName:overs:First:JSON_Parse" type="V_WString" />
+                <Field name="RunsScoredRaw" size="1073741823" source="CrossTab:Header:FieldName:runs:First:JSON_Parse" type="V_WString" />
+                <Field name="WicketsLostRaw" size="1073741823" source="CrossTab:Header:FieldName:wickets:First:JSON_Parse" type="V_WString" />
+                <Field name="LoadRunId" size="1073741823" source="Formula: &quot;02_ingest_json_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="44">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Message.Message">
+            <Position x="2499" y="805" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <When>First</When>
+              <Filter />
+              <Type>Message</Type>
+              <Priority>Normal</Priority>
+              <Transient>False</Transient>
+              <MessageExpression>"Error"</MessageExpression>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="SourceFileName" size="260" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="SourceFileHash" size="1073741823" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="MatchIdRaw" size="1073741823" source="CrossTab:Header:JSON_Name:match_id:First:JSON_Parse" type="V_WString" />
+                <Field name="InningsNo" source="CrossTab:Group:First:" type="Int32" />
+                <Field name="BattingTeamCodeRaw" size="1073741823" source="CrossTab:Header:FieldName:batting_team:First:JSON_Parse" type="V_WString" />
+                <Field name="BowlingTeamCodeRaw" size="1073741823" source="CrossTab:Header:FieldName:bowling_team:First:JSON_Parse" type="V_WString" />
+                <Field name="ExtrasTotalRaw" size="1073741823" source="CrossTab:Header:FieldName:extras:First:JSON_Parse" type="V_WString" />
+                <Field name="OversPlayedRaw" size="1073741823" source="CrossTab:Header:FieldName:overs:First:JSON_Parse" type="V_WString" />
+                <Field name="RunsScoredRaw" size="1073741823" source="CrossTab:Header:FieldName:runs:First:JSON_Parse" type="V_WString" />
+                <Field name="WicketsLostRaw" size="1073741823" source="CrossTab:Header:FieldName:wickets:First:JSON_Parse" type="V_WString" />
+                <Field name="LoadRunId" size="1073741823" source="Formula: &quot;02_ingest_json_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMessage" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="2339" y="272" width="649" height="319" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>ETL Logging: End to Run Log</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>ETL Logging: End to Run Log</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="31">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="2364" y="321" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="MatchIdRaw" action="Count" rename="MatchCount" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="MatchCount" source="Summarize: Count - MatchIdRaw" type="Int64" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="33">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="2364" y="508" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="InningsNo" action="Count" rename="InningsCount" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="InningsCount" source="Summarize: Count - InningsNo" type="Int64" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="36">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+            <Position x="2499" y="322" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <CartesianMode>Error</CartesianMode>
+              <SelectConfiguration>
+                <Configuration outputConnection="Output">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="MatchCount" source="Summarize: Count - MatchIdRaw" type="Int64" />
+                <Field name="InningsCount" source="Summarize: Count - InningsNo" type="Int64" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+        </Node>
+        <Node ToolID="37">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="2634" y="322" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="&quot;02_ingest_json&quot;" field="WorkflowName" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="&quot;Succeeded&quot;" field="Status" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="0" field="RowsIn" size="8" type="Int64" enabled="true" />
+                <FormulaField expression="[MatchCount]+[InningsCount]" field="RowsOut" size="8" type="Int64" enabled="true" />
+                <FormulaField expression="0" field="RowsRejected" size="8" type="Int64" enabled="true" />
+                <FormulaField expression="&quot;&quot;" field="ErrorMessage" size="1073741823" type="V_WString" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>WorkflowName = "02_ingest_json"
+Status = "Succeeded"
+RowsIn = 0
+RowsOut = [MatchCount]+[InningsCount]</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="MatchCount" source="Summarize: Count - MatchIdRaw" type="Int64" />
+                <Field name="InningsCount" source="Summarize: Count - InningsNo" type="Int64" />
+                <Field name="WorkflowName" size="1073741823" source="Formula: &quot;02_ingest_json&quot;" type="V_WString" />
+                <Field name="Status" size="1073741823" source="Formula: &quot;Succeeded&quot;" type="V_WString" />
+                <Field name="RowsIn" source="Formula: 0" type="Int64" />
+                <Field name="RowsOut" source="Formula: [MatchCount]+[InningsCount]" type="Int64" />
+                <Field name="RowsRejected" source="Formula: 0" type="Int64" />
+                <Field name="ErrorMessage" size="1073741823" source="Formula: &quot;&quot;" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="38">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="2769" y="322" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="MatchCount" selected="False" />
+                <SelectField field="InningsCount" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="WorkflowName" size="1073741823" source="Formula: &quot;02_ingest_json&quot;" type="V_WString" />
+                <Field name="Status" size="1073741823" source="Formula: &quot;Succeeded&quot;" type="V_WString" />
+                <Field name="RowsIn" source="Formula: 0" type="Int64" />
+                <Field name="RowsOut" source="Formula: [MatchCount]+[InningsCount]" type="Int64" />
+                <Field name="RowsRejected" source="Formula: 0" type="Int64" />
+                <Field name="ErrorMessage" size="1073741823" source="Formula: &quot;&quot;" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="39">
+          <GuiSettings Plugin="Log_ETL_Event.yxmc">
+            <Position x="2904" y="322" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="Input.Input5"><![CDATA[WorkflowName=WorkflowName
+Status=Status
+RowsIn=RowsIn
+RowsOut=RowsOut
+RowsRejected=RowsRejected
+ErrorMessage=ErrorMessage
+]]></Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="..\macros\Log_ETL_Event.yxmc" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="45">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Input5" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="True" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="27" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="True" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="True" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="26" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="34" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="34" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="35" Connection="Output" />
+      <Destination ToolID="28" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Join" />
+      <Destination ToolID="35" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="Output" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="28" Connection="Output" />
+      <Destination ToolID="29" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="Output" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="Output" />
+      <Destination ToolID="31" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="Output" />
+      <Destination ToolID="40" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="29" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="29" Connection="Output" />
+      <Destination ToolID="33" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="29" Connection="Output" />
+      <Destination ToolID="43" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="40" Connection="True" />
+      <Destination ToolID="41" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="43" Connection="True" />
+      <Destination ToolID="44" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="31" Connection="Output" />
+      <Destination ToolID="36" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="33" Connection="Output" />
+      <Destination ToolID="36" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="36" Connection="Output" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="37" Connection="Output" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="Output" />
+      <Destination ToolID="39" Connection="Input5" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="False" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <DefaultTZ value="Local" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>02_ingest_json</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="d39ec054-80a0-4667-a889-74dbf6718e66" />
+      <Telemetry>
+        <PreviousWorkflowId value="4e3058de-38e9-4cb8-957c-fb6431606f05" />
+        <OriginWorkflowId value="af42cb0a-32dd-4eb0-825e-3e6de3c162e8" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (45)</Name>
+          <ToolId value="45" />
+          <Questions />
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="3" Selected="True" />
+        <Tool ToolId="8" Selected="False" />
+        <Tool ToolId="10" Selected="False" />
+        <Tool ToolId="17" Selected="False" />
+        <Tool ToolId="14" Selected="False" />
+        <Tool ToolId="20" Selected="True" />
+        <Tool ToolId="19" Selected="True" />
+        <Tool ToolId="39" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>

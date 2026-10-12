@@ -1,0 +1,50 @@
+{
+  "match_id": "M0116",
+  "season": "2025",
+  "format": "T20",
+  "date": "2025-06-10",
+  "venue": {
+    "code": "BLR01"
+  },
+  "teams": [
+    {
+      "code": "BLR",
+      "name": "Bangalore Royals"
+    },
+    {
+      "code": "HYD",
+      "name": "Hyderabad Hawks"
+    }
+  ],
+  "toss": {
+    "winner": "BLR",
+    "decision": "Bat"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "BLR",
+    "margin": 25,
+    "margin_type": "Runs",
+    "man_of_match": "P0104"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "BLR",
+      "bowling_team": "HYD",
+      "runs": 193,
+      "wickets": 10,
+      "overs": 18.2,
+      "extras": 8
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "HYD",
+      "bowling_team": "BLR",
+      "runs": 168,
+      "wickets": 10,
+      "overs": 19.0,
+      "extras": 8
+    }
+  ]
+}

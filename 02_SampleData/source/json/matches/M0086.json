@@ -1,0 +1,50 @@
+{
+  "match_id": "M0086",
+  "season": "2025",
+  "format": "T20",
+  "date": "2025-04-11",
+  "venue": {
+    "code": "DEL01"
+  },
+  "teams": [
+    {
+      "code": "DEL",
+      "name": "Delhi Comets"
+    },
+    {
+      "code": "HYD",
+      "name": "Hyderabad Hawks"
+    }
+  ],
+  "toss": {
+    "winner": "HYD",
+    "decision": "Bat"
+  },
+  "result": {
+    "method": "Normal",
+    "winner": "DEL",
+    "margin": 0,
+    "margin_type": "Wickets",
+    "man_of_match": "P0106"
+  },
+  "innings": [
+    {
+      "innings_no": 1,
+      "batting_team": "HYD",
+      "bowling_team": "DEL",
+      "runs": 60,
+      "wickets": 10,
+      "overs": 11.4,
+      "extras": 4
+    },
+    {
+      "innings_no": 2,
+      "batting_team": "DEL",
+      "bowling_team": "HYD",
+      "runs": 99,
+      "wickets": 10,
+      "overs": 12.0,
+      "extras": 7
+    }
+  ]
+}

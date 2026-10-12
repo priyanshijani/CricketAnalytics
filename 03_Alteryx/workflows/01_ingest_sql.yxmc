@@ -1,0 +1,908 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2026.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="74" y="45" width="244" height="504" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Input Raw Data
+Only selected limited columns</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Input Raw Data
+Only selected limited columns</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="4">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="99" y="94" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File />
+              <FormatSpecificOptions UseDcm="true" Format="23" RecordLimit="">
+                <SingleRowFetch>False</SingleRowFetch>
+                <ReadCentroids>False</ReadCentroids>
+                <Query>SELECT TeamCode, TeamName, Country, FoundedYear, IsActive FROM dbo.Teams;</Query>
+                <TableStyle>Quoted</TableStyle>
+                <PostSQL />
+                <CacheData>False</CacheData>
+                <Table />
+                <SessionReadOnly>True</SessionReadOnly>
+                <ReadUncommitted>False</ReadUncommitted>
+                <Connection DcmType="ConnectionId" DcmTitle="CricketSource_DSN" DcmSchemaId="database-odbc-dsn-mssql-nocreds">8e88dc7f-4cce-4b54-8356-5ee042239a20</Connection>
+                <NoProgress>True</NoProgress>
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <PreSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>dcm:CricketSource_DSN
+Query=SELECT TeamCode, TeamName, C...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="TeamCode" size="10" source="File: SELECT TeamCode, TeamName, Country, FoundedYear, IsActive FROM dbo.Teams;" type="V_String" />
+                <Field name="TeamName" size="100" source="File: SELECT TeamCode, TeamName, Country, FoundedYear, IsActive FROM dbo.Teams;" type="V_String" />
+                <Field name="Country" size="50" source="File: SELECT TeamCode, TeamName, Country, FoundedYear, IsActive FROM dbo.Teams;" type="V_String" />
+                <Field name="FoundedYear" source="File: SELECT TeamCode, TeamName, Country, FoundedYear, IsActive FROM dbo.Teams;" type="Int32" />
+                <Field name="IsActive" source="File: SELECT TeamCode, TeamName, Country, FoundedYear, IsActive FROM dbo.Teams;" type="Bool" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="5">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="99" y="241" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File />
+              <FormatSpecificOptions UseDcm="true" Format="23" RecordLimit="">
+                <SingleRowFetch>False</SingleRowFetch>
+                <ReadCentroids>False</ReadCentroids>
+                <Query>SELECT PlayerCode, FullName, DateOfBirth, Country, BattingStyle, BowlingStyle, PlayerRole, DebutDate FROM dbo.Players;</Query>
+                <TableStyle>Quoted</TableStyle>
+                <PostSQL />
+                <CacheData>False</CacheData>
+                <Table />
+                <SessionReadOnly>True</SessionReadOnly>
+                <ReadUncommitted>False</ReadUncommitted>
+                <Connection DcmType="ConnectionId" DcmTitle="CricketSource_DSN" DcmSchemaId="database-odbc-dsn-mssql-nocreds">8e88dc7f-4cce-4b54-8356-5ee042239a20</Connection>
+                <NoProgress>True</NoProgress>
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <PreSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>dcm:CricketSource_DSN
+Query=SELECT PlayerCode, FullName,...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="PlayerCode" size="20" source="File: SELECT PlayerCode, FullName, DateOfBirth, Country, BattingStyle, BowlingStyle, PlayerRole, DebutDate FROM dbo.Players;" type="V_String" />
+                <Field name="FullName" size="150" source="File: SELECT PlayerCode, FullName, DateOfBirth, Country, BattingStyle, BowlingStyle, PlayerRole, DebutDate FROM dbo.Players;" type="V_String" />
+                <Field name="DateOfBirth" source="File: SELECT PlayerCode, FullName, DateOfBirth, Country, BattingStyle, BowlingStyle, PlayerRole, DebutDate FROM dbo.Players;" type="Date" />
+                <Field name="Country" size="50" source="File: SELECT PlayerCode, FullName, DateOfBirth, Country, BattingStyle, BowlingStyle, PlayerRole, DebutDate FROM dbo.Players;" type="V_String" />
+                <Field name="BattingStyle" size="30" source="File: SELECT PlayerCode, FullName, DateOfBirth, Country, BattingStyle, BowlingStyle, PlayerRole, DebutDate FROM dbo.Players;" type="V_String" />
+                <Field name="BowlingStyle" size="30" source="File: SELECT PlayerCode, FullName, DateOfBirth, Country, BattingStyle, BowlingStyle, PlayerRole, DebutDate FROM dbo.Players;" type="V_String" />
+                <Field name="PlayerRole" size="30" source="File: SELECT PlayerCode, FullName, DateOfBirth, Country, BattingStyle, BowlingStyle, PlayerRole, DebutDate FROM dbo.Players;" type="V_String" />
+                <Field name="DebutDate" source="File: SELECT PlayerCode, FullName, DateOfBirth, Country, BattingStyle, BowlingStyle, PlayerRole, DebutDate FROM dbo.Players;" type="Date" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="6">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="99" y="388" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File />
+              <FormatSpecificOptions UseDcm="true" Format="23" RecordLimit="">
+                <SingleRowFetch>False</SingleRowFetch>
+                <ReadCentroids>False</ReadCentroids>
+                <Query>SELECT VenueCode, VenueName, City, Country, Capacity FROM dbo.Venues;</Query>
+                <TableStyle>Quoted</TableStyle>
+                <PostSQL />
+                <CacheData>False</CacheData>
+                <Table />
+                <SessionReadOnly>True</SessionReadOnly>
+                <ReadUncommitted>False</ReadUncommitted>
+                <Connection DcmType="ConnectionId" DcmTitle="CricketSource_DSN" DcmSchemaId="database-odbc-dsn-mssql-nocreds">8e88dc7f-4cce-4b54-8356-5ee042239a20</Connection>
+                <NoProgress>True</NoProgress>
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <PreSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>dcm:CricketSource_DSN
+Query=SELECT VenueCode, VenueName,...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="VenueCode" size="20" source="File: SELECT VenueCode, VenueName, City, Country, Capacity FROM dbo.Venues;" type="V_String" />
+                <Field name="VenueName" size="150" source="File: SELECT VenueCode, VenueName, City, Country, Capacity FROM dbo.Venues;" type="V_String" />
+                <Field name="City" size="100" source="File: SELECT VenueCode, VenueName, City, Country, Capacity FROM dbo.Venues;" type="V_String" />
+                <Field name="Country" size="50" source="File: SELECT VenueCode, VenueName, City, Country, Capacity FROM dbo.Venues;" type="V_String" />
+                <Field name="Capacity" source="File: SELECT VenueCode, VenueName, City, Country, Capacity FROM dbo.Venues;" type="Int32" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="539" y="45" width="212" height="534" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>ETL Logging: LoadRunId</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>ETL Logging: LoadRunId</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="7">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="564" y="94" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="&quot;01_ingest_sql_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" field="LoadRunId" size="1073741823" type="V_WString" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>LoadRunId = "01_ingest_sql_" + DateTimeFormat(DateTimeStart(),"%Y%m%d%H%M%S")</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="TeamCode" size="10" source="File: SELECT TeamCode, TeamName, Country, FoundedYear, IsActive FROM dbo.Teams;" type="V_String" />
+                <Field name="TeamName" size="100" source="File: SELECT TeamCode, TeamName, Country, FoundedYear, IsActive FROM dbo.Teams;" type="V_String" />
+                <Field name="Country" size="50" source="File: SELECT TeamCode, TeamName, Country, FoundedYear, IsActive FROM dbo.Teams;" type="V_String" />
+                <Field name="FoundedYear" source="File: SELECT TeamCode, TeamName, Country, FoundedYear, IsActive FROM dbo.Teams;" type="Int32" />
+                <Field name="IsActive" source="File: SELECT TeamCode, TeamName, Country, FoundedYear, IsActive FROM dbo.Teams;" type="Bool" />
+                <Field name="LoadRunId" size="1073741823" source="Formula: &quot;01_ingest_sql_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="8">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="564" y="241" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="&quot;01_ingest_sql_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" field="LoadRunId" size="1073741823" type="V_WString" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>LoadRunId = "01_ingest_sql_" + DateTimeFormat(DateTimeStart(),"%Y%m%d%H%M%S")</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="PlayerCode" size="20" source="File: SELECT PlayerCode, FullName, DateOfBirth, Country, BattingStyle, BowlingStyle, PlayerRole, DebutDate FROM dbo.Players;" type="V_String" />
+                <Field name="FullName" size="150" source="File: SELECT PlayerCode, FullName, DateOfBirth, Country, BattingStyle, BowlingStyle, PlayerRole, DebutDate FROM dbo.Players;" type="V_String" />
+                <Field name="DateOfBirth" source="File: SELECT PlayerCode, FullName, DateOfBirth, Country, BattingStyle, BowlingStyle, PlayerRole, DebutDate FROM dbo.Players;" type="Date" />
+                <Field name="Country" size="50" source="File: SELECT PlayerCode, FullName, DateOfBirth, Country, BattingStyle, BowlingStyle, PlayerRole, DebutDate FROM dbo.Players;" type="V_String" />
+                <Field name="BattingStyle" size="30" source="File: SELECT PlayerCode, FullName, DateOfBirth, Country, BattingStyle, BowlingStyle, PlayerRole, DebutDate FROM dbo.Players;" type="V_String" />
+                <Field name="BowlingStyle" size="30" source="File: SELECT PlayerCode, FullName, DateOfBirth, Country, BattingStyle, BowlingStyle, PlayerRole, DebutDate FROM dbo.Players;" type="V_String" />
+                <Field name="PlayerRole" size="30" source="File: SELECT PlayerCode, FullName, DateOfBirth, Country, BattingStyle, BowlingStyle, PlayerRole, DebutDate FROM dbo.Players;" type="V_String" />
+                <Field name="DebutDate" source="File: SELECT PlayerCode, FullName, DateOfBirth, Country, BattingStyle, BowlingStyle, PlayerRole, DebutDate FROM dbo.Players;" type="Date" />
+                <Field name="LoadRunId" size="1073741823" source="Formula: &quot;01_ingest_sql_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="9">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="564" y="388" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="&quot;01_ingest_sql_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" field="LoadRunId" size="1073741823" type="V_WString" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>LoadRunId = "01_ingest_sql_" + DateTimeFormat(DateTimeStart(),"%Y%m%d%H%M%S")</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="VenueCode" size="20" source="File: SELECT VenueCode, VenueName, City, Country, Capacity FROM dbo.Venues;" type="V_String" />
+                <Field name="VenueName" size="150" source="File: SELECT VenueCode, VenueName, City, Country, Capacity FROM dbo.Venues;" type="V_String" />
+                <Field name="City" size="100" source="File: SELECT VenueCode, VenueName, City, Country, Capacity FROM dbo.Venues;" type="V_String" />
+                <Field name="Country" size="50" source="File: SELECT VenueCode, VenueName, City, Country, Capacity FROM dbo.Venues;" type="V_String" />
+                <Field name="Capacity" source="File: SELECT VenueCode, VenueName, City, Country, Capacity FROM dbo.Venues;" type="Int32" />
+                <Field name="LoadRunId" size="1073741823" source="Formula: &quot;01_ingest_sql_&quot; + DateTimeFormat(DateTimeStart(),&quot;%Y%m%d%H%M%S&quot;)" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="821" y="41" width="210" height="435" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Copy to Staging 
+(Raw Data Source copy)</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Copy to Staging 
+(Raw Data Source copy)</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="13">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="846" y="89" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File />
+              <Passwords />
+              <Disable>False</Disable>
+              <FormatSpecificOptions UseDcm="true" MaxRecords="" Format="23">
+                <SpatialObjSize>8000</SpatialObjSize>
+                <TableStyle>Quoted</TableStyle>
+                <TransactionMessages>False</TransactionMessages>
+                <Geometry>True</Geometry>
+                <Table>stg.TeamsSnapshot</Table>
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <OutputOption>Delete</OutputOption>
+                <Connection DcmType="ConnectionId" DcmTitle="CricketDW_DSN" DcmSchemaId="database-odbc-dsn-mssql-nocreds">f2959105-04cd-4379-a3c1-64baa7fb78b9</Connection>
+                <Projection />
+                <PostSQL />
+                <TransactionSize>10000</TransactionSize>
+                <PreSQL />
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>dcm:CricketDW_DSN
+Table=stg.TeamsSnapshot</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="14">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="846" y="210" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File />
+              <Passwords />
+              <Disable>False</Disable>
+              <FormatSpecificOptions UseDcm="true" MaxRecords="" Format="23">
+                <SpatialObjSize>8000</SpatialObjSize>
+                <TableStyle>Quoted</TableStyle>
+                <TransactionMessages>False</TransactionMessages>
+                <Geometry>True</Geometry>
+                <Table>stg.PlayersSnapshot</Table>
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <OutputOption>Delete</OutputOption>
+                <Connection DcmType="ConnectionId" DcmTitle="CricketDW_DSN" DcmSchemaId="database-odbc-dsn-mssql-nocreds">f2959105-04cd-4379-a3c1-64baa7fb78b9</Connection>
+                <Projection />
+                <PostSQL />
+                <TransactionSize>10000</TransactionSize>
+                <PreSQL />
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>dcm:CricketDW_DSN
+Table=stg.PlayersSnapshot</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="15">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="846" y="330" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File />
+              <Passwords />
+              <Disable>False</Disable>
+              <FormatSpecificOptions UseDcm="true" MaxRecords="" Format="23">
+                <SpatialObjSize>8000</SpatialObjSize>
+                <TableStyle>Quoted</TableStyle>
+                <TransactionMessages>False</TransactionMessages>
+                <Geometry>True</Geometry>
+                <Table>stg.VenuesSnapshot</Table>
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <OutputOption>Delete</OutputOption>
+                <Connection DcmType="ConnectionId" DcmTitle="CricketDW_DSN" DcmSchemaId="database-odbc-dsn-mssql-nocreds">f2959105-04cd-4379-a3c1-64baa7fb78b9</Connection>
+                <Projection />
+                <PostSQL />
+                <TransactionSize>10000</TransactionSize>
+                <PreSQL />
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>dcm:CricketDW_DSN
+Table=stg.VenuesSnapshot</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="797" y="509" width="781" height="289" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>ETL logging: End of run Log</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>ETL logging: End of run Log</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="18">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="822" y="558" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="TeamCode" action="Count" rename="TeamRows" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="TeamRows" source="Summarize: Count - TeamCode" type="Int64" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="19">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="822" y="714" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="PlayerCode" action="Count" rename="PlayerRows" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="PlayerRows" source="Summarize: Count - PlayerCode" type="Int64" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="20">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="954" y="558" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="VenueCode" action="Count" rename="VenueRows" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="VenueRows" source="Summarize: Count - VenueCode" type="Int64" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="21">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+            <Position x="954" y="714" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <CartesianMode>Error</CartesianMode>
+              <SelectConfiguration>
+                <Configuration outputConnection="Output">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Source_Count" selected="True" rename="Source_Count" input="Source_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="TeamRows" source="Summarize: Count - TeamCode" type="Int64" />
+                <Field name="PlayerRows" source="Summarize: Count - PlayerCode" type="Int64" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+        </Node>
+        <Node ToolID="22">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+            <Position x="1098" y="558" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <CartesianMode>Error</CartesianMode>
+              <SelectConfiguration>
+                <Configuration outputConnection="Output">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="TeamRows" source="Summarize: Count - TeamCode" type="Int64" />
+                <Field name="PlayerRows" source="Summarize: Count - PlayerCode" type="Int64" />
+                <Field name="VenueRows" source="Summarize: Count - VenueCode" type="Int64" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+        </Node>
+        <Node ToolID="23">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1230" y="558" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="&quot;01_ingest_sql&quot;" field="WorkflowName" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="&quot;Succeeded&quot;" field="Status" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="0" field="RowsIn" size="8" type="Int64" enabled="true" />
+                <FormulaField expression="[TeamRows]+[PlayerRows]+[VenueRows]" field="RowsOut" size="8" type="Int64" enabled="true" />
+                <FormulaField expression="0" field="RowsRejected" size="8" type="Int64" enabled="true" />
+                <FormulaField expression="&quot;&quot;" field="ErrorMessage" size="1073741823" type="V_WString" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>WorkflowName = "01_ingest_sql"
+Status = "Succeeded"
+RowsIn = 0
+RowsOut...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="TeamRows" source="Summarize: Count - TeamCode" type="Int64" />
+                <Field name="PlayerRows" source="Summarize: Count - PlayerCode" type="Int64" />
+                <Field name="VenueRows" source="Summarize: Count - VenueCode" type="Int64" />
+                <Field name="WorkflowName" size="1073741823" source="Formula: &quot;01_ingest_sql&quot;" type="V_WString" />
+                <Field name="Status" size="1073741823" source="Formula: &quot;Succeeded&quot;" type="V_WString" />
+                <Field name="RowsIn" source="Formula: 0" type="Int64" />
+                <Field name="RowsOut" source="Formula: [TeamRows]+[PlayerRows]+[VenueRows]" type="Int64" />
+                <Field name="RowsRejected" source="Formula: 0" type="Int64" />
+                <Field name="ErrorMessage" size="1073741823" source="Formula: &quot;&quot;" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="29">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="1362" y="558" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="TeamRows" selected="False" />
+                <SelectField field="PlayerRows" selected="False" />
+                <SelectField field="VenueRows" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="WorkflowName" size="1073741823" source="Formula: &quot;01_ingest_sql&quot;" type="V_WString" />
+                <Field name="Status" size="1073741823" source="Formula: &quot;Succeeded&quot;" type="V_WString" />
+                <Field name="RowsIn" source="Formula: 0" type="Int64" />
+                <Field name="RowsOut" source="Formula: [TeamRows]+[PlayerRows]+[VenueRows]" type="Int64" />
+                <Field name="RowsRejected" source="Formula: 0" type="Int64" />
+                <Field name="ErrorMessage" size="1073741823" source="Formula: &quot;&quot;" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="32">
+          <GuiSettings Plugin="Log_ETL_Event.yxmc">
+            <Position x="1494" y="558" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="Input.Input5"><![CDATA[WorkflowName=WorkflowName
+Status=Status
+RowsIn=RowsIn
+RowsOut=RowsOut
+RowsRejected=RowsRejected
+ErrorMessage=ErrorMessage
+]]></Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name>Log_ETL_Event (26)</Name>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="..\macros\Log_ETL_Event.yxmc" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="77" y="581" width="385" height="225" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>ETL logging: Start of run Log</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>ETL logging: Start of run Log</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="1">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+            <Position x="102" y="630" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <NumRows value="0" />
+              <Fields>
+                <Field name="WorkflowName" />
+              </Fields>
+              <Data />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="WorkflowName" size="1073741823" source="TextInput:" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+        </Node>
+        <Node ToolID="2">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="234" y="630" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="&quot;01_ingest_sql&quot;" field="WorkflowName" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="&quot;Started&quot;" field="Status" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="0" field="RowsIn" size="8" type="Int64" enabled="true" />
+                <FormulaField expression="0" field="RowsOut" size="8" type="Int64" enabled="true" />
+                <FormulaField expression="0" field="RowsRejected" size="8" type="Int64" enabled="true" />
+                <FormulaField expression="&quot;&quot;" field="ErrorMessage" size="1073741823" type="V_WString" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>WorkflowName = "01_ingest_sql"
+Status = "Started"
+RowsIn = 0
+RowsOut =...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="WorkflowName" size="1073741823" source="Formula: &quot;01_ingest_sql&quot;" type="V_WString" />
+                <Field name="Status" size="1073741823" source="Formula: &quot;Started&quot;" type="V_WString" />
+                <Field name="RowsIn" source="Formula: 0" type="Int64" />
+                <Field name="RowsOut" source="Formula: 0" type="Int64" />
+                <Field name="RowsRejected" source="Formula: 0" type="Int64" />
+                <Field name="ErrorMessage" size="1073741823" source="Formula: &quot;&quot;" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="33">
+          <GuiSettings Plugin="Log_ETL_Event.yxmc">
+            <Position x="378" y="630" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="Input.Input5"><![CDATA[WorkflowName=WorkflowName
+Status=Status
+RowsIn=RowsIn
+RowsOut=RowsOut
+RowsRejected=RowsRejected
+ErrorMessage=ErrorMessage
+]]></Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name>Log_ETL_Event (25)</Name>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="..\macros\Log_ETL_Event.yxmc" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="21" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="21" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="22" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="22" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Output" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="29" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="29" Connection="Output" />
+      <Destination ToolID="32" Connection="Input5" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="33" Connection="Input5" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <DefaultTZ value="Local" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>01_ingest_sql</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="04341757-bec4-4882-b608-bc43da26c1db" />
+      <Telemetry>
+        <PreviousWorkflowId value="03c51c72-311d-46ce-8151-61d18cd70194" />
+        <OriginWorkflowId value="2e569899-d74a-4b42-8777-4ac8f3d80409" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (24)</Name>
+          <ToolId value="24" />
+          <Questions />
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="32" Selected="True" />
+        <Tool ToolId="13" Selected="True" />
+        <Tool ToolId="14" Selected="True" />
+        <Tool ToolId="15" Selected="True" />
+        <Tool ToolId="33" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>
