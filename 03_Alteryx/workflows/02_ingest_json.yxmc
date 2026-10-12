@@ -907,7 +907,7 @@ Fie...</DefaultAnnotationText>
           </GuiSettings>
           <Properties>
             <Configuration>
-              <Expression>False</Expression>
+              <Expression>1 = 0</Expression>
               <Mode>Custom</Mode>
             </Configuration>
             <Annotation DisplayMode="0">
